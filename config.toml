@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Shijian Knowledge Management"
+title = "Shijian Homepage"
 
 enableRobotsTXT = true
 uglyurls = false
@@ -70,8 +70,8 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Shijian Knowledge Management"
-description = "Shijian Knowledge Management"
+title = "Shijian Homepage"
+description = "Shijian Homepage"
 languageName ="English"
 contentDir = "content"
 # Weight used for sorting.

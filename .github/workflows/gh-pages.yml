@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main  # set a branch to deploy
   pull_request:
 
 jobs:
@@ -12,8 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: recursive  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive  # fetch Hugo themes, use recursive
+          fetch-depth: 0 # fetch all history for .GitInfo and .Lastmod
+
+      # submodules: recursive is as below command,
+      #- run: git submodule update --init --recursive
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -24,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '16' # as development environment
 
       - name: Cache dependencies
         uses: actions/cache@v1
@@ -34,17 +37,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install
+      - name: Install Node Dependencies
         run: npm install
 
+      # debugging
       # - run: npm list -all
-
-      #- run: git submodule update --init --recursive
-      - run: ls -l themes/docsy/assets/vendor
-      - run: tree
-      #- run: ls -l themes/docsy/assets/vendor/bootstrap/scss
-
-      - run: hugo -v
+      # - run: tree
+      # - run: ls -l themes/docsy/assets/vendor
+      # - run: ls -l themes/docsy/assets/vendor/bootstrap/scss
+      # - run: hugo -v
 
       - name: Build
         run: hugo --minify

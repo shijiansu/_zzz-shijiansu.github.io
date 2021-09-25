@@ -91,6 +91,7 @@ This the multi-page printable view of this section.
 <h1 class=title>Overview</h1>
 <div class=lead>Here&rsquo;s where your user finds out if your project is for them.</div>
 <ul>
+<li>1: <a href=#pg-cd03d718a8962f6d0a2825edd3b166ba>Set up from Google Docsy example</a></li>
 </ul>
 <div class=content>
 <div class="pageinfo pageinfo-primary">
@@ -120,6 +121,124 @@ This the multi-page printable view of this section.
 <li><a href=/docs/examples/>Examples</a>: Check out some example code!</li>
 </ul>
 </div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-cd03d718a8962f6d0a2825edd3b166ba>1 - Set up from Google Docsy example</h1>
+<blockquote>
+<p>Origin / 2021-09-25</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8f5902;font-style:italic># google docsy example template</span>
+<span style=color:#8f5902;font-style:italic># create the github repository from the google docsy example &#34;Use this template&#34;</span>
+<span style=color:#8f5902;font-style:italic># refer to https://www.docsy.dev/docs/getting-started/#using-the-github-ui</span>
+
+<span style=color:#8f5902;font-style:italic># github hosting</span>
+<span style=color:#8f5902;font-style:italic># make it possible hosting in the github: &lt;user&gt;.github.io</span>
+<span style=color:#8f5902;font-style:italic># refer to</span>
+<span style=color:#8f5902;font-style:italic>## https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site</span>
+<span style=color:#8f5902;font-style:italic>## https://docs.github.com/en/pages/getting-started-with-github-pages</span>
+
+<span style=color:#8f5902;font-style:italic># development environment</span>
+brew -v <span style=color:#8f5902;font-style:italic># Homebrew 3.2.13</span>
+nvm --version <span style=color:#8f5902;font-style:italic># 0.35.3, install via brew</span>
+node -v <span style=color:#8f5902;font-style:italic># v16.10.0 # install via nvm</span>
+<span style=color:#8f5902;font-style:italic># nvm install node --reinstall-packages-from=node # if need to upgrade</span>
+brew install hugo <span style=color:#8f5902;font-style:italic># default is with &#34;extended&#34; for scss</span>
+hugo version <span style=color:#8f5902;font-style:italic># hugo v0.88.1+extended</span>
+
+<span style=color:#8f5902;font-style:italic># github</span>
+<span style=color:#8f5902;font-style:italic># include public, resources in .gitignore</span>
+<span style=color:#8f5902;font-style:italic># refer to https://www.toptal.com/developers/gitignore/api/hugo</span>
+
+<span style=color:#8f5902;font-style:italic># clean up the google docsy example</span>
+rm deploy.sh
+rm CONTRIBUTING.md
+rm LICENSE
+rm Dockerfile
+rm docker-compose.yaml
+
+<span style=color:#8f5902;font-style:italic># verify</span>
+<span style=color:#8f5902;font-style:italic>## important</span>
+<span style=color:#8f5902;font-style:italic>## in google docsy, it requires hugo extended for scss</span>
+git clone https://github.com/shijiansu/shijiansu.github.io
+<span style=color:#204a87>cd</span> shijiansu.github.io
+git submodule update --init --recursive --depth <span style=color:#0000cf;font-weight:700>1</span> <span style=color:#8f5902;font-style:italic># because themes/docsy is submodule</span>
+<span style=color:#8f5902;font-style:italic># below are also the submodule, please ensure they exists in your local</span>
+<span style=color:#8f5902;font-style:italic>## themes/docsy/assets/vendor/Font-Awesome</span>
+<span style=color:#8f5902;font-style:italic>## themes/docsy/assets/vendor/bootstrap</span>
+<span style=color:#8f5902;font-style:italic># if you do not set up from the google docsy example, </span>
+<span style=color:#8f5902;font-style:italic># then you need to install below nodejs dependencies manually</span>
+npm install -D autoprefixer
+npm install -D postcss-cli
+npm install -D postcss
+npm install
+
+hugo server
+
+
+
+
+<span style=color:#8f5902;font-style:italic># github actions</span>
+<span style=color:#8f5902;font-style:italic># need to make default branch from &#34;master&#34; to &#34;main&#34;</span>
+mkdir .github <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> <span style=color:#204a87>cd</span> .github
+mkdir workflows <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> <span style=color:#204a87>cd</span> workflows
+<span style=color:#204a87>echo</span> <span style=color:#ce5c00;font-weight:700>&lt;&lt;&lt;</span> EOL
+line 1, <span style=color:#4e9a06>${</span><span style=color:#000>kernel</span><span style=color:#4e9a06>}</span>
+line 2,
+line 3, <span style=color:#4e9a06>${</span><span style=color:#000>distro</span><span style=color:#4e9a06>}</span>
+line <span style=color:#0000cf;font-weight:700>4</span>
+line ...
+EOL &gt; gh-pages2.yml
+
+<span style=color:#8f5902;font-style:italic># github actions yml explaination</span>
+
+<span style=color:#8f5902;font-style:italic>## nodjes environment: https://github.com/actions/setup-node</span>
+
+
+
+<span style=color:#8f5902;font-style:italic># Set up GitHub Pages: repository -&gt; Settings -&gt; Pages -&gt; select Source to &#34;Branch: gh-pages&#34;</span>
+
+
+<span style=color:#8f5902;font-style:italic># github</span>
+<span style=color:#8f5902;font-style:italic># create shijiansu.github.io.git</span>
+git clone https://github.com/shijiansu/shijiansu.github.io
+<span style=color:#204a87>cd</span> shijiansu.github.io
+curl https://www.toptal.com/developers/gitignore/api/xcodeinjection,xcode,webstorm+all,vuejs,visualstudiocode,vertx,terraform,swift,sonarqube,scala,react,r,pycharm+all,puppet,objective-c,node,maven,macos,kotlin,jmeter,java,intellij+all,gradle,go,eclipse,androidstudio,android,pydev,python,hugo -o .gitignore
+<span style=color:#204a87>cd</span> ..
+
+
+<span style=color:#8f5902;font-style:italic># ---</span>
+
+<span style=color:#8f5902;font-style:italic># initiate hugo</span>
+hugo new site shijiansu.github.io --force <span style=color:#8f5902;font-style:italic># use force as the folder exists</span>
+<span style=color:#204a87>cd</span> shijiansu.github.io
+
+<span style=color:#8f5902;font-style:italic># ---</span>
+
+<span style=color:#8f5902;font-style:italic># initiate google docsy</span>
+<span style=color:#8f5902;font-style:italic># https://www.docsy.dev/docs/getting-started/</span>
+sudo npm install -D autoprefixer
+sudo npm install -D postcss-cli
+sudo npm install -D postcss
+<span style=color:#8f5902;font-style:italic>## build your own site using the Docsy theme</span>
+
+e
+
+<span style=color:#8f5902;font-style:italic># ---</span>
+
+<span style=color:#8f5902;font-style:italic># set up github action</span>
+
+
+<span style=color:#204a87>cd</span> shijian-blog
+git submodule add https://github.com/flysnow-org/maupassant-hugo themes/maupassant <span style=color:#8f5902;font-style:italic># will push to github</span>
+<span style=color:#204a87>echo</span> <span style=color:#000>theme</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>\&#34;</span>maupassant<span style=color:#4e9a06>\&#34;</span> &gt;&gt; config.toml
+
+hugo server -D
+
+<span style=color:#8f5902;font-style:italic># deploy to github</span>
+<span style=color:#8f5902;font-style:italic>## https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action</span>
+
+
+</code></pre></div>
 </div>
 </main>
 </div>

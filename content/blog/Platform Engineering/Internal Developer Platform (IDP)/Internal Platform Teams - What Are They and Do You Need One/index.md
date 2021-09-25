@@ -1,10 +1,9 @@
 ---
 date: 2021-04-01
-author: https://humanitec.com/blog/internal-platform-teams-what-are-they-and-do-you-need-one
+author: https://humanitec.com/blog/internal-platform-teams-what-are-they-and-do-you-need-one/
 title: "Internal Platform Teams - What Are They and Do You Need One"
+tags: ["2021", "Devops", "IDP"]
 categories: ["Backend Engineering", "Platform Engineering"]
-tags: ["IDP", "2021", "Devops"]
-weight: 9999
 description: >
 ---
 
@@ -24,7 +23,7 @@ The common thread in everything they do: enable developer self-service across th
 
 [The 2020 State of DevOps report by Puppet](https://puppet.com/resources/report/2020-state-of-devops-report/) clearly surfaces this by mapping the level of DevOps sophistication against the use of self-service platforms built by Platform teams.
 
-![img](images/01.png)
+![1](images/1.png)
 
 Source: [2020 State of DevOps report by Puppet](https://puppet.com/resources/report/2020-state-of-devops-report/)
 
@@ -34,7 +33,7 @@ Jason Warner, CTO at GitHub, [explained in his interview with us](https://humani
 
 The strategic focus on Platform teams and developer self-service in these elite organizations clearly pays off. The results of well-trimmed Internal Platform teams are quite astounding: top performers deploy a stunning 208 times more frequently than low performers. [The 2019 Accelerate State of DevOps Report](https://services.google.com/fh/files/misc/state-of-devops-2019.pdf) shows very interesting data on the top percentile teams:
 
-![02](images/02.png)
+![02](images/2.png)
 
 Source: [2019 Accelerate State of DevOps Report](https://services.google.com/fh/files/misc/state-of-devops-2019.pdf)
 
@@ -70,7 +69,7 @@ We compiled the key areas that we have seen Internal Platform teams focus on, in
 
 We mentioned this already, but it is probably the most important takeaway: your Internal Platform team needs to be driven by a [product mindset](https://martinfowler.com/articles/talk-about-platforms.html). They need to focus on what provides real value (as opposed to what is “cool” to work on) for their internal customers, the app developers, based on the feedback they gave them. This philosophy needs to be drilled into every aspect of your Platform team’s activities. Iterate on your Internal Developer Platform, ship new features. At the same time, don’t forget you are also responsible for maintaining a reliable and scalable Ops setup. If something goes wrong in your team, all other teams will suffer from it.
 
-![03](images/03.png)
+![3](images/3.png)
 
 Source: [2020 State of DevOps report by Puppet](https://puppet.com/resources/report/2020-state-of-devops-report/)
 
@@ -88,7 +87,7 @@ In order to do so, Internal Platform teams need to focus on optimizing every ste
 
 A good Platform team prevents other teams from reinventing the wheel by solving common problems time and again. It’s key to figure out what these common problems are: start by understanding developer pain points and friction areas that cause slowdowns in development. You can gather this information both qualitatively through developers’ feedback and quantitatively via engineering KPIs. This intel, combined with an understanding of the future direction of the product, can help the Internal Platform team shape a good roadmap and pick the right battles to fight. The Puppet report gives us some insights on what the core responsibilities of Platform teams are.
 
-![04](images/04.png)
+![4](images/4.png)
 
 Source: [2020 State of DevOps report by Puppet](https://puppet.com/resources/report/2020-state-of-devops-report/)
 
@@ -98,7 +97,7 @@ Platform teams need to define a golden path for their developers: a reduced set 
 
 It’s important you don’t go to war with commercial vendors. It doesn’t matter if your homegrown CI/CD solution is superior today. AWS, GCP, Humanitec will catch up, faster than expected, and make that tool and team redundant. Every Platform team should be asking themselves: what is our differentiator? Instead of building in-house alternatives to a CI system, a CD tool or a metrics platform and compete against businesses that have 20 or 50 times your capacity, focus on the specific needs of your teams and tailor off-the-shelf solutions to your requirements. Commercial competitors are more likely to optimize for more generic needs of the industry anyway.
 
-![05](images/05.png)
+![5](images/5.png)
 
 ### Educate and empower your teams
 

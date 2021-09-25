@@ -1,7 +1,7 @@
 # shijiansu.github.io
 
 ![](https://img.shields.io/badge/language-markdown-blue)
-![](https://img.shields.io/badge/technology-markdown,%20hugo,%20google%20docsy-blue)
+![](https://img.shields.io/badge/technology-markdown,%20hugo,%20google%20docsy%20theme,%20github%20actions,%20github%20pages-blue)
 ![](https://img.shields.io/badge/development%20year-2021-orange)
 
 ![](https://img.shields.io/github/languages/top/shijiansu/shijiansu.github.io)

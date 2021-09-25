@@ -1,4 +1,4 @@
-name: github pages
+name: GitHub Pages
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: '16' # as development environment
 
-      - name: Cache Nodejs Dependencies
+      - name: Cache dependencies # GitHub cache (up to 5GB)
         uses: actions/cache@v1
         with:
           path: ~/.npm
@@ -38,7 +38,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install Node Dependencies
+      - name: Install dependencies
         run: npm install
 
       # debugging

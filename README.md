@@ -14,7 +14,10 @@
 
 - 
 
+## Blog environment
+
+Hugo v0.88.1
+
 ## Execute all tests in repo
 
 `/bin/bash run-repo-test.sh`
-

@@ -1,6 +1,5 @@
 ---
 title: "Setup by Docsy example"
-date: 2021-09-25
 categories: ["Examples"]
 tags: ["test", "sample", "docs"]
 weight: 9999
@@ -40,6 +39,7 @@ rm CONTRIBUTING.md
 rm LICENSE
 rm Dockerfile
 rm docker-compose.yaml
+rm netlify.toml
 
 # verify
 ## important
@@ -69,9 +69,11 @@ line ...
 EOL > gh-pages.yml
 
 # github actions yml explaination
-## hugo github action: https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action
+## hugo github action:
+## https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action
 ## nodjes environment: https://github.com/actions/setup-node
 
 # github pages
-## set up GitHub Pages: repository -> Settings -> Pages -> select Source to "Branch: gh-pages"
+## set up GitHub Pages:
+## repository -> Settings -> Pages -> select Source to "Branch: gh-pages"
 ```

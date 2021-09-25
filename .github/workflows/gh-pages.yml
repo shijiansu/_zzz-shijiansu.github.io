@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0 # fetch all history for .GitInfo and .Lastmod
 
       # submodules: recursive is as below command,
-      #- run: git submodule update --init --recursive
+      # - run: git submodule update --init --recursive
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -24,12 +24,12 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Setup Node
+      - name: Setup Nodejs
         uses: actions/setup-node@v2
         with:
           node-version: '16' # as development environment
 
-      - name: Cache dependencies
+      - name: Cache Nodejs Dependencies
         uses: actions/cache@v1
         with:
           path: ~/.npm

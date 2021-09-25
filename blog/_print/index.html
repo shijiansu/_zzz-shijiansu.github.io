@@ -99,6 +99,11 @@ This the multi-page printable view of this section.
 <li><a href=#pg-fd6795a5f160662071a9f087444cf9f4>12 Factor Apps</a></li>
 <ul>
 <li><a href=#pg-a98b2ab19382fda80029b1cd27663c27>12 Factor App Principles and Cloud-Native Microservices</a></li>
+<li><a href=#pg-8238e3a59065f729d10a786986006b0c>Spring 5.0 Microservice 2nd - Twelve-Factor Apps</a></li>
+</ul>
+<li><a href=#pg-48dd09d55801293c398b5ad265cbefb5>Open Application Model</a></li>
+<ul>
+<li><a href=#pg-67999ae3ebb50702517f8ab4c16d5b15>Introduction</a></li>
 </ul>
 </ul>
 <li><a href=#pg-39acc2d5dd68a7f0b30012f78601a727>Platform Engineering</a></li>
@@ -738,6 +743,93 @@ By <b><a href=https://dzone.com/articles/12-factor-app-principles-and-cloud-nati
 <li>Microservices: Containerization also helps here to run the one-off processes as a task and shutdown automatically one done with the implementation.</li>
 </ul>
 <p>That&rsquo;s all for today. Hope you have enjoyed the article. Please share your thoughts or ideas or improvements in the below comments box.</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-8238e3a59065f729d10a786986006b0c>Spring 5.0 Microservice 2nd - Twelve-Factor Apps</h1>
+<div class="td-byline mb-4">
+By <b>Spring 5.0 Microservice 2nd (2017)</b> |
+<time datetime=2020-08-30 class=text-muted>2020-08-30</time>
+</div>
+<h2 id=1-single-code-base>1. Single code base</h2>
+<p><img src=images/single-code-base.png alt></p>
+<p>Extending the same philosophy for microservices, each microservice should have its own code base, and this code base is not shared with any other microservice. It also means that one microservice will have exactly one code base.</p>
+<h2 id=2-bundle-dependencies>2. Bundle dependencies</h2>
+<h2 id=3-externalizing-configurations>3. Externalizing configurations</h2>
+<p>The Externalize configurations principle gives you an advice to externalize all configuration parameters from the code. An application&rsquo;s configuration parameters vary between environments such as support email IDs or URL of an external system, username, passwords, queue name, and more. These will be different for development, testing, and production. All service configurations should be externalized</p>
+<p><img src=images/externalizing-configurations.png alt></p>
+<h2 id=4-backing-services-are-addressable>4. Backing services are addressable</h2>
+<p>All backing services should be accessible through an addressable URL. All services need to talk to some external resources during the life cycle of their execution. For example, they could be listening to or sending messages to a messaging system, sending an email, or persisting data to a database. All these services should be reachable through a URL without complex communication requirements</p>
+<p><img src=images/backing-services-are-addressable.png alt></p>
+<h2 id=5-isolation-between-build-release-and-run>5. Isolation between build, release, and run</h2>
+<p><img src=images/isolation-between-build-release-and-run.png alt></p>
+<h2 id=6-stateless-shared-nothing-processes>6. Stateless, shared nothing processes</h2>
+<h2 id=7-expose-services-through-port-bindings>7. Expose services through port bindings</h2>
+<p>A Twelve-Factor App ideally does not relay on an external web server. A HTTP listener, such as Tomcat, Jetty, and more, has to be embedded in the service or application itself.</p>
+<h2 id=8-concurrency-for-scale-out>8. Concurrency for scale out</h2>
+<p>In the microservices world, services are designed for a scale out rather than scale up.</p>
+<h2 id=9-disposability-with-minimal-overhead>9. Disposability, with minimal overhead</h2>
+<p>In the microservices context, in order to achieve full automation, it is extremely important to keep the size of the application as thin as possible, with minimal startup and shutdown times. Microservices should also consider lazy loading of objects and data.</p>
+<h2 id=10-development-production-parity>10. Development, production parity</h2>
+<p>The development, production parity principle states the importance of keeping the development and production environments as identical as possible. For example, let&rsquo;s consider an application with multiple services or processes, such as a job scheduler service, cache services, or one or more application services. In a development environment, we tend to run all of them on a single machine. Whereas, in production, we will facilitate independent machines to run each of these processes.</p>
+<h2 id=11-externalizing-logs>11. Externalizing logs</h2>
+<p>If the I/Os are not fast enough in a given infrastructure, they could create a bottleneck. The solution to this is to use a centralized logging framework. <strong>Splunk, greylog, Logstash, Logplex, Loggly</strong> are some examples of log shipping and analysis tools. The recommended approach is to ship logs to a central repository by tapping the logback appenders and write to one of the shipper&rsquo;s endpoints.</p>
+<p><img src=images/externalizing-logs.png alt></p>
+<h2 id=12-package-admin-processes>12. Package admin processes</h2>
+<p>Apart from application requests, most of the applications provision for admin tasks. This principle advices you to target the same release and an identical environment as the long running processes runs to perform these activities. Admin code should also be packaged along with the application code.</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-48dd09d55801293c398b5ad265cbefb5>Open Application Model</h1>
+<div class="td-byline mb-4">
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-67999ae3ebb50702517f8ab4c16d5b15>Introduction</h1>
+<div class="td-byline mb-4">
+By <b><a href=https://oam.dev/>https://oam.dev/</a></b> |
+<time datetime=2021-05-25 class=text-muted>2021-05-25</time>
+</div>
+<p>An open standard for defining cloud native apps.</p>
+<p>Focused on application rather than container or orchestrator, Open Application Model [OAM] brings modular, extensible, and portable design for modeling application deployment with higher level yet consistent API.</p>
+<p>This is the key to enable simple yet robust application delivery across hybrid environments including Kubernetes, cloud, or even IoT devices.</p>
+<h2 id=overview>Overview</h2>
+<h3 id=1-traditional-way---app-deployment-is-hard>1. Traditional Way - App Deployment is Hard</h3>
+<ol>
+<li>Developers spend time on infrastructure details instead of apps - ingress, labels, DNS, etc, and learning how the infrastructure is implemented.</li>
+<li>Inextensible - upper layer platform may be introduced, but it&rsquo;s almost certain that the needs of your app will outgrow the capabilities of that platform soon.</li>
+<li>Runtime lock-in - app description is tightly coupled with the runtime infrastructure, which heavily impact on how you configure, develop and operate the app across hybrid environments.</li>
+</ol>
+<h3 id=2-the-oam-way---an-app-centric-approach>2. The OAM Way - An App-centric Approach</h3>
+<ol>
+<li>Application first - define the app with a self-contained model, where operational behaviors as part of app definition, free of infrastructure here.</li>
+<li>Clarity and extensibility - an open standard to modularize platform capabilities into reusable pieces, assemble them into an app deployment per your own needs, fully self-service.</li>
+<li>Runtime agnostic - a consistent experience to deploy and operate your apps across on-prem clusters, cloud providers or even edge devices.</li>
+</ol>
+<h2 id=introduction>Introduction</h2>
+<blockquote>
+<p>&ldquo;Developers think in terms of application architecture, not of infrastructure.&rdquo;</p>
+</blockquote>
+<p><img src=images/introduction.png alt></p>
+<h2 id=overview-of-the-model>Overview of the Model</h2>
+<blockquote>
+<p><a href=https://github.com/oam-dev/spec/blob/master/2.overview_and_terminology.md>https://github.com/oam-dev/spec/blob/master/2.overview_and_terminology.md</a></p>
+</blockquote>
+<p>This specification proposes a model that defines cloud native applications as follows:</p>
+<blockquote>
+<p>A cloud native application is a collection of interrelated, but discrete components (services, tasks, workers) that, when coupled with configuration and instantiated in a suitable runtime, together accomplish a unified functional purpose.</p>
+</blockquote>
+<p>In current release, this application model defines the following:</p>
+<ul>
+<li>Components represents a runnable unit, together with a description (schematic).</li>
+<li>Workload types identify the different workloads that a component can execute.</li>
+<li>Traits are overlays that augment a component with additional operations-specific features. Traits represent operator concerns, not developer/software owner concerns.</li>
+<li>Application scopes represent application boundaries by grouping components with common properties or dependencies.</li>
+<li>An application configuration assembles a set of component instances, their traits, and the application scopes in which they are placed, combined with configuration parameters and metadata.</li>
+</ul>
+<p>Thus, an application is a collection of components with a set of operational traits and scoped together into one or more application boundaries.</p>
+<h2 id=see-it-in-action>See it in action</h2>
+<blockquote>
+<p><a href=https://github.com/oam-dev/kubevela>https://github.com/oam-dev/kubevela</a></p>
+</blockquote>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-39acc2d5dd68a7f0b30012f78601a727>Platform Engineering</h1>

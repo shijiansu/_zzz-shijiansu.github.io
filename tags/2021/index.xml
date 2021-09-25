@@ -1,4 +1,46 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – 2021</title><link>/tags/2021/</link><description>Recent content in 2021 on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Internal Platform Teams - What Are They and Do You Need One</title><link>/blog/2021/04/01/internal-platform-teams-what-are-they-and-do-you-need-one/</link><pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/04/01/internal-platform-teams-what-are-they-and-do-you-need-one/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – 2021</title><link>/tags/2021/</link><description>Recent content in 2021 on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Introduction</title><link>/blog/2021/05/25/introduction/</link><pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/05/25/introduction/</guid><description>
+&lt;p>An open standard for defining cloud native apps.&lt;/p>
+&lt;p>Focused on application rather than container or orchestrator, Open Application Model [OAM] brings modular, extensible, and portable design for modeling application deployment with higher level yet consistent API.&lt;/p>
+&lt;p>This is the key to enable simple yet robust application delivery across hybrid environments including Kubernetes, cloud, or even IoT devices.&lt;/p>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;h3 id="1-traditional-way---app-deployment-is-hard">1. Traditional Way - App Deployment is Hard&lt;/h3>
+&lt;ol>
+&lt;li>Developers spend time on infrastructure details instead of apps - ingress, labels, DNS, etc, and learning how the infrastructure is implemented.&lt;/li>
+&lt;li>Inextensible - upper layer platform may be introduced, but it&amp;rsquo;s almost certain that the needs of your app will outgrow the capabilities of that platform soon.&lt;/li>
+&lt;li>Runtime lock-in - app description is tightly coupled with the runtime infrastructure, which heavily impact on how you configure, develop and operate the app across hybrid environments.&lt;/li>
+&lt;/ol>
+&lt;h3 id="2-the-oam-way---an-app-centric-approach">2. The OAM Way - An App-centric Approach&lt;/h3>
+&lt;ol>
+&lt;li>Application first - define the app with a self-contained model, where operational behaviors as part of app definition, free of infrastructure here.&lt;/li>
+&lt;li>Clarity and extensibility - an open standard to modularize platform capabilities into reusable pieces, assemble them into an app deployment per your own needs, fully self-service.&lt;/li>
+&lt;li>Runtime agnostic - a consistent experience to deploy and operate your apps across on-prem clusters, cloud providers or even edge devices.&lt;/li>
+&lt;/ol>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Developers think in terms of application architecture, not of infrastructure.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="images/introduction.png" alt="">&lt;/p>
+&lt;h2 id="overview-of-the-model">Overview of the Model&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/oam-dev/spec/blob/master/2.overview_and_terminology.md">https://github.com/oam-dev/spec/blob/master/2.overview_and_terminology.md&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>This specification proposes a model that defines cloud native applications as follows:&lt;/p>
+&lt;blockquote>
+&lt;p>A cloud native application is a collection of interrelated, but discrete components (services, tasks, workers) that, when coupled with configuration and instantiated in a suitable runtime, together accomplish a unified functional purpose.&lt;/p>
+&lt;/blockquote>
+&lt;p>In current release, this application model defines the following:&lt;/p>
+&lt;ul>
+&lt;li>Components represents a runnable unit, together with a description (schematic).&lt;/li>
+&lt;li>Workload types identify the different workloads that a component can execute.&lt;/li>
+&lt;li>Traits are overlays that augment a component with additional operations-specific features. Traits represent operator concerns, not developer/software owner concerns.&lt;/li>
+&lt;li>Application scopes represent application boundaries by grouping components with common properties or dependencies.&lt;/li>
+&lt;li>An application configuration assembles a set of component instances, their traits, and the application scopes in which they are placed, combined with configuration parameters and metadata.&lt;/li>
+&lt;/ul>
+&lt;p>Thus, an application is a collection of components with a set of operational traits and scoped together into one or more application boundaries.&lt;/p>
+&lt;h2 id="see-it-in-action">See it in action&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/oam-dev/kubevela">https://github.com/oam-dev/kubevela&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>Blog: Internal Platform Teams - What Are They and Do You Need One</title><link>/blog/2021/04/01/internal-platform-teams-what-are-they-and-do-you-need-one/</link><pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/04/01/internal-platform-teams-what-are-they-and-do-you-need-one/</guid><description>
 &lt;p>The early 2000s, the era of the SysAdmin. They were the ultimate rulers of the infrastructure, the gatekeepers of any setup. If your app developers wanted anything done, they needed to pass through them. Specifically, this meant every script and piece of code was thrown over the fence to SysAdmins to figure out what to do with it and how to deploy it. Not a great experience on either side of the fence. Then 2007 came and Werner Vogels &lt;a href="https://queue.acm.org/detail.cfm?id=1142065">famously yelled&lt;/a>: “You build it, you run it”. And a whole generation of SysAdmins was fired. Cloud native was finally allowing developers to provision the resources they needed, whenever they needed them. The answer to every dev teams’ problems. Or was it?&lt;/p>
 &lt;p>While it did bring about a plethora of improvements around scalability, availability and ease of operation, it turns out Cloud native also meant things got a lot more complicated. As every company’s value proposition becomes digitized (&lt;a href="https://www.youtube.com/watch?v=ZAKn9qkYEwU&amp;amp;t=1978s">as Twilio’s CEO explains&lt;/a>), the degree of complexity of its systems grows exponentially. They suddenly need to integrate with countless new technologies, be deployed across multiple clusters and vendors in different regions, all while offering an effortless end experience to customers. The result of all of this is that your frontend app developers are completely overwhelmed by the sheer amount of tools that make up your infrastructure. And whenever they are supposed to be using those YAML files for their deployments, they end up going to your Ops team to ask for help. So much for “you build it, you run it”.&lt;/p>
 &lt;h2 id="the-key-to-true-devops">The key to true DevOps&lt;/h2>

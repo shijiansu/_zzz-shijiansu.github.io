@@ -2,7 +2,7 @@
 title: "Topics"
 menu:
   main:
-    weight: 20
+    weight: 10
     pre: <i class='fas fa-flask'></i>
 ---
 

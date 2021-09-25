@@ -1,9 +1,9 @@
 ---
 title: "Documentation"
-weight: 30
+weight: 20
 menu:
   main:
-    weight: 30
+    weight: 20
     pre: <i class='fas fa-graduation-cap'></i>
 ---
 

@@ -7,8 +7,8 @@ on:
   pull_request:
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
+  build_and_deploy:
+    runs-on: ubuntu-latest # ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -38,10 +38,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-  build:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - name: Install Node Dependencies
         run: npm install
 
@@ -55,17 +51,6 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'

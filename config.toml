@@ -1,8 +1,8 @@
 baseURL = "/"
-title = "Shijian Blog"
+title = "Shijian Knowledge Management"
 
 enableRobotsTXT = true
-uglyurls = true
+uglyurls = false
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
@@ -70,8 +70,8 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Shijian Blog"
-description = "Shijian Blog"
+title = "Shijian Knowledge Management"
+description = "Shijian Knowledge Management"
 languageName ="English"
 contentDir = "content"
 # Weight used for sorting.

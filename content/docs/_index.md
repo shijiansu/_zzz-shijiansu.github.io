@@ -1,11 +1,10 @@
-
 ---
 title: "Documentation"
-linkTitle: "Documentation"
-weight: 20
+weight: 30
 menu:
   main:
-    weight: 20
+    weight: 30
+    pre: <i class='fas fa-graduation-cap'></i>
 ---
 
 {{% pageinfo %}}

@@ -1,9 +1,10 @@
 ---
-title: "Topics"
+title: "Terminologies"
 menu:
   main:
-    weight: 20
-    pre: <i class='fas fa-flask'></i>
+    weight: 40
+    pre: <i class='fas fa-comments'></i>
+layout: docs
 ---
 
 

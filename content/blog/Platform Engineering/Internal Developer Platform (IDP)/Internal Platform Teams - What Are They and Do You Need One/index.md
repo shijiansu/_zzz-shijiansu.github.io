@@ -1,12 +1,12 @@
 ---
+date: 2021-04-01
+author: https://humanitec.com/blog/internal-platform-teams-what-are-they-and-do-you-need-one
 title: "Internal Platform Teams - What Are They and Do You Need One"
-categories: ["Examples"]
-tags: ["test", "sample", "docs"]
+categories: ["Backend Engineering", "Platform Engineering"]
+tags: ["IDP", "2021", "Devops"]
 weight: 9999
 description: >
 ---
-
-> https://humanitec.com/blog/internal-platform-teams-what-are-they-and-do-you-need-one | 2021-04-01
 
 The early 2000s, the era of the SysAdmin. They were the ultimate rulers of the infrastructure, the gatekeepers of any setup. If your app developers wanted anything done, they needed to pass through them. Specifically, this meant every script and piece of code was thrown over the fence to SysAdmins to figure out what to do with it and how to deploy it. Not a great experience on either side of the fence. Then 2007 came and Werner Vogels [famously yelled](https://queue.acm.org/detail.cfm?id=1142065): “You build it, you run it”. And a whole generation of SysAdmins was fired. Cloud native was finally allowing developers to provision the resources they needed, whenever they needed them. The answer to every dev teams’ problems. Or was it?
 

@@ -6,7 +6,9 @@ weight: 9999
 description: >
 ---
 
-> Su Shijian / 2021-09-25
+> Su Shijian | 2021-09-25
+
+## Steps
 
 ```bash
 # about google docsy - https://www.docsy.dev/docs/
@@ -77,3 +79,8 @@ EOL > gh-pages.yml
 ## set up GitHub Pages:
 ## repository -> Settings -> Pages -> select Source to "Branch: gh-pages"
 ```
+
+## Reference
+
+- https://github.com/google/docsy/blob/master/userguide/content/en/_index.html
+- https://github.com/google/docsy-example

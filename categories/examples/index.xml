@@ -1,8 +1,30 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Goldydocs – Examples</title><link>/categories/examples/</link><description>Recent content in Examples on Goldydocs</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 25 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/examples/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Set up from Google Docsy example</title><link>/docs/overview/set-up-from-google-docsy-example/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>/docs/overview/set-up-from-google-docsy-example/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Goldydocs – Examples</title><link>/categories/examples/</link><description>Recent content in Examples on Goldydocs</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 25 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/examples/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Getting Started</title><link>/docs/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/getting-started/</guid><description>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>This is a placeholder page that shows you how to use this template site.&lt;/p>
+&lt;/div>
+&lt;p>Information in this section helps your user try your project themselves.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.&lt;/p>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?&lt;/p>
+&lt;h2 id="setup">Setup&lt;/h2>
+&lt;p>Is there any initial setup users need to do after installation to try your project?&lt;/p>
+&lt;h2 id="try-it-out">Try it out!&lt;/h2>
+&lt;p>Can your users test their installation, for example by running a command or deploying a Hello World example?&lt;/p></description></item><item><title>Docs: Setup by Docsy example</title><link>/docs/setup-by-docsy-example/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>/docs/setup-by-docsy-example/</guid><description>
 &lt;blockquote>
-&lt;p>Origin / 2021-09-25&lt;/p>
+&lt;p>Su Shijian / 2021-09-25&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#8f5902;font-style:italic"># google docsy example template&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#8f5902;font-style:italic"># about google docsy - https://www.docsy.dev/docs/&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># google docsy example template&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># create the github repository from the google docsy example &amp;#34;Use this template&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># refer to https://www.docsy.dev/docs/getting-started/#using-the-github-ui&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># github hosting&lt;/span>
@@ -43,67 +65,19 @@ npm install -D postcss
 npm install
 hugo server
 &lt;span style="color:#8f5902;font-style:italic"># github actions&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># need to make default branch from &amp;#34;master&amp;#34; to &amp;#34;main&amp;#34;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># make default branch from &amp;#34;master&amp;#34; (as google docsy example) to &amp;#34;main&amp;#34; because of gh-pages.yml&lt;/span>
 mkdir .github &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#204a87">cd&lt;/span> .github
 mkdir workflows &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#204a87">cd&lt;/span> workflows
 &lt;span style="color:#204a87">echo&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;&amp;lt;&amp;lt;&lt;/span> EOL
-line 1, &lt;span style="color:#4e9a06">${&lt;/span>&lt;span style="color:#000">kernel&lt;/span>&lt;span style="color:#4e9a06">}&lt;/span>
-line 2,
-line 3, &lt;span style="color:#4e9a06">${&lt;/span>&lt;span style="color:#000">distro&lt;/span>&lt;span style="color:#4e9a06">}&lt;/span>
-line &lt;span style="color:#0000cf;font-weight:bold">4&lt;/span>
 line ...
-EOL &amp;gt; gh-pages2.yml
+EOL &amp;gt; gh-pages.yml
 &lt;span style="color:#8f5902;font-style:italic"># github actions yml explaination&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## hugo github action: https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic">## nodjes environment: https://github.com/actions/setup-node&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># Set up GitHub Pages: repository -&amp;gt; Settings -&amp;gt; Pages -&amp;gt; select Source to &amp;#34;Branch: gh-pages&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># github&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># create shijiansu.github.io.git&lt;/span>
-git clone https://github.com/shijiansu/shijiansu.github.io
-&lt;span style="color:#204a87">cd&lt;/span> shijiansu.github.io
-curl https://www.toptal.com/developers/gitignore/api/xcodeinjection,xcode,webstorm+all,vuejs,visualstudiocode,vertx,terraform,swift,sonarqube,scala,react,r,pycharm+all,puppet,objective-c,node,maven,macos,kotlin,jmeter,java,intellij+all,gradle,go,eclipse,androidstudio,android,pydev,python,hugo -o .gitignore
-&lt;span style="color:#204a87">cd&lt;/span> ..
-&lt;span style="color:#8f5902;font-style:italic"># ---&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># initiate hugo&lt;/span>
-hugo new site shijiansu.github.io --force &lt;span style="color:#8f5902;font-style:italic"># use force as the folder exists&lt;/span>
-&lt;span style="color:#204a87">cd&lt;/span> shijiansu.github.io
-&lt;span style="color:#8f5902;font-style:italic"># ---&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># initiate google docsy&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># https://www.docsy.dev/docs/getting-started/&lt;/span>
-sudo npm install -D autoprefixer
-sudo npm install -D postcss-cli
-sudo npm install -D postcss
-&lt;span style="color:#8f5902;font-style:italic">## build your own site using the Docsy theme&lt;/span>
-e
-&lt;span style="color:#8f5902;font-style:italic"># ---&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># set up github action&lt;/span>
-&lt;span style="color:#204a87">cd&lt;/span> shijian-blog
-git submodule add https://github.com/flysnow-org/maupassant-hugo themes/maupassant &lt;span style="color:#8f5902;font-style:italic"># will push to github&lt;/span>
-&lt;span style="color:#204a87">echo&lt;/span> &lt;span style="color:#000">theme&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">\&amp;#34;&lt;/span>maupassant&lt;span style="color:#4e9a06">\&amp;#34;&lt;/span> &amp;gt;&amp;gt; config.toml
-hugo server -D
-&lt;span style="color:#8f5902;font-style:italic"># deploy to github&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">## https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Getting Started</title><link>/docs/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/getting-started/</guid><description>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>This is a placeholder page that shows you how to use this template site.&lt;/p>
-&lt;/div>
-&lt;p>Information in this section helps your user try your project themselves.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.&lt;/p>
-&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
-&lt;p>Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?&lt;/p>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?&lt;/p>
-&lt;h2 id="setup">Setup&lt;/h2>
-&lt;p>Is there any initial setup users need to do after installation to try your project?&lt;/p>
-&lt;h2 id="try-it-out">Try it out!&lt;/h2>
-&lt;p>Can your users test their installation, for example by running a command or deploying a Hello World example?&lt;/p></description></item><item><title>Docs: Example Page</title><link>/docs/getting-started/example-page/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/example-page/</guid><description>
+&lt;span style="color:#8f5902;font-style:italic"># github pages&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## set up GitHub Pages: repository -&amp;gt; Settings -&amp;gt; Pages -&amp;gt; select Source to &amp;#34;Branch: gh-pages&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Example Page</title><link>/docs/getting-started/example-page/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/docs/getting-started/example-page/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>This is a placeholder page. Replace it with your own content.&lt;/p>
 &lt;/div>

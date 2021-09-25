@@ -1,0 +1,118 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Cloud Native</title><link>/categories/cloud-native/</link><description>Recent content in Cloud Native on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/cloud-native/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 12 Factor App Principles and Cloud-Native Microservices</title><link>/blog/2020/09/22/12-factor-app-principles-and-cloud-native-microservices/</link><pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate><guid>/blog/2020/09/22/12-factor-app-principles-and-cloud-native-microservices/</guid><description>
+&lt;p>&lt;img src="images/12-factor-app-principles.png" alt="img">&lt;/p>
+&lt;p>12-factor app is a methodology or set of principles for building the scalable and performant, independent, and most resilient enterprise applications. It establishes the general principles and guidelines for creating robust enterprise applications. 12-factor app principles got very popular as it aligns with Microservice principles.&lt;/p>
+&lt;h2 id="the-12-factor-principles">The 12-Factor Principles&lt;/h2>
+&lt;ul>
+&lt;li>Codebase (One codebase tracked in revision control, many deploys)&lt;/li>
+&lt;li>Dependencies (Explicitly declare and isolate the dependencies)&lt;/li>
+&lt;li>Config (Store configurations in an environment)&lt;/li>
+&lt;li>Backing Services (treat backing resources as attached resources)&lt;/li>
+&lt;li>Build, release, and Run (Strictly separate build and run stages)&lt;/li>
+&lt;li>Processes (execute the app as one or more stateless processes)&lt;/li>
+&lt;li>Port Binding (Export services via port binding)&lt;/li>
+&lt;li>Concurrency (Scale out via the process model)&lt;/li>
+&lt;li>Disposability (maximize the robustness with fast startup and graceful shutdown)&lt;/li>
+&lt;li>Dev/prod parity (Keep development, staging, and production as similar as possible)&lt;/li>
+&lt;li>Logs (Treat logs as event streams)&lt;/li>
+&lt;li>Admin processes (Run admin/management tasks as one-off processes)&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-codebase-one-codebase-tracked-in-revision-control-many-deploys">1. Codebase (One Codebase Tracked In Revision Control, Many Deploys)&lt;/h2>
+&lt;p>12-factor app advocates that every application should have its own codebase (repos). Multiple codebases for multiple versions must be avoided. Please do note that having branches would be fine. I.e. For all the deployment environments there should be only one repo but not multiple.&lt;/p>
+&lt;p>Multiple apps sharing the same code are a violation of the twelve-factor. Here you should opt-in for shared libraries.&lt;/p>
+&lt;p>From the 12-factor app perspective app, deploy meaning the running instance of an app like production, staging, QA, etc. Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.&lt;/p>
+&lt;p>Different versions (the version is like a code change that is available in one environment but not in other) may be active in multiple deploys.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In Microservices, every service should have its own codebase. Having an independent codebase helps you to easy CI/CD process for your applications.&lt;/li>
+&lt;/ul>
+&lt;p>Twelve-factor app advocates of not sharing the code between the application. If you need to share you need to build a library and make it as a dependency and manage through package repository like maven.&lt;/p>
+&lt;h2 id="2-dependencies-explicitly-declare-and-isolate-the-dependencies">2. Dependencies (Explicitly Declare and Isolate the Dependencies)&lt;/h2>
+&lt;p>It talks about managing the dependencies externally using dependency management tools instead of adding them to your codebase.&lt;/p>
+&lt;p>From the perspective of the Java, you can think of Gradle as a dependency manager. You will mention all the dependencies in build.gradle file and your application will download all the mentioned dependencies from maven repository or various other repositories.&lt;/p>
+&lt;p>You also need to consider the dependencies from the operating system/ execution environment perspective as well.&lt;/p>
+&lt;p>Microservices: All the application packages will be managed through package managers like sbt, maven.&lt;/p>
+&lt;ul>
+&lt;li>In non-containerized environments, you can go for configuration management tools like chef, ansible, etc. to install system-level dependencies.&lt;/li>
+&lt;li>For a containerized environment, you can go for dockerfile.&lt;/li>
+&lt;/ul>
+&lt;h2 id="3-config-store-configurations-in-an-environment">3. Config (Store Configurations In an Environment&lt;/h2>
+&lt;p>Anything that varies between the deployment environments is considered as configuration. This includes:&lt;/p>
+&lt;ul>
+&lt;li>Database connections and credentials, system integration endpoints&lt;/li>
+&lt;li>Credentials to external services such as Amazon S3 or Twitter or any other external apps&lt;/li>
+&lt;li>Application-specific information like IP Addresses, ports, and hostnames, etc.&lt;/li>
+&lt;/ul>
+&lt;p>You should not hardcode any configuration values as constants in the codebase. This is a direct violation of 12-factor app principles.&lt;/p>
+&lt;p>12-factor app principles suggest saving the configuration values in the environment variables.&lt;/p>
+&lt;p>It advocates the strict separation between the code and configurations. The code must be the same irrespective of where the application being deployed.&lt;/p>
+&lt;p>As per &amp;ldquo;config&amp;rdquo;, what varies for the environment to the environment must be moved to configurations and managed via environment variables.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Externalize the configurations from the application. In a microservice service environment, you can manage the configurations for your applications from a source control like git (spring-cloud-config) and use the environment variables to not to maintain the sensitive information in the source control.&lt;/li>
+&lt;/ul>
+&lt;h2 id="4-backing-services-treat-backing-resources-as-attached-resources">4. Backing Services (Treat Backing Resources as Attached Resources)&lt;/h2>
+&lt;p>As per 12 factor app principles, a backing service is an application/service the app consumes over the network as part of its normal operation.&lt;/p>
+&lt;p>Database, Message Brokers, any other external systems that the app communicates is treated as Backing service.&lt;/p>
+&lt;p>12-factor app can automatically swap the application from one provider to another without making any further modifications to the code base. Let us say, you would like to change the database server from MySQL to Aurora. To do so, you should not make any code changes to your application. Only configuration change should be able to take care of it.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In a microservice ecosystem, anything external to service is treated as attached resource. The resource can be swapped at any given point of time without impacting the service.&lt;/li>
+&lt;/ul>
+&lt;p>By following the interfaced based programming allow to swap the provider dynamically without impact on the system. Plug-in based implementation also helps you to support multiple providers.&lt;/p>
+&lt;h2 id="5-build-release-and-run-strictly-separate-build-and-run-stages">5. Build, Release, and Run (Strictly Separate Build and Run Stages)&lt;/h2>
+&lt;p>The application must have a strict separation between the build, release, and run stages. Let us understand each stage in more detail.&lt;/p>
+&lt;ul>
+&lt;li>Build stage: transform the code into an executable bundle/ build package.&lt;/li>
+&lt;li>Release stage: get the build package from the build stage and combines with the configurations of the deployment environment and make your application ready to run.&lt;/li>
+&lt;li>Run stage: It is like running your app in the execution environment.&lt;/li>
+&lt;/ul>
+&lt;p>Microservices: You can use CI/CD tools to automate the builds and deployment process. Docker images make it easy to separate the build, release, and run stages more efficiently.&lt;/p>
+&lt;h2 id="6-processes-execute-the-app-as-one-or-more-stateless-processes">6. Processes (Execute the App as One or More Stateless Processes)&lt;/h2>
+&lt;p>The app is executed inside the execution environment as a process. An app can have one or more instances/processes to meet the user/customer demands.&lt;/p>
+&lt;p>As per 12-factor principles, the application should not store the data in in-memory and it must be saved to a store and use from there. As far as the state concern, your application should store the state in the database instead of in memory of the process.&lt;/p>
+&lt;p>Avoid using sticky sessions, using sticky sessions are a violation of 12-factor app principles. If you would store the session information, you can choose redis or memcached or any other cache provider based on your requirements.&lt;/p>
+&lt;p>By following these, your app can be highly scalable without any impact on the system&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the stateless nature of REST, your services can be horizontally scaled as per the needs with zero impact. If your system still requires to maintain the state use the attached resources (redis, Memcached, or datastore) to store the state instead of in-memory.&lt;/li>
+&lt;/ul>
+&lt;h2 id="7-port-binding-export-services-via-port-binding">7. Port Binding (Export Services Via Port Binding)&lt;/h2>
+&lt;p>The twelve-factor app is completely self-contained and doesn&amp;rsquo;t rely on runtime injection of a webserver into the execution environment to create a web-facing service. The web app exports HTTP as a service by binding to a port, and listening to requests coming in on that port.&lt;/p>
+&lt;p>In short, this is all about having your application as a standalone instead of deploying them into any of the external web servers.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Spring boot is one example of this one. Spring boot by default comes with embedded tomcat, jetty, or undertow.&lt;/li>
+&lt;/ul>
+&lt;h2 id="8-concurrency-scale-out-via-the-process-model">8. Concurrency (Scale Out Via the Process Model)&lt;/h2>
+&lt;p>This talks about scaling the application. Twelve-factor app principles suggest to consider running your application as multiple processes/instances instead of running in one large system. You can still opt-in for threads to improve the concurrent handling of the requests.&lt;/p>
+&lt;p>In a nutshell, twelve-factor app principles advocate to opt-in for horizontal scaling instead of vertical scaling.&lt;/p>
+&lt;p>(vertical scaling- Add additional hardware to the system&lt;/p>
+&lt;p>Horizontal scaling - Add additional instances of the application)&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the containerization, applications can be scaled horizontally as per the demands.&lt;/li>
+&lt;/ul>
+&lt;h2 id="9-disposability-maximize-the-robustness-with-fast-startup-and-graceful-shutdown">9. Disposability (Maximize the Robustness with Fast Startup and Graceful Shutdown)&lt;/h2>
+&lt;p>The twelve-factor app&amp;rsquo;s processes are disposable, meaning they can be started or stopped at a moment&amp;rsquo;s notice. When the application is shutting down or starting, an instance should not impact the application state.&lt;/p>
+&lt;p>Graceful shutdowns are very important. The system must ensure the correct state.&lt;/p>
+&lt;p>The system should not get impacted when new instances are added or takedown the existing instances as per need. This is also known as system disposability.&lt;/p>
+&lt;p>Systems do crash due to various reasons. the system should ensure that the impact would be minimal and the application should be stored in a valid state.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the containerization into the deployment process of microservices, your application implicitly follows this principle at a maximum extent. Docker containers can be started or stopped instantly. Storing request, state, or session data in queues or other backing services ensures that a request is handled seamlessly in the event of a container crash.&lt;/li>
+&lt;/ul>
+&lt;h2 id="10-devprod-parity-keep-development-staging-and-production-as-similar-as-possible">10. Dev/Prod Parity (Keep Development, Staging, and Production as Similar as Possible)&lt;/h2>
+&lt;p>The twelve-factor methodology suggests keeping the gap between development and production environment as minimal as possible. This reduces the risks of showing up bugs in a specific environment.&lt;/p>
+&lt;p>The twelve-factor developer resists the urge to use different backing services between development and production.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: This is an inherent feature of the Microservices that is run using the containerization techniques.&lt;/li>
+&lt;/ul>
+&lt;h2 id="11-logs-treat-logs-as-event-streams">11. Logs (Treat Logs as Event Streams)&lt;/h2>
+&lt;p>Logs become paramount in troubleshooting the production issues or understanding the user behavior. Logs provide visibility into the behavior of a running application.&lt;/p>
+&lt;p>Twelve-factor app principles advocate separating the log generation and processing the log&amp;rsquo;s information. From the application logs will be written as a standard output and the execution environment takes care of capture, storage, curation, and archival of such stream should be handled by the execution environment.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In Microservices, observability is the first-class citizen. Observability can be achieved through using APM tools (ELK, Newrelic, and other tools) or log aggregations tools like Splunk, logs, etc.&lt;/li>
+&lt;/ul>
+&lt;p>By following the above-mentioned guidelines all you need is to debug an issue is to go to the central dashboard of your tool and search for it.&lt;/p>
+&lt;h2 id="12-admin-processes-run-adminmanagement-tasks-as-one-off-processes">12. Admin Processes (Run Admin/Management Tasks as One-Off Processes)&lt;/h2>
+&lt;p>There is a number of one-off processes as part of the application deployment like data migration, executing one-off scripts in a specific environment.&lt;/p>
+&lt;p>Twelve-factor principles advocates for keeping such administrative tasks as part of the application codebase in the repository. By doing so, one-off scripts follow the same process defined for your codebase.&lt;/p>
+&lt;p>Ensure one-off scripts are automated so that you don&amp;rsquo;t need to worry about executing them manually before releasing the build.&lt;/p>
+&lt;p>Twelve-factor principles also suggest using the built-in tool of the execution environment to run those scripts on production servers.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Containerization also helps here to run the one-off processes as a task and shutdown automatically one done with the implementation.&lt;/li>
+&lt;/ul>
+&lt;p>That&amp;rsquo;s all for today. Hope you have enjoyed the article. Please share your thoughts or ideas or improvements in the below comments box.&lt;/p></description></item></channel></rss>

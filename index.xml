@@ -7,12 +7,12 @@
 &lt;p>The common thread in everything they do: enable developer self-service across the organization. As Skelton and Pais explain in &lt;a href="https://teamtopologies.com/book">Team Topologies&lt;/a>,&lt;/p>
 &lt;p>“The Platform team’s knowledge is best made available via self-service capabilities via a web portal and or/programmable API [i.e. an IDP] (as opposed to lengthy instruction manuals)”.&lt;/p>
 &lt;p>&lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">The 2020 State of DevOps report by Puppet&lt;/a> clearly surfaces this by mapping the level of DevOps sophistication against the use of self-service platforms built by Platform teams.&lt;/p>
-&lt;p>&lt;img src="images/01.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="images/1.png" alt="1">&lt;/p>
 &lt;p>Source: &lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">2020 State of DevOps report by Puppet&lt;/a>&lt;/p>
 &lt;p>Jason Warner, CTO at GitHub, &lt;a href="https://humanitec.com/blog/jason-warner-why-github-built-their-own-internal-developer-platform">explained in his interview with us&lt;/a> how building their platform team and their IDP wasn’t really a cosmetic choice but rather a vital move on their part, which allowed GitHub to scale the way they did. Jan Löffler, Head of Platform at Zalando (largest e-commerce in Germany), &lt;a href="https://humanitec.com/blog/why-zalando-builds-an-own-developer-platform">agrees that an Internal Platform team&lt;/a>, in combination with an Internal Developer Platform, is an essential component of what makes such a large organization function and ship software so much faster than a regular team.&lt;/p>
 &lt;h2 id="impressive-impact">Impressive impact&lt;/h2>
 &lt;p>The strategic focus on Platform teams and developer self-service in these elite organizations clearly pays off. The results of well-trimmed Internal Platform teams are quite astounding: top performers deploy a stunning 208 times more frequently than low performers. &lt;a href="https://services.google.com/fh/files/misc/state-of-devops-2019.pdf">The 2019 Accelerate State of DevOps Report&lt;/a> shows very interesting data on the top percentile teams:&lt;/p>
-&lt;p>&lt;img src="images/02.png" alt="02">&lt;/p>
+&lt;p>&lt;img src="images/2.png" alt="02">&lt;/p>
 &lt;p>Source: &lt;a href="https://services.google.com/fh/files/misc/state-of-devops-2019.pdf">2019 Accelerate State of DevOps Report&lt;/a>&lt;/p>
 &lt;p>While these “elite performers” only make up for a fraction of the market, this trend is catching the attention of many others. According to the &lt;a href="https://www.gartner.com/en/documents/3906678/how-to-scale-devops-by-building-platform-teams">2019 Gartner DevOps report&lt;/a>, IDPs and Platform teams are increasingly the go-to approach to solve problems holistically and handle multiple teams and applications, instead of just the projects at hand. According to this report, 60% of surveyed teams are currently embarking onto the platform journey.&lt;/p>
 &lt;p>We have already written at length about &lt;a href="https://humanitec.com/blog/the-rise-of-internal-developer-platforms">the rise of Internal Developer Platforms&lt;/a> in the industry and &lt;a href="https://humanitec.com/blog/what-is-an-internal-developer-platform">what they are&lt;/a>. A match made in DevOps heaven, IDPs are the indispensable companion of any Platform team. Together, they provide app developers with the best tools and workflows to do their job as efficiently and effortlessly as possible.&lt;/p>
@@ -30,7 +30,7 @@
 &lt;p>We compiled the key areas that we have seen Internal Platform teams focus on, in order to deliver the right internal tooling, standards and workflows to their application developers. The cornerstone is always the reduction of complexity and cognitive load for the end user of the Internal Developer Platform. If that is unstable, your engineering productivity will drop dramatically. But let’s get into the details.&lt;/p>
 &lt;h3 id="treat-your-platform-as-a-product">Treat your platform as a product&lt;/h3>
 &lt;p>We mentioned this already, but it is probably the most important takeaway: your Internal Platform team needs to be driven by a &lt;a href="https://martinfowler.com/articles/talk-about-platforms.html">product mindset&lt;/a>. They need to focus on what provides real value (as opposed to what is “cool” to work on) for their internal customers, the app developers, based on the feedback they gave them. This philosophy needs to be drilled into every aspect of your Platform team’s activities. Iterate on your Internal Developer Platform, ship new features. At the same time, don’t forget you are also responsible for maintaining a reliable and scalable Ops setup. If something goes wrong in your team, all other teams will suffer from it.&lt;/p>
-&lt;p>&lt;img src="images/03.png" alt="03">&lt;/p>
+&lt;p>&lt;img src="images/3.png" alt="3">&lt;/p>
 &lt;p>Source: &lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">2020 State of DevOps report by Puppet&lt;/a>&lt;/p>
 &lt;h3 id="optimize-iteration-speed">Optimize iteration speed&lt;/h3>
 &lt;p>When you think about it, the speed at which your organization innovates is directly correlated to (and constrained by) your iteration speed. Increase that, and your app developers will be able to consistently ship more features and products to your customers, confident that things won’t break.&lt;/p>
@@ -42,12 +42,12 @@
 &lt;/ul>
 &lt;h3 id="solve-common-problems">Solve common problems&lt;/h3>
 &lt;p>A good Platform team prevents other teams from reinventing the wheel by solving common problems time and again. It’s key to figure out what these common problems are: start by understanding developer pain points and friction areas that cause slowdowns in development. You can gather this information both qualitatively through developers’ feedback and quantitatively via engineering KPIs. This intel, combined with an understanding of the future direction of the product, can help the Internal Platform team shape a good roadmap and pick the right battles to fight. The Puppet report gives us some insights on what the core responsibilities of Platform teams are.&lt;/p>
-&lt;p>&lt;img src="images/04.png" alt="04">&lt;/p>
+&lt;p>&lt;img src="images/4.png" alt="4">&lt;/p>
 &lt;p>Source: &lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">2020 State of DevOps report by Puppet&lt;/a>&lt;/p>
 &lt;h3 id="be-glue-my-friend">Be glue, my friend&lt;/h3>
 &lt;p>Platform teams need to define a golden path for their developers: a reduced set of sane, proven choices of tools that get the job done and allow you to build, deploy, and operate your services. Once you have defined this path, the main value you create as an Internal Platform team is to be the sticky glue that brings all the tools together and ensures a smooth development and deployment experience for your engineers.&lt;/p>
 &lt;p>It’s important you don’t go to war with commercial vendors. It doesn’t matter if your homegrown CI/CD solution is superior today. AWS, GCP, Humanitec will catch up, faster than expected, and make that tool and team redundant. Every Platform team should be asking themselves: what is our differentiator? Instead of building in-house alternatives to a CI system, a CD tool or a metrics platform and compete against businesses that have 20 or 50 times your capacity, focus on the specific needs of your teams and tailor off-the-shelf solutions to your requirements. Commercial competitors are more likely to optimize for more generic needs of the industry anyway.&lt;/p>
-&lt;p>&lt;img src="images/05.png" alt="05">&lt;/p>
+&lt;p>&lt;img src="images/5.png" alt="5">&lt;/p>
 &lt;h3 id="educate-and-empower-your-teams">Educate and empower your teams&lt;/h3>
 &lt;p>Finally, a good Platform team is a central source of education and best practices for the rest of the company. Some of the most impactful activities we saw elite teams routinely perform in this area include:&lt;/p>
 &lt;ul>
@@ -57,7 +57,274 @@
 &lt;li>Organizing internal hackathons so dev teams can surface their requirements for internal tooling needs. Nigel Simons (Director Enterprise Tech at a Fortune 100) explained in a &lt;a href="https://humanitec.com/blog/developer-experience-roundtable-continuous-improvement-nigel-simpson-erik-muttersbach">conversation with us&lt;/a> that 50% of their teams’ hackathon ideas actually make it to production.&lt;/li>
 &lt;/ul>
 &lt;h2 id="summary">Summary&lt;/h2>
-&lt;p>If you and your team are scaling up your infrastructure and adding engineers at an increasing pace, you are likely considering (or hopefully will consider, after reading this) to build an Internal Platform team. The benefits can be many and if done right, a Platform team can allow your organization to scale considerably faster and more efficiently than with a less standardized approach and product driven mentality.&lt;/p></description></item><item><title>Blog: Easy documentation with Docsy</title><link>/blog/2018/10/06/easy-documentation-with-docsy/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>/blog/2018/10/06/easy-documentation-with-docsy/</guid><description>
+&lt;p>If you and your team are scaling up your infrastructure and adding engineers at an increasing pace, you are likely considering (or hopefully will consider, after reading this) to build an Internal Platform team. The benefits can be many and if done right, a Platform team can allow your organization to scale considerably faster and more efficiently than with a less standardized approach and product driven mentality.&lt;/p></description></item><item><title>Blog: Backend as a Service - What is a BaaS</title><link>/blog/2021/02/09/backend-as-a-service-what-is-a-baas/</link><pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate><guid>/blog/2021/02/09/backend-as-a-service-what-is-a-baas/</guid><description>
+&lt;h2 id="what-is-a-backend-as-a-service">What is a backend as a service?&lt;/h2>
+&lt;p>&lt;img src="images/0.png" alt="0">&lt;/p>
+&lt;p>A BaaS or mBaaS or Backend as a Service is a platform that automates backend side development and takes care of the cloud infrastructure. Using a BaaS, you will outsource the responsibilities of running and maintaining servers to a third party and focus on the frontend or client-side development.&lt;/p>
+&lt;p>On top of that, a BaaS will provide tools to help you create a backend code and speed up the development process. It has ready to use features like scalable databases, APIs, cloud code functions, social media integrations, file storage, and push notifications.&lt;/p>
+&lt;h3 id="frontend-vs-backend">Frontend vs. Backend&lt;/h3>
+&lt;p>&lt;img src="images/1.png" alt="1">&lt;/p>
+&lt;p>First things, first! Here is a simple explanation of the differences between the frontend and backend.&lt;/p>
+&lt;ul>
+&lt;li>Frontend: Every software application has a section that the user sees that is called the frontend.&lt;/li>
+&lt;li>Backend: There is also a part that the user does not see that is named backend. These two portions combine through APIs.&lt;/li>
+&lt;/ul>
+&lt;p>Please refer to Wikipedia know more about Frontend vs. Backend.&lt;/p>
+&lt;h3 id="baas-vs-custom-backend">BaaS vs. Custom Backend&lt;/h3>
+&lt;p>For every app you build, there is a choice to develop it, creating a custom backend, or using a BaaS framework. Let’s understand the difference between these two approaches.&lt;/p>
+&lt;p>Going for a custom backend, you will have to create your backend from scratch and handle the infrastructure. The pros of this approach are the flexibility it provides and customization possibilities. The downsides will be higher development costs and a longer time to market.&lt;/p>
+&lt;p>On the other hand, a BaaS will deliver ready to use building blocks and code generation tools. The advantages of this approach are a much faster development process and reduced time to market. The cons will be lower flexibility and following a standardized architecture.&lt;/p>
+&lt;p>The following examples will help you to understand the differences between custom coding and using a BaaS.&lt;/p>
+&lt;h4 id="example-01--baas-vs-aws-ec2-instances">Example 01 – BaaS vs. AWS EC2 Instances&lt;/h4>
+&lt;p>Imagine you would like to build a new software project and that you will not use a BaaS. The first step before you start developing the backend side code is to set up the servers. Here is how it will work:&lt;/p>
+&lt;ul>
+&lt;li>Login on AWS or any other cloud.&lt;/li>
+&lt;li>Go to Instances&lt;/li>
+&lt;li>Launch Instance&lt;/li>
+&lt;li>Select the Operating System&lt;/li>
+&lt;li>Instance Size, Type&lt;/li>
+&lt;li>Configure Instance Details
+&lt;ul>
+&lt;li>Number of instances&lt;/li>
+&lt;li>Network&lt;/li>
+&lt;li>IP&lt;/li>
+&lt;li>Monitoring&lt;/li>
+&lt;li>Other settings like Auto Scaling, IAM, etc&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Add Storage&lt;/li>
+&lt;li>Security Settings&lt;/li>
+&lt;/ul>
+&lt;p>All right, your instance is up and running, and now you can start coding! Not really! That is only the first step of the process, and you will still need to install the web-server, database, framework, etc. After all that is done, you can start coding. The time to perform this process can range from a few hours (for a small project with skilled backend developers) to more than a day for large environments.&lt;/p>
+&lt;p>This same process using a backend as a service will be done with a few clicks and take no more than a few minutes.&lt;/p>
+&lt;h4 id="example-02--baas-vs-custom-coding-login-feature">Example 02 – BaaS vs. Custom coding Login feature&lt;/h4>
+&lt;p>Imagine that after your server setup is ready and you want to develop your application’s first feature. Let’s consider the first feature you will code is a social login to Facebook. I will assume outsourcing development to an offshore company, which will cost $25/hour. This simple task will take around 16 hours and cost $400.&lt;/p>
+&lt;p>On the other hand, using a BaaS will allow you to implement the same feature in less than one hour. You will have a saving of 15 hours and $375. Not bad for a simple task implementation!&lt;/p>
+&lt;h4 id="example-03--gdpr-security-settings">Example 03 – GDPR security settings&lt;/h4>
+&lt;p>GDPR privacy requirements are pretty complicated, and the implementation will demand a lot of engineering effort. The requirements will range from implementing HTTPS for transit data to encrypt server-side data in rest (and several other conditions). The exact amount of engineering hours to fulfill all the elements will depend on the project’s size and complexity, but can easily surpass 100 hours of implementation.&lt;/p>
+&lt;p>Outsourcing this implementation to a backend as a service company makes sense, especially for small to medium projects. Because the backend platforms can dilute the investment made to implement GDPR settings among hundreds or thousands of apps, the stake per app will be minimal. A company with a single project will have to offset all the investments under only one application. Even if the app is successful, it will demand much more time to return the investment.&lt;/p>
+&lt;h3 id="baas-vs-mbaas">BaaS vs. MBaaS&lt;/h3>
+&lt;p>BaaS and MBaaS are pretty much the same things! You can use a backend as a service for web projects or mobile projects. It’s recognized as a mobile backend as a service (MBaaS) or mobile BaaS when used for mobile development.&lt;/p>
+&lt;p>Why use a backend as a service?
+A BaaS platform will help you to solve two problems:&lt;/p>
+&lt;p>Manage and scale cloud infrastructure
+Speed up backend development
+There are many benefits of using a BaaS cloud, and the reasons to use a backend as a service classifies into business and technical aspects.&lt;/p>
+&lt;h2 id="why-use-a-backend-as-a-service">Why use a backend as a service?&lt;/h2>
+&lt;p>A BaaS platform will help you to solve two problems:&lt;/p>
+&lt;ul>
+&lt;li>Manage and scale cloud infrastructure&lt;/li>
+&lt;li>Speed up backend development&lt;/li>
+&lt;/ul>
+&lt;p>There are many benefits of using a BaaS cloud, and the reasons to use a backend as a service classifies into business and technical aspects.&lt;/p>
+&lt;h3 id="business-reasons-to-use-a-baas">Business reasons to use a BaaS&lt;/h3>
+&lt;p>The business advantages of a backend as a service are mainly related to productivity gains and outsourcing cloud management responsibilities. In particular, for small to medium size projects, you will have substantial benefits using a backend platform. The math is pretty simple; a backend/infrastructure engineer will cost around $80k/year in the USA. Outsourcing part of the work to a third party will allow offsetting this cost.&lt;/p>
+&lt;p>The other advantage is delivering faster time to market to a software project. Waiting for several months to provide a software product will kill the market opportunity or make you start behind the competition. So, the business advantages of a BaaS are:&lt;/p>
+&lt;ul>
+&lt;li>Reduce time to market&lt;/li>
+&lt;li>Save money and decrease the cost of development&lt;/li>
+&lt;li>Assign fewer backend developers to a project (same results with fewer developers)&lt;/li>
+&lt;li>Outsource cloud infrastructure management&lt;/li>
+&lt;/ul>
+&lt;h3 id="technical-reasons-to-use-a-baas">Technical reasons to use a BaaS&lt;/h3>
+&lt;p>Good backend developers are difficult to find and are well-paid professionals. If you find one of them, make sure you use their time wisely and ask them to deliver high-value code. Programming, repetitive activities, and boilerplate code is a waste of time and money. So, it has to be avoided.&lt;/p>
+&lt;p>The other advantage of a backend service is that it will let your frontend developers concentrate on what they are best at. That is, delivering frontend code and excellent usability for your application. So, the technical advantages of a BaaS are:&lt;/p>
+&lt;ul>
+&lt;li>Focus on frontend development&lt;/li>
+&lt;li>Excludes redundant stack setup&lt;/li>
+&lt;li>No need to program boilerplate code&lt;/li>
+&lt;li>Standardize the coding environment&lt;/li>
+&lt;li>Let backend developers program high-value lines of code&lt;/li>
+&lt;li>Provides ready to use features like authentication, data storage, and search&lt;/li>
+&lt;li>Let you clone apps and run testing environments&lt;/li>
+&lt;li>Focus on coding business logic rather than boiler plate code&lt;/li>
+&lt;li>Has ready to use security settings and backup procedures&lt;/li>
+&lt;/ul>
+&lt;h2 id="when-to-use-a-backend-as-a-service">When to use a backend as a service?&lt;/h2>
+&lt;p>Here are three everyday use cases for using a backend as a service platform:&lt;/p>
+&lt;ul>
+&lt;li>Making an MVP – Minimum Viable Product&lt;/li>
+&lt;li>Stand-alone apps or applications that require a small number of integrations&lt;/li>
+&lt;li>Enterprise apps that are not mission-critical&lt;/li>
+&lt;/ul>
+&lt;p>For these cases, using a BaaS is a no-brain and will save you a lot of time and money.&lt;/p>
+&lt;h3 id="advantages-and-disadvantages-of-a-baas">Advantages and Disadvantages of a BaaS&lt;/h3>
+&lt;p>Here are the pros and cons of using a backend as a service.&lt;/p>
+&lt;p>Advantages of a Backend as a Service&lt;/p>
+&lt;ul>
+&lt;li>Development speed – It’s super fast&lt;/li>
+&lt;li>Development price – It’s really cheap&lt;/li>
+&lt;li>It’s serverless, and you don’t need to manage infrastructure&lt;/li>
+&lt;/ul>
+&lt;p>To know all the benefits of using a BaaS, please read: BaaS – 22 Benefits &lt;a href="https://blog.back4app.com/2019/10/24/what-are-the-benefits-baas-backend-as-a-service/">https://blog.back4app.com/2019/10/24/what-are-the-benefits-baas-backend-as-a-service/&lt;/a> you will enjoy&lt;/p>
+&lt;h3 id="disadvantages-of-a-backend-as-a-service">Disadvantages of a Backend as a Service&lt;/h3>
+&lt;ul>
+&lt;li>Less flexibility in comparison to custom coding&lt;/li>
+&lt;li>A lower level of customization in comparison to a custom backend&lt;/li>
+&lt;li>Vendor lock-in for closed source platforms&lt;/li>
+&lt;/ul>
+&lt;h2 id="iaas-x-paas-x-baas">IaaS x PaaS x BaaS&lt;/h2>
+&lt;p>Every time you move from IaaS to PaaS and from PaaS to BaaS, you add layers of service (or segments of value) to your application. Here is a simple overview:&lt;/p>
+&lt;ul>
+&lt;li>IAAS = Data Center + Servers + Storage +Networking&lt;/li>
+&lt;li>PAAS = IAAS + Deploy + Manage + Scale&lt;/li>
+&lt;li>BAAS = PAAS + Features to Build Backend&lt;/li>
+&lt;/ul>
+&lt;h2 id="what-features-have-a-backend-as-a-service">What features have a backend as a service?&lt;/h2>
+&lt;p>A backend as a service will provide you with features that can be deployed across all types of applications. Here are the most common features of a backend as a service.&lt;/p>
+&lt;ul>
+&lt;li>Scalable Database (NoSQL or SQL)&lt;/li>
+&lt;li>APIs (GraphQL and REST)&lt;/li>
+&lt;li>Business Logic via Cloud Code Functions&lt;/li>
+&lt;li>User authentication&lt;/li>
+&lt;li>Social Integration (Facebook, LinkedIn, Twitter, etc.)&lt;/li>
+&lt;li>Email Verification&lt;/li>
+&lt;li>Push Notifications&lt;/li>
+&lt;li>Geolocation&lt;/li>
+&lt;li>Database Graphical User Interface (GUI)&lt;/li>
+&lt;li>Logs&lt;/li>
+&lt;li>CDN and Cache&lt;/li>
+&lt;li>Infrastructure (Security settings, auto-scaling, data backup, DB optimization)&lt;/li>
+&lt;/ul>
+&lt;h2 id="how-does-a-baas-architecture-look-like">How does a BaaS architecture look like?&lt;/h2>
+&lt;p>Generally speaking, a mobile backend as a service architecture is divided into three different layers.&lt;/p>
+&lt;p>The first layer is the foundation and contains the database servers. A database cluster will have at least two servers to replicate data and a backup routine to retrieve data.&lt;/p>
+&lt;p>The second layer is the application cluster and contains multiple servers to process requests. The quantity of servers fluctuates throughout the time of the day, and auto-scaling procedures are necessary to fulfill the group with the correct amount of servers.&lt;/p>
+&lt;p>The third layer connects the application servers to the Internet, and it’s composed of load balancers and CDNs.&lt;/p>
+&lt;p>&lt;img src="images/2.png" alt="2">&lt;/p>
+&lt;h2 id="what-types-of-projects-run-best-on-a-backend-as-a-service">What types of projects run best on a Backend as a Service?&lt;/h2>
+&lt;ul>
+&lt;li>Real-time applications (chat, messaging apps)&lt;/li>
+&lt;li>Transportation apps (similar to Uber)&lt;/li>
+&lt;li>Social-network type apps&lt;/li>
+&lt;li>Ecommerce apps&lt;/li>
+&lt;li>Music or Video streaming apps&lt;/li>
+&lt;li>Games&lt;/li>
+&lt;/ul>
+&lt;h2 id="baas-providers-and-features">BaaS Providers and features&lt;/h2>
+&lt;p>Refer to &lt;a href="https://blog.back4app.com/backend-as-a-service-baas/">https://blog.back4app.com/backend-as-a-service-baas/&lt;/a>&lt;/p>
+&lt;h3 id="baas-providers-comparison">BaaS Providers Comparison&lt;/h3>
+&lt;p>&lt;img src="images/3.png" alt="">&lt;/p>
+&lt;p>&lt;img src="images/4.png" alt="4">&lt;/p>
+&lt;p>&lt;img src="images/5.png" alt="5">&lt;/p>
+&lt;p>&lt;img src="images/6.png" alt="6">&lt;/p></description></item><item><title>Blog: 12 Factor App Principles and Cloud-Native Microservices</title><link>/blog/2020/09/22/12-factor-app-principles-and-cloud-native-microservices/</link><pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate><guid>/blog/2020/09/22/12-factor-app-principles-and-cloud-native-microservices/</guid><description>
+&lt;p>&lt;img src="images/12-factor-app-principles.png" alt="img">&lt;/p>
+&lt;p>12-factor app is a methodology or set of principles for building the scalable and performant, independent, and most resilient enterprise applications. It establishes the general principles and guidelines for creating robust enterprise applications. 12-factor app principles got very popular as it aligns with Microservice principles.&lt;/p>
+&lt;h2 id="the-12-factor-principles">The 12-Factor Principles&lt;/h2>
+&lt;ul>
+&lt;li>Codebase (One codebase tracked in revision control, many deploys)&lt;/li>
+&lt;li>Dependencies (Explicitly declare and isolate the dependencies)&lt;/li>
+&lt;li>Config (Store configurations in an environment)&lt;/li>
+&lt;li>Backing Services (treat backing resources as attached resources)&lt;/li>
+&lt;li>Build, release, and Run (Strictly separate build and run stages)&lt;/li>
+&lt;li>Processes (execute the app as one or more stateless processes)&lt;/li>
+&lt;li>Port Binding (Export services via port binding)&lt;/li>
+&lt;li>Concurrency (Scale out via the process model)&lt;/li>
+&lt;li>Disposability (maximize the robustness with fast startup and graceful shutdown)&lt;/li>
+&lt;li>Dev/prod parity (Keep development, staging, and production as similar as possible)&lt;/li>
+&lt;li>Logs (Treat logs as event streams)&lt;/li>
+&lt;li>Admin processes (Run admin/management tasks as one-off processes)&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-codebase-one-codebase-tracked-in-revision-control-many-deploys">1. Codebase (One Codebase Tracked In Revision Control, Many Deploys)&lt;/h2>
+&lt;p>12-factor app advocates that every application should have its own codebase (repos). Multiple codebases for multiple versions must be avoided. Please do note that having branches would be fine. I.e. For all the deployment environments there should be only one repo but not multiple.&lt;/p>
+&lt;p>Multiple apps sharing the same code are a violation of the twelve-factor. Here you should opt-in for shared libraries.&lt;/p>
+&lt;p>From the 12-factor app perspective app, deploy meaning the running instance of an app like production, staging, QA, etc. Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.&lt;/p>
+&lt;p>Different versions (the version is like a code change that is available in one environment but not in other) may be active in multiple deploys.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In Microservices, every service should have its own codebase. Having an independent codebase helps you to easy CI/CD process for your applications.&lt;/li>
+&lt;/ul>
+&lt;p>Twelve-factor app advocates of not sharing the code between the application. If you need to share you need to build a library and make it as a dependency and manage through package repository like maven.&lt;/p>
+&lt;h2 id="2-dependencies-explicitly-declare-and-isolate-the-dependencies">2. Dependencies (Explicitly Declare and Isolate the Dependencies)&lt;/h2>
+&lt;p>It talks about managing the dependencies externally using dependency management tools instead of adding them to your codebase.&lt;/p>
+&lt;p>From the perspective of the Java, you can think of Gradle as a dependency manager. You will mention all the dependencies in build.gradle file and your application will download all the mentioned dependencies from maven repository or various other repositories.&lt;/p>
+&lt;p>You also need to consider the dependencies from the operating system/ execution environment perspective as well.&lt;/p>
+&lt;p>Microservices: All the application packages will be managed through package managers like sbt, maven.&lt;/p>
+&lt;ul>
+&lt;li>In non-containerized environments, you can go for configuration management tools like chef, ansible, etc. to install system-level dependencies.&lt;/li>
+&lt;li>For a containerized environment, you can go for dockerfile.&lt;/li>
+&lt;/ul>
+&lt;h2 id="3-config-store-configurations-in-an-environment">3. Config (Store Configurations In an Environment&lt;/h2>
+&lt;p>Anything that varies between the deployment environments is considered as configuration. This includes:&lt;/p>
+&lt;ul>
+&lt;li>Database connections and credentials, system integration endpoints&lt;/li>
+&lt;li>Credentials to external services such as Amazon S3 or Twitter or any other external apps&lt;/li>
+&lt;li>Application-specific information like IP Addresses, ports, and hostnames, etc.&lt;/li>
+&lt;/ul>
+&lt;p>You should not hardcode any configuration values as constants in the codebase. This is a direct violation of 12-factor app principles.&lt;/p>
+&lt;p>12-factor app principles suggest saving the configuration values in the environment variables.&lt;/p>
+&lt;p>It advocates the strict separation between the code and configurations. The code must be the same irrespective of where the application being deployed.&lt;/p>
+&lt;p>As per &amp;ldquo;config&amp;rdquo;, what varies for the environment to the environment must be moved to configurations and managed via environment variables.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Externalize the configurations from the application. In a microservice service environment, you can manage the configurations for your applications from a source control like git (spring-cloud-config) and use the environment variables to not to maintain the sensitive information in the source control.&lt;/li>
+&lt;/ul>
+&lt;h2 id="4-backing-services-treat-backing-resources-as-attached-resources">4. Backing Services (Treat Backing Resources as Attached Resources)&lt;/h2>
+&lt;p>As per 12 factor app principles, a backing service is an application/service the app consumes over the network as part of its normal operation.&lt;/p>
+&lt;p>Database, Message Brokers, any other external systems that the app communicates is treated as Backing service.&lt;/p>
+&lt;p>12-factor app can automatically swap the application from one provider to another without making any further modifications to the code base. Let us say, you would like to change the database server from MySQL to Aurora. To do so, you should not make any code changes to your application. Only configuration change should be able to take care of it.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In a microservice ecosystem, anything external to service is treated as attached resource. The resource can be swapped at any given point of time without impacting the service.&lt;/li>
+&lt;/ul>
+&lt;p>By following the interfaced based programming allow to swap the provider dynamically without impact on the system. Plug-in based implementation also helps you to support multiple providers.&lt;/p>
+&lt;h2 id="5-build-release-and-run-strictly-separate-build-and-run-stages">5. Build, Release, and Run (Strictly Separate Build and Run Stages)&lt;/h2>
+&lt;p>The application must have a strict separation between the build, release, and run stages. Let us understand each stage in more detail.&lt;/p>
+&lt;ul>
+&lt;li>Build stage: transform the code into an executable bundle/ build package.&lt;/li>
+&lt;li>Release stage: get the build package from the build stage and combines with the configurations of the deployment environment and make your application ready to run.&lt;/li>
+&lt;li>Run stage: It is like running your app in the execution environment.&lt;/li>
+&lt;/ul>
+&lt;p>Microservices: You can use CI/CD tools to automate the builds and deployment process. Docker images make it easy to separate the build, release, and run stages more efficiently.&lt;/p>
+&lt;h2 id="6-processes-execute-the-app-as-one-or-more-stateless-processes">6. Processes (Execute the App as One or More Stateless Processes)&lt;/h2>
+&lt;p>The app is executed inside the execution environment as a process. An app can have one or more instances/processes to meet the user/customer demands.&lt;/p>
+&lt;p>As per 12-factor principles, the application should not store the data in in-memory and it must be saved to a store and use from there. As far as the state concern, your application should store the state in the database instead of in memory of the process.&lt;/p>
+&lt;p>Avoid using sticky sessions, using sticky sessions are a violation of 12-factor app principles. If you would store the session information, you can choose redis or memcached or any other cache provider based on your requirements.&lt;/p>
+&lt;p>By following these, your app can be highly scalable without any impact on the system&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the stateless nature of REST, your services can be horizontally scaled as per the needs with zero impact. If your system still requires to maintain the state use the attached resources (redis, Memcached, or datastore) to store the state instead of in-memory.&lt;/li>
+&lt;/ul>
+&lt;h2 id="7-port-binding-export-services-via-port-binding">7. Port Binding (Export Services Via Port Binding)&lt;/h2>
+&lt;p>The twelve-factor app is completely self-contained and doesn&amp;rsquo;t rely on runtime injection of a webserver into the execution environment to create a web-facing service. The web app exports HTTP as a service by binding to a port, and listening to requests coming in on that port.&lt;/p>
+&lt;p>In short, this is all about having your application as a standalone instead of deploying them into any of the external web servers.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Spring boot is one example of this one. Spring boot by default comes with embedded tomcat, jetty, or undertow.&lt;/li>
+&lt;/ul>
+&lt;h2 id="8-concurrency-scale-out-via-the-process-model">8. Concurrency (Scale Out Via the Process Model)&lt;/h2>
+&lt;p>This talks about scaling the application. Twelve-factor app principles suggest to consider running your application as multiple processes/instances instead of running in one large system. You can still opt-in for threads to improve the concurrent handling of the requests.&lt;/p>
+&lt;p>In a nutshell, twelve-factor app principles advocate to opt-in for horizontal scaling instead of vertical scaling.&lt;/p>
+&lt;p>(vertical scaling- Add additional hardware to the system&lt;/p>
+&lt;p>Horizontal scaling - Add additional instances of the application)&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the containerization, applications can be scaled horizontally as per the demands.&lt;/li>
+&lt;/ul>
+&lt;h2 id="9-disposability-maximize-the-robustness-with-fast-startup-and-graceful-shutdown">9. Disposability (Maximize the Robustness with Fast Startup and Graceful Shutdown)&lt;/h2>
+&lt;p>The twelve-factor app&amp;rsquo;s processes are disposable, meaning they can be started or stopped at a moment&amp;rsquo;s notice. When the application is shutting down or starting, an instance should not impact the application state.&lt;/p>
+&lt;p>Graceful shutdowns are very important. The system must ensure the correct state.&lt;/p>
+&lt;p>The system should not get impacted when new instances are added or takedown the existing instances as per need. This is also known as system disposability.&lt;/p>
+&lt;p>Systems do crash due to various reasons. the system should ensure that the impact would be minimal and the application should be stored in a valid state.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the containerization into the deployment process of microservices, your application implicitly follows this principle at a maximum extent. Docker containers can be started or stopped instantly. Storing request, state, or session data in queues or other backing services ensures that a request is handled seamlessly in the event of a container crash.&lt;/li>
+&lt;/ul>
+&lt;h2 id="10-devprod-parity-keep-development-staging-and-production-as-similar-as-possible">10. Dev/Prod Parity (Keep Development, Staging, and Production as Similar as Possible)&lt;/h2>
+&lt;p>The twelve-factor methodology suggests keeping the gap between development and production environment as minimal as possible. This reduces the risks of showing up bugs in a specific environment.&lt;/p>
+&lt;p>The twelve-factor developer resists the urge to use different backing services between development and production.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: This is an inherent feature of the Microservices that is run using the containerization techniques.&lt;/li>
+&lt;/ul>
+&lt;h2 id="11-logs-treat-logs-as-event-streams">11. Logs (Treat Logs as Event Streams)&lt;/h2>
+&lt;p>Logs become paramount in troubleshooting the production issues or understanding the user behavior. Logs provide visibility into the behavior of a running application.&lt;/p>
+&lt;p>Twelve-factor app principles advocate separating the log generation and processing the log&amp;rsquo;s information. From the application logs will be written as a standard output and the execution environment takes care of capture, storage, curation, and archival of such stream should be handled by the execution environment.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In Microservices, observability is the first-class citizen. Observability can be achieved through using APM tools (ELK, Newrelic, and other tools) or log aggregations tools like Splunk, logs, etc.&lt;/li>
+&lt;/ul>
+&lt;p>By following the above-mentioned guidelines all you need is to debug an issue is to go to the central dashboard of your tool and search for it.&lt;/p>
+&lt;h2 id="12-admin-processes-run-adminmanagement-tasks-as-one-off-processes">12. Admin Processes (Run Admin/Management Tasks as One-Off Processes)&lt;/h2>
+&lt;p>There is a number of one-off processes as part of the application deployment like data migration, executing one-off scripts in a specific environment.&lt;/p>
+&lt;p>Twelve-factor principles advocates for keeping such administrative tasks as part of the application codebase in the repository. By doing so, one-off scripts follow the same process defined for your codebase.&lt;/p>
+&lt;p>Ensure one-off scripts are automated so that you don&amp;rsquo;t need to worry about executing them manually before releasing the build.&lt;/p>
+&lt;p>Twelve-factor principles also suggest using the built-in tool of the execution environment to run those scripts on production servers.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Containerization also helps here to run the one-off processes as a task and shutdown automatically one done with the implementation.&lt;/li>
+&lt;/ul>
+&lt;p>That&amp;rsquo;s all for today. Hope you have enjoyed the article. Please share your thoughts or ideas or improvements in the below comments box.&lt;/p></description></item><item><title>Blog: Easy documentation with Docsy</title><link>/blog/2018/10/06/easy-documentation-with-docsy/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>/blog/2018/10/06/easy-documentation-with-docsy/</guid><description>
 &lt;img src="/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_640x0_resize_catmullrom_3.png" width="640" height="253"/>
 &lt;p>&lt;strong>This is a typical blog post that includes images.&lt;/strong>&lt;/p>
 &lt;p>The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&lt;/p>
@@ -87,271 +354,7 @@ Fetch and scale an image in the upcoming Hugo 0.43.
 &lt;small class="text-muted">&lt;br/>Photo: Riona MacNamara / CC-BY-CA&lt;/small>&lt;/p>
 &lt;/div>
 &lt;/div>
-&lt;/code>&lt;/pre>&lt;p>The image will be rendered at the size and byline specified in the front matter.&lt;/p></description></item><item><title>Blog: The second blog post</title><link>/blog/2018/10/06/the-second-blog-post/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>/blog/2018/10/06/the-second-blog-post/</guid><description>
-&lt;p>Text can be &lt;strong>bold&lt;/strong>, &lt;em>italic&lt;/em>, or &lt;del>strikethrough&lt;/del>. &lt;a href="https://github.com">Links&lt;/a> should be blue with no underlines (unless hovered over).&lt;/p>
-&lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>
-&lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>
-&lt;blockquote>
-&lt;p>There should be no margin above this first sentence.&lt;/p>
-&lt;p>Blockquotes should be a lighter gray with a border along the left side in the secondary color.&lt;/p>
-&lt;p>There should be no margin below this final sentence.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="first-header">First Header&lt;/h2>
-&lt;p>This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;p>On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.&lt;/p>
-&lt;p>Lorem markdownum tuta hospes stabat; idem saxum facit quaterque repetito
-occumbere, oves novem gestit haerebat frena; qui. Respicit recurvam erat:
-pignora hinc reppulit nos &lt;strong>aut&lt;/strong>, aptos, ipsa.&lt;/p>
-&lt;p>Meae optatos &lt;em>passa est&lt;/em> Epiros utiliter &lt;em>Talibus niveis&lt;/em>, hoc lata, edidit.
-Dixi ad aestum.&lt;/p>
-&lt;h2 id="header-2">Header 2&lt;/h2>
-&lt;blockquote>
-&lt;p>This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="header-3">Header 3&lt;/h3>
-&lt;pre tabindex="0">&lt;code>This is a code block following a header.
-&lt;/code>&lt;/pre>&lt;h4 id="header-4">Header 4&lt;/h4>
-&lt;ul>
-&lt;li>This is an unordered list following a header.&lt;/li>
-&lt;li>This is an unordered list following a header.&lt;/li>
-&lt;li>This is an unordered list following a header.&lt;/li>
-&lt;/ul>
-&lt;h5 id="header-5">Header 5&lt;/h5>
-&lt;ol>
-&lt;li>This is an ordered list following a header.&lt;/li>
-&lt;li>This is an ordered list following a header.&lt;/li>
-&lt;li>This is an ordered list following a header.&lt;/li>
-&lt;/ol>
-&lt;h6 id="header-6">Header 6&lt;/h6>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>What&lt;/th>
-&lt;th>Follows&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>A table&lt;/td>
-&lt;td>A header&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>A table&lt;/td>
-&lt;td>A header&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>A table&lt;/td>
-&lt;td>A header&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;hr>
-&lt;p>There&amp;rsquo;s a horizontal rule above and below this.&lt;/p>
-&lt;hr>
-&lt;p>Here is an unordered list:&lt;/p>
-&lt;ul>
-&lt;li>Salt-n-Pepa&lt;/li>
-&lt;li>Bel Biv DeVoe&lt;/li>
-&lt;li>Kid &amp;lsquo;N Play&lt;/li>
-&lt;/ul>
-&lt;p>And an ordered list:&lt;/p>
-&lt;ol>
-&lt;li>Michael Jackson&lt;/li>
-&lt;li>Michael Bolton&lt;/li>
-&lt;li>Michael Bublé&lt;/li>
-&lt;/ol>
-&lt;p>And an unordered task list:&lt;/p>
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> Create a sample markdown document&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> Add task lists to it&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Take a vacation&lt;/li>
-&lt;/ul>
-&lt;p>And a &amp;ldquo;mixed&amp;rdquo; task list:&lt;/p>
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> Steal underpants&lt;/li>
-&lt;li>?&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Profit!&lt;/li>
-&lt;/ul>
-&lt;p>And a nested list:&lt;/p>
-&lt;ul>
-&lt;li>Jackson 5
-&lt;ul>
-&lt;li>Michael&lt;/li>
-&lt;li>Tito&lt;/li>
-&lt;li>Jackie&lt;/li>
-&lt;li>Marlon&lt;/li>
-&lt;li>Jermaine&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>TMNT
-&lt;ul>
-&lt;li>Leonardo&lt;/li>
-&lt;li>Michelangelo&lt;/li>
-&lt;li>Donatello&lt;/li>
-&lt;li>Raphael&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Definition lists can be used with Markdown syntax. Definition terms are bold.&lt;/p>
-&lt;dl>
-&lt;dt>Name&lt;/dt>
-&lt;dd>Godzilla&lt;/dd>
-&lt;dt>Born&lt;/dt>
-&lt;dd>1952&lt;/dd>
-&lt;dt>Birthplace&lt;/dt>
-&lt;dd>Japan&lt;/dd>
-&lt;dt>Color&lt;/dt>
-&lt;dd>Green&lt;/dd>
-&lt;/dl>
-&lt;hr>
-&lt;p>Tables should have bold headings and alternating shaded rows.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Artist&lt;/th>
-&lt;th>Album&lt;/th>
-&lt;th>Year&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Michael Jackson&lt;/td>
-&lt;td>Thriller&lt;/td>
-&lt;td>1982&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Prince&lt;/td>
-&lt;td>Purple Rain&lt;/td>
-&lt;td>1984&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Beastie Boys&lt;/td>
-&lt;td>License to Ill&lt;/td>
-&lt;td>1986&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>If a table is too wide, it should scroll horizontally.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Artist&lt;/th>
-&lt;th>Album&lt;/th>
-&lt;th>Year&lt;/th>
-&lt;th>Label&lt;/th>
-&lt;th>Awards&lt;/th>
-&lt;th>Songs&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Michael Jackson&lt;/td>
-&lt;td>Thriller&lt;/td>
-&lt;td>1982&lt;/td>
-&lt;td>Epic Records&lt;/td>
-&lt;td>Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical&lt;/td>
-&lt;td>Wanna Be Startin&amp;rsquo; Somethin', Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Prince&lt;/td>
-&lt;td>Purple Rain&lt;/td>
-&lt;td>1984&lt;/td>
-&lt;td>Warner Brothers Records&lt;/td>
-&lt;td>Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal&lt;/td>
-&lt;td>Let&amp;rsquo;s Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I&amp;rsquo;m a Star, Purple Rain&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Beastie Boys&lt;/td>
-&lt;td>License to Ill&lt;/td>
-&lt;td>1986&lt;/td>
-&lt;td>Mercury Records&lt;/td>
-&lt;td>noawardsbutthistablecelliswide&lt;/td>
-&lt;td>Rhymin &amp;amp; Stealin, The New Style, She&amp;rsquo;s Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;hr>
-&lt;p>Code snippets like &lt;code>var foo = &amp;quot;bar&amp;quot;;&lt;/code> can be shown inline.&lt;/p>
-&lt;p>Also, &lt;code>this should vertically align&lt;/code> &lt;del>&lt;code>with this&lt;/code>&lt;/del> &lt;del>and this&lt;/del>.&lt;/p>
-&lt;p>Code can also be shown in a block element.&lt;/p>
-&lt;pre tabindex="0">&lt;code>foo := &amp;quot;bar&amp;quot;;
-bar := &amp;quot;foo&amp;quot;;
-&lt;/code>&lt;/pre>&lt;p>Code can also use syntax highlighting.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="color:#204a87;font-weight:bold">func&lt;/span> &lt;span style="color:#000">main&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#000">input&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#4e9a06">`var foo = &amp;#34;bar&amp;#34;;`&lt;/span>
-&lt;span style="color:#000">lexer&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">lexers&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;javascript&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;span style="color:#000">iterator&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">_&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">lexer&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Tokenise&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">nil&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">input&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;span style="color:#000">style&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">styles&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;github&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;span style="color:#000">formatter&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">html&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">New&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">html&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">WithLineNumbers&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">buff&lt;/span> &lt;span style="color:#000">bytes&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Buffer&lt;/span>
-&lt;span style="color:#000">formatter&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Format&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&lt;/span>&lt;span style="color:#000">buff&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">style&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">iterator&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;span style="color:#000">fmt&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Println&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">buff&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">String&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-&lt;/code>&lt;/pre>&lt;p>Inline code inside table cells should still be distinguishable.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Language&lt;/th>
-&lt;th>Code&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Javascript&lt;/td>
-&lt;td>&lt;code>var foo = &amp;quot;bar&amp;quot;;&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Ruby&lt;/td>
-&lt;td>&lt;code>foo = &amp;quot;bar&amp;quot;{&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;hr>
-&lt;p>Small images should be shown at their actual size.&lt;/p>
-&lt;p>&lt;img src="https://placekitten.com/g/300/200/" alt="">&lt;/p>
-&lt;p>Large images should always scale down and fit in the content container.&lt;/p>
-&lt;p>&lt;img src="https://placekitten.com/g/1200/800/" alt="">&lt;/p>
-&lt;h2 id="components">Components&lt;/h2>
-&lt;h3 id="alerts">Alerts&lt;/h3>
-&lt;p>
-&lt;div class="alert alert-primary" role="alert">
-This is an alert.
-&lt;/div>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-This is an alert with a title.
-&lt;/div>
-&lt;div class="alert alert-primary" role="alert">
-This is a successful alert.
-&lt;/div>
-&lt;div class="alert alert-primary" role="alert">
-This is a warning!
-&lt;/div>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Warning!&lt;/h4>
-This is a warning with a title!
-&lt;/div>
-&lt;/p>
-&lt;h2 id="sizing">Sizing&lt;/h2>
-&lt;p>Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;h3 id="parameters-available">Parameters available&lt;/h3>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;h3 id="using-pixels">Using pixels&lt;/h3>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;h3 id="using-rem">Using rem&lt;/h3>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;h2 id="memory">Memory&lt;/h2>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;h3 id="ram-to-use">RAM to use&lt;/h3>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;h3 id="more-is-better">More is better&lt;/h3>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;h3 id="used-ram">Used RAM&lt;/h3>
-&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
-&lt;pre tabindex="0">&lt;code>This is the final element on the page and there should be no margin below this.
-&lt;/code>&lt;/pre></description></item><item><title>Blog: Another Great Release</title><link>/blog/2018/01/04/another-great-release/</link><pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate><guid>/blog/2018/01/04/another-great-release/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>The image will be rendered at the size and byline specified in the front matter.&lt;/p></description></item><item><title>Blog: Another Great Release</title><link>/blog/2018/01/04/another-great-release/</link><pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate><guid>/blog/2018/01/04/another-great-release/</guid><description>
 &lt;p>Text can be &lt;strong>bold&lt;/strong>, &lt;em>italic&lt;/em>, or &lt;del>strikethrough&lt;/del>. &lt;a href="https://github.com">Links&lt;/a> should be blue with no underlines (unless hovered over).&lt;/p>
 &lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>
 &lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>

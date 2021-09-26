@@ -2,8 +2,8 @@
 date: 2021-04-01
 author: https://humanitec.com/blog/internal-platform-teams-what-are-they-and-do-you-need-one/
 title: "Internal Platform Teams - What Are They and Do You Need One"
-tags: ["2021", "Devops", "IDP"]
-categories: ["Backend Engineering", "Platform Engineering"]
+tags: ["2021"]
+categories: ["Backend Engineering", "Platform Engineering", "Internal Developer Platform"]
 description: >
 ---
 

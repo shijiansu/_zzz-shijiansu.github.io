@@ -2,8 +2,8 @@
 date: 2021-05-25
 author: https://oam.dev/
 title: "Introduction"
-tags: ["2021", "OAM"]
-categories: ["Backend Engineering", "Cloud Native"]
+tags: ["2021"]
+categories: ["Backend Engineering", "Cloud Native", "Open Application Model"]
 weight: 1
 description: >
 ---

@@ -2,8 +2,8 @@
 date: 2020-09-22
 author: https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser/
 title: "12 Factor App Principles and Cloud-Native Microservices"
-tags: ["2020", "Microservices"]
-categories: ["Backend Engineering", "Cloud Native"]
+tags: ["2020"]
+categories: ["Backend Engineering", "Cloud Native", "Twelve-Factor Apps"]
 description: >
 ---
 

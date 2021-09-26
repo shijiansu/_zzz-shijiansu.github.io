@@ -2,8 +2,8 @@
 date: 2020-08-30
 author: Spring 5.0 Microservice 2nd (2017)
 title: "Spring 5.0 Microservice 2nd - Twelve-Factor Apps"
-tags: ["2020", "Microservices"]
-categories: ["Backend Engineering", "Cloud Native"]
+tags: ["2020"]
+categories: ["Backend Engineering", "Cloud Native", "Twelve-Factor Apps"]
 description: >
 ---
 

@@ -2,7 +2,7 @@
 date: 2021-02-09
 author: https://blog.back4app.com/backend-as-a-service-baas/
 title: "Backend as a Service - What is a BaaS"
-tags: ["2021", "API", "BaaS"]
+tags: ["2021"]
 categories: ["Backend Engineering", "Backend as a Service"]
 description: >
 ---

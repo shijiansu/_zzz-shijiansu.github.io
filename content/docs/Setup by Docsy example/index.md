@@ -1,17 +1,27 @@
 ---
+date: 2021-09-25
+author: Su Shijian
 title: "Setup by Docsy example"
-categories: ["Examples"]
-tags: ["test", "sample", "docs"]
-weight: 9999
+tags: ["TBD"]
+categories: ["TBD"]
 description: >
 ---
 
 > Su Shijian | 2021-09-25
 
+## Environment
+
+- Nodejs v16.10.0
+- Hugo v0.88.1
+- Google Docsy theme (via Docsy example) - theme/docsy
+  - SCSS
+- GitHub Actions - .github/workflows
+- GitHub Pages
+
 ## Steps
 
 ```bash
-# about google docsy - https://www.docsy.dev/docs/
+# about google docsy theme - https://www.docsy.dev/docs/
 
 # google docsy example template
 # create the github repository from the google docsy example "Use this template"

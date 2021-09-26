@@ -1,4 +1,3 @@
 ---
 title: "Platform Engineering"
 ---
-

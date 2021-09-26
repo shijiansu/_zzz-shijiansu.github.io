@@ -82,7 +82,9 @@ echo <<< EOL
 line ...
 EOL > gh-pages.yml
 
-# github actions yml explaination
+# github actions yml explanation
+# this is check in to repository "gh-pages" branch,
+# which will setup in github pages as source of github pages.
 ## hugo github action:
 ## https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action
 ## nodjes environment: https://github.com/actions/setup-node

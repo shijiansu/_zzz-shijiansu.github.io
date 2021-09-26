@@ -5,10 +5,12 @@
 &lt;h2 id="environment">Environment&lt;/h2>
 &lt;ul>
 &lt;li>Nodejs v16.10.0&lt;/li>
-&lt;li>Hugo v0.88.1&lt;/li>
+&lt;li>Hugo v0.88.1 - Websites builder&lt;/li>
 &lt;li>Google Docsy theme (via Docsy example) - theme/docsy
 &lt;ul>
 &lt;li>SCSS&lt;/li>
+&lt;li>&lt;a href="https://www.docsy.dev/">https://www.docsy.dev/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.docsy.dev/docs/adding-content/content/">https://www.docsy.dev/docs/adding-content/content/&lt;/a> (Userful for customization!)&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>GitHub Actions - .github/workflows&lt;/li>

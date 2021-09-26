@@ -1,0 +1,47 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Reliability</title><link>/categories/reliability/</link><description>Recent content in Reliability on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 26 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/reliability/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: MTBF</title><link>/docs/sre/reliability/mtbf/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/docs/sre/reliability/mtbf/</guid><description>
+&lt;blockquote>
+&lt;p>MTBF (Mean Time Between Failures, 平均故障间隔时间) 定义为, 失效或维护中所需要的平均时间, 包括故障时间以及检测和维护设备的时间. 对于一个简单的可维护的元件, MTBF = MTTF + MTTR. 因为MTTR通常远小于MTTF, 所以MTBF近似等于MTTF, 通常由MTTF替代. MTBF用于可维护性和不可维护的系统.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.uniquelims.net/xinwen/hyxw/155.html">https://www.uniquelims.net/xinwen/hyxw/155.html&lt;/a>&lt;/li>
+&lt;li>Date: Unknown&lt;/li>
+&lt;/ul></description></item><item><title>Terminologies: MTBF</title><link>/terminologies/sre/reliability/mtbf/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/terminologies/sre/reliability/mtbf/</guid><description>
+&lt;blockquote>
+&lt;p>MTBF (Mean Time Between Failures, 平均故障间隔时间) 定义为, 失效或维护中所需要的平均时间, 包括故障时间以及检测和维护设备的时间. 对于一个简单的可维护的元件, MTBF = MTTF + MTTR. 因为MTTR通常远小于MTTF, 所以MTBF近似等于MTTF, 通常由MTTF替代. MTBF用于可维护性和不可维护的系统.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.uniquelims.net/xinwen/hyxw/155.html">https://www.uniquelims.net/xinwen/hyxw/155.html&lt;/a>&lt;/li>
+&lt;li>Date: Unknown&lt;/li>
+&lt;/ul></description></item><item><title>Docs: MTTF</title><link>/docs/sre/reliability/mttf/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/docs/sre/reliability/mttf/</guid><description>
+&lt;blockquote>
+&lt;p>MTTF (Mean Time to Failure, 平均失效前时间), 定义为随机变量、出错时间等的&amp;quot;期望值&amp;quot;. 但是, MTTF经常被错误地理解为, &amp;ldquo;能保证的最短的生命周期&amp;rdquo;. MTTF的长短, 通常与使用周期中的产品有关, 其中不包括老化失效.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.uniquelims.net/xinwen/hyxw/155.html">https://www.uniquelims.net/xinwen/hyxw/155.html&lt;/a>&lt;/li>
+&lt;li>Date: Unknown&lt;/li>
+&lt;/ul></description></item><item><title>Terminologies: MTTF</title><link>/terminologies/sre/reliability/mttf/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/terminologies/sre/reliability/mttf/</guid><description>
+&lt;blockquote>
+&lt;p>MTTF (Mean Time to Failure, 平均失效前时间), 定义为随机变量、出错时间等的&amp;quot;期望值&amp;quot;. 但是, MTTF经常被错误地理解为, &amp;ldquo;能保证的最短的生命周期&amp;rdquo;. MTTF的长短, 通常与使用周期中的产品有关, 其中不包括老化失效.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.uniquelims.net/xinwen/hyxw/155.html">https://www.uniquelims.net/xinwen/hyxw/155.html&lt;/a>&lt;/li>
+&lt;li>Date: Unknown&lt;/li>
+&lt;/ul></description></item><item><title>Docs: MTTR</title><link>/docs/sre/reliability/mttr/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/docs/sre/reliability/mttr/</guid><description>
+&lt;blockquote>
+&lt;p>MTTR (Mean Time to Restoration, 平均恢复前时间), 源自于IEC 61508中的平均维护时间 (Mean Time to Repair), 目的是为了清楚界定术语中的时间的概念, MTTR是随机变量恢复时间的期望值. 它包括确认失效发生所必需的时间, 以及维护所需要的时间. MTTR也必须包含获得配件的时间, 维修团队的响应时间, 记录所有任务的时间, 还有将设备重新投入使用的时间.&lt;/p>
+&lt;p>MTTR也必须包含获得配件的时间, 维修团队的响应时间, 记录所有任务的时间, 还有将设备重新投入使用的时间.&lt;/p>
+&lt;p>有些系统有内置冗余, 所以, 当一个子系统出现故障, 另一国的地位, 保持整个系统的运行. 虽然整体系统具有零MTTR, 故障子系统仍然需要修理或更换, 因此子系统只有一个非零MTTR.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.uniquelims.net/xinwen/hyxw/155.html">https://www.uniquelims.net/xinwen/hyxw/155.html&lt;/a>&lt;/li>
+&lt;li>Date: Unknown&lt;/li>
+&lt;/ul></description></item><item><title>Terminologies: MTTR</title><link>/terminologies/sre/reliability/mttr/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/terminologies/sre/reliability/mttr/</guid><description>
+&lt;blockquote>
+&lt;p>MTTR (Mean Time to Restoration, 平均恢复前时间), 源自于IEC 61508中的平均维护时间 (Mean Time to Repair), 目的是为了清楚界定术语中的时间的概念, MTTR是随机变量恢复时间的期望值. 它包括确认失效发生所必需的时间, 以及维护所需要的时间. MTTR也必须包含获得配件的时间, 维修团队的响应时间, 记录所有任务的时间, 还有将设备重新投入使用的时间.&lt;/p>
+&lt;p>MTTR也必须包含获得配件的时间, 维修团队的响应时间, 记录所有任务的时间, 还有将设备重新投入使用的时间.&lt;/p>
+&lt;p>有些系统有内置冗余, 所以, 当一个子系统出现故障, 另一国的地位, 保持整个系统的运行. 虽然整体系统具有零MTTR, 故障子系统仍然需要修理或更换, 因此子系统只有一个非零MTTR.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.uniquelims.net/xinwen/hyxw/155.html">https://www.uniquelims.net/xinwen/hyxw/155.html&lt;/a>&lt;/li>
+&lt;li>Date: Unknown&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Reliability</title><link>/docs/sre/reliability/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/docs/sre/reliability/</guid><description/></item><item><title>Terminologies: Reliability</title><link>/terminologies/sre/reliability/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>/terminologies/sre/reliability/</guid><description/></item></channel></rss>

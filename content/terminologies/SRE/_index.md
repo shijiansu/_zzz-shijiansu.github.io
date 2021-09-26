@@ -5,5 +5,4 @@ title: "SRE"
 tags: ["Terminologies - S"]
 categories: ["Site Reliability Engineering"]
 description: >
-  Site Reliability Engineering
 ---

@@ -7,6 +7,7 @@ menu:
     pre: <i class='fas fa-comments'></i>
 cascade:
 - type: "docs"
+  simple_list: true
   toc_root: true
   _target:
     path: "*/**"

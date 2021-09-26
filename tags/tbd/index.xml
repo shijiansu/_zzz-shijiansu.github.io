@@ -1,0 +1,79 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – TBD</title><link>/tags/tbd/</link><description>Recent content in TBD on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 25 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tbd/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Setup by Docsy example</title><link>/docs/setup-by-docsy-example/</link><pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate><guid>/docs/setup-by-docsy-example/</guid><description>
+&lt;blockquote>
+&lt;p>Su Shijian | 2021-09-25&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="environment">Environment&lt;/h2>
+&lt;ul>
+&lt;li>Nodejs v16.10.0&lt;/li>
+&lt;li>Hugo v0.88.1&lt;/li>
+&lt;li>Google Docsy theme (via Docsy example) - theme/docsy
+&lt;ul>
+&lt;li>SCSS&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>GitHub Actions - .github/workflows&lt;/li>
+&lt;li>GitHub Pages&lt;/li>
+&lt;/ul>
+&lt;h2 id="steps">Steps&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#8f5902;font-style:italic"># about google docsy theme - https://www.docsy.dev/docs/&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># google docsy example template&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># create the github repository from the google docsy example &amp;#34;Use this template&amp;#34;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># refer to https://www.docsy.dev/docs/getting-started/#using-the-github-ui&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># github hosting&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># make it possible hosting in the github: &amp;lt;user&amp;gt;.github.io&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># refer to&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## https://docs.github.com/en/pages/getting-started-with-github-pages&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># development environment&lt;/span>
+brew -v &lt;span style="color:#8f5902;font-style:italic"># Homebrew 3.2.13&lt;/span>
+nvm --version &lt;span style="color:#8f5902;font-style:italic"># 0.35.3, install via brew&lt;/span>
+node -v &lt;span style="color:#8f5902;font-style:italic"># v16.10.0 # install via nvm&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># nvm install node --reinstall-packages-from=node # if need to upgrade&lt;/span>
+brew install hugo &lt;span style="color:#8f5902;font-style:italic"># default is with &amp;#34;extended&amp;#34; for scss&lt;/span>
+hugo version &lt;span style="color:#8f5902;font-style:italic"># hugo v0.88.1+extended&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># github&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># include public, resources in .gitignore&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># refer to https://www.toptal.com/developers/gitignore/api/hugo&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># clean up the google docsy example&lt;/span>
+rm deploy.sh
+rm CONTRIBUTING.md
+rm LICENSE
+rm Dockerfile
+rm docker-compose.yaml
+rm netlify.toml
+&lt;span style="color:#8f5902;font-style:italic"># verify&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## important&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## in google docsy, it requires hugo extended for scss&lt;/span>
+git clone https://github.com/shijiansu/shijiansu.github.io
+&lt;span style="color:#204a87">cd&lt;/span> shijiansu.github.io
+git submodule update --init --recursive --depth &lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> &lt;span style="color:#8f5902;font-style:italic"># because themes/docsy is submodule&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># below are also the submodule, please ensure they exists in your local&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## themes/docsy/assets/vendor/Font-Awesome&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## themes/docsy/assets/vendor/bootstrap&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># if you do not set up from the google docsy example, &lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># then you need to install below nodejs dependencies manually&lt;/span>
+npm install -D autoprefixer
+npm install -D postcss-cli
+npm install -D postcss
+npm install
+hugo server
+&lt;span style="color:#8f5902;font-style:italic"># github actions&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># make default branch from &amp;#34;master&amp;#34; (as google docsy example) to &amp;#34;main&amp;#34; because of gh-pages.yml&lt;/span>
+mkdir .github &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#204a87">cd&lt;/span> .github
+mkdir workflows &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#204a87">cd&lt;/span> workflows
+&lt;span style="color:#204a87">echo&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;&amp;lt;&amp;lt;&lt;/span> EOL
+line ...
+EOL &amp;gt; gh-pages.yml
+&lt;span style="color:#8f5902;font-style:italic"># github actions yml explaination&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## hugo github action:&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## nodjes environment: https://github.com/actions/setup-node&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># github pages&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## set up GitHub Pages:&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">## repository -&amp;gt; Settings -&amp;gt; Pages -&amp;gt; select Source to &amp;#34;Branch: gh-pages&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/google/docsy/blob/master/userguide/content/en/_index.html">https://github.com/google/docsy/blob/master/userguide/content/en/_index.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/google/docsy-example">https://github.com/google/docsy-example&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

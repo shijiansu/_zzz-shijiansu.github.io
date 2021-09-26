@@ -6,6 +6,7 @@ tags: ["2021"]
 categories: ["Backend Engineering", "Cloud Native", "Open Application Model"]
 weight: 1
 description: >
+  Open Application Model (OAM) introduction
 ---
 
 An open standard for defining cloud native apps.

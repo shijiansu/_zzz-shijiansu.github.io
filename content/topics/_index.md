@@ -4,6 +4,12 @@ menu:
   main:
     weight: 10
     pre: <i class='fas fa-flask'></i>
+cascade:
+- type: "blog"
+  simple_list: true
+  toc_root: true
+  _target:
+    path: "*/**"
 ---
 
 

@@ -12,9 +12,11 @@ description: >
 ## Environment
 
 - Nodejs v16.10.0
-- Hugo v0.88.1
+- Hugo v0.88.1 - Websites builder
 - Google Docsy theme (via Docsy example) - theme/docsy
   - SCSS
+  - https://www.docsy.dev/
+  - https://www.docsy.dev/docs/adding-content/content/ (Userful for customization!)
 - GitHub Actions - .github/workflows
 - GitHub Pages
 

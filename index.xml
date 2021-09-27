@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Shijian Homepage</title><link>/</link><description>Recent content on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Introduction</title><link>/blog/2021/05/25/introduction/</link><pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate><guid>/blog/2021/05/25/introduction/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Shijian Homepage</title><link>/</link><description>Recent content on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Topics: Introduction</title><link>/topics/cloud-native/open-application-model/introduction/</link><pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate><guid>/topics/cloud-native/open-application-model/introduction/</guid><description>
 &lt;p>An open standard for defining cloud native apps.&lt;/p>
 &lt;p>Focused on application rather than container or orchestrator, Open Application Model [OAM] brings modular, extensible, and portable design for modeling application deployment with higher level yet consistent API.&lt;/p>
 &lt;p>This is the key to enable simple yet robust application delivery across hybrid environments including Kubernetes, cloud, or even IoT devices.&lt;/p>
@@ -40,7 +40,7 @@
 &lt;h2 id="see-it-in-action">See it in action&lt;/h2>
 &lt;blockquote>
 &lt;p>&lt;a href="https://github.com/oam-dev/kubevela">https://github.com/oam-dev/kubevela&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>Blog: Internal Platform Teams - What Are They and Do You Need One</title><link>/blog/2021/04/01/internal-platform-teams-what-are-they-and-do-you-need-one/</link><pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate><guid>/blog/2021/04/01/internal-platform-teams-what-are-they-and-do-you-need-one/</guid><description>
+&lt;/blockquote></description></item><item><title>Topics: Internal Platform Teams - What Are They and Do You Need One</title><link>/topics/platform-engineering/internal-developer-platform-idp/internal-platform-teams-what-are-they-and-do-you-need-one/</link><pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate><guid>/topics/platform-engineering/internal-developer-platform-idp/internal-platform-teams-what-are-they-and-do-you-need-one/</guid><description>
 &lt;p>The early 2000s, the era of the SysAdmin. They were the ultimate rulers of the infrastructure, the gatekeepers of any setup. If your app developers wanted anything done, they needed to pass through them. Specifically, this meant every script and piece of code was thrown over the fence to SysAdmins to figure out what to do with it and how to deploy it. Not a great experience on either side of the fence. Then 2007 came and Werner Vogels &lt;a href="https://queue.acm.org/detail.cfm?id=1142065">famously yelled&lt;/a>: “You build it, you run it”. And a whole generation of SysAdmins was fired. Cloud native was finally allowing developers to provision the resources they needed, whenever they needed them. The answer to every dev teams’ problems. Or was it?&lt;/p>
 &lt;p>While it did bring about a plethora of improvements around scalability, availability and ease of operation, it turns out Cloud native also meant things got a lot more complicated. As every company’s value proposition becomes digitized (&lt;a href="https://www.youtube.com/watch?v=ZAKn9qkYEwU&amp;amp;t=1978s">as Twilio’s CEO explains&lt;/a>), the degree of complexity of its systems grows exponentially. They suddenly need to integrate with countless new technologies, be deployed across multiple clusters and vendors in different regions, all while offering an effortless end experience to customers. The result of all of this is that your frontend app developers are completely overwhelmed by the sheer amount of tools that make up your infrastructure. And whenever they are supposed to be using those YAML files for their deployments, they end up going to your Ops team to ask for help. So much for “you build it, you run it”.&lt;/p>
 &lt;h2 id="the-key-to-true-devops">The key to true DevOps&lt;/h2>
@@ -99,7 +99,7 @@
 &lt;li>Organizing internal hackathons so dev teams can surface their requirements for internal tooling needs. Nigel Simons (Director Enterprise Tech at a Fortune 100) explained in a &lt;a href="https://humanitec.com/blog/developer-experience-roundtable-continuous-improvement-nigel-simpson-erik-muttersbach">conversation with us&lt;/a> that 50% of their teams’ hackathon ideas actually make it to production.&lt;/li>
 &lt;/ul>
 &lt;h2 id="summary">Summary&lt;/h2>
-&lt;p>If you and your team are scaling up your infrastructure and adding engineers at an increasing pace, you are likely considering (or hopefully will consider, after reading this) to build an Internal Platform team. The benefits can be many and if done right, a Platform team can allow your organization to scale considerably faster and more efficiently than with a less standardized approach and product driven mentality.&lt;/p></description></item><item><title>Blog: Backend as a Service - What is a BaaS</title><link>/blog/2021/02/09/backend-as-a-service-what-is-a-baas/</link><pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate><guid>/blog/2021/02/09/backend-as-a-service-what-is-a-baas/</guid><description>
+&lt;p>If you and your team are scaling up your infrastructure and adding engineers at an increasing pace, you are likely considering (or hopefully will consider, after reading this) to build an Internal Platform team. The benefits can be many and if done right, a Platform team can allow your organization to scale considerably faster and more efficiently than with a less standardized approach and product driven mentality.&lt;/p></description></item><item><title>Topics: Backend as a Service - What is a BaaS</title><link>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</link><pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate><guid>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</guid><description>
 &lt;h2 id="what-is-a-backend-as-a-service">What is a backend as a service?&lt;/h2>
 &lt;p>&lt;img src="images/0.png" alt="0">&lt;/p>
 &lt;p>A BaaS or mBaaS or Backend as a Service is a platform that automates backend side development and takes care of the cloud infrastructure. Using a BaaS, you will outsource the responsibilities of running and maintaining servers to a third party and focus on the frontend or client-side development.&lt;/p>
@@ -249,7 +249,7 @@ There are many benefits of using a BaaS cloud, and the reasons to use a backend 
 &lt;p>&lt;img src="images/3.png" alt="">&lt;/p>
 &lt;p>&lt;img src="images/4.png" alt="4">&lt;/p>
 &lt;p>&lt;img src="images/5.png" alt="5">&lt;/p>
-&lt;p>&lt;img src="images/6.png" alt="6">&lt;/p></description></item><item><title>Blog: 12 Factor App Principles and Cloud-Native Microservices</title><link>/blog/2020/09/22/12-factor-app-principles-and-cloud-native-microservices/</link><pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate><guid>/blog/2020/09/22/12-factor-app-principles-and-cloud-native-microservices/</guid><description>
+&lt;p>&lt;img src="images/6.png" alt="6">&lt;/p></description></item><item><title>Topics: 12 Factor App Principles and Cloud-Native Microservices</title><link>/topics/cloud-native/12-factor-apps/12-factor-app-principles-and-cloud-native-microservices/</link><pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate><guid>/topics/cloud-native/12-factor-apps/12-factor-app-principles-and-cloud-native-microservices/</guid><description>
 &lt;p>&lt;img src="images/12-factor-app-principles.png" alt="img">&lt;/p>
 &lt;p>12-factor app is a methodology or set of principles for building the scalable and performant, independent, and most resilient enterprise applications. It establishes the general principles and guidelines for creating robust enterprise applications. 12-factor app principles got very popular as it aligns with Microservice principles.&lt;/p>
 &lt;h2 id="the-12-factor-principles">The 12-Factor Principles&lt;/h2>
@@ -366,7 +366,7 @@ There are many benefits of using a BaaS cloud, and the reasons to use a backend 
 &lt;ul>
 &lt;li>Microservices: Containerization also helps here to run the one-off processes as a task and shutdown automatically one done with the implementation.&lt;/li>
 &lt;/ul>
-&lt;p>That&amp;rsquo;s all for today. Hope you have enjoyed the article. Please share your thoughts or ideas or improvements in the below comments box.&lt;/p></description></item><item><title>Blog: Spring 5.0 Microservice 2nd - Twelve-Factor Apps</title><link>/blog/2020/08/30/spring-5.0-microservice-2nd-twelve-factor-apps/</link><pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate><guid>/blog/2020/08/30/spring-5.0-microservice-2nd-twelve-factor-apps/</guid><description>
+&lt;p>That&amp;rsquo;s all for today. Hope you have enjoyed the article. Please share your thoughts or ideas or improvements in the below comments box.&lt;/p></description></item><item><title>Topics: Spring 5.0 Microservice 2nd - Twelve-Factor Apps</title><link>/topics/cloud-native/12-factor-apps/spring-5.0-microservice-2nd-twelve-factor-apps/</link><pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate><guid>/topics/cloud-native/12-factor-apps/spring-5.0-microservice-2nd-twelve-factor-apps/</guid><description>
 &lt;h2 id="1-single-code-base">1. Single code base&lt;/h2>
 &lt;p>&lt;img src="images/single-code-base.png" alt="">&lt;/p>
 &lt;p>Extending the same philosophy for microservices, each microservice should have its own code base, and this code base is not shared with any other microservice. It also means that one microservice will have exactly one code base.&lt;/p>
@@ -392,14 +392,14 @@ There are many benefits of using a BaaS cloud, and the reasons to use a backend 
 &lt;p>If the I/Os are not fast enough in a given infrastructure, they could create a bottleneck. The solution to this is to use a centralized logging framework. &lt;strong>Splunk, greylog, Logstash, Logplex, Loggly&lt;/strong> are some examples of log shipping and analysis tools. The recommended approach is to ship logs to a central repository by tapping the logback appenders and write to one of the shipper&amp;rsquo;s endpoints.&lt;/p>
 &lt;p>&lt;img src="images/externalizing-logs.png" alt="">&lt;/p>
 &lt;h2 id="12-package-admin-processes">12. Package admin processes&lt;/h2>
-&lt;p>Apart from application requests, most of the applications provision for admin tasks. This principle advices you to target the same release and an identical environment as the long running processes runs to perform these activities. Admin code should also be packaged along with the application code.&lt;/p></description></item><item><title>Blog: Easy documentation with Docsy</title><link>/blog/2018/10/06/easy-documentation-with-docsy/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>/blog/2018/10/06/easy-documentation-with-docsy/</guid><description>
-&lt;img src="/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_640x0_resize_catmullrom_3.png" width="640" height="253"/>
+&lt;p>Apart from application requests, most of the applications provision for admin tasks. This principle advices you to target the same release and an identical environment as the long running processes runs to perform these activities. Admin code should also be packaged along with the application code.&lt;/p></description></item><item><title>Topics: Easy documentation with Docsy</title><link>/topics/news/first-post/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>/topics/news/first-post/</guid><description>
+&lt;img src="/topics/news/first-post/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_640x0_resize_catmullrom_3.png" width="640" height="253"/>
 &lt;p>&lt;strong>This is a typical blog post that includes images.&lt;/strong>&lt;/p>
 &lt;p>The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&lt;/p>
 &lt;h2 id="including-images">Including images&lt;/h2>
 &lt;p>Here&amp;rsquo;s an image (&lt;code>featured-sunset-get.png&lt;/code>) that includes a byline and a caption.&lt;/p>
 &lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-&lt;img class="card-img-top" src="/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png" width="600" height="300">
+&lt;img class="card-img-top" src="/topics/news/first-post/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png" width="600" height="300">
 &lt;div class="card-body px-0 pt-2 pb-0">
 &lt;p class="card-text">
 Fetch and scale an image in the upcoming Hugo 0.43.
@@ -415,14 +415,14 @@ byline: &amp;quot;Photo: Riona MacNamara / CC-BY-CA&amp;quot;
 &lt;/code>&lt;/pre>&lt;p>To include the image in a page, specify its details like this:&lt;/p>
 &lt;pre tabindex="0">&lt;code>
 &lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
-&lt;img class="card-img-top" src="/blog/2018/10/06/easy-documentation-with-docsy/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png" width="600" height="300">
+&lt;img class="card-img-top" src="/topics/news/first-post/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png" width="600" height="300">
 &lt;div class="card-body px-0 pt-2 pb-0">
 &lt;p class="card-text">
 Fetch and scale an image in the upcoming Hugo 0.43.
 &lt;small class="text-muted">&lt;br/>Photo: Riona MacNamara / CC-BY-CA&lt;/small>&lt;/p>
 &lt;/div>
 &lt;/div>
-&lt;/code>&lt;/pre>&lt;p>The image will be rendered at the size and byline specified in the front matter.&lt;/p></description></item><item><title>Blog: Another Great Release</title><link>/blog/2018/01/04/another-great-release/</link><pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate><guid>/blog/2018/01/04/another-great-release/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>The image will be rendered at the size and byline specified in the front matter.&lt;/p></description></item><item><title>Topics: Another Great Release</title><link>/topics/releases/in-depth-monoliths-detailed-spec/</link><pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate><guid>/topics/releases/in-depth-monoliths-detailed-spec/</guid><description>
 &lt;p>Text can be &lt;strong>bold&lt;/strong>, &lt;em>italic&lt;/em>, or &lt;del>strikethrough&lt;/del>. &lt;a href="https://github.com">Links&lt;/a> should be blue with no underlines (unless hovered over).&lt;/p>
 &lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>
 &lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>

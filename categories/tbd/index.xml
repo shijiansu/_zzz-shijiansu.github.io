@@ -67,7 +67,9 @@ mkdir workflows &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;am
 &lt;span style="color:#204a87">echo&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;lt;&amp;lt;&amp;lt;&lt;/span> EOL
 line ...
 EOL &amp;gt; gh-pages.yml
-&lt;span style="color:#8f5902;font-style:italic"># github actions yml explaination&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># github actions yml explanation&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># this is check in to repository &amp;#34;gh-pages&amp;#34; branch,&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># which will setup in github pages as source of github pages.&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic">## hugo github action:&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic">## https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic">## nodjes environment: https://github.com/actions/setup-node&lt;/span>

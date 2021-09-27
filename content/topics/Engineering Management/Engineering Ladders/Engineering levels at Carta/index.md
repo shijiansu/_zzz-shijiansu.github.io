@@ -19,7 +19,7 @@ Carta has eight full-time engineering levels, plus a separate level for interns.
 
 Writing down the precise requirements for what constitutes performance at a given level is tough. If the list is too general, it doesn’t give employees a clear picture of what they need to do to advance. If the list is too specific, it encourages employees to check boxes rather than focus on doing their job. The truth is, some boxes are important to check, but there is a degree of judgment that comes into leveling and promotion decisions. As the company matures, fine-tuning this balance — and fighting bias — only increases in importance.
 
-Fortunately, it’s easy to articulate the single most important thing for leveling: your **impact** on the company. We can sum up the entire system by describing the (rough) impact we expect employees to have as they progress: on tasks (L2), on features (L3), on problems (L4), on teams (L5), on the organization (L6), on the company (L7), and on the industry (L8). You’ll note that this is not a linear progression, especially at the top of the range; moving the trajectory of the *industry* is exponentially harder than moving the trajectory of the *company*. This is why our levels aren’t linear, and neither is compensation.
+Fortunately, it’s easy to articulate the single most important thing for leveling: your **impact** on the company. We can sum up the entire system by describing the (rough) impact we expect employees to have as they progress: on **tasks (L2)**, on **features (L3)**, on **problems (L4)**, on teams (L5), on the **organization (L6)**, on the **company (L7)**, and on the **industry (L8)**. You’ll note that this is not a linear progression, especially at the top of the range; moving the trajectory of the *industry* is exponentially harder than moving the trajectory of the *company*. This is why our levels aren’t linear, and neither is compensation.
 
 ![This graph shows the expected impact (on the y axis) plotted against our engineering levels (on the x axis), from L2 to L8. The curve of impact is roughly linear until Senior II (our L5): then it begins to increase exponentially.](images/1.png)
 
@@ -43,7 +43,7 @@ To set compensation at Carta, we use [Carta Total Comp](https://carta.com/blog/i
 
 ## **Career progression**
 
-As you think about your career progression at Carta, one of the first things to know is that there’s a big discontinuity at L5, which Carta considers its first **terminal** level. Prior to L5, we expect engineers at Carta to make “reasonable progress” along our bands; if you aren’t continuously learning, developing your skills, scaling your impact, and getting promoted every few years, your lack of progress will eventually become a performance issue. Once you get to L5, the situation changes. After L5, further promotion is no longer “expected,” and no longer comes with a timeline. Being promoted beyond this level is *extremely* difficult: most engineers won’t ever get there, and that’s perfectly okay.
+As you think about your career progression at Carta, one of the first things to know is that there’s a big discontinuity at **L5**, which Carta considers its first **terminal** level. **Prior to L5, we expect engineers at Carta to make “reasonable progress” along our bands**; if you aren’t continuously learning, developing your skills, scaling your impact, and getting promoted every few years, your lack of progress will eventually become a performance issue. Once you get to L5, the situation changes. **After L5, further promotion is no longer “expected"**, and no longer comes with a timeline. Being promoted beyond this level is *extremely* difficult: most engineers won’t ever get there, and that’s perfectly okay.
 
 It’s also important to remember that, as you get more senior, it becomes more and more **your responsibility** to own your career. Your manager is there to support you, give you guidance and advice, and help you capitalize on opportunities along the way, but *you* are responsible for your trajectory.
 
@@ -99,7 +99,7 @@ A last point on management career trajectory is that **headcount** is a [vanity 
 
 **VP (M6)** is an executive role, usually leading an entire scaled business unit or a mission-critical cross-functional organization. Your primary stakeholders are C-suite executives. You’re actively involved in setting the strategic direction of the company *and* held directly accountable for the performance of your entire org.
 
-## Summary
+## Put together
 
 | Engineering Ladder |                                | Management Ladder |                            |
 | :----------------: | :----------------------------: | :---------------: | :------------------------: |

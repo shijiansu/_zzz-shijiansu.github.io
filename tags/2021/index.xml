@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – 2021</title><link>/tags/2021/</link><description>Recent content in 2021 on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Topics: Introduction</title><link>/topics/cloud-native/open-application-model/introduction/</link><pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate><guid>/topics/cloud-native/open-application-model/introduction/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – 2021</title><link>/tags/2021/</link><description>Recent content in 2021 on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Topics: Introduction</title><link>/topics/cloud-native/open-application-model/introduction/</link><pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate><guid>/topics/cloud-native/open-application-model/introduction/</guid><description>
 &lt;p>An open standard for defining cloud native apps.&lt;/p>
 &lt;p>Focused on application rather than container or orchestrator, Open Application Model [OAM] brings modular, extensible, and portable design for modeling application deployment with higher level yet consistent API.&lt;/p>
 &lt;p>This is the key to enable simple yet robust application delivery across hybrid environments including Kubernetes, cloud, or even IoT devices.&lt;/p>
@@ -40,7 +40,104 @@
 &lt;h2 id="see-it-in-action">See it in action&lt;/h2>
 &lt;blockquote>
 &lt;p>&lt;a href="https://github.com/oam-dev/kubevela">https://github.com/oam-dev/kubevela&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>Topics: Engineering levels at Carta</title><link>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</link><pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</guid><description>
+&lt;/blockquote></description></item><item><title>Topics: Engineering levels at Alibaba</title><link>/topics/engineering-management/engineering-ladders/engineering-levels-at-alibaba/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/engineering-ladders/engineering-levels-at-alibaba/</guid><description>
+&lt;h2 id="put-together">Put together&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Engineering Ladder&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">Management Ladder&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;strong>Level&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Name&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Level&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Name&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P3&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P4&lt;/td>
+&lt;td style="text-align:center">Junior engineer&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P5&lt;/td>
+&lt;td style="text-align:center">Engineer&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P6&lt;/td>
+&lt;td style="text-align:center">Advanced engineer&lt;/td>
+&lt;td style="text-align:center">M1&lt;/td>
+&lt;td style="text-align:center">Lead&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P7 (first terminal level)&lt;/td>
+&lt;td style="text-align:center">Technical expert&lt;/td>
+&lt;td style="text-align:center">M2&lt;/td>
+&lt;td style="text-align:center">Manager&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P8&lt;/td>
+&lt;td style="text-align:center">Advanced technical expert&lt;/td>
+&lt;td style="text-align:center">M3&lt;/td>
+&lt;td style="text-align:center">Senior manager&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P9 (second terminal level)&lt;/td>
+&lt;td style="text-align:center">Senior technical expert&lt;/td>
+&lt;td style="text-align:center">M4&lt;/td>
+&lt;td style="text-align:center">Director&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P10&lt;/td>
+&lt;td style="text-align:center">Researcher&lt;/td>
+&lt;td style="text-align:center">M5&lt;/td>
+&lt;td style="text-align:center">Senior director&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P11&lt;/td>
+&lt;td style="text-align:center">Advanced researcher&lt;/td>
+&lt;td style="text-align:center">M6&lt;/td>
+&lt;td style="text-align:center">VP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P12&lt;/td>
+&lt;td style="text-align:center">Senior researcher&lt;/td>
+&lt;td style="text-align:center">M7&lt;/td>
+&lt;td style="text-align:center">Senior VP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P13&lt;/td>
+&lt;td style="text-align:center">Scientist&lt;/td>
+&lt;td style="text-align:center">M8&lt;/td>
+&lt;td style="text-align:center">Executive VP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P14&lt;/td>
+&lt;td style="text-align:center">Senior scientist&lt;/td>
+&lt;td style="text-align:center">M9&lt;/td>
+&lt;td style="text-align:center">Vice-Chairman&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">M10&lt;/td>
+&lt;td style="text-align:center">Chairman&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Topics: Engineering levels at Carta</title><link>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</link><pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</guid><description>
 &lt;p>At Carta, we follow Jim Barksdale’s &lt;a href="https://www.forbes.com/sites/michaellindenmayer/2014/03/07/4-hard-earned-lessons-from-ben-horowitz/">maxim&lt;/a>: “take care of the people, the products, and the profits…in that order.” We believe &lt;a href="https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/05/05/three-ways-businesses-can-get-ahead-by-prioritizing-people/amp/">people &lt;em>are&lt;/em> the business&lt;/a>: building an environment where our engineers &lt;em>want&lt;/em> to come to work every day and know they can grow their careers is the best technical leverage we could hope for.&lt;/p>
 &lt;p>To that end, having a fair, equitable, and &lt;em>clear&lt;/em> framework for leveling and career progression is one of our most important goals. Engineering leaders talk about levels and promotion processes a lot, but they focus more on the &lt;em>what&lt;/em> and not the &lt;em>why&lt;/em>. At Carta, we want everyone to understand how the company thinks about fairness and compensation, why our leveling processes exist, and what they’re trying to achieve.&lt;/p>
 &lt;p>What follows is our internal engineering leveling guide, lightly edited for public consumption. We hope that by sharing it here we can help demystify some common questions about engineering career ladders and communicate our values to candidates and prospects alike.&lt;/p>
@@ -125,7 +222,7 @@
 &lt;td style="text-align:center">Tech lead manager&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">L5&lt;/td>
+&lt;td style="text-align:center">L5 (first terminal level)&lt;/td>
 &lt;td style="text-align:center">Senior software engineer II&lt;/td>
 &lt;td style="text-align:center">M2&lt;/td>
 &lt;td style="text-align:center">Engineering manager&lt;/td>

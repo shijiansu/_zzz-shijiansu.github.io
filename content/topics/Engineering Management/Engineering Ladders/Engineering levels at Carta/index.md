@@ -101,19 +101,14 @@ A last point on management career trajectory is that **headcount** is a [vanity 
 
 ## Put together
 
-| Engineering Ladder |                                | Management Ladder |                            |
-| :----------------: | :----------------------------: | :---------------: | :------------------------: |
-|     **Level**      |            **Name**            |     **Level**     |          **Name**          |
-|         L2         |      Software engineer I       |                   |                            |
-|         L3         |      Software engineer II      |                   |                            |
-|         L4         |   Senior software engineer I   |        M1         |     Tech lead manager      |
-|         L5         |  Senior software engineer II   |        M2         |    Engineering manager     |
-|         L6         |    Staff software engineer     |        M3         | Senior engineering manager |
-|         L7         | Senior staff software engineer |        M4         |          Director          |
-|         L8         |  Principal software engineer   |        M5         |      Senior director       |
-|                    |                                |        M6         |             VP             |
-
-
-
-
-
+|    Engineering Ladder     |                                | Management Ladder |                            |
+| :-----------------------: | :----------------------------: | :---------------: | :------------------------: |
+|         **Level**         |            **Name**            |     **Level**     |          **Name**          |
+|            L2             |      Software engineer I       |                   |                            |
+|            L3             |      Software engineer II      |                   |                            |
+|            L4             |   Senior software engineer I   |        M1         |     Tech lead manager      |
+| L5 (first terminal level) |  Senior software engineer II   |        M2         |    Engineering manager     |
+|            L6             |    Staff software engineer     |        M3         | Senior engineering manager |
+|            L7             | Senior staff software engineer |        M4         |          Director          |
+|            L8             |  Principal software engineer   |        M5         |      Senior director       |
+|                           |                                |        M6         |             VP             |

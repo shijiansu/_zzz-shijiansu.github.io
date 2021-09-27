@@ -1,6 +1,6 @@
 ---
 date: 2021-09-27
-author: Internet (aggregated multiple sources)
+author: Internet (aggregating multiple sources)
 title: "Engineering levels at Alibaba"
 tags: ["2021"]
 categories: ["Engineering Management", "Engineering Ladders"]

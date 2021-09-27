@@ -1,5 +1,5 @@
 ---
-title: "Documentation"
+title: "Docs"
 weight: 20
 menu:
   main:

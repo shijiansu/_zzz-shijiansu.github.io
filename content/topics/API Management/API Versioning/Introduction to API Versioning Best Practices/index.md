@@ -73,7 +73,7 @@ API providers often communicate **resource criteria** and limitations in their r
 
 A clever outlier is using **MIME** types to include a version indicator. API providers register these MIME types on their backend and then users include **Accept** and **Content-type headers**. IETF legitimized this approach in [RFC4627](http://www.ietf.org/rfc/rfc4627.txt). While this does work, developers choosing this approach will inevitably end up explaining their choice to management types who state, “but it doesn’t work on HTML forms, so why do you want to do it that way?”
 
-```makefile
+```http
 Accept: application/pre.company.app-v1+json
 Content-Type: application/pre.company.app-v1+json
 ```
@@ -82,12 +82,14 @@ The debate over implementation is deep and will continue. So, developers and pro
 
 What constitutes a proper response code is something engineers will debate gleefully and loudly at company happy hours. But, here are some useful negative responses that are verbose enough to be helpful downstream.
 
-```makefile
+```http
 400: BAD_REQUEST: ApiVersionUnspecified: An API version is required, but was not specified
 400: BAD_REQUEST: InvalidApiVersion: An API version was specified, but it is invalid
 400: BAD_REQUEST: AmbiguousApiVersion: An API version was specified multiple times with different values
 400, 405: BAD_REQUEST, METHOD_NOT_ALLOWED: UnsupportedApiVersion: The specified API version is not supported
-301: MOVED_PERMANENTLY: movedPermanently: This request and future requests for the same operation have to be sent to the URL specified in the Location header of this response instead of to the URL to which this request was sent
+301: MOVED_PERMANENTLY: movedPermanently: This request and future requests for the same operation have 
+to be sent to the URL specified in the Location header of this response 
+instead of to the URL to which this request was sent
 410: GONE: deleted: The request failed because the resource associated with the request has been deleted
 299: OK: Warning: "Deprecated API"
 ```

@@ -1,12 +1,11 @@
 ---
 date: 2021-05-25
 author: https://oam.dev/
-title: "Introduction"
+title: "Introduction to Open Application Model"
 tags: ["2021"]
 categories: ["Backend Engineering", "Cloud Native", "Open Application Model"]
 weight: 1
 description: >
-  Open Application Model (OAM) introduction
 ---
 
 An open standard for defining cloud native apps.

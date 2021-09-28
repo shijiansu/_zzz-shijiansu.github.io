@@ -2,7 +2,7 @@
 date: 2017-11-03
 author: https://nordicapis.com/introduction-to-api-versioning-best-practices/
 title: "Introduction to API Versioning Best Practices"
-tags: ["2021", "TODO", "TO SUMMARIZE"]
+tags: ["2017", "TODO", "TO SUMMARIZE"]
 categories: ["API Management", "API Versioning"]
 description: >
 ---

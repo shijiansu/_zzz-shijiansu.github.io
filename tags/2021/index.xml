@@ -262,40 +262,29 @@
 &lt;/ul>
 &lt;h2 id="1-use-kebab-case-for-urls">1. Use kebab-case for URLs&lt;/h2>
 &lt;p>For example, if you want to get the list of orders.&lt;/p>
-&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">/systemOrders or /system_orders
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">/system-orders
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="2-use-camelcase-for-parameters">2. Use camelCase for Parameters&lt;/h2>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>/systemOrders or /system_orders&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>/system-orders&lt;/code>&lt;/p>
+&lt;h2 id="2-use-camelcase-for-parameters">2. Use camelCase for Parameters&lt;/h2>
 &lt;p>For example, if you want to get products from a particular shop.&lt;/p>
-&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">/system-orders/{order_id} or /system-orders/{OrderId}
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">/system-orders/{orderId}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="3-plural-name-to-point-to-a-collection">3. Plural Name to Point to a Collection&lt;/h2>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>/system-orders/{order_id} or /system-orders/{OrderId}&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>/system-orders/{orderId}&lt;/code>&lt;/p>
+&lt;h2 id="3-plural-name-to-point-to-a-collection">3. Plural Name to Point to a Collection&lt;/h2>
 &lt;p>If you want to get all the users of a system.&lt;/p>
-&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">GET /user or GET /User
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">GET /users
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="4-url-starts-with-a-collection-and-ends-with-an-identifier">4. URL Starts With a Collection and Ends With an Identifier&lt;/h2>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>GET /user or GET /User&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>GET /users&lt;/code>&lt;/p>
+&lt;h2 id="4-url-starts-with-a-collection-and-ends-with-an-identifier">4. URL Starts With a Collection and Ends With an Identifier&lt;/h2>
 &lt;p>If want to keep the concept singular and consistent.&lt;/p>
-&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">GET /shops/:shopId/category/:categoryId/price
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is bad because it’s pointing to a property instead of a resource.&lt;/p>
-&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">GET /shops/:shopId/ or GET /category/:categoryId
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="5-keep-verbs-out-of-your-resource-url">5. Keep Verbs Out of Your Resource URL&lt;/h2>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>GET /shops/:shopId/category/:categoryId/price&lt;/code>&lt;/p>
+&lt;p>This is bad because it’s pointing to a property instead of a resource.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>GET /shops/:shopId/ or GET /category/:categoryId&lt;/code>&lt;/p>
+&lt;h2 id="5-keep-verbs-out-of-your-resource-url">5. Keep Verbs Out of Your Resource URL&lt;/h2>
 &lt;p>Don’t use verbs to express your intention in the URL. Instead, use proper HTTP methods to describe the operation.&lt;/p>
-&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">POST /updateuser/{userId} or GET /getusers
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">PUT /user/{userId}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="6-use-verbs-for-non-resource-url">6. Use Verbs for Non-Resource URL&lt;/h2>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>POST /updateuser/{userId} or GET /getusers&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>PUT /user/{userId}&lt;/code>&lt;/p>
+&lt;h2 id="6-use-verbs-for-non-resource-url">6. Use Verbs for Non-Resource URL&lt;/h2>
 &lt;p>You have an endpoint that returns nothing but an operation. In this case, you can use verbs. For example, if you want to resend the alert to a user.&lt;/p>
-&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">POST /alerts/245743/resend
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Keep in mind that these are not our CRUD operations. Rather, these are considered functions that do a specific job in our system.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>POST /alerts/245743/resend&lt;/code>&lt;/p>
+&lt;p>Keep in mind that these are not our CRUD operations. Rather, these are considered functions that do a specific job in our system.&lt;/p>
 &lt;h2 id="7-use-camelcase-for-json-property">7. Use camelCase for JSON property&lt;/h2>
 &lt;p>If you’re building a system in which the request body or response is JSON, the property names should be in &lt;code>camelCase&lt;/code>&lt;/p>
 &lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
@@ -309,14 +298,13 @@ userName: &amp;#34;Mohammad Faisal&amp;#34;
 userId: &amp;#34;1&amp;#34;
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="8-monitoring">8. Monitoring&lt;/h2>
-&lt;p>RESTful HTTP services MUST implement the &lt;code>/health&lt;/code> and &lt;code>/version&lt;/code> and &lt;code>/metrics &lt;/code>API endpoints. They will provide the following info.&lt;/p>
-&lt;h3 id="health">/health&lt;/h3>
-&lt;p>Respond to requests to &lt;code>/health&lt;/code> with a &lt;code>200 OK&lt;/code> status code.&lt;/p>
-&lt;h3 id="version">/version&lt;/h3>
-&lt;p>Respond to request to &lt;code>/version&lt;/code> with the version number.&lt;/p>
-&lt;h3 id="metrics">&lt;code>/**metrics**&lt;/code>&lt;/h3>
-&lt;p>This endpoint will provide various metrics like average response time.&lt;/p>
-&lt;p>&lt;code>/debug &lt;/code>and&lt;code> /status&lt;/code> endpoints are also highly recommended.&lt;/p>
+&lt;p>RESTful HTTP services MUST implement the &lt;code>/health&lt;/code> and &lt;code>/version&lt;/code> and &lt;code>/metrics&lt;/code> API endpoints. They will provide the following info.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>/health&lt;/strong>: Respond to requests to &lt;code>/health&lt;/code> with a &lt;code>200 OK&lt;/code> status code.&lt;/li>
+&lt;li>&lt;strong>/version&lt;/strong>: Respond to request to &lt;code>/version&lt;/code> with the version number.&lt;/li>
+&lt;li>&lt;strong>/metrics&lt;/strong>: This endpoint will provide various metrics like average response time.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>/debug&lt;/code> and &lt;code>/status&lt;/code> endpoints are also highly recommended.&lt;/p>
 &lt;h2 id="9-dont-use-table_name-for-the-resource-name">9. Don’t Use table_name for the Resource Name&lt;/h2>
 &lt;p>Don’t just use the table name as your resource name. In the long run, this kind of laziness can be harmful.&lt;/p>
 &lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>product_order&lt;/code>&lt;/p>
@@ -331,9 +319,8 @@ userId: &amp;#34;1&amp;#34;
 &lt;p>Having good and detailed documentation results in a great user experience for your API consumers.&lt;/p>
 &lt;h2 id="11-use-simple-ordinal-number-as-version">11. Use Simple Ordinal Number as Version&lt;/h2>
 &lt;p>Always use versioning for the API and move it all the way to the left so that it has the highest scope. The version number should be &lt;code>v1&lt;/code>, &lt;code>v2&lt;/code> etc.&lt;/p>
-&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">http://api.domain.com/v1/shops/3/products
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Always use versioning in your API because if the API is being used by external entities, changing the endpoint can break their functionality.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>http://api.domain.com/v1/shops/3/products&lt;/code>&lt;/p>
+&lt;p>Always use versioning in your API because if the API is being used by external entities, changing the endpoint can break their functionality.&lt;/p>
 &lt;h2 id="12-include-total-number-of-resources-in-your-response">12. Include Total Number of Resources in Your Response&lt;/h2>
 &lt;p>If an API returns a list of objects always include the total number of resources in the response. You can use the &lt;code>total&lt;/code> property for this.&lt;/p>
 &lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
@@ -350,23 +337,21 @@ users: [
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="13-accept-limit-and-offset-parameters">13. Accept limit and offset Parameters&lt;/h2>
 &lt;p>Always accept &lt;code>limit&lt;/code> and &lt;code>offset&lt;/code> parameters in &lt;code>GET&lt;/code> operations.&lt;/p>
-&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">GET /shops?offset=5&amp;amp;limit=5
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is because it’s necessary for pagination on the front end.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>GET /shops?offset=5&amp;amp;limit=5&lt;/code>&lt;/p>
+&lt;p>This is because it’s necessary for pagination on the front end.&lt;/p>
 &lt;h2 id="14-take-fields-query-parameter">14. Take fields Query Parameter&lt;/h2>
 &lt;p>The amount of data being returned should also be taken into consideration. Add a &lt;code>fields&lt;/code> parameter to expose only the required fields from your API.&lt;/p>
-&lt;h3 id="example">Example:&lt;/h3>
+&lt;h3 id="example">Example&lt;/h3>
 &lt;p>Only return the name, address, and contact of the shops.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">GET /shops?fields=id,name,address,contact
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>It also helps to reduce the response size in some cases.&lt;/p>
+&lt;p>&lt;code>GET /shops?fields=id,name,address,contact&lt;/code>&lt;/p>
+&lt;p>It also helps to reduce the response size in some cases.&lt;/p>
 &lt;h2 id="15-dont-pass-authentication-tokens-in-url">15. Don’t Pass Authentication Tokens in URL&lt;/h2>
 &lt;p>This is a very bad practice because often URLs are logged and the authentication token will also be logged unnecessarily.&lt;/p>
-&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">GET /shops/123?token=some_kind_of_authenticaiton_token
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>GET /shops/123?token=some_kind_of_authenticaiton_token&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
 &lt;p>Instead, pass them with the header:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">Authorization: Bearer xxxxxx, Extra yyyyy
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Also, authorization tokens should be short-lived&lt;/p>
+&lt;p>&lt;code>Authorization: Bearer xxxxxx, Extra yyyyy&lt;/code>&lt;/p>
+&lt;p>Also, authorization tokens should be short-lived&lt;/p>
 &lt;h2 id="16-validate-the-content-type">16. Validate the Content-Type&lt;/h2>
 &lt;p>The server should not assume the content type. For example, if you accept &lt;code>application/x-www-form-urlencoded&lt;/code> then an attacker can create a form and trigger a simple POST request.&lt;/p>
 &lt;p>So, always validate the &lt;code>content-type&lt;/code> and if you want to go with a default one use &lt;code>content-type: application/json&lt;/code>&lt;/p>

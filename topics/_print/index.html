@@ -84,6 +84,13 @@ This the multi-page printable view of this section.
 <ul>
 <li><a href=#pg-50f869b0e1649ec9794364f3adaafcb8>Another Great Release</a></li>
 </ul>
+<li><a href=#pg-2e205b2cfd9dcf8b0d907ba96ccd2f8e>API Management</a></li>
+<ul>
+<li><a href=#pg-0ed8876273e6ac030821cc5482b6b68c>Design RESTFul API</a></li>
+<ul>
+<li><a href=#pg-42068dd39eadc2f40b2fe49907766cd7>Practical advice for designing REST APIs</a></li>
+</ul>
+</ul>
 <li><a href=#pg-5950fca8d5839a1bdc2abfd212cd83be>Backend as a Service (BaaS)</a></li>
 <ul>
 <li><a href=#pg-2b17838ce2190ed9ffab259bb0a26a72>Backend as a Service - What is a BaaS</a></li>
@@ -449,6 +456,181 @@ This is a warning with a title!
 <p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.</p>
 <pre tabindex=0><code>This is the final element on the page and there should be no margin below this.
 </code></pre>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-2e205b2cfd9dcf8b0d907ba96ccd2f8e>API Management</h1>
+<div class="td-byline mb-4">
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-0ed8876273e6ac030821cc5482b6b68c>Design RESTFul API</h1>
+<div class="td-byline mb-4">
+<time datetime=2021-01-01 class=text-muted>2021-01-01</time>
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-42068dd39eadc2f40b2fe49907766cd7>Practical advice for designing REST APIs</h1>
+<div class="td-byline mb-4">
+By <b><a href=https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9>https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9</a></b> |
+<time datetime=2021-04-16 class=text-muted>2021-04-16</time>
+</div>
+<h2 id=first-some-terminology>First, Some Terminology</h2>
+<p>Any API design follows something called <code>Resource Oriented Design</code> It consists of three key concepts</p>
+<ul>
+<li><strong>Resource:</strong> A resource is a piece of data, For example, <strong>a User</strong>.</li>
+<li><strong>Collection:</strong> A group of resources is called a collection. Example: <strong>A list of users</strong></li>
+<li><strong>URL:</strong> Identifies the location of resource or collection. Example: <code>/user</code></li>
+</ul>
+<h2 id=1-use-kebab-case-for-urls>1. Use kebab-case for URLs</h2>
+<p>For example, if you want to get the list of orders.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>/systemOrders or /system_orders
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>/system-orders
+</code></pre></div><h2 id=2-use-camelcase-for-parameters>2. Use camelCase for Parameters</h2>
+<p>For example, if you want to get products from a particular shop.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>/system-orders/{order_id} or /system-orders/{OrderId}
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>/system-orders/{orderId}
+</code></pre></div><h2 id=3-plural-name-to-point-to-a-collection>3. Plural Name to Point to a Collection</h2>
+<p>If you want to get all the users of a system.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>GET /user or GET /User
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>GET /users
+</code></pre></div><h2 id=4-url-starts-with-a-collection-and-ends-with-an-identifier>4. URL Starts With a Collection and Ends With an Identifier</h2>
+<p>If want to keep the concept singular and consistent.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>GET /shops/:shopId/category/:categoryId/price
+</code></pre></div><p>This is bad because it’s pointing to a property instead of a resource.</p>
+<p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>GET /shops/:shopId/ or GET /category/:categoryId
+</code></pre></div><h2 id=5-keep-verbs-out-of-your-resource-url>5. Keep Verbs Out of Your Resource URL</h2>
+<p>Don’t use verbs to express your intention in the URL. Instead, use proper HTTP methods to describe the operation.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>POST /updateuser/{userId} or GET /getusers
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>PUT /user/{userId}
+</code></pre></div><h2 id=6-use-verbs-for-non-resource-url>6. Use Verbs for Non-Resource URL</h2>
+<p>You have an endpoint that returns nothing but an operation. In this case, you can use verbs. For example, if you want to resend the alert to a user.</p>
+<p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>POST /alerts/245743/resend
+</code></pre></div><p>Keep in mind that these are not our CRUD operations. Rather, these are considered functions that do a specific job in our system.</p>
+<h2 id=7-use-camelcase-for-json-property>7. Use camelCase for JSON property</h2>
+<p>If you’re building a system in which the request body or response is JSON, the property names should be in <code>camelCase</code></p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
+   user_name: &#34;Mohammad Faisal&#34;
+   user_id: &#34;1&#34;
+}
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
+   userName: &#34;Mohammad Faisal&#34;
+   userId: &#34;1&#34;
+}
+</code></pre></div><h2 id=8-monitoring>8. Monitoring</h2>
+<p>RESTful HTTP services MUST implement the <code>/health</code> and <code>/version</code> and <code>/metrics </code>API endpoints. They will provide the following info.</p>
+<h3 id=health>/health</h3>
+<p>Respond to requests to <code>/health</code> with a <code>200 OK</code> status code.</p>
+<h3 id=version>/version</h3>
+<p>Respond to request to <code>/version</code> with the version number.</p>
+<h3 id=metrics><code>/**metrics**</code></h3>
+<p>This endpoint will provide various metrics like average response time.</p>
+<p><code>/debug </code>and<code> /status</code> endpoints are also highly recommended.</p>
+<h2 id=9-dont-use-table_name-for-the-resource-name>9. Don’t Use table_name for the Resource Name</h2>
+<p>Don’t just use the table name as your resource name. In the long run, this kind of laziness can be harmful.</p>
+<p><strong>Bad:</strong> <code>product_order</code></p>
+<p><strong>Good:</strong> <code>product-orders</code></p>
+<p>This is because exposing the underlying architecture is not your purpose.</p>
+<h2 id=10-use-api-design-tools>10. Use API Design Tools</h2>
+<p>There are many good API design tools for good documentation, such as:</p>
+<ul>
+<li><a href=https://apiblueprint.org/>API Blueprint</a></li>
+<li><a href=https://swagger.io/>Swagger</a></li>
+</ul>
+<p>Having good and detailed documentation results in a great user experience for your API consumers.</p>
+<h2 id=11-use-simple-ordinal-number-as-version>11. Use Simple Ordinal Number as Version</h2>
+<p>Always use versioning for the API and move it all the way to the left so that it has the highest scope. The version number should be <code>v1</code>, <code>v2</code> etc.</p>
+<p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>http://api.domain.com/v1/shops/3/products
+</code></pre></div><p>Always use versioning in your API because if the API is being used by external entities, changing the endpoint can break their functionality.</p>
+<h2 id=12-include-total-number-of-resources-in-your-response>12. Include Total Number of Resources in Your Response</h2>
+<p>If an API returns a list of objects always include the total number of resources in the response. You can use the <code>total</code> property for this.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
+  users: [ 
+     ...
+  ]
+}
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
+  users: [ 
+     ...
+  ],  total: 34
+}
+</code></pre></div><h2 id=13-accept-limit-and-offset-parameters>13. Accept limit and offset Parameters</h2>
+<p>Always accept <code>limit</code> and <code>offset</code> parameters in <code>GET</code> operations.</p>
+<p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>GET /shops?offset=5&amp;limit=5
+</code></pre></div><p>This is because it’s necessary for pagination on the front end.</p>
+<h2 id=14-take-fields-query-parameter>14. Take fields Query Parameter</h2>
+<p>The amount of data being returned should also be taken into consideration. Add a <code>fields</code> parameter to expose only the required fields from your API.</p>
+<h3 id=example>Example:</h3>
+<p>Only return the name, address, and contact of the shops.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>GET /shops?fields=id,name,address,contact
+</code></pre></div><p>It also helps to reduce the response size in some cases.</p>
+<h2 id=15-dont-pass-authentication-tokens-in-url>15. Don’t Pass Authentication Tokens in URL</h2>
+<p>This is a very bad practice because often URLs are logged and the authentication token will also be logged unnecessarily.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>GET /shops/123?token=some_kind_of_authenticaiton_token
+</code></pre></div><p><strong>Good:</strong></p>
+<p>Instead, pass them with the header:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>Authorization: Bearer xxxxxx, Extra yyyyy
+</code></pre></div><p>Also, authorization tokens should be short-lived</p>
+<h2 id=16-validate-the-content-type>16. Validate the Content-Type</h2>
+<p>The server should not assume the content type. For example, if you accept <code>application/x-www-form-urlencoded</code> then an attacker can create a form and trigger a simple POST request.</p>
+<p>So, always validate the <code>content-type</code> and if you want to go with a default one use <code>content-type: application/json</code></p>
+<h2 id=17-use-http-methods-for-crud-functions>17. Use HTTP Methods for CRUD Functions</h2>
+<p>HTTP methods serve the purpose of explaining CRUD functionality.</p>
+<ul>
+<li><code>GET</code>: To retrieve a representation of a resource.</li>
+<li><code>POST</code>: To create new resources and sub-resources.</li>
+<li><code>PUT</code>: To update existing resources.</li>
+<li><code>PATCH</code>: To update existing resources. It only updates the fields that were supplied, leaving the others alone</li>
+<li><code>DELETE</code>: To delete existing resources.</li>
+</ul>
+<h2 id=18-use-the-relation-in-the-url-for-nested-resources>18. Use the Relation in the URL For Nested Resources</h2>
+<p>Some practical examples are:</p>
+<ul>
+<li><code>GET /shops/2/products</code> : Get the list of all products from shop 2.</li>
+<li><code>GET /shops/2/products/31</code>: Get the details of product 31, which belongs to shop 2.</li>
+<li><code>DELETE /shops/2/products/31</code> , should delete product 31, which belongs to shop 2.</li>
+<li><code>PUT /shops/2/products/31</code> , should update the info of product 31, Use PUT on resource-URL only, not the collection.</li>
+<li><code>POST /shops</code> , should create a new shop and return the details of the new shop created. Use POST on collection-URLs.</li>
+</ul>
+<h2 id=19-cors>19. CORS</h2>
+<p>Do support CORS (Cross-Origin Resource Sharing) headers for all public-facing APIs.</p>
+<p>Consider supporting a CORS allowed origin of “*”, and enforcing authorization through valid OAuth tokens.</p>
+<p>Avoid combining user credentials with origin validation.</p>
+<h2 id=20-security>20. Security</h2>
+<p>Enforce HTTPS (TLS-encrypted) across all endpoints, resources, and services.</p>
+<p>Enforce and require HTTPS for all callback URLs, push notification endpoints, and webhooks.</p>
+<h2 id=21-errors>21. Errors</h2>
+<p>Errors, or more specifically service errors, occur when a client makes an invalid or incorrect request to a service or passes invalid or incorrect data to a service, and the service rejects the request.</p>
+<p>Examples include invalid authentication credentials, incorrect parameters, unknown version IDs, etc.</p>
+<ul>
+<li>Do return <code>4xx</code> HTTP error codes when rejecting a client request due to one or more Service Errors.</li>
+<li>Consider processing all attributes and then returning multiple validation problems in a single response.</li>
+</ul>
+<h2 id=22-golden-rules>22. Golden Rules</h2>
+<p>If you are ever in doubt about an API formatting decision, these golden rules can help guide us to making the right decision.</p>
+<ul>
+<li>Flat is better than nested.</li>
+<li>Simple is better than complex.</li>
+<li>Strings are better than numbers.</li>
+<li>Consistency is better than customization.</li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-5950fca8d5839a1bdc2abfd212cd83be>Backend as a Service (BaaS)</h1>
@@ -850,7 +1032,7 @@ By <b>Spring 5.0 Microservice 2nd (2017)</b> |
 <div class=td-content>
 <h1 id=pg-afc968ae274edf8a54e2a58db311a068>Engineering levels at Alibaba</h1>
 <div class="td-byline mb-4">
-By <b>Internet (aggregating multiple sources)</b> |
+By <b>Internet (aggregating multiple sources) / Su Shijian</b> |
 <time datetime=2021-09-27 class=text-muted>2021-09-27</time>
 </div>
 <h2 id=put-together>Put together</h2>

@@ -74,6 +74,10 @@ This the multi-page printable view of this section.
 </div>
 <h1 class=title>API Management</h1>
 <ul>
+<li><a href=#pg-b6ac75f0e5022b5c590a2fbb85e7732b>API Architectural Styles</a></li>
+<ul>
+<li><a href=#pg-5c87c6889e2d99798fb08b95e3f30e47>Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</a></li>
+</ul>
 <li><a href=#pg-6326cdc184dfc5babdaddca4740a7fd9>API Versioning</a></li>
 <ul>
 <li><a href=#pg-1b52f9e91f300089e4b3c6aada5e153e>Introduction to API Versioning Best Practices</a></li>
@@ -87,6 +91,152 @@ This the multi-page printable view of this section.
 </div>
 </div>
 <div class=td-content>
+<h1 id=pg-b6ac75f0e5022b5c590a2fbb85e7732b>API Architectural Styles</h1>
+<div class="td-byline mb-4">
+<time datetime=2021-01-01 class=text-muted>2021-01-01</time>
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-5c87c6889e2d99798fb08b95e3f30e47>Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</h1>
+<div class="td-byline mb-4">
+By <b><a href=https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/>https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/</a></b> |
+<time datetime=2020-05-29 class=text-muted>2020-05-29</time>
+</div>
+<p>Two separate applications need an intermediary to talk to each other. So, developers often build bridges – <a href=https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/>Application Programming Interfaces</a> – to allow one system to access the information or functionality of another.</p>
+<p>In order to integrate applications quickly and at scale, APIs are realized using protocols and/or specifications to define the semantics and syntax of the messages passed across the wire. These specifications make up the API architecture.</p>
+<p>Over time, different API architectural styles have been released. Each of them has its own patterns of standardizing data exchange. A pull of choices raises endless debates as to which architectural style is best.</p>
+<p><img src=images/1.png alt="API timeline"></p>
+<p><em>API styles over time, Source:</em> <a href="https://twitter.com/robdcrowley?lang=en"><em>Rob Crowley</em></a></p>
+<p>Today, many API consumers refer to REST as “<em>REST in peace</em>” and cheer for GraphQL, while ten years ago it was a reverse story with REST as the winner to replace SOAP. The problem with these opinions is that they are one-sided picking a technology itself instead of considering how its actual properties and characteristics match the situation at hand.</p>
+<p>In this article, we’ll stay objective and discuss the four major API styles in the order of their appearance, compare their strong and weak sides, and highlight the scenarios where each of them fits best.</p>
+<p><img src=images/2.png alt="Four major API styles compared"></p>
+<p><em>Four major API styles compared</em></p>
+<h2 id=1-remote-procedure-call-rpc-invoking-a-function-on-another-system>1. Remote Procedure Call (RPC): invoking a function on another system</h2>
+<p>A <strong>Remote Procedure Call</strong> is a specification that allows for remote execution of a function in a different context. RPC extends the notion of local procedure calling but puts it in the context of an HTTP API.</p>
+<p>Initial XML-RPC was problematic because ensuring data types of XML payloads is tough. So, later an RPC API started using a more concrete <a href=https://www.jsonrpc.org/>JSON-RPC</a> specification which is considered a simpler alternative to SOAP. <a href=https://grpc.io/>gRPC</a> is the latest RPC version developed by Google in 2015. With pluggable support for load balancing, tracing, health checking, and authentication, gRPC is well-suited for connecting microservices.</p>
+<h3 id=11-how-rpc-works>1.1 How RPC works</h3>
+<p>A client invokes a remote procedure, serializes the parameters and additional information into a message, and sends the message to a server. On receiving the message, the server deserializes its content, executes the requested operation, and sends a result back to the client. The server stub and client stub take care of the serialization and deserialization of the parameters.</p>
+<p><img src=images/3.png alt="Remote Procedure Calling Mechanism"></p>
+<p><em>Remote Procedure Calling Mechanism, Source:</em> <a href=https://www.guru99.com/remote-procedure-call-rpc.html#1><em>Guru99</em></a></p>
+<h3 id=12-rpc-pros>1.2 RPC Pros</h3>
+<p><strong>Straightforward and simple interaction.</strong> RPC uses GET to fetch information and POST for everything else. The mechanics of the interaction between a server and a client come down to calling an endpoint and getting a response.</p>
+<p><strong>Easy-to-add functions.</strong> If we get a new requirement for our API, we can easily add another endpoint executing this requirement: 1) Write a new function and throw it behind an endpoint and 2) now a client can hit this endpoint and get the info meeting the set requirement.</p>
+<p><strong>High performance.</strong> Lightweight payloads go easy on the network providing high performance, which is important for shared servers and for parallel computations executing on networks of workstations. RPC is able to optimize the network layer and make it very efficient with sending tons of messages per day between different services.</p>
+<h3 id=13-rpc-cons>1.3 RPC Cons</h3>
+<p><strong>Tight coupling to the underlying system.</strong> An API’s abstraction level contributes to its reusability. The tighter it is to the underlying system, the less reusable it will be for other systems. RPC’s tight coupling to the underlying system doesn’t allow for an abstraction layer between the functions in the system and the external API. This raises security issues as it’s quite easy to leak implementation details about the underlying system into the API. An RPC’s tight coupling makes scalability requirements and loosely coupled teams hard to achieve. So, the client either worries about any possible side effects of calling a particular endpoint or tries figuring out what endpoint to call because it doesn’t understand how the server is naming its functions.</p>
+<p><strong>Low discoverability.</strong> In RPC there’s no way to introspect the API or send a request and start understanding what function to call based on its requests.</p>
+<p><strong>Function explosion.</strong> It’s so easy to create new functions. So, instead of editing the existing ones, we create new ones ending up with a huge list of overlapping functions that are hard to understand.</p>
+<h3 id=14-rpc-use-cases>1.4 RPC use cases</h3>
+<p>The RPC pattern started being used around the 80s, but this doesn’t automatically make it obsolete. Big companies like Google, Facebook (<a href=https://thrift.apache.org/>Apache Thrift</a>), and Twitch (<a href=https://twitchtv.github.io/twirp/docs/intro.html>Twirp</a>) are using RPC high-performance variates internally to perform extremely high-performance, low-overhead messaging. Their massive microservices systems require internal communication to be clear while arranged in short messages.</p>
+<p><strong>Command API.</strong> An RPC is the proper choice for sending commands to a remote system. For instance, a Slack API is very command-focused: Join a channel, leave a channel, send a message. So, the designers of the Slack API modeled it in an RPC-like style making it small, tight, and easy to use.</p>
+<p><strong>Customer-specific APIs for internal microservices</strong>. Having direct integration between a single provider and consumer, we don’t want to spend a lot of time transmitting a lot of metadata over the wire, like a REST API does. With high message rate and message performance, gRPC and Twirp are strong cases for microservices. Using HTTP 2 under the hood, gRPC is able to optimize the network layer and make it very efficient with sending tons of messages per day between different services. However, if you’re not aiming at high network performance, but rather at a stable API contact between teams publishing highly distinctive microservices, REST will ensure that.</p>
+<h2 id=2-simple-objects-access-protocol-soap-making-data-available-as-services>2. Simple Objects Access Protocol (SOAP): making data available as services</h2>
+<p><a href=https://www.altexsoft.com/blog/engineering/what-is-soap-formats-protocols-message-structure-and-how-soap-is-different-from-rest/#soap-use-cases><strong>SOAP</strong></a> is an XML-formatted, highly standardized web communication protocol. Released by Microsoft a year after XML-RPC, SOAP inherited a lot from it. When REST followed, they were first used in parallel, but soon REST won the popularity contest.</p>
+<h3 id=21-how-soap-works>2.1 How SOAP works</h3>
+<p>XML data format drags behind a lot of formality. Paired with the massive message structure, it makes SOAP the most verbose API style.</p>
+<p>A SOAP message is composed of:</p>
+<ul>
+<li>an envelope tag that begins and ends every message,</li>
+<li>a body containing the request or response</li>
+<li>a header if a message must determine any specifics or extra requirements, and</li>
+<li>a fault informing of any errors that can occur throughout the request processing.</li>
+</ul>
+<p><img src=images/4.png alt="An example of the SOAP message"></p>
+<p><em>An example of the SOAP message. Source:</em> <a href=https://www.ibm.com/support/knowledgecenter/en/SSMKHH_10.0.0/com.ibm.etools.mft.doc/ac55780_.htm><em>IBM</em></a></p>
+<p>The SOAP API logic is written in Web Service Description Language (WSDL). This API description language defines the endpoints and describes all processes that can be performed. This allows different programming languages and IDEs to quickly set up communication.</p>
+<p>SOAP supports both stateful and stateless messaging. In a stateful scenario, the server stores the received information that can be really heavy. But it’s justified for operations involving multiple parties and complex transactions.</p>
+<h3 id=22-soap-pros>2.2 SOAP Pros</h3>
+<p><strong>Language- and platform-agnostic.</strong> The built-in functionality to create web-based services allows SOAP to handle communications and make responses language- and platform-independent.</p>
+<p><strong>Bound to a variety of transport protocols.</strong> SOAP is flexible in terms of transfer protocols to accommodate for multiple scenarios.</p>
+<p><strong>Built-in error handling.</strong> SOAP API specification allows for returning the Retry XML message with error code and its explanation.</p>
+<p><strong>A number of security extensions.</strong> Integrated with the WS-Security protocols, SOAP meets an enterprise-grade transaction quality. It provides privacy and integrity inside the transactions while allowing for encryption on the message level.</p>
+<p><img src=images/5.png alt="SOAP message-level security: authentication data in the header element and encrypted body"></p>
+<p><em>SOAP message-level security: authentication data in the header element and encrypted body</em></p>
+<h3 id=23-soap-cons>2.3 SOAP Cons</h3>
+<p>These days, many developers shudder at the idea of having to integrate a SOAP API for several reasons.</p>
+<p><strong>XML only.</strong> SOAP messages contain a lot of metadata and only support verbose XML structures for requests and responses.</p>
+<p><strong>Heavyweight.</strong> Due to the large size of XML-files, SOAP services require a large bandwidth.</p>
+<p><strong>Narrowly specialized knowledge.</strong> Building SOAP API servers requires a deep understanding of all protocols involved and their highly restricted rules.</p>
+<p><strong>Tedious message updating.</strong> Requiring additional effort to add or remove the message properties, rigid SOAP schema slows down adoption.</p>
+<h3 id=24-soap-use-cases>2.4 SOAP use cases</h3>
+<p>Right now, the SOAP architecture is most commonly used for internal integration within enterprises or with their trusted partners.</p>
+<p><strong>Highly secured data transmission.</strong> SOAP rigid structure, security and authorization capabilities make it the most suitable option for enforcing a formal software contract between API and client while complying with the legal contract between the API provider and API consumer. That’s why financial organizations and other corporate users opt for SOAP.</p>
+<h2 id=3-representational-state-transfer-rest-making-data-available-as-resources>3. Representational state transfer (REST): making data available as resources</h2>
+<p><strong>REST</strong> is a self-explanatory API architectural style defined by a set of architectural constraints and intended for wide adoption with many API consumers.</p>
+<p>The most common API style today was originally described in 2000 by Roy Fielding in his <a href=https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm>doctoral dissertation</a>. REST makes server-side data available representing it in simple formats, often JSON and XML.</p>
+<h3 id=31-how-rest-works>3.1 How REST works</h3>
+<p>REST isn’t as strictly defined as SOAP. RESTful architecture should comply with six architectural constraints:</p>
+<ul>
+<li><strong>uniform interface:</strong> permitting a uniform way of interacting with a given server regardless of device or application type</li>
+<li><strong>stateless</strong>: the necessary state to handle the request as contained within the request itself and without the server storing anything related to the session</li>
+<li><strong>caching</strong></li>
+<li><strong>client-server architecture:</strong> allowing for independent evolution of either side</li>
+<li><strong>layered system</strong> of the application</li>
+<li>the ability for servers to <strong>provide executable code</strong> to the client</li>
+</ul>
+<p>In fact, some services are RESTful only to a degree. They have RPC style at the core, break down larger services into resources, and use HTTP infrastructure efficiently. But the key part is using hypermedia aka HATEOAS, short for <a href=https://en.wikipedia.org/wiki/HATEOAS>Hypertext As The Engine of Application State</a>. Basically, it means that with each response, a REST API provides metadata linking to all the related info about how to use the API. That’s what enables decoupling the client and the server. As a result, both API provider and API consumer can evolve independently without hindering their communication.</p>
+<p><img src=images/6.png alt="Richardson Maturity Model as a goalpost to achieving truly complete and useful APIs"></p>
+<p><em>Richardson Maturity Model as a goalpost to achieving truly complete and useful APIs, Source:</em> <a href=https://nordicapis.com/what-is-the-richardson-maturity-model/><em>Kristopher Sandoval</em></a></p>
+<p><em>“HATEOAS is a key feature of REST. It’s really what makes REST REST. Since most people don’t use HATEOAS, they are actually using HTTP RPC,”</em> that’s some radical opinion expressed on <a href=https://www.reddit.com/r/golang/comments/7qvi0w/twirp_a_sweet_new_rpc_framework_for_go_twitch_blog/dstkrnm/>Reddit</a>. Indeed, HATEOAS is the most mature version of REST. However, it’s difficult to achieve requiring much more advanced and intelligent API clients than those typically used and built today. So, even really good REST APIs today don’t always do it. This is why HATEOAS mainly serves as a vision for the long term development of a RESTful API design.</p>
+<p>There really may be a gray zone between REST and RPC, when a service implements some features of REST and some of RPC. REST is based on the resource or noun instead of action or verb-based.</p>
+<p><img src=images/7.png alt="Opposing operations in verb-centric RPC to the ones in noun-centric REST"></p>
+<p><em>Opposing operations in verb-centric RPC to the ones in noun-centric REST</em></p>
+<p>In REST, things are done using HTTP methods such as GET, POST, PUT, DELETE, OPTIONS, and, hopefully, PATCH.</p>
+<p><img src=images/8.png alt="REST API"></p>
+<p><em>Source: Thomas Davis</em></p>
+<h3 id=32-rest-pros>3.2 REST Pros</h3>
+<p><strong>Decoupled client and server.</strong> Decoupling the client and the server as much as possible, REST allows for a better abstraction than RPC. A system with abstraction levels is able to encapsulate its details to better identify and sustain its properties. This makes a REST API flexible enough to evolve over time while remaining a stable system.</p>
+<p><strong>Discoverability.</strong> Communication between the client and server describes everything so that no external documentation is required to understand how to interact with the REST API.</p>
+<p><strong>Cache-friendly.</strong> Reusing a lot of HTTP tools, REST is the only style that allows caching data on the HTTP level. In contrast, caching implementation on any other API will require configuring an additional cache module.</p>
+<p><strong>Multiple formats support.</strong> The ability to support multiple formats for storing and exchanging data is one of the reasons REST is currently a prevailing choice for building public APIs.</p>
+<h3 id=33-rest-cons>3.3 REST Cons:</h3>
+<p><strong>No single REST structure.</strong> There’s no exact right way to build a REST API. How to model resources and which resources to model will depend on each scenario. This makes REST simple in theory, but difficult in practice.</p>
+<p><strong>Big payloads.</strong> REST returns a lot of rich metadata so that the client can understand everything necessary about the state of the application just from its responses. And this chattiness is no big deal for a big network pipe with lots of bandwidth capacity. But that’s not always the case. This was the key driving factor for Facebook coming up with the description of GraphQL style in 2012.</p>
+<p><strong>Over- and under-fetching problems.</strong> Containing either too much data or not enough of it, REST responses often create the need for another request.</p>
+<h3 id=34-rest-use-cases>3.4 REST use cases</h3>
+<p><strong>Management APIs.</strong> APIs focused on managing objects in a system and intended for many consumers are the most common API type. REST helps such APIs to have strong discoverability, good documentation, and it fits this object model well.</p>
+<p><strong>Simple resource-driven apps.</strong> REST is a valuable approach for connecting resource-driven apps that don’t need flexibility in queries.</p>
+<h2 id=4-graphql-querying-just-the-needed-data>4. GraphQL: querying just the needed data</h2>
+<p>It takes a number of calls to the REST API for it to return the needed staff. So GraphQL was invented to be a game-changer.</p>
+<p><a href=https://www.altexsoft.com/blog/engineering/graphql-core-features-architecture-pros-and-cons/><strong>GraphQL</strong></a> is a syntax that describes how to make a precise data request. Implementing GraphQL is worth it for an application’s data model with a lot of complex entities referencing each other.</p>
+<p><img src=images/9.png alt="How to retrieve only the needed data from the GraphQL endpoint"></p>
+<p><em>How to retrieve only the needed data from the GraphQL endpoint, Source:</em> <a href=https://medium.com/@mohittikoo/rest-vs-graphql-will-graphql-do-to-rest-what-xml-did-to-json-c99e4fa639c3><em>Mohit Tikoo</em></a></p>
+<p>These days the GraphQL ecosystem is expanding with libraries and powerful tools like Apollo, GraphiQL, and GraphQL Explorer.</p>
+<h3 id=41-how-graphql-works>4.1 How GraphQL works</h3>
+<p>GraphQL starts with building a <em>schema,</em> which is a description of all the queries you can possibly make in a GraphQL API and all the <em>types</em> that they return. Schema-building is hard as it requires strong typing in the Schema Definition Language (SDL).</p>
+<p>Having the schema before querying, a client can validate their query against making sure the server will be able to respond to it. On reaching the backend application, a GraphQL operation is interpreted against the entire schema, and resolved with data for the frontend application. Sending one massive query to the server, the API returns a JSON response with exactly the shape of the data we asked for.</p>
+<p><img src=images/10.png alt="Query execution in GraphQL"></p>
+<p><em>Query execution in GraphQL, Source:</em> <a href=https://www.apollographql.com/blog/graphql-explained-5844742f195e><em>Jonas Helfer</em></a></p>
+<p>In addition to the RESTful CRUD operations, GraphQL has <em>subscriptions</em> allowing for real-time notifications from the server.</p>
+<h3 id=42-graphql-pros>4.2 GraphQL Pros</h3>
+<p><strong>Typed schema.</strong> GraphQL publishes in advance what it can do, which improves its discoverability. By pointing a client at the GraphQL API, we can find out what queries are available.</p>
+<p><strong>Fits graph-like data very well.</strong> Data that goes far into linked relations but not good for flat data.</p>
+<p><strong>No versioning.</strong> The best practice with versioning is not to version the API at all.</p>
+<p>While REST offers multiple API versions, GraphQL uses a single, evolving version that gives continuous access to new features and contributes to cleaner, more maintainable server code.</p>
+<p><strong>Detailed error messages.</strong> In a similar fashion to SOAP, GraphQL provides details to errors that occurred. Its error message includes all the resolvers and refers to the exact query part at fault.</p>
+<p><strong>Flexible permissions.</strong> GraphQL allows for selectively exposing certain functions while preserving private information. Meanwhile, REST architecture doesn’t reveal data in portions. It’s either all or nothing.</p>
+<h3 id=43-graphql-cons>4.3 GraphQL Cons</h3>
+<p><strong>Performance issues.</strong> GraphQL trades off complexity for its power. Having too many nested fields in one request can lead to system overload. So, REST remains a better option for complex queries.</p>
+<p><strong>Caching complexity.</strong> As GraphQL isn’t reusing HTTP caching semantics, it requires a custom caching effort.</p>
+<p><strong>A lot of pre-development education.</strong> Not having enough time to figure out GraphQL niche operations and SDL, many projects decide to follow the well-known path of REST.</p>
+<h3 id=44-graphql-use-cases>4.4 GraphQL use cases</h3>
+<p><strong>Mobile API.</strong> In this case, network performance and single message payload optimization is important. So, GraphQL offers a more efficient data loading for mobile devices.</p>
+<p><strong>Complex systems and microservices.</strong> GraphQL is able to hide the complexity of multiple systems integration behind its API. Aggregating data from multiple places, it merges them into one global schema. This is particularly relevant for <a href=https://www.altexsoft.com/whitepapers/legacy-system-modernization-how-to-transform-the-enterprise-for-digital-future/>legacy infrastructures</a> or third-party APIs that have expanded over time.</p>
+<h2 id=5-which-api-pattern-fits-your-use-case-best>5. Which API pattern fits your use case best?</h2>
+<p>Every API project has different requirements and needs. Usually, the architectural choice depends on</p>
+<ul>
+<li>the programming language in use,</li>
+<li>the environment in which you’re developing, and</li>
+<li>the resources you have to spare, both human and financial.</li>
+</ul>
+<p>Knowing all the tradeoffs that go into each design style, API designers can pick the one that’s going to fit the project best.</p>
+<p>With its tight coupling, RPC works for internal microservices but it’s not an option for a strong external API or an API service.</p>
+<p>SOAP is troublesome but its rich security features remain irreplaceable for billing operations, booking systems, and payments.</p>
+<p>REST has the highest abstraction and best modeling of the API. But it tends to be heavier on the wire and chattier – a downside if you’re working on mobile.</p>
+<p>GraphQL is a big step forward in terms of data fetching but not everyone has enough time and effort to get the hang of it.</p>
+<p>At the end of the day, it makes sense to try a few small use cases with a particular style, and see if it fits your use case and solves your problems. If it does, try expanding and see if it fits more use cases.</p>
+</div>
+<div class=td-content style=page-break-before:always>
 <h1 id=pg-6326cdc184dfc5babdaddca4740a7fd9>API Versioning</h1>
 <div class="td-byline mb-4">
 <time datetime=2021-01-01 class=text-muted>2021-01-01</time>
@@ -137,18 +287,20 @@ By <b><a href=https://nordicapis.com/introduction-to-api-versioning-best-practic
 <p>A common alternative to path parameters is <strong>header exchanges</strong>. They can be more verbose about the expected response and are usually included anyway for an HTTP request. Having a resource specific header approach allows for other parameters (such as caching, compression, and <a href=http://nordicapis.com/content-negotiation/>content negotiation</a>) to be included.</p>
 <p>API providers often communicate <strong>resource criteria</strong> and limitations in their response, so developers will need to examine the header exchange anyway. Besides just response codes, common header responses include <a href=http://nordicapis.com/stemming-the-flood-how-to-rate-limit-an-api/>rate limit bounds</a>, <a href=http://nordicapis.com/best-practices-api-error-handling/>specific error messages</a>, time-based data, and more.</p>
 <p>A clever outlier is using <strong>MIME</strong> types to include a version indicator. API providers register these MIME types on their backend and then users include <strong>Accept</strong> and <strong>Content-type headers</strong>. IETF legitimized this approach in <a href=http://www.ietf.org/rfc/rfc4627.txt>RFC4627</a>. While this does work, developers choosing this approach will inevitably end up explaining their choice to management types who state, “but it doesn’t work on HTML forms, so why do you want to do it that way?”</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-makefile data-lang=makefile><span style=color:#000>Accept</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>application</span>/<span style=color:#000>pre</span>.<span style=color:#000>company</span>.<span style=color:#000>app</span>-<span style=color:#000>v</span>1+<span style=color:#000>json</span>
-<span style=color:#000>Content-Type</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>application</span>/<span style=color:#000>pre</span>.<span style=color:#000>company</span>.<span style=color:#000>app</span>-<span style=color:#000>v</span>1+<span style=color:#000>json</span>
-</code></pre></div><p>The debate over implementation is deep and will continue. So, developers and providers will have to make choices based on their specific needs. In general, the most common approach is a combination of <strong>URI parameters</strong> and <strong>header criteria</strong>. APIs accept URI requests with parameters and then return a payload with proper response codes and (hopefully) verbose <strong>metadata</strong> in the header of the response.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-http data-lang=http><span style=color:#a40000>Accept: application/pre.company.app-v1+json
+</span><span style=color:#a40000>Content-Type: application/pre.company.app-v1+json
+</span></code></pre></div><p>The debate over implementation is deep and will continue. So, developers and providers will have to make choices based on their specific needs. In general, the most common approach is a combination of <strong>URI parameters</strong> and <strong>header criteria</strong>. APIs accept URI requests with parameters and then return a payload with proper response codes and (hopefully) verbose <strong>metadata</strong> in the header of the response.</p>
 <p>What constitutes a proper response code is something engineers will debate gleefully and loudly at company happy hours. But, here are some useful negative responses that are verbose enough to be helpful downstream.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-makefile data-lang=makefile><span style=color:#000>400</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>BAD_REQUEST</span>: <span style=color:#000>ApiVersionUnspecified</span>: <span style=color:#000>An</span> <span style=color:#000>API</span> <span style=color:#000>version</span> <span style=color:#000>is</span> <span style=color:#000>required</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>but</span> <span style=color:#000>was</span> <span style=color:#000>not</span> <span style=color:#000>specified</span>
-<span style=color:#000>400</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>BAD_REQUEST</span>: <span style=color:#000>InvalidApiVersion</span>: <span style=color:#000>An</span> <span style=color:#000>API</span> <span style=color:#000>version</span> <span style=color:#000>was</span> <span style=color:#000>specified</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>but</span> <span style=color:#000>it</span> <span style=color:#000>is</span> <span style=color:#000>invalid</span>
-<span style=color:#000>400</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>BAD_REQUEST</span>: <span style=color:#000>AmbiguousApiVersion</span>: <span style=color:#000>An</span> <span style=color:#000>API</span> <span style=color:#000>version</span> <span style=color:#000>was</span> <span style=color:#000>specified</span> <span style=color:#000>multiple</span> <span style=color:#000>times</span> <span style=color:#000>with</span> <span style=color:#000>different</span> <span style=color:#000>values</span>
-<span style=color:#000>400, 405</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>BAD_REQUEST</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>METHOD_NOT_ALLOWED</span>: <span style=color:#000>UnsupportedApiVersion</span>: <span style=color:#000>The</span> <span style=color:#000>specified</span> <span style=color:#000>API</span> <span style=color:#000>version</span> <span style=color:#000>is</span> <span style=color:#000>not</span> <span style=color:#000>supported</span>
-<span style=color:#000>301</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>MOVED_PERMANENTLY</span>: <span style=color:#000>movedPermanently</span>: <span style=color:#000>This</span> <span style=color:#000>request</span> <span style=color:#000>and</span> <span style=color:#000>future</span> <span style=color:#000>requests</span> <span style=color:#000>for</span> <span style=color:#000>the</span> <span style=color:#000>same</span> <span style=color:#000>operation</span> <span style=color:#000>have</span> <span style=color:#000>to</span> <span style=color:#000>be</span> <span style=color:#000>sent</span> <span style=color:#000>to</span> <span style=color:#000>the</span> <span style=color:#000>URL</span> <span style=color:#000>specified</span> <span style=color:#000>in</span> <span style=color:#000>the</span> <span style=color:#000>Location</span> <span style=color:#000>header</span> <span style=color:#000>of</span> <span style=color:#000>this</span> <span style=color:#000>response</span> <span style=color:#000>instead</span> <span style=color:#000>of</span> <span style=color:#000>to</span> <span style=color:#000>the</span> <span style=color:#000>URL</span> <span style=color:#000>to</span> <span style=color:#000>which</span> <span style=color:#000>this</span> <span style=color:#000>request</span> <span style=color:#000>was</span> <span style=color:#000>sent</span>
-<span style=color:#000>410</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>GONE</span>: <span style=color:#000>deleted</span>: <span style=color:#000>The</span> <span style=color:#000>request</span> <span style=color:#000>failed</span> <span style=color:#000>because</span> <span style=color:#000>the</span> <span style=color:#000>resource</span> <span style=color:#000>associated</span> <span style=color:#000>with</span> <span style=color:#000>the</span> <span style=color:#000>request</span> <span style=color:#000>has</span> <span style=color:#000>been</span> <span style=color:#000>deleted</span>
-<span style=color:#000>299</span><span style=color:#ce5c00;font-weight:700>:</span> <span style=color:#000>OK</span>: <span style=color:#000>Warning</span>: &#34;<span style=color:#000>Deprecated</span> <span style=color:#000>API</span>&#34;
-</code></pre></div><p>For More on Error Responses read: <a href=https://nordicapis.com/best-practices-api-error-handling/>Best Practices for API Error Handling</a></p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-http data-lang=http><span style=color:#a40000>400: BAD_REQUEST: ApiVersionUnspecified: An API version is required, but was not specified
+</span><span style=color:#a40000>400: BAD_REQUEST: InvalidApiVersion: An API version was specified, but it is invalid
+</span><span style=color:#a40000>400: BAD_REQUEST: AmbiguousApiVersion: An API version was specified multiple times with different values
+</span><span style=color:#a40000>400, 405: BAD_REQUEST, METHOD_NOT_ALLOWED: UnsupportedApiVersion: The specified API version is not supported
+</span><span style=color:#a40000>301: MOVED_PERMANENTLY: movedPermanently: This request and future requests for the same operation have 
+</span><span style=color:#a40000>to be sent to the URL specified in the Location header of this response 
+</span><span style=color:#a40000>instead of to the URL to which this request was sent
+</span><span style=color:#a40000>410: GONE: deleted: The request failed because the resource associated with the request has been deleted
+</span><span style=color:#a40000>299: OK: Warning: &#34;Deprecated API&#34;
+</span></code></pre></div><p>For More on Error Responses read: <a href=https://nordicapis.com/best-practices-api-error-handling/>Best Practices for API Error Handling</a></p>
 <h2 id=business-motives-will-direct-versioning-choices>Business Motives Will Direct Versioning Choices</h2>
 <p>In some ways, the technical aspects of versioning are the easiest to work out. The real debate comes down to product needs, <strong>business concerns</strong>, and future plans. The requirements for supporting multiple versions of an API can be very high in terms of engineering support, backend resources, and simple bandwidth.</p>
 <p>Also, to be done well, a new version needs <strong>rich documentation</strong> to successfully transition. Since up-to-date documentation is often low on the priorities of fast moving companies, it can end up getting launched poorly as a mashup of old documentation and new. Bad documentation can yield deep costs in time and money.</p>

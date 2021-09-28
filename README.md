@@ -18,6 +18,16 @@
 
 Hugo v0.88.1
 
+```bash
+# local
+hugo server
+open http://localhost:1313/
+
+# deployment
+# after push the code to main branch,
+# github will trigger github actions to deploy this to github pages
+```
+
 ## Execute all tests in repo
 
 `/bin/bash run-repo-test.sh`

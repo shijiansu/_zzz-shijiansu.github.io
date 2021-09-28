@@ -19,93 +19,49 @@ Any API design follows something called `Resource Oriented Design` It consists o
 
 For example, if you want to get the list of orders.
 
-**Bad:**
+**Bad:** `/systemOrders or /system_orders`
 
-```text
-/systemOrders or /system_orders
-```
-
-**Good:**
-
-```text
-/system-orders
-```
+**Good:** `/system-orders`
 
 ## 2. Use camelCase for Parameters
 
 For example, if you want to get products from a particular shop.
 
-**Bad:**
+**Bad:** `/system-orders/{order_id} or /system-orders/{OrderId}`
 
-```text
-/system-orders/{order_id} or /system-orders/{OrderId}
-```
-
-**Good:**
-
-```text
-/system-orders/{orderId}
-```
+**Good:** `/system-orders/{orderId}`
 
 ## 3. Plural Name to Point to a Collection
 
 If you want to get all the users of a system.
 
-**Bad:**
+**Bad:** `GET /user or GET /User`
 
-```text
-GET /user or GET /User
-```
-
-**Good:**
-
-```text
-GET /users
-```
+**Good:** `GET /users`
 
 ## 4. URL Starts With a Collection and Ends With an Identifier
 
 If want to keep the concept singular and consistent.
 
-**Bad:**
-
-```text
-GET /shops/:shopId/category/:categoryId/price
-```
+**Bad:** `GET /shops/:shopId/category/:categoryId/price`
 
 This is bad because it’s pointing to a property instead of a resource.
 
-**Good:**
-
-```text
-GET /shops/:shopId/ or GET /category/:categoryId
-```
+**Good:** `GET /shops/:shopId/ or GET /category/:categoryId`
 
 ## 5. Keep Verbs Out of Your Resource URL
 
 Don’t use verbs to express your intention in the URL. Instead, use proper HTTP methods to describe the operation.
 
-**Bad:**
+**Bad:** `POST /updateuser/{userId} or GET /getusers`
 
-```text
-POST /updateuser/{userId} or GET /getusers
-```
-
-**Good:**
-
-```text
-PUT /user/{userId}
-```
+**Good:** `PUT /user/{userId}`
 
 ## 6. Use Verbs for Non-Resource URL
 
 You have an endpoint that returns nothing but an operation. In this case, you can use verbs. For example, if you want to resend the alert to a user.
 
-**Good:**
-
-```text
-POST /alerts/245743/resend
-```
+**Good:** `POST /alerts/245743/resend`
 
 Keep in mind that these are not our CRUD operations. Rather, these are considered functions that do a specific job in our system.
 
@@ -133,21 +89,13 @@ If you’re building a system in which the request body or response is JSON, the
 
 ## 8. Monitoring
 
-RESTful HTTP services MUST implement the `/health` and `/version` and `/metrics `API endpoints. They will provide the following info.
+RESTful HTTP services MUST implement the `/health` and `/version` and `/metrics` API endpoints. They will provide the following info.
 
-### /health
+- **/health**: Respond to requests to `/health` with a `200 OK` status code.
+- **/version**: Respond to request to `/version` with the version number.
+- **/metrics**: This endpoint will provide various metrics like average response time.
 
-Respond to requests to `/health` with a `200 OK` status code.
-
-### /version
-
-Respond to request to `/version` with the version number.
-
-### `/**metrics**`
-
-This endpoint will provide various metrics like average response time.
-
-`/debug `and` /status` endpoints are also highly recommended.
+`/debug` and `/status` endpoints are also highly recommended.
 
 ## 9. Don’t Use table_name for the Resource Name
 
@@ -172,11 +120,7 @@ Having good and detailed documentation results in a great user experience for yo
 
 Always use versioning for the API and move it all the way to the left so that it has the highest scope. The version number should be `v1`, `v2` etc.
 
-**Good:**
-
-```text
-http://api.domain.com/v1/shops/3/products
-```
+**Good:** `http://api.domain.com/v1/shops/3/products`
 
 Always use versioning in your API because if the API is being used by external entities, changing the endpoint can break their functionality.
 
@@ -208,11 +152,7 @@ If an API returns a list of objects always include the total number of resources
 
 Always accept `limit` and `offset` parameters in `GET` operations.
 
-**Good:**
-
-```text
-GET /shops?offset=5&limit=5
-```
+**Good:** `GET /shops?offset=5&limit=5`
 
 This is because it’s necessary for pagination on the front end.
 
@@ -220,13 +160,11 @@ This is because it’s necessary for pagination on the front end.
 
 The amount of data being returned should also be taken into consideration. Add a `fields` parameter to expose only the required fields from your API.
 
-### Example:
+### Example
 
 Only return the name, address, and contact of the shops.
 
-```text
-GET /shops?fields=id,name,address,contact
-```
+`GET /shops?fields=id,name,address,contact`
 
 It also helps to reduce the response size in some cases.
 
@@ -234,19 +172,13 @@ It also helps to reduce the response size in some cases.
 
 This is a very bad practice because often URLs are logged and the authentication token will also be logged unnecessarily.
 
-**Bad:**
-
-```text
-GET /shops/123?token=some_kind_of_authenticaiton_token
-```
+**Bad:** `GET /shops/123?token=some_kind_of_authenticaiton_token`
 
 **Good:**
 
 Instead, pass them with the header:
 
-```text
-Authorization: Bearer xxxxxx, Extra yyyyy
-```
+`Authorization: Bearer xxxxxx, Extra yyyyy`
 
 Also, authorization tokens should be short-lived
 

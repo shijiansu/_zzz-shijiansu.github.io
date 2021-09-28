@@ -26,6 +26,7 @@ open http://localhost:1313/
 # deployment
 # after push the code to main branch,
 # github will trigger github actions to deploy this to github pages
+open https://shijiansu.github.io/
 ```
 
 ## Execute all tests in repo

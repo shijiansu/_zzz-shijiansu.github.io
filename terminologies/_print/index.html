@@ -84,13 +84,23 @@ This the multi-page printable view of this section.
 </div>
 <h1 class=title>Terminologies</h1>
 <ul>
-<li>1: <a href=#pg-b6f9c0e3f47aa2d8866a56815630707b>SRE</a></li>
+<li>1: <a href=#pg-797b4223239088895ab3f15256f6a48e>Agile</a></li>
 <ul>
-<li>1.1: <a href=#pg-bc634b4ef49a7b31b364365c735f659d>Reliability</a></li>
+<li>1.1: <a href=#pg-81c73622993d6cac92e49391325a1ed5>Lean Software Development</a></li>
 <ul>
-<li>1.1.1: <a href=#pg-ec64510f6faf5eb34bfa3aadaee53832>MTBF</a></li>
-<li>1.1.2: <a href=#pg-f34eb05f468f6ac726a5c1bd54395f37>MTTF</a></li>
-<li>1.1.3: <a href=#pg-2d8b5353085022f3ec2a89dfc21ce920>MTTR</a></li>
+<li>1.1.1: <a href=#pg-56f215af5af37f54936b2e7d404fe917>Lean Metrics</a></li>
+<ul>
+<li>1.1.1.1: <a href=#pg-9b7a5dc5c4fde289d487d1e24f1375b3>Cycle Time</a></li>
+</ul>
+</ul>
+</ul>
+<li>2: <a href=#pg-b6f9c0e3f47aa2d8866a56815630707b>SRE</a></li>
+<ul>
+<li>2.1: <a href=#pg-bc634b4ef49a7b31b364365c735f659d>Reliability</a></li>
+<ul>
+<li>2.1.1: <a href=#pg-ec64510f6faf5eb34bfa3aadaee53832>MTBF</a></li>
+<li>2.1.2: <a href=#pg-f34eb05f468f6ac726a5c1bd54395f37>MTTF</a></li>
+<li>2.1.3: <a href=#pg-2d8b5353085022f3ec2a89dfc21ce920>MTTR</a></li>
 </ul>
 </ul>
 </ul>
@@ -101,13 +111,57 @@ This the multi-page printable view of this section.
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-b6f9c0e3f47aa2d8866a56815630707b>1 - SRE</h1>
+<h1 id=pg-797b4223239088895ab3f15256f6a48e>1 - Agile</h1>
 </div>
 <div class=td-content>
-<h1 id=pg-bc634b4ef49a7b31b364365c735f659d>1.1 - Reliability</h1>
+<h1 id=pg-81c73622993d6cac92e49391325a1ed5>1.1 - Lean Software Development</h1>
 </div>
 <div class=td-content>
-<h1 id=pg-ec64510f6faf5eb34bfa3aadaee53832>1.1.1 - MTBF</h1>
+<h1 id=pg-56f215af5af37f54936b2e7d404fe917>1.1.1 - Lean Metrics</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-9b7a5dc5c4fde289d487d1e24f1375b3>1.1.1.1 - Cycle Time</h1>
+<blockquote>
+<h4 id=what-is-cycle-time>What Is Cycle Time?</h4>
+<p>In Kanban, cycle time is defined as the time it takes from when you start work on a <a href=https://www.digite.com/agile/user-stories/>user story</a> that’s ready for implementation, to when it’s ready for delivery (release).</p>
+<p>In terms of Kanban board columns this is the time from when you move a card from “Ready” (“To do”) to “In progress” (“doing”) to the time when you move that card from “In progress” to “Done”.</p>
+<p>Of course, user stories aren’t the only work on a Kanban board and you can measure cycle time for all tasks you track on a Kanban board. For example, bugs that need fixing or research you need to do before you can proceed with a user story or bug fix.</p>
+<p>However, if you want to look at cycle time in relation to lead time, you want to focus on items that directly deliver value to the team’s and company’s customers, the user stories.</p>
+<h4 id=does-cycle-time-include-wait-time>Does Cycle Time Include Wait Time?</h4>
+<p>Yes.</p>
+<p>Work on a user story can stall for many reasons. For example, when it (or you) is waiting for</p>
+<ul>
+<li>an answer from someone.</li>
+<li>a specific test environment.</li>
+<li>a colleague to collaborate.</li>
+<li>the next step in a workflow.</li>
+</ul>
+<p>Someone picked it up, so it’s in progress, but while no work is being done, that’s wait time.</p>
+</blockquote>
+<ul>
+<li><a href=https://www.digite.com/agile/lead-time-cycle-time/>https://www.digite.com/agile/lead-time-cycle-time/</a></li>
+<li>Date: Unknown</li>
+</ul>
+<p><img src=images/lead-time-vs-cycle-time.png alt="Lead Time vs Cycle Time"></p>
+<blockquote>
+<p>Cycle time is all about the <strong>speed of delivery</strong> of the product/service to the market or customer.</p>
+<p>Cycle time is the time taken from the start of production of a particular unit to the completion of production. So, it is an internal metric and may not be visible to the customer. It signifies the effort spent on making the product.</p>
+<p><em><strong>Cycle time = Production time + Waiting time for Production</strong></em></p>
+</blockquote>
+<ul>
+<li><a href=https://www.whatissixsigma.net/cycle-time/>https://www.whatissixsigma.net/cycle-time/</a></li>
+<li>Date: Unknown</li>
+</ul>
+<p><img src=images/cycle-time.png alt="Figure 1: Difference between Cycle Time and Lead Time"></p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-b6f9c0e3f47aa2d8866a56815630707b>2 - SRE</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-bc634b4ef49a7b31b364365c735f659d>2.1 - Reliability</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-ec64510f6faf5eb34bfa3aadaee53832>2.1.1 - MTBF</h1>
 <blockquote>
 <p>MTBF (Mean Time Between Failures, 平均故障间隔时间) 定义为, 失效或维护中所需要的平均时间, 包括故障时间以及检测和维护设备的时间. 对于一个简单的可维护的元件, MTBF = MTTF + MTTR. 因为MTTR通常远小于MTTF, 所以MTBF近似等于MTTF, 通常由MTTF替代. MTBF用于可维护性和不可维护的系统.</p>
 </blockquote>
@@ -117,7 +171,7 @@ This the multi-page printable view of this section.
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-f34eb05f468f6ac726a5c1bd54395f37>1.1.2 - MTTF</h1>
+<h1 id=pg-f34eb05f468f6ac726a5c1bd54395f37>2.1.2 - MTTF</h1>
 <blockquote>
 <p>MTTF (Mean Time to Failure, 平均失效前时间), 定义为随机变量、出错时间等的"期望值". 但是, MTTF经常被错误地理解为, &ldquo;能保证的最短的生命周期&rdquo;. MTTF的长短, 通常与使用周期中的产品有关, 其中不包括老化失效.</p>
 </blockquote>
@@ -127,7 +181,7 @@ This the multi-page printable view of this section.
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-2d8b5353085022f3ec2a89dfc21ce920>1.1.3 - MTTR</h1>
+<h1 id=pg-2d8b5353085022f3ec2a89dfc21ce920>2.1.3 - MTTR</h1>
 <blockquote>
 <p>MTTR (Mean Time to Restoration, 平均恢复前时间), 源自于IEC 61508中的平均维护时间 (Mean Time to Repair), 目的是为了清楚界定术语中的时间的概念, MTTR是随机变量恢复时间的期望值. 它包括确认失效发生所必需的时间, 以及维护所需要的时间. MTTR也必须包含获得配件的时间, 维修团队的响应时间, 记录所有任务的时间, 还有将设备重新投入使用的时间.</p>
 <p>MTTR也必须包含获得配件的时间, 维修团队的响应时间, 记录所有任务的时间, 还有将设备重新投入使用的时间.</p>

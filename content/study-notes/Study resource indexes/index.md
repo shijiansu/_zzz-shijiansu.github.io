@@ -1,7 +1,7 @@
 ---
 date: 2021-09-28
 author: Su Shijian
-title: "Study resources"
+title: "Study resource indexes"
 tags: ["TBD"]
 categories: ["TBD"]
 description: >

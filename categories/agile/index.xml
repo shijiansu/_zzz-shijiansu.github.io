@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Agile</title><link>/categories/agile/</link><description>Recent content in Agile on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 05 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/agile/index.xml" rel="self" type="application/rss+xml"/><item><title>Terminologies: Cycle Time</title><link>/terminologies/agile/lean-software-development/lean-metrics/cycle-time/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/lean-metrics/cycle-time/</guid><description>
 &lt;blockquote>
-&lt;h4 id="what-is-cycle-time">What Is Cycle Time?&lt;/h4>
+&lt;p>&lt;strong>What Is Cycle Time?&lt;/strong>&lt;/p>
 &lt;p>In Kanban, cycle time is defined as the time it takes from when you start work on a &lt;a href="https://www.digite.com/agile/user-stories/">user story&lt;/a> that’s ready for implementation, to when it’s ready for delivery (release).&lt;/p>
 &lt;p>In terms of Kanban board columns this is the time from when you move a card from “Ready” (“To do”) to “In progress” (“doing”) to the time when you move that card from “In progress” to “Done”.&lt;/p>
 &lt;p>Of course, user stories aren’t the only work on a Kanban board and you can measure cycle time for all tasks you track on a Kanban board. For example, bugs that need fixing or research you need to do before you can proceed with a user story or bug fix.&lt;/p>
 &lt;p>However, if you want to look at cycle time in relation to lead time, you want to focus on items that directly deliver value to the team’s and company’s customers, the user stories.&lt;/p>
-&lt;h4 id="does-cycle-time-include-wait-time">Does Cycle Time Include Wait Time?&lt;/h4>
+&lt;p>&lt;strong>Does Cycle Time Include Wait Time?&lt;/strong>&lt;/p>
 &lt;p>Yes.&lt;/p>
 &lt;p>Work on a user story can stall for many reasons. For example, when it (or you) is waiting for&lt;/p>
 &lt;ul>

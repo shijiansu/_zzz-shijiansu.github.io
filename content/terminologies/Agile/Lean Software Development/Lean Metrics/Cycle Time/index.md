@@ -7,7 +7,7 @@ categories: ["Agile", "Lean Software Development", "Lean Metrics"]
 description: >
 ---
 
-> #### What Is Cycle Time?
+> **What Is Cycle Time?**
 >
 > In Kanban, cycle time is defined as the time it takes from when you start work on a [user story](https://www.digite.com/agile/user-stories/) that’s ready for implementation, to when it’s ready for delivery (release).
 >
@@ -17,7 +17,7 @@ description: >
 >
 > However, if you want to look at cycle time in relation to lead time, you want to focus on items that directly deliver value to the team’s and company’s customers, the user stories.
 >
-> #### Does Cycle Time Include Wait Time?
+> **Does Cycle Time Include Wait Time?**
 >
 > Yes.
 >

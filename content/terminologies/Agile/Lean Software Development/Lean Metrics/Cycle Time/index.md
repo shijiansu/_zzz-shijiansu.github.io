@@ -29,19 +29,19 @@ description: >
 > - the next step in a workflow.
 >
 > Someone picked it up, so it’s in progress, but while no work is being done, that’s wait time.
+>
+> ![Lead Time vs Cycle Time](images/lead-time-vs-cycle-time.png)
 
 - https://www.digite.com/agile/lead-time-cycle-time/
 - Date: Unknown
-
-![Lead Time vs Cycle Time](images/lead-time-vs-cycle-time.png)
 
 > Cycle time is all about the **speed of delivery** of the product/service to the market or customer.
 >
 > Cycle time is the time taken from the start of production of a particular unit to the completion of production. So, it is an internal metric and may not be visible to the customer. It signifies the effort spent on making the product.
 >
 > ***Cycle time = Production time + Waiting time for Production***
+>
+> ![Figure 1: Difference between Cycle Time and Lead Time](images/cycle-time.png)
 
 - https://www.whatissixsigma.net/cycle-time/
 - Date: Unknown
-
-![Figure 1: Difference between Cycle Time and Lead Time](images/cycle-time.png)

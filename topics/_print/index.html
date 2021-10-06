@@ -118,6 +118,13 @@ This the multi-page printable view of this section.
 <li><a href=#pg-a7c052e9e413d810c6d9f373b5dfb132>Spring 5.0 Microservice 2nd - Twelve-Factor Apps</a></li>
 </ul>
 </ul>
+<li><a href=#pg-9a15601f91338dc0a930d240162e5f2d>DevOps</a></li>
+<ul>
+<li><a href=#pg-21f091ed9c25a7b70813078cf56cd140>DevOps Team Structure</a></li>
+<ul>
+<li><a href=#pg-b10dce2501840ce842656966e80b0e0f>DevOps Anti-Types</a></li>
+</ul>
+</ul>
 <li><a href=#pg-50d69072b23e4256baa67008cab1b28d>Engineering Management</a></li>
 <ul>
 <li><a href=#pg-a52709acc630548f7599a8daa895a1c1>Engineering Ladders</a></li>
@@ -1228,6 +1235,53 @@ By <b>Spring 5.0 Microservice 2nd (2017)</b> |
 <p><img src=images/externalizing-logs.png alt></p>
 <h2 id=12-package-admin-processes>12. Package admin processes</h2>
 <p>Apart from application requests, most of the applications provision for admin tasks. This principle advices you to target the same release and an identical environment as the long running processes runs to perform these activities. Admin code should also be packaged along with the application code.</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-9a15601f91338dc0a930d240162e5f2d>DevOps</h1>
+<div class="td-byline mb-4">
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-21f091ed9c25a7b70813078cf56cd140>DevOps Team Structure</h1>
+<div class="td-byline mb-4">
+<time datetime=2021-01-01 class=text-muted>2021-01-01</time>
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-b10dce2501840ce842656966e80b0e0f>DevOps Anti-Types</h1>
+<div class="td-byline mb-4">
+By <b><a href=https://web.devopstopologies.com/>https://web.devopstopologies.com/</a></b> |
+<time datetime=2021-10-06 class=text-muted>2021-10-06</time>
+</div>
+<h2 id=anti-type-a-dev-and-ops-silos><strong>Anti-Type A:</strong> Dev and Ops Silos</h2>
+<p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.</p>
+<p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Dev and Ops Silos), we know there is a problem.</p>
+<p><img src=images/anti-type-a.png alt="Anti-Type A"></p>
+<h2 id=anti-type-b-devops-team-silo><strong>Anti-Type B:</strong> DevOps Team Silo</h2>
+<p>The DevOps Team Silo (Anti-Type B) typically results from a manager or exec deciding that they “need a bit of this DevOps thing” and starting a ‘DevOps team’ (probably full of people known as ‘a DevOp‘). The members of the DevOps team quickly form another silo, keeping Dev and Ops further apart than ever as they defend their corner, skills, and toolset from the ‘clueless Devs’ and ‘dinosaur Ops’ people.</p>
+<p>The only situation where a separate DevOps silo really makes sense is when the team is temporary, lasting less than (say) 12 or 18 months, with the express purpose of bringing Dev and Ops closer together, and with a clear mandate to make the DevOps team superfluous after that time; this becomes what I have called a <a href=https://web.devopstopologies.com/#type-five>Type 5 DevOps Topology</a>.</p>
+<p><img src=images/anti-type-b.png alt="Anti-Type B"></p>
+<h2 id=anti-type-c-dev-dont-need-ops><strong>Anti-Type C:</strong> Dev Don&rsquo;t Need Ops</h2>
+<p>This topology is borne of a combination of naivety and arrogance from developers and development managers, particularly when starting on new projects or systems. Assuming that Ops is now a thing of the past (“we have the Cloud now, right?”), the developers wildly underestimate the complexity and importance of operational skills and activities, and believe that they can do without them, or just cover them in spare hours.</p>
+<p>Such an Anti-Type C DevOps topology will probably end up needing either a <a href=https://web.devopstopologies.com/#type-three>Type 3 (Ops as IaaS)</a> or a <a href=https://web.devopstopologies.com/#type-four>Type 4 (DevOps-as-a-Service)</a> topology when their software becomes more involved and operational activities start to swamp ‘development’ (aka coding) time. If only such teams recognised the importance of Operations as a discipline as important and valuable as software development, they would be able to avoid much pain and unnecessary (and quite basic) operational mistakes</p>
+<p><img src=images/anti-type-c.png alt="Anti-Type C"></p>
+<h2 id=anti-type-d-devops-as-tools-team><strong>Anti-Type D:</strong> DevOps as Tools Team</h2>
+<p>In order to &ldquo;become DevOps&rdquo; without losing current dev teams velocity (read delivery of functional stories), a DevOps team is set up to work on the tooling required for deployment pipelines, configuration management, environment management, etc. Meanwhile Ops folks continue to work in isolation and Dev teams continue to throw them applications &ldquo;over the wall&rdquo;.</p>
+<p>Although the outcomes of this dedicated team can be beneficial in terms of an improved tool chain, its impact is limited. The fundamental problem of lack of early Ops involvement and collaboration in the application development lifecycle remains unchanged.</p>
+<p><img src=images/anti-type-d.png alt="Anti-Type D"></p>
+<h2 id=anti-type-e-rebranded-sysadmin><strong>Anti-Type E:</strong> Rebranded SysAdmin</h2>
+<p>This anti-type is typical in organizations with low engineering maturity. They want to improve their practices and reduce costs, yet they fail to see IT as a core driver of the business. Because industry successes with DevOps are now evident, they want to &ldquo;do DevOps&rdquo; as well. Unfortunately, instead of reflecting on the gaps in the current structure and relationships, they take the elusive path of hiring &ldquo;DevOps engineers&rdquo; for their Ops team(s).</p>
+<p>DevOps becomes just a rebranding of the role previously known as SysAdmin, with no real cultural/organizational change taking place. This anti-type is becoming more and more widespread as unscrupulous recruiters jump on the bandwagon searching for candidates with automation and tooling skills. Unfortunately, it&rsquo;s the human communication skills that can make DevOps thrive in an organization.</p>
+<p><img src=images/anti-type-e.png alt="Anti-Type E"></p>
+<h2 id=anti-type-f-ops-embedded-in-dev-team><strong>Anti-Type F:</strong> Ops Embedded in Dev Team</h2>
+<p>The organization does not want to keep a separate Ops team, so development teams take responsibility for infrastructure, managing environments, monitoring, etc. However, doing so in a project or product-driven way means those items are subject to resource constraints and re-prioritizations which lead to subpar approaches and half-baked solutions.</p>
+<p>In this anti-type the organization shows lack of appreciation for the importance and skills required for effective IT operations. In particular, the value of Ops is diminished because it&rsquo;s treated as an annoyance for Devs (as Ops is managed by a single Dev team manager with other priorities).</p>
+<p><em>Thanks to <a href=https://twitter.com/ScottPrugh>Scott Prugh</a> for suggesting clarifications on how Anti-Type F differs from Type 2.</em></p>
+<p><img src=images/anti-type-f.png alt="Anti-Type F"></p>
+<h2 id=anti-type-g-dev-and-dba-silos><strong>Anti-Type G:</strong> Dev and DBA Silos</h2>
+<p>This is a form of <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A (Dev and Ops Silos)</a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).</p>
+<p>Furthermore, just like Ops in <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A</a>, the DBA team is not involved early in the application development, thus data problems (migrations, performance, etc) are found late in the delivery cycle. Coupled with the overload of supporting multiple applications databases, the end result is constant firefighting and mounting pressure to deliver.</p>
+<p><img src=images/anti-type-g.png alt="Anti-Type G"></p>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-50d69072b23e4256baa67008cab1b28d>Engineering Management</h1>

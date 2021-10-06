@@ -15,19 +15,19 @@
 &lt;li>the next step in a workflow.&lt;/li>
 &lt;/ul>
 &lt;p>Someone picked it up, so it’s in progress, but while no work is being done, that’s wait time.&lt;/p>
+&lt;p>&lt;img src="images/lead-time-vs-cycle-time.png" alt="Lead Time vs Cycle Time">&lt;/p>
 &lt;/blockquote>
 &lt;ul>
 &lt;li>&lt;a href="https://www.digite.com/agile/lead-time-cycle-time/">https://www.digite.com/agile/lead-time-cycle-time/&lt;/a>&lt;/li>
 &lt;li>Date: Unknown&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="images/lead-time-vs-cycle-time.png" alt="Lead Time vs Cycle Time">&lt;/p>
 &lt;blockquote>
 &lt;p>Cycle time is all about the &lt;strong>speed of delivery&lt;/strong> of the product/service to the market or customer.&lt;/p>
 &lt;p>Cycle time is the time taken from the start of production of a particular unit to the completion of production. So, it is an internal metric and may not be visible to the customer. It signifies the effort spent on making the product.&lt;/p>
 &lt;p>&lt;em>&lt;strong>Cycle time = Production time + Waiting time for Production&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>&lt;img src="images/cycle-time.png" alt="Figure 1: Difference between Cycle Time and Lead Time">&lt;/p>
 &lt;/blockquote>
 &lt;ul>
 &lt;li>&lt;a href="https://www.whatissixsigma.net/cycle-time/">https://www.whatissixsigma.net/cycle-time/&lt;/a>&lt;/li>
 &lt;li>Date: Unknown&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="images/cycle-time.png" alt="Figure 1: Difference between Cycle Time and Lead Time">&lt;/p></description></item><item><title>Terminologies: Lean Metrics</title><link>/terminologies/agile/lean-software-development/lean-metrics/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/lean-metrics/</guid><description/></item><item><title>Terminologies: Lean Software Development</title><link>/terminologies/agile/lean-software-development/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/</guid><description/></item></channel></rss>
+&lt;/ul></description></item><item><title>Terminologies: Lean Metrics</title><link>/terminologies/agile/lean-software-development/lean-metrics/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/lean-metrics/</guid><description/></item><item><title>Terminologies: Lean Software Development</title><link>/terminologies/agile/lean-software-development/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/</guid><description/></item></channel></rss>

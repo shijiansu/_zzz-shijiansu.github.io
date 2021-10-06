@@ -78,6 +78,7 @@ This the multi-page printable view of this section.
 <h1 class=title>DevOps Team Structure</h1>
 <ul>
 <li><a href=#pg-b10dce2501840ce842656966e80b0e0f>DevOps Anti-Types</a></li>
+<li><a href=#pg-ee76ae906de9937fbfc1c07581b391e7>DevOps Team Topologies</a></li>
 </ul>
 <div class=content>
 </div>
@@ -117,6 +118,86 @@ By <b><a href=https://web.devopstopologies.com/>https://web.devopstopologies.com
 <p>This is a form of <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A (Dev and Ops Silos)</a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).</p>
 <p>Furthermore, just like Ops in <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A</a>, the DBA team is not involved early in the application development, thus data problems (migrations, performance, etc) are found late in the delivery cycle. Coupled with the overload of supporting multiple applications databases, the end result is constant firefighting and mounting pressure to deliver.</p>
 <p><img src=images/anti-type-g.png alt="Anti-Type G"></p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-ee76ae906de9937fbfc1c07581b391e7>DevOps Team Topologies</h1>
+<div class="td-byline mb-4">
+By <b><a href=https://web.devopstopologies.com/>https://web.devopstopologies.com/</a></b> |
+<time datetime=2021-10-06 class=text-muted>2021-10-06</time>
+</div>
+<h2 id=type-1-dev-and-ops-collaboration><strong>Type 1:</strong> Dev and Ops Collaboration</h2>
+<p>This is the ‘promised land’ of DevOps: smooth collaboration between Dev teams and Ops teams, each specialising where needed, but also sharing where needed. There are likely many separate Dev teams, each working on a separate or semi-separate product stack.</p>
+<p>My sense is that this Type 1 model needs quite substantial organisational change to establish it, and a good degree of competence higher up in the technical management team. Dev and Ops must have a clearly expressed and demonstrably effective shared goal (‘Delivering Reliable, Frequent Changes’, or whatever). Ops folks must be comfortable pairing with Devs and get to grips with test-driven coding and Git, and Devs must take operational features seriously and seek out Ops people for input into logging implementations, and so on, all of which needs quite a culture change from the recent past.</p>
+<p><img src=images/type-1.png alt="Type 1"></p>
+<blockquote>
+<p><strong>Type 1 suitability:</strong> an organisation with strong technical leadership.
+<strong>Potential effectiveness:</strong> <strong>HIGH</strong></p>
+</blockquote>
+<h2 id=type-2-fully-shared-ops-responsibilities><strong>Type 2:</strong> Fully Shared Ops Responsibilities</h2>
+<p>Where operations people have been integrated in product development teams, we see a Type 2 topology. There is so little separation between Dev and Ops that all people are highly focused on a shared purpose; this is arguable a form of <a href=https://web.devopstopologies.com/#type-one>Type 1 (Dev and Ops Collaboration)</a>, but it has some special features.</p>
+<p>Organisations such as Netflix and Facebook with effectively a single web-based product have achieved this Type 2 topology, but I think it’s probably not hugely applicable outside a narrow product focus, because the budgetary constraints and context-switching typically present in an organisation with multiple product streams will probably force Dev and Ops further apart (say, back to a <a href=https://web.devopstopologies.com/#type-one>Type 1 model</a>). This topology might also be called ‘NoOps‘, as there is no distinct or visible Operations team (although the Netflix NoOps might also be <a href=https://web.devopstopologies.com/#type-three>Type 3 (Ops as IaaS)</a>).</p>
+<p><img src=images/type-2.png alt="Type 2"></p>
+<blockquote>
+<p><strong>Type 2 suitability:</strong> organisations with a single main web-based product or service.
+<strong>Potential effectiveness:</strong> <strong>HIGH</strong></p>
+</blockquote>
+<h2 id=type-3-ops-as-infrastructure-as-a-service-platform><strong>Type 3:</strong> Ops as Infrastructure-as-a-Service (Platform)</h2>
+<p>For organisations with a fairly traditional IT Operations department which cannot or will not change rapidly [enough], and for organisations who run all their applications in the public cloud (Amazon EC2, Rackspace, Azure, etc.), it probably helps to treat Operations as a team who simply provides the elastic infrastructure on which applications are deployed and run; the internal Ops team is thus directly equivalent to Amazon EC2, or Infrastructure-as-a-Service.</p>
+<p>A team (perhaps a virtual team) within Dev then acts as a source of expertise about operational features, metrics, monitoring, server provisioning, etc., and probably does most of the communication with the IaaS team. This team is still a Dev team, however, following standard practices like TDD, CI, iterative development, coaching, etc.</p>
+<p>The IaaS topology trades some potential effectiveness (losing direct collaboration with Ops people) for easier implementation, possibly deriving value more quickly than by trying for <a href=https://web.devopstopologies.com/#type-one>Type 1 (Dev and Ops Collaboration)</a> which could be attempted at a later date.</p>
+<p><img src=images/type-3.png alt="Type 3"></p>
+<blockquote>
+<p><strong>Type 3 suitability:</strong> organisations with several different products and services, with a traditional Ops department, or whose applications run entirely in the public cloud.
+<strong>Potential effectiveness:</strong> <strong>MEDIUM</strong></p>
+</blockquote>
+<h2 id=type-4-devops-as-an-external-service><strong>Type 4:</strong> DevOps as an External Service</h2>
+<p>Some organisations, particularly smaller ones, might not have the finances, experience, or staff to take a lead on the operational aspects of the software they produce. The Dev team might then reach out to a service provider like Rackspace to help them build test environments and automate their infrastructure and monitoring, and advise them on the kinds of operational features to implement during the software development cycles.</p>
+<p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a <a href=https://web.devopstopologies.com/#type-three>Type 3 (Ops as IaaS)</a> or even <a href=https://web.devopstopologies.com/#type-one>Type 1 (Dev and Ops Collaboration)</a> model as they grow and take on more staff with operational focus.</p>
+<p><img src=images/type-4.png alt="Type 4"></p>
+<blockquote>
+<p><strong>Type 4 suitability:</strong> smaller teams or organisations with limited experience of operational issues.
+<strong>Potential effectiveness:</strong> <strong>MEDIUM</strong></p>
+</blockquote>
+<h2 id=type-5-devops-team-with-an-expiry-date><strong>Type 5:</strong> DevOps Team with an Expiry Date</h2>
+<p>The DevOps Team with an Expiry Date (Type 5) looks substantially like <a href=https://web.devopstopologies.com/#anti-type-b>Anti-Type B (DevOps Team Silo)</a>, but its intent and longevity are quite different. This temporary team has a mission to bring Dev and Ops closer together, ideally towards a <a href=https://web.devopstopologies.com/#type-one>Type 1 (Dev and Ops Collaboration)</a> or <a href=https://web.devopstopologies.com/#type-two>Type 2 (Fully Shared Ops Responsibilities)</a> model, and eventually make itself obsolete.</p>
+<p>The members of the temporary team will ‘translate’ between Dev-speak and Ops-speak, introducing crazy ideas like stand-ups and Kanban for Ops teams, and thinking about dirty details like load-balancers, management NICs, and SSL offloading for Dev teams. If enough people start to see the value of bringing Dev and Ops together, then the temporary team has a real chance of achieving its aim; crucially, long-term responsibility for deployments and production diagnostics should not be given to the temporary team, otherwise it is likely to become a <a href=https://web.devopstopologies.com/#anti-type-b>DevOps Team Silo (Anti-Type B).</a></p>
+<p><img src=images/type-5.png alt="Type 5"></p>
+<blockquote>
+<p><strong>Type 5 suitability:</strong> as a precursor to <a href=https://web.devopstopologies.com/#type-one>Type 1 topology</a>, but beware the danger of <a href=https://web.devopstopologies.com/#anti-type-b>Anti-Type B</a>.
+<strong>Potential effectiveness:</strong> <strong>LOW to HIGH</strong></p>
+</blockquote>
+<h2 id=type-6-devops-advocacy-team><strong>Type 6:</strong> DevOps Advocacy Team</h2>
+<p>Within organisations that have a large gap between Dev and Ops (or the tendency towards a large gap), it can be effective to have a &lsquo;facilitating&rsquo; DevOps team that keeps the Dev and Ops sides talking. This is a version of <a href=https://web.devopstopologies.com/#type-five>Type 5 (DevOps Team with an Expiry Date)</a> but where the DevOps team exists on an ongoing basis with the specific remit of facilitating collaboration and cooperation between Dev and Ops teams. Members of this team are sometimes called &lsquo;DevOps Advocates&rsquo;, because they help to spread awareness of DevOps practices.</p>
+<blockquote>
+<p><a href=https://twitter.com/ericminick/status/517335119330172930>The goal for a &ldquo;DevOps Team&rdquo; should be to put itself out of business by enabling the rest of the org.</a></p>
+</blockquote>
+<p><img src=images/type-6.png alt="Type 6"></p>
+<blockquote>
+<p><strong>Type 6 suitability:</strong> organisations with a tendency for Dev and Ops to drift apart. Beware the danger of <a href=https://web.devopstopologies.com/#anti-type-b>Anti-Type B.</a>
+<strong>Potential effectiveness:</strong> <strong>MEDIUM to HIGH</strong></p>
+</blockquote>
+<h2 id=type-7-sre-team-google-model><strong>Type 7:</strong> SRE Team (Google Model)</h2>
+<p>DevOps often recommends that Dev teams join the on-call rotation, but it&rsquo;s not essential. In fact, some organisations (including Google) run a different model, with an explicit &lsquo;hand-off&rsquo; from Development to the team that runs the software, the Site Reliability Engineering (SRE) team. In this model, the Dev teams need to provide test evidence (logs, metrics, etc.) to the SRE team showing that their software is of a good enough standard to be supported by the SRE team.</p>
+<p>Crucially, the SRE team can reject software that is operationally substandard, asking the Developers to improve the code before it is put into Production. Collaboration between Dev and SRE happens around operational criteria but once the SRE team is happy with the code, they (and not the Dev team) support it in Production.</p>
+<p><img src=images/type-7.png alt="Type 7"></p>
+<blockquote>
+<p><strong>Type 7 suitability:</strong> Type 7 is suitable only for organisations with a high degree of engineering and organisational maturity. Beware of a return to <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A</a> if the SRE/Ops team is told to &ldquo;JFDI&rdquo; deploy.
+<strong>Potential effectiveness:</strong> <strong>LOW to HIGH</strong></p>
+</blockquote>
+<h2 id=type-8-container-driven-collaboration><strong>Type 8:</strong> Container-Driven Collaboration</h2>
+<p>Containers remove the need for some kinds of collaboration between Dev and Ops by encapsulating the deployment and runtime requirements of an app into a container. In this way, the container acts as a boundary on the responsibilities of both Dev and Ops. With a sound engineering culture, the Container-Driven Collaboration model works well, but if Dev starts to ignore operational considerations this model can revert towards to an adversarial &lsquo;us and them&rsquo;.</p>
+<p><img src=images/type-8.png alt="Type 8"></p>
+<blockquote>
+<p><strong>Type 8 suitability:</strong> Containers can work very well, but beware <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A</a>, where the Ops team is expected to run anything that Dev throws at it.
+<strong>Potential effectiveness:</strong> <strong>MEDIUM to HIGH</strong></p>
+</blockquote>
+<h2 id=type-9-dev-and-dba-collaboration><strong>Type 9:</strong> Dev and DBA Collaboration</h2>
+<p>In order to bridge the Dev-DBA chasm, some organisations have experimented with something like Type 9, where a database capability from the DBA team is complimented with a database capability (or specialism) from the Dev team. This seems to help to translate between the Dev-centric view of databases (as essentially dumb persistence stores for apps) and the DBA-centric view of databases (smart, rich sources of business value).</p>
+<p><img src=images/type-9.png alt="Type 9"></p>
+<blockquote>
+<p><strong>Type 9 suitability:</strong> for organisations with one or more large, central databases with multiple connected applications.
+<strong>Potential effectiveness:</strong> <strong>MEDIUM</strong></p>
+</blockquote>
 </div>
 </main>
 </div>

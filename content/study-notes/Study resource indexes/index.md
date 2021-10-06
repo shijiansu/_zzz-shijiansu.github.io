@@ -14,3 +14,7 @@ description: >
 ### Scrum
 
 - Certified Scrum Professional Product Owner (CSP-PO) - [Link](https://github.com/shijiansu/agile-scrum-2021-certified-scrum-professional-product-owner) (**private**)
+
+## eBook
+
+- https://sg1lib.org/

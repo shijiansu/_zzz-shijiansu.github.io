@@ -2,8 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.88.1"><link rel=alternate type=text/html href=/docs/tutorials/_print/>
-<meta name=ROBOTS content="INDEX, FOLLOW">
+<meta name=generator content="Hugo 0.88.1"><meta name=ROBOTS content="INDEX, FOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -14,20 +13,26 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>Tutorials | Shijian Homepage</title>
-<meta name=description content="Show your user how to work through some end to end examples.
-">
-<meta property="og:title" content="Tutorials">
-<meta property="og:description" content="Show your user how to work through some end to end examples.
-">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/docs/tutorials/"><meta property="og:site_name" content="Shijian Homepage">
-<meta itemprop=name content="Tutorials">
-<meta itemprop=description content="Show your user how to work through some end to end examples.
-"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Tutorials">
-<meta name=twitter:description content="Show your user how to work through some end to end examples.
-">
+<title>Lead Time | Shijian Homepage</title>
+<meta name=description content="
+What Is Lead Time?
+In Kanban, lead time is defined as the time it takes from a user story being ready for implementation to when it’s ready for …">
+<meta property="og:title" content="Lead Time">
+<meta property="og:description" content="What Is Lead Time? In Kanban, lead time is defined as the time it takes from a user story being ready for implementation to when it’s ready for delivery (release). This includes the time it’s sitting on the backlog waiting to be picked up.
+In terms of Kanban board columns this is the time from when a card is added to “Ready” (“To do”) to the time when you move that card to “Done”.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/terminologies/agile/lean-software-development/lean-metrics/lead-time/"><meta property="article:section" content="terminologies">
+<meta property="article:published_time" content="2021-10-06T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-10-06T23:05:24+08:00"><meta property="og:site_name" content="Shijian Homepage">
+<meta itemprop=name content="Lead Time">
+<meta itemprop=description content="What Is Lead Time? In Kanban, lead time is defined as the time it takes from a user story being ready for implementation to when it’s ready for delivery (release). This includes the time it’s sitting on the backlog waiting to be picked up.
+In terms of Kanban board columns this is the time from when a card is added to “Ready” (“To do”) to the time when you move that card to “Done”."><meta itemprop=datePublished content="2021-10-06T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-10-06T23:05:24+08:00">
+<meta itemprop=wordCount content="77">
+<meta itemprop=keywords content="Terminologies - L,"><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Lead Time">
+<meta name=twitter:description content="What Is Lead Time? In Kanban, lead time is defined as the time it takes from a user story being ready for implementation to when it’s ready for delivery (release). This includes the time it’s sitting on the backlog waiting to be picked up.
+In terms of Kanban board columns this is the time from when a card is added to “Ready” (“To do”) to the time when you move that card to “Done”.">
 <link rel=preload href=/scss/main.min.67cc959ef105df1e2ec85813cf31ce275a9816ceee54062bd54d5ff6d04833f7.css as=style>
 <link href=/scss/main.min.67cc959ef105df1e2ec85813cf31ce275a9816ceee54062bd54d5ff6d04833f7.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -35,7 +40,7 @@
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
-<body class=td-section>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -47,13 +52,13 @@
 <a class=nav-link href=/topics/><i class="fas fa-flask"></i><span>Topics</span></a>
 </li>
 <li class="nav-item mr-4 mb-2 mb-lg-0">
-<a class="nav-link active" href=/docs/><i class="fas fa-graduation-cap"></i><span class=active>Docs</span></a>
+<a class=nav-link href=/docs/><i class="fas fa-graduation-cap"></i><span>Docs</span></a>
 </li>
 <li class="nav-item mr-4 mb-2 mb-lg-0">
 <a class=nav-link href=/study-notes/><i class="fas fa-graduation-cap"></i><span>Study Notes</span></a>
 </li>
 <li class="nav-item mr-4 mb-2 mb-lg-0">
-<a class=nav-link href=/terminologies/><i class="fas fa-comments"></i><span>Terminologies</span></a>
+<a class="nav-link active" href=/terminologies/><i class="fas fa-comments"></i><span class=active>Terminologies</span></a>
 </li>
 </ul>
 </div>
@@ -74,60 +79,44 @@
 </form>
 <nav class="collapse td-sidebar-nav" id=td-section-nav>
 <ul class="td-sidebar-nav__section pr-md-3 ul-0">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docs-li>
-<a href=/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-docs><span>Docs</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-terminologies-li>
+<a href=/terminologies/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-terminologies><span>Terminologies</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsoverview-li>
-<a href=/docs/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsoverview><span>Overview</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsgetting-started-li>
-<a href=/docs/getting-started/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsgetting-started><span>Getting Started</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-terminologiesagile-li>
+<a href=/terminologies/agile/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-terminologiesagile><span>Agile</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedexample-page-li>
-<a href=/docs/getting-started/example-page/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedexample-page><span>Example Page</span></a>
-</li>
-</ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamples-li>
-<a href=/docs/examples/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsexamples><span>Examples</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsconcepts-li>
-<a href=/docs/concepts/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsconcepts><span>Concepts</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docstasks-li>
-<a href=/docs/tasks/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docstasks><span>Core Tasks</span></a>
-<ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docstasksbeds-li>
-<a href=/docs/tasks/beds/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstasksbeds><span>Bed and Chair Metrics</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docstasksporridge-li>
-<a href=/docs/tasks/porridge/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstasksporridge><span>Porridge Assessment</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docstaskstask-li>
-<a href=/docs/tasks/task/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstaskstask><span>Another Task</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id=m-docstasksponycopters-li>
-<a href=/docs/tasks/ponycopters/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docstasksponycopters><span>Working with Ponycopters</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-terminologiesagilelean-software-development-li>
+<a href=/terminologies/agile/lean-software-development/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-terminologiesagilelean-software-development><span>Lean Software Development</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docstasksponycoptersconfiguring-ponycopters-li>
-<a href=/docs/tasks/ponycopters/configuring-ponycopters/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstasksponycoptersconfiguring-ponycopters><span>Configuring Ponycopters</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docstasksponycopterslaunching-ponycopters-li>
-<a href=/docs/tasks/ponycopters/launching-ponycopters/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstasksponycopterslaunching-ponycopters><span>Launching Ponycopters</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-terminologiesagilelean-software-developmentlean-metrics-li>
+<a href=/terminologies/agile/lean-software-development/lean-metrics/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-terminologiesagilelean-software-developmentlean-metrics><span>Lean Metrics</span></a>
+<ul class="ul-4 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-terminologiesagilelean-software-developmentlean-metricslead-time-li>
+<a href=/terminologies/agile/lean-software-development/lean-metrics/lead-time/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-terminologiesagilelean-software-developmentlean-metricslead-time><span class=td-sidebar-nav-active-item>Lead Time</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-terminologiesagilelean-software-developmentlean-metricscycle-time-li>
+<a href=/terminologies/agile/lean-software-development/lean-metrics/cycle-time/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-terminologiesagilelean-software-developmentlean-metricscycle-time><span>Cycle Time</span></a>
 </li>
 </ul>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docstutorials-li>
-<a href=/docs/tutorials/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-docstutorials><span class=td-sidebar-nav-active-item>Tutorials</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-terminologiessre-li>
+<a href=/terminologies/sre/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-terminologiessre><span>SRE</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docstutorialsmulti-bear-li>
-<a href=/docs/tutorials/multi-bear/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstutorialsmulti-bear><span>Multi-Bear Domicile Setup</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docstutorialstutorial2-li>
-<a href=/docs/tutorials/tutorial2/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstutorialstutorial2><span>Another Tutorial</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id=m-terminologiessrereliability-li>
+<a href=/terminologies/sre/reliability/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-terminologiessrereliability><span>Reliability</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-terminologiessrereliabilitymtbf-li>
+<a href=/terminologies/sre/reliability/mtbf/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-terminologiessrereliabilitymtbf><span>MTBF</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-terminologiessrereliabilitymttf-li>
+<a href=/terminologies/sre/reliability/mttf/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-terminologiessrereliabilitymttf><span>MTTF</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-terminologiessrereliabilitymttr-li>
+<a href=/terminologies/sre/reliability/mttr/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-terminologiessrereliabilitymttr><span>MTTR</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsreference-li>
-<a href=/docs/reference/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsreference><span>Reference</span></a>
-<ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsreferenceparameter-reference-li>
-<a href=/docs/reference/parameter-reference/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsreferenceparameter-reference><span>Parameter Reference</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docscontribution-guidelines-li>
-<a href=/docs/contribution-guidelines/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docscontribution-guidelines><span>Contribution Guidelines</span></a>
 </li>
 </ul>
 </li>
@@ -137,11 +126,11 @@
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com//edit/master/content/en/docs/Tutorials/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com//new/master/content/en/docs/Tutorials/_index.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
-<a href="https://github.com//issues/new?title=Tutorials" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href=https://github.com//edit/master/content/en/terminologies/Agile/Lean%20Software%20Development/Lean%20Metrics/Lead%20Time/index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com//new/master/content/en/terminologies/Agile/Lean%20Software%20Development/Lean%20Metrics/Lead%20Time/index.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com//issues/new?title=Lead%20Time" target=_blank><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 <a href=https://github.com//issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
-<a id=print href=/docs/tutorials/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+<a id=print href=/terminologies/agile/lean-software-development/lean-metrics/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
 <div class="taxonomy taxonomy-terms-cloud taxo-tags">
 <h5 class=taxonomy-title>Tag Cloud</h5>
@@ -193,39 +182,51 @@
 <nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
 <ol class="breadcrumb spb-1">
 <li class=breadcrumb-item>
-<a href=/docs/>Docs</a>
+<a href=/terminologies/>Terminologies</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/terminologies/agile/>Agile</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/terminologies/agile/lean-software-development/>Lean Software Development</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/terminologies/agile/lean-software-development/lean-metrics/>Lean Metrics</a>
 </li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/docs/tutorials/>Tutorials</a>
+<a href=/terminologies/agile/lean-software-development/lean-metrics/lead-time/>Lead Time</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>Tutorials</h1>
-<div class=lead>Show your user how to work through some end to end examples.</div>
+<h1>Lead Time</h1>
 <header class=article-meta>
+<div class="taxonomy taxonomy-terms-article taxo-tags">
+<h5 class=taxonomy-title>Tags:</h5>
+<ul class=taxonomy-terms>
+<li><a class=taxonomy-term href=/tags/terminologies-l/ data-taxonomy-term=terminologies-l><span class=taxonomy-label>Terminologies - L</span></a></li>
+</ul>
+</div>
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+<h5 class=taxonomy-title>Categories:</h5>
+<ul class=taxonomy-terms>
+<li><a class=taxonomy-term href=/categories/agile/ data-taxonomy-term=agile><span class=taxonomy-label>Agile</span></a></li>
+<li><a class=taxonomy-term href=/categories/lean-software-development/ data-taxonomy-term=lean-software-development><span class=taxonomy-label>Lean Software Development</span></a></li>
+<li><a class=taxonomy-term href=/categories/lean-metrics/ data-taxonomy-term=lean-metrics><span class=taxonomy-label>Lean Metrics</span></a></li>
+</ul>
+</div>
 </header>
-<div class="pageinfo pageinfo-primary">
-<p>This is a placeholder page that shows you how to use this template site.</p>
-</div>
-<p>Tutorials are <strong>complete worked examples</strong> made up of <strong>multiple tasks</strong> that guide the user through a relatively simple but realistic scenario: building an application that uses some of your project’s features, for example. If you have already created some Examples for your project you can base Tutorials on them. This section is <strong>optional</strong>. However, remember that although you may not need this section at first, having tutorials can be useful to help your users engage with your example code, especially if there are aspects that need more explanation than you can easily provide in code comments.</p>
-<div class=section-index>
-<hr class=panel-line>
-<div class=entry>
-<h5>
-<a href=/docs/tutorials/multi-bear/>Multi-Bear Domicile Setup</a>
-</h5>
-<p>A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/docs/tutorials/tutorial2/>Another Tutorial</a>
-</h5>
-<p>A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</p>
-</div>
-</div>
+<blockquote>
+<h4 id=what-is-lead-time>What Is Lead Time?</h4>
+<p>In Kanban, lead time is defined as the time it takes from a user story being ready for implementation to when it’s ready for delivery (release). This includes the time it’s sitting on the backlog waiting to be picked up.</p>
+<p>In terms of Kanban board columns this is the time from when a card is added to “Ready” (“To do”) to the time when you move that card to “Done”.</p>
+</blockquote>
+<ul>
+<li><a href=https://www.digite.com/agile/lead-time-cycle-time/>https://www.digite.com/agile/lead-time-cycle-time/</a></li>
+<li>Date: Unknown</li>
+</ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified 2021-09-25: <a href=https://github.com//commit/44413bd200f77d86bfafef9b252f3b2bb52a0488>Update project structure (44413bd)</a>
+Last modified 2021-10-06: <a href=https://github.com//commit/7be68bbc525564e319c5b12860f7b56ad5c1c9b7>Create index.md (7be68bb)</a>
 </div>
 </div>
 </main>

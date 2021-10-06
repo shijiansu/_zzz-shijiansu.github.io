@@ -1,4 +1,13 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Agile</title><link>/categories/agile/</link><description>Recent content in Agile on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 05 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/agile/index.xml" rel="self" type="application/rss+xml"/><item><title>Terminologies: Cycle Time</title><link>/terminologies/agile/lean-software-development/lean-metrics/cycle-time/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/lean-metrics/cycle-time/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Agile</title><link>/categories/agile/</link><description>Recent content in Agile on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/agile/index.xml" rel="self" type="application/rss+xml"/><item><title>Terminologies: Lead Time</title><link>/terminologies/agile/lean-software-development/lean-metrics/lead-time/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/lean-metrics/lead-time/</guid><description>
+&lt;blockquote>
+&lt;h4 id="what-is-lead-time">What Is Lead Time?&lt;/h4>
+&lt;p>In Kanban, lead time is defined as the time it takes from a user story being ready for implementation to when it’s ready for delivery (release). This includes the time it’s sitting on the backlog waiting to be picked up.&lt;/p>
+&lt;p>In terms of Kanban board columns this is the time from when a card is added to “Ready” (“To do”) to the time when you move that card to “Done”.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://www.digite.com/agile/lead-time-cycle-time/">https://www.digite.com/agile/lead-time-cycle-time/&lt;/a>&lt;/li>
+&lt;li>Date: Unknown&lt;/li>
+&lt;/ul></description></item><item><title>Terminologies: Cycle Time</title><link>/terminologies/agile/lean-software-development/lean-metrics/cycle-time/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>/terminologies/agile/lean-software-development/lean-metrics/cycle-time/</guid><description>
 &lt;blockquote>
 &lt;p>&lt;strong>What Is Cycle Time?&lt;/strong>&lt;/p>
 &lt;p>In Kanban, cycle time is defined as the time it takes from when you start work on a &lt;a href="https://www.digite.com/agile/user-stories/">user story&lt;/a> that’s ready for implementation, to when it’s ready for delivery (release).&lt;/p>

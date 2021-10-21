@@ -76,8 +76,8 @@ languageName ="English"
 contentDir = "content"
 # Weight used for sorting.
 weight = 1
-time_format_default = "2006-01-02"
-time_format_blog = "2006-01-02"
+time_format_default = "2021-01-02"
+time_format_blog = "2021-01-02"
 
 [markup]
   [markup.goldmark]
@@ -155,7 +155,7 @@ navbar_logo = true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
 navbar_translucent_over_cover_disable = false
 # Enable to show the side bar menu in its compact state.
-sidebar_menu_compact = true
+sidebar_menu_compact = false
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 

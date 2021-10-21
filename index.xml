@@ -1,1 +1,1362 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Shijian Homepage</title><link>/</link><description>Recent content on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Shijian Homepage</title><link>/</link><description>Recent content on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Topics: Introduction to Open Application Model</title><link>/topics/cloud-native/open-application-model/introduction-to-open-application-model/</link><pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate><guid>/topics/cloud-native/open-application-model/introduction-to-open-application-model/</guid><description>
+&lt;p>An open standard for defining cloud native apps.&lt;/p>
+&lt;p>Focused on application rather than container or orchestrator, Open Application Model [OAM] brings modular, extensible, and portable design for modeling application deployment with higher level yet consistent API.&lt;/p>
+&lt;p>This is the key to enable simple yet robust application delivery across hybrid environments including Kubernetes, cloud, or even IoT devices.&lt;/p>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;h3 id="1-traditional-way---app-deployment-is-hard">1. Traditional Way - App Deployment is Hard&lt;/h3>
+&lt;ol>
+&lt;li>Developers spend time on infrastructure details instead of apps - ingress, labels, DNS, etc, and learning how the infrastructure is implemented.&lt;/li>
+&lt;li>Inextensible - upper layer platform may be introduced, but it&amp;rsquo;s almost certain that the needs of your app will outgrow the capabilities of that platform soon.&lt;/li>
+&lt;li>Runtime lock-in - app description is tightly coupled with the runtime infrastructure, which heavily impact on how you configure, develop and operate the app across hybrid environments.&lt;/li>
+&lt;/ol>
+&lt;h3 id="2-the-oam-way---an-app-centric-approach">2. The OAM Way - An App-centric Approach&lt;/h3>
+&lt;ol>
+&lt;li>Application first - define the app with a self-contained model, where operational behaviors as part of app definition, free of infrastructure here.&lt;/li>
+&lt;li>Clarity and extensibility - an open standard to modularize platform capabilities into reusable pieces, assemble them into an app deployment per your own needs, fully self-service.&lt;/li>
+&lt;li>Runtime agnostic - a consistent experience to deploy and operate your apps across on-prem clusters, cloud providers or even edge devices.&lt;/li>
+&lt;/ol>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Developers think in terms of application architecture, not of infrastructure.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="images/introduction.png" alt="">&lt;/p>
+&lt;h2 id="overview-of-the-model">Overview of the Model&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/oam-dev/spec/blob/master/2.overview_and_terminology.md">https://github.com/oam-dev/spec/blob/master/2.overview_and_terminology.md&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>This specification proposes a model that defines cloud native applications as follows:&lt;/p>
+&lt;blockquote>
+&lt;p>A cloud native application is a collection of interrelated, but discrete components (services, tasks, workers) that, when coupled with configuration and instantiated in a suitable runtime, together accomplish a unified functional purpose.&lt;/p>
+&lt;/blockquote>
+&lt;p>In current release, this application model defines the following:&lt;/p>
+&lt;ul>
+&lt;li>Components represents a runnable unit, together with a description (schematic).&lt;/li>
+&lt;li>Workload types identify the different workloads that a component can execute.&lt;/li>
+&lt;li>Traits are overlays that augment a component with additional operations-specific features. Traits represent operator concerns, not developer/software owner concerns.&lt;/li>
+&lt;li>Application scopes represent application boundaries by grouping components with common properties or dependencies.&lt;/li>
+&lt;li>An application configuration assembles a set of component instances, their traits, and the application scopes in which they are placed, combined with configuration parameters and metadata.&lt;/li>
+&lt;/ul>
+&lt;p>Thus, an application is a collection of components with a set of operational traits and scoped together into one or more application boundaries.&lt;/p>
+&lt;h2 id="see-it-in-action">See it in action&lt;/h2>
+&lt;blockquote>
+&lt;p>&lt;a href="https://github.com/oam-dev/kubevela">https://github.com/oam-dev/kubevela&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>Topics: Core ideas in Team Topologies</title><link>/topics/engineering-management/team-topologies/core-ideas-in-team-topologies/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/team-topologies/core-ideas-in-team-topologies/</guid><description>
+&lt;h2 id="four-fundamental-topologies">Four Fundamental Topologies&lt;/h2>
+&lt;ul>
+&lt;li>Stream-aligned team: aligned to a flow of work from (usually) a segment of the business domain&lt;/li>
+&lt;li>Enabling team: helps a Stream-aligned team to overcome obstacles. Also detects missing capabilities.&lt;/li>
+&lt;li>Complicated Subsystem team: where significant mathematics/calculation/technical expertise is needed.&lt;/li>
+&lt;li>Platform team: a grouping of other team types that provide a compelling internal product to accelerate delivery by Stream-aligned teams&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/1.png" alt="Four fundamental topologies">&lt;/p>
+&lt;h2 id="four-fundamental-topologies---with-the-flow-of-change">Four Fundamental Topologies - With The Flow Of Change&lt;/h2>
+&lt;p>The flow of change is shown left-to-right. Stream-aligned teams own an entire slice of the business domain (or other flow) end-to-end. The Stream-aligned teams are “You Built It, You Run It” teams. There are no hand-offs to other teams for any purpose.&lt;/p>
+&lt;p>This diagram is a snapshot in time. The team relationships WILL change as new goals are set and the teams discover new things.&lt;/p>
+&lt;p>&lt;img src="images/2.png" alt="Four fundamental topologies shown with the flow of change">&lt;/p>
+&lt;h2 id="three-team-interaction-modes">Three Team Interaction Modes&lt;/h2>
+&lt;p>There are only three ways in which team should interact:&lt;/p>
+&lt;ul>
+&lt;li>Collaboration: working together for a defined period of time to discover new things (APIs, practices, technologies, etc.)&lt;/li>
+&lt;li>X-as-a-Service: one team provides and one team consumes something “as a Service”&lt;/li>
+&lt;li>Facilitation: one team helps and mentors another team&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/3.png" alt="3 team interaction modes">&lt;/p>
+&lt;h2 id="additional-resources">Additional Resources&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://teamtopologies.com/">https://teamtopologies.com/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/TeamTopologies/">https://github.com/TeamTopologies/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://teamtopologies.com/resources">Useful tools and guides for team-first organization design for software delivery&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://academy.teamtopologies.com/courses/team-topologies-distilled">Team Topologies Distilled&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Topics: DevOps Anti-Types</title><link>/topics/devops/devops-team-structure/devops-anti-types/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>/topics/devops/devops-team-structure/devops-anti-types/</guid><description>
+&lt;h2 id="anti-type-a-dev-and-ops-silos">&lt;strong>Anti-Type A:&lt;/strong> Dev and Ops Silos&lt;/h2>
+&lt;p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.&lt;/p>
+&lt;p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Dev and Ops Silos), we know there is a problem.&lt;/p>
+&lt;p>&lt;img src="images/anti-type-a.png" alt="Anti-Type A">&lt;/p>
+&lt;h2 id="anti-type-b-devops-team-silo">&lt;strong>Anti-Type B:&lt;/strong> DevOps Team Silo&lt;/h2>
+&lt;p>The DevOps Team Silo (Anti-Type B) typically results from a manager or exec deciding that they “need a bit of this DevOps thing” and starting a ‘DevOps team’ (probably full of people known as ‘a DevOp‘). The members of the DevOps team quickly form another silo, keeping Dev and Ops further apart than ever as they defend their corner, skills, and toolset from the ‘clueless Devs’ and ‘dinosaur Ops’ people.&lt;/p>
+&lt;p>The only situation where a separate DevOps silo really makes sense is when the team is temporary, lasting less than (say) 12 or 18 months, with the express purpose of bringing Dev and Ops closer together, and with a clear mandate to make the DevOps team superfluous after that time; this becomes what I have called a &lt;a href="https://web.devopstopologies.com/#type-five">Type 5 DevOps Topology&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="images/anti-type-b.png" alt="Anti-Type B">&lt;/p>
+&lt;h2 id="anti-type-c-dev-dont-need-ops">&lt;strong>Anti-Type C:&lt;/strong> Dev Don&amp;rsquo;t Need Ops&lt;/h2>
+&lt;p>This topology is borne of a combination of naivety and arrogance from developers and development managers, particularly when starting on new projects or systems. Assuming that Ops is now a thing of the past (“we have the Cloud now, right?”), the developers wildly underestimate the complexity and importance of operational skills and activities, and believe that they can do without them, or just cover them in spare hours.&lt;/p>
+&lt;p>Such an Anti-Type C DevOps topology will probably end up needing either a &lt;a href="https://web.devopstopologies.com/#type-three">Type 3 (Ops as IaaS)&lt;/a> or a &lt;a href="https://web.devopstopologies.com/#type-four">Type 4 (DevOps-as-a-Service)&lt;/a> topology when their software becomes more involved and operational activities start to swamp ‘development’ (aka coding) time. If only such teams recognised the importance of Operations as a discipline as important and valuable as software development, they would be able to avoid much pain and unnecessary (and quite basic) operational mistakes&lt;/p>
+&lt;p>&lt;img src="images/anti-type-c.png" alt="Anti-Type C">&lt;/p>
+&lt;h2 id="anti-type-d-devops-as-tools-team">&lt;strong>Anti-Type D:&lt;/strong> DevOps as Tools Team&lt;/h2>
+&lt;p>In order to &amp;ldquo;become DevOps&amp;rdquo; without losing current dev teams velocity (read delivery of functional stories), a DevOps team is set up to work on the tooling required for deployment pipelines, configuration management, environment management, etc. Meanwhile Ops folks continue to work in isolation and Dev teams continue to throw them applications &amp;ldquo;over the wall&amp;rdquo;.&lt;/p>
+&lt;p>Although the outcomes of this dedicated team can be beneficial in terms of an improved tool chain, its impact is limited. The fundamental problem of lack of early Ops involvement and collaboration in the application development lifecycle remains unchanged.&lt;/p>
+&lt;p>&lt;img src="images/anti-type-d.png" alt="Anti-Type D">&lt;/p>
+&lt;h2 id="anti-type-e-rebranded-sysadmin">&lt;strong>Anti-Type E:&lt;/strong> Rebranded SysAdmin&lt;/h2>
+&lt;p>This anti-type is typical in organizations with low engineering maturity. They want to improve their practices and reduce costs, yet they fail to see IT as a core driver of the business. Because industry successes with DevOps are now evident, they want to &amp;ldquo;do DevOps&amp;rdquo; as well. Unfortunately, instead of reflecting on the gaps in the current structure and relationships, they take the elusive path of hiring &amp;ldquo;DevOps engineers&amp;rdquo; for their Ops team(s).&lt;/p>
+&lt;p>DevOps becomes just a rebranding of the role previously known as SysAdmin, with no real cultural/organizational change taking place. This anti-type is becoming more and more widespread as unscrupulous recruiters jump on the bandwagon searching for candidates with automation and tooling skills. Unfortunately, it&amp;rsquo;s the human communication skills that can make DevOps thrive in an organization.&lt;/p>
+&lt;p>&lt;img src="images/anti-type-e.png" alt="Anti-Type E">&lt;/p>
+&lt;h2 id="anti-type-f-ops-embedded-in-dev-team">&lt;strong>Anti-Type F:&lt;/strong> Ops Embedded in Dev Team&lt;/h2>
+&lt;p>The organization does not want to keep a separate Ops team, so development teams take responsibility for infrastructure, managing environments, monitoring, etc. However, doing so in a project or product-driven way means those items are subject to resource constraints and re-prioritizations which lead to subpar approaches and half-baked solutions.&lt;/p>
+&lt;p>In this anti-type the organization shows lack of appreciation for the importance and skills required for effective IT operations. In particular, the value of Ops is diminished because it&amp;rsquo;s treated as an annoyance for Devs (as Ops is managed by a single Dev team manager with other priorities).&lt;/p>
+&lt;p>&lt;em>Thanks to &lt;a href="https://twitter.com/ScottPrugh">Scott Prugh&lt;/a> for suggesting clarifications on how Anti-Type F differs from Type 2.&lt;/em>&lt;/p>
+&lt;p>&lt;img src="images/anti-type-f.png" alt="Anti-Type F">&lt;/p>
+&lt;h2 id="anti-type-g-dev-and-dba-silos">&lt;strong>Anti-Type G:&lt;/strong> Dev and DBA Silos&lt;/h2>
+&lt;p>This is a form of &lt;a href="https://web.devopstopologies.com/#anti-type-a">Anti-Type A (Dev and Ops Silos)&lt;/a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).&lt;/p>
+&lt;p>Furthermore, just like Ops in &lt;a href="https://web.devopstopologies.com/#anti-type-a">Anti-Type A&lt;/a>, the DBA team is not involved early in the application development, thus data problems (migrations, performance, etc) are found late in the delivery cycle. Coupled with the overload of supporting multiple applications databases, the end result is constant firefighting and mounting pressure to deliver.&lt;/p>
+&lt;p>&lt;img src="images/anti-type-g.png" alt="Anti-Type G">&lt;/p></description></item><item><title>Topics: DevOps Team Topologies</title><link>/topics/devops/devops-team-structure/devops-team-topologies/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>/topics/devops/devops-team-structure/devops-team-topologies/</guid><description>
+&lt;h2 id="type-1-dev-and-ops-collaboration">&lt;strong>Type 1:&lt;/strong> Dev and Ops Collaboration&lt;/h2>
+&lt;p>This is the ‘promised land’ of DevOps: smooth collaboration between Dev teams and Ops teams, each specialising where needed, but also sharing where needed. There are likely many separate Dev teams, each working on a separate or semi-separate product stack.&lt;/p>
+&lt;p>My sense is that this Type 1 model needs quite substantial organisational change to establish it, and a good degree of competence higher up in the technical management team. Dev and Ops must have a clearly expressed and demonstrably effective shared goal (‘Delivering Reliable, Frequent Changes’, or whatever). Ops folks must be comfortable pairing with Devs and get to grips with test-driven coding and Git, and Devs must take operational features seriously and seek out Ops people for input into logging implementations, and so on, all of which needs quite a culture change from the recent past.&lt;/p>
+&lt;p>&lt;img src="images/type-1.png" alt="Type 1">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 1 suitability:&lt;/strong> an organisation with strong technical leadership.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>HIGH&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-2-fully-shared-ops-responsibilities">&lt;strong>Type 2:&lt;/strong> Fully Shared Ops Responsibilities&lt;/h2>
+&lt;p>Where operations people have been integrated in product development teams, we see a Type 2 topology. There is so little separation between Dev and Ops that all people are highly focused on a shared purpose; this is arguable a form of &lt;a href="https://web.devopstopologies.com/#type-one">Type 1 (Dev and Ops Collaboration)&lt;/a>, but it has some special features.&lt;/p>
+&lt;p>Organisations such as Netflix and Facebook with effectively a single web-based product have achieved this Type 2 topology, but I think it’s probably not hugely applicable outside a narrow product focus, because the budgetary constraints and context-switching typically present in an organisation with multiple product streams will probably force Dev and Ops further apart (say, back to a &lt;a href="https://web.devopstopologies.com/#type-one">Type 1 model&lt;/a>). This topology might also be called ‘NoOps‘, as there is no distinct or visible Operations team (although the Netflix NoOps might also be &lt;a href="https://web.devopstopologies.com/#type-three">Type 3 (Ops as IaaS)&lt;/a>).&lt;/p>
+&lt;p>&lt;img src="images/type-2.png" alt="Type 2">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 2 suitability:&lt;/strong> organisations with a single main web-based product or service.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>HIGH&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-3-ops-as-infrastructure-as-a-service-platform">&lt;strong>Type 3:&lt;/strong> Ops as Infrastructure-as-a-Service (Platform)&lt;/h2>
+&lt;p>For organisations with a fairly traditional IT Operations department which cannot or will not change rapidly [enough], and for organisations who run all their applications in the public cloud (Amazon EC2, Rackspace, Azure, etc.), it probably helps to treat Operations as a team who simply provides the elastic infrastructure on which applications are deployed and run; the internal Ops team is thus directly equivalent to Amazon EC2, or Infrastructure-as-a-Service.&lt;/p>
+&lt;p>A team (perhaps a virtual team) within Dev then acts as a source of expertise about operational features, metrics, monitoring, server provisioning, etc., and probably does most of the communication with the IaaS team. This team is still a Dev team, however, following standard practices like TDD, CI, iterative development, coaching, etc.&lt;/p>
+&lt;p>The IaaS topology trades some potential effectiveness (losing direct collaboration with Ops people) for easier implementation, possibly deriving value more quickly than by trying for &lt;a href="https://web.devopstopologies.com/#type-one">Type 1 (Dev and Ops Collaboration)&lt;/a> which could be attempted at a later date.&lt;/p>
+&lt;p>&lt;img src="images/type-3.png" alt="Type 3">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 3 suitability:&lt;/strong> organisations with several different products and services, with a traditional Ops department, or whose applications run entirely in the public cloud.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>MEDIUM&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-4-devops-as-an-external-service">&lt;strong>Type 4:&lt;/strong> DevOps as an External Service&lt;/h2>
+&lt;p>Some organisations, particularly smaller ones, might not have the finances, experience, or staff to take a lead on the operational aspects of the software they produce. The Dev team might then reach out to a service provider like Rackspace to help them build test environments and automate their infrastructure and monitoring, and advise them on the kinds of operational features to implement during the software development cycles.&lt;/p>
+&lt;p>What might be called DevOps-as-a-Service could be a useful and pragmatic way for a small organisation or team to learn about automation, monitoring, and configuration management, and then perhaps move towards a &lt;a href="https://web.devopstopologies.com/#type-three">Type 3 (Ops as IaaS)&lt;/a> or even &lt;a href="https://web.devopstopologies.com/#type-one">Type 1 (Dev and Ops Collaboration)&lt;/a> model as they grow and take on more staff with operational focus.&lt;/p>
+&lt;p>&lt;img src="images/type-4.png" alt="Type 4">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 4 suitability:&lt;/strong> smaller teams or organisations with limited experience of operational issues.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>MEDIUM&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-5-devops-team-with-an-expiry-date">&lt;strong>Type 5:&lt;/strong> DevOps Team with an Expiry Date&lt;/h2>
+&lt;p>The DevOps Team with an Expiry Date (Type 5) looks substantially like &lt;a href="https://web.devopstopologies.com/#anti-type-b">Anti-Type B (DevOps Team Silo)&lt;/a>, but its intent and longevity are quite different. This temporary team has a mission to bring Dev and Ops closer together, ideally towards a &lt;a href="https://web.devopstopologies.com/#type-one">Type 1 (Dev and Ops Collaboration)&lt;/a> or &lt;a href="https://web.devopstopologies.com/#type-two">Type 2 (Fully Shared Ops Responsibilities)&lt;/a> model, and eventually make itself obsolete.&lt;/p>
+&lt;p>The members of the temporary team will ‘translate’ between Dev-speak and Ops-speak, introducing crazy ideas like stand-ups and Kanban for Ops teams, and thinking about dirty details like load-balancers, management NICs, and SSL offloading for Dev teams. If enough people start to see the value of bringing Dev and Ops together, then the temporary team has a real chance of achieving its aim; crucially, long-term responsibility for deployments and production diagnostics should not be given to the temporary team, otherwise it is likely to become a &lt;a href="https://web.devopstopologies.com/#anti-type-b">DevOps Team Silo (Anti-Type B).&lt;/a>&lt;/p>
+&lt;p>&lt;img src="images/type-5.png" alt="Type 5">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 5 suitability:&lt;/strong> as a precursor to &lt;a href="https://web.devopstopologies.com/#type-one">Type 1 topology&lt;/a>, but beware the danger of &lt;a href="https://web.devopstopologies.com/#anti-type-b">Anti-Type B&lt;/a>.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>LOW to HIGH&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-6-devops-advocacy-team">&lt;strong>Type 6:&lt;/strong> DevOps Advocacy Team&lt;/h2>
+&lt;p>Within organisations that have a large gap between Dev and Ops (or the tendency towards a large gap), it can be effective to have a &amp;lsquo;facilitating&amp;rsquo; DevOps team that keeps the Dev and Ops sides talking. This is a version of &lt;a href="https://web.devopstopologies.com/#type-five">Type 5 (DevOps Team with an Expiry Date)&lt;/a> but where the DevOps team exists on an ongoing basis with the specific remit of facilitating collaboration and cooperation between Dev and Ops teams. Members of this team are sometimes called &amp;lsquo;DevOps Advocates&amp;rsquo;, because they help to spread awareness of DevOps practices.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://twitter.com/ericminick/status/517335119330172930">The goal for a &amp;ldquo;DevOps Team&amp;rdquo; should be to put itself out of business by enabling the rest of the org.&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="images/type-6.png" alt="Type 6">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 6 suitability:&lt;/strong> organisations with a tendency for Dev and Ops to drift apart. Beware the danger of &lt;a href="https://web.devopstopologies.com/#anti-type-b">Anti-Type B.&lt;/a>
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>MEDIUM to HIGH&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-7-sre-team-google-model">&lt;strong>Type 7:&lt;/strong> SRE Team (Google Model)&lt;/h2>
+&lt;p>DevOps often recommends that Dev teams join the on-call rotation, but it&amp;rsquo;s not essential. In fact, some organisations (including Google) run a different model, with an explicit &amp;lsquo;hand-off&amp;rsquo; from Development to the team that runs the software, the Site Reliability Engineering (SRE) team. In this model, the Dev teams need to provide test evidence (logs, metrics, etc.) to the SRE team showing that their software is of a good enough standard to be supported by the SRE team.&lt;/p>
+&lt;p>Crucially, the SRE team can reject software that is operationally substandard, asking the Developers to improve the code before it is put into Production. Collaboration between Dev and SRE happens around operational criteria but once the SRE team is happy with the code, they (and not the Dev team) support it in Production.&lt;/p>
+&lt;p>&lt;img src="images/type-7.png" alt="Type 7">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 7 suitability:&lt;/strong> Type 7 is suitable only for organisations with a high degree of engineering and organisational maturity. Beware of a return to &lt;a href="https://web.devopstopologies.com/#anti-type-a">Anti-Type A&lt;/a> if the SRE/Ops team is told to &amp;ldquo;JFDI&amp;rdquo; deploy.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>LOW to HIGH&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-8-container-driven-collaboration">&lt;strong>Type 8:&lt;/strong> Container-Driven Collaboration&lt;/h2>
+&lt;p>Containers remove the need for some kinds of collaboration between Dev and Ops by encapsulating the deployment and runtime requirements of an app into a container. In this way, the container acts as a boundary on the responsibilities of both Dev and Ops. With a sound engineering culture, the Container-Driven Collaboration model works well, but if Dev starts to ignore operational considerations this model can revert towards to an adversarial &amp;lsquo;us and them&amp;rsquo;.&lt;/p>
+&lt;p>&lt;img src="images/type-8.png" alt="Type 8">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 8 suitability:&lt;/strong> Containers can work very well, but beware &lt;a href="https://web.devopstopologies.com/#anti-type-a">Anti-Type A&lt;/a>, where the Ops team is expected to run anything that Dev throws at it.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>MEDIUM to HIGH&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="type-9-dev-and-dba-collaboration">&lt;strong>Type 9:&lt;/strong> Dev and DBA Collaboration&lt;/h2>
+&lt;p>In order to bridge the Dev-DBA chasm, some organisations have experimented with something like Type 9, where a database capability from the DBA team is complimented with a database capability (or specialism) from the Dev team. This seems to help to translate between the Dev-centric view of databases (as essentially dumb persistence stores for apps) and the DBA-centric view of databases (smart, rich sources of business value).&lt;/p>
+&lt;p>&lt;img src="images/type-9.png" alt="Type 9">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Type 9 suitability:&lt;/strong> for organisations with one or more large, central databases with multiple connected applications.
+&lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>MEDIUM&lt;/strong>&lt;/p>
+&lt;/blockquote></description></item><item><title>Topics: Engineering levels at Alibaba</title><link>/topics/engineering-management/engineering-ladders/engineering-levels-at-alibaba/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/engineering-ladders/engineering-levels-at-alibaba/</guid><description>
+&lt;h2 id="put-together">Put together&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Engineering Ladder&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">Management Ladder&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;strong>Level&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Name&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Level&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Name&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P3&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P4&lt;/td>
+&lt;td style="text-align:center">Junior engineer&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P5&lt;/td>
+&lt;td style="text-align:center">Engineer&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P6&lt;/td>
+&lt;td style="text-align:center">Advanced engineer&lt;/td>
+&lt;td style="text-align:center">M1&lt;/td>
+&lt;td style="text-align:center">Lead&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P7 (first terminal level)&lt;/td>
+&lt;td style="text-align:center">Technical expert&lt;/td>
+&lt;td style="text-align:center">M2&lt;/td>
+&lt;td style="text-align:center">Manager&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P8&lt;/td>
+&lt;td style="text-align:center">Advanced technical expert&lt;/td>
+&lt;td style="text-align:center">M3&lt;/td>
+&lt;td style="text-align:center">Senior manager&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P9 (second terminal level)&lt;/td>
+&lt;td style="text-align:center">Senior technical expert&lt;/td>
+&lt;td style="text-align:center">M4&lt;/td>
+&lt;td style="text-align:center">Director&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P10&lt;/td>
+&lt;td style="text-align:center">Researcher&lt;/td>
+&lt;td style="text-align:center">M5&lt;/td>
+&lt;td style="text-align:center">Senior director&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P11&lt;/td>
+&lt;td style="text-align:center">Advanced researcher&lt;/td>
+&lt;td style="text-align:center">M6&lt;/td>
+&lt;td style="text-align:center">VP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P12&lt;/td>
+&lt;td style="text-align:center">Senior researcher&lt;/td>
+&lt;td style="text-align:center">M7&lt;/td>
+&lt;td style="text-align:center">Senior VP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P13&lt;/td>
+&lt;td style="text-align:center">Scientist&lt;/td>
+&lt;td style="text-align:center">M8&lt;/td>
+&lt;td style="text-align:center">Executive VP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">P14&lt;/td>
+&lt;td style="text-align:center">Senior scientist&lt;/td>
+&lt;td style="text-align:center">M9&lt;/td>
+&lt;td style="text-align:center">Vice-Chairman&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">M10&lt;/td>
+&lt;td style="text-align:center">Chairman&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Topics: Engineering levels at Carta</title><link>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</link><pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</guid><description>
+&lt;p>At Carta, we follow Jim Barksdale’s &lt;a href="https://www.forbes.com/sites/michaellindenmayer/2014/03/07/4-hard-earned-lessons-from-ben-horowitz/">maxim&lt;/a>: “take care of the people, the products, and the profits…in that order.” We believe &lt;a href="https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/05/05/three-ways-businesses-can-get-ahead-by-prioritizing-people/amp/">people &lt;em>are&lt;/em> the business&lt;/a>: building an environment where our engineers &lt;em>want&lt;/em> to come to work every day and know they can grow their careers is the best technical leverage we could hope for.&lt;/p>
+&lt;p>To that end, having a fair, equitable, and &lt;em>clear&lt;/em> framework for leveling and career progression is one of our most important goals. Engineering leaders talk about levels and promotion processes a lot, but they focus more on the &lt;em>what&lt;/em> and not the &lt;em>why&lt;/em>. At Carta, we want everyone to understand how the company thinks about fairness and compensation, why our leveling processes exist, and what they’re trying to achieve.&lt;/p>
+&lt;p>What follows is our internal engineering leveling guide, lightly edited for public consumption. We hope that by sharing it here we can help demystify some common questions about engineering career ladders and communicate our values to candidates and prospects alike.&lt;/p>
+&lt;h1 id="our-system">Our system&lt;/h1>
+&lt;p>Carta has eight full-time engineering levels, plus a separate level for interns. These levels are similar to the ones that exist at other comparable tech companies, but they’re not identical. It’s worth understanding them — and the way we assess them — as you think about your career.&lt;/p>
+&lt;p>Writing down the precise requirements for what constitutes performance at a given level is tough. If the list is too general, it doesn’t give employees a clear picture of what they need to do to advance. If the list is too specific, it encourages employees to check boxes rather than focus on doing their job. The truth is, some boxes are important to check, but there is a degree of judgment that comes into leveling and promotion decisions. As the company matures, fine-tuning this balance — and fighting bias — only increases in importance.&lt;/p>
+&lt;p>Fortunately, it’s easy to articulate the single most important thing for leveling: your &lt;strong>impact&lt;/strong> on the company. We can sum up the entire system by describing the (rough) impact we expect employees to have as they progress: on &lt;strong>tasks (L2)&lt;/strong>, on &lt;strong>features (L3)&lt;/strong>, on &lt;strong>problems (L4)&lt;/strong>, on teams (L5), on the &lt;strong>organization (L6)&lt;/strong>, on the &lt;strong>company (L7)&lt;/strong>, and on the &lt;strong>industry (L8)&lt;/strong>. You’ll note that this is not a linear progression, especially at the top of the range; moving the trajectory of the &lt;em>industry&lt;/em> is exponentially harder than moving the trajectory of the &lt;em>company&lt;/em>. This is why our levels aren’t linear, and neither is compensation.&lt;/p>
+&lt;p>&lt;img src="images/1.png" alt="This graph shows the expected impact (on the y axis) plotted against our engineering levels (on the x axis), from L2 to L8. The curve of impact is roughly linear until Senior II (our L5): then it begins to increase exponentially.">&lt;/p>
+&lt;h2 id="fairness">&lt;strong>Fairness&lt;/strong>&lt;/h2>
+&lt;p>Leveling decisions can sometimes seem unfair, and fairness is one of Carta’s most important values. One important thing to understand is that levels are &lt;strong>conservative&lt;/strong> by default: Once we put someone in a level, the only practical way we can “take it back” is by managing the person out of the company, which is painful for both parties. So when we promote someone, we need to be sure that it’s the right decision; it’s better for everyone to have you perform solidly at L5 than to struggle at L6.&lt;/p>
+&lt;p>Because levels are conservative, you’ll often hear managers say that promotions are a &lt;em>lagging&lt;/em> indicator of performance: You have to demonstrate that you’re performing at the next level, consistently, over a significant period of time. This can feel unfair — why am I delivering value at an L5 level and only getting paid like an L4? — until you remember that promoting you is a risk for the company, and since the company doesn’t want to make a mistake and lose you, they’re risk-averse. &lt;em>You&lt;/em> might be certain that you have all the skills of a senior engineer, but you have to convince the company that this is the case, lest we fall victim to &lt;a href="https://en.wikipedia.org/wiki/Peter_principle">the Peter principle&lt;/a> and promote people to their level of incompetence.&lt;/p>
+&lt;p>This situation — when you &lt;em>know&lt;/em> you have the skill to operate at the next level, but the company doesn’t seem willing to recognize it — can be particularly frustrating. Sometimes this happens because you’re wrong, and you’ve misjudged your own abilities. But sometimes you’re right…and the company is, too. How? Because you don’t get promoted for your skill; you get promoted for your demonstrated &lt;strong>impact&lt;/strong> on the organization and the business. This impact can come in many forms, but you have to deliver. Your manager won’t hold shifting business priorities against you, but she can’t exactly give you “credit” for bad luck, either. In some sense, it doesn’t matter how “good” you are if the company doesn’t see the benefit of your talent and hard work. We can only reward progress, not activity.&lt;/p>
+&lt;p>Another important thing to understand is that the way people are leveled in the organization won’t always feel “pairwise fair.” Sometimes you may think that you’re performing better than someone else in the organization who is a higher level. And sometimes you may be right. But it’s crucial to realize that making these kinds of comparisons will never help convince your manager to put you up for promotion. First, your assessment of your coworker is likely to be incomplete: You have full knowledge of your own work, but only a tiny window into that of your peers. But even if you’re right, someone else’s performance problem isn’t grounds for your promotion—imagine what would happen over time if we let the worst-performing employee in a level set the standard. Keep your focus on your accomplishments and the impact you’re driving for the company; don’t waste time and energy worrying about your coworkers.&lt;/p>
+&lt;h2 id="compensation">&lt;strong>Compensation&lt;/strong>&lt;/h2>
+&lt;p>Carta designs our compensation to align your impact and our goals as a company. The way we think about comp is that, with increasing seniority, salary increases about linearly, but equity compensation increases superlinearly (after the senior levels). At the early levels, your salary represents most of your overall compensation; at the highest levels, most of your comp comes from equity. Your salary might grow 3x over the course of your career, but your target equity compensation can grow 10x (or more, as the company grows).&lt;/p>
+&lt;p>Because we base equity compensation on the value of the stock at the time it’s granted, in a high-growth world, longer-tenured junior people can end up with (much) larger equity grants than shorter-tenured senior ones. In a zero-sum world, this might rankle, but the more important point is that the value of your stock today might be one-tenth what it’s worth in five years, if we all do our jobs well.&lt;/p>
+&lt;p>To set compensation at Carta, we use &lt;a href="https://carta.com/blog/introducing-carta-total-comp/">Carta Total Comp&lt;/a> to benchmark against public and private companies we compete with for talent. We design our salary bands so that when you join Carta, you’ll be making less in total compensation than you’d get if you joined a larger, later-stage, slower-growing company. But we expect you to make &lt;em>more&lt;/em> money than you would at a FAANG over time if Carta continues to execute well and grow.&lt;/p>
+&lt;h2 id="career-progression">&lt;strong>Career progression&lt;/strong>&lt;/h2>
+&lt;p>As you think about your career progression at Carta, one of the first things to know is that there’s a big discontinuity at &lt;strong>L5&lt;/strong>, which Carta considers its first &lt;strong>terminal&lt;/strong> level. &lt;strong>Prior to L5, we expect engineers at Carta to make “reasonable progress” along our bands&lt;/strong>; if you aren’t continuously learning, developing your skills, scaling your impact, and getting promoted every few years, your lack of progress will eventually become a performance issue. Once you get to L5, the situation changes. &lt;strong>After L5, further promotion is no longer “expected&amp;quot;&lt;/strong>, and no longer comes with a timeline. Being promoted beyond this level is &lt;em>extremely&lt;/em> difficult: most engineers won’t ever get there, and that’s perfectly okay.&lt;/p>
+&lt;p>It’s also important to remember that, as you get more senior, it becomes more and more &lt;strong>your responsibility&lt;/strong> to own your career. Your manager is there to support you, give you guidance and advice, and help you capitalize on opportunities along the way, but &lt;em>you&lt;/em> are responsible for your trajectory.&lt;/p>
+&lt;blockquote>
+&lt;p>“Every promotion I’ve ever gotten has been me saying: I am operating at this level, I have done all of these things, I think I am ready for the next level, and here is why. Your contributions should never be ambiguous — document them! Make a list for yourself outside of work — about what you do, and how it impacts the company. Advocating for yourself isn’t arrogance: You are giving your manager details about things you are working on.”&lt;/p>
+&lt;p>— &lt;a href="http://simpleleadership.io/the-importance-of-self-advocacy-with-arquay-harris/">&lt;em>Arquay Harris&lt;/em>&lt;/a>&lt;em>,&lt;/em> &lt;a href="https://www.linkedin.com/in/arquay">&lt;em>VP of Engineering&lt;/em>&lt;/a> &lt;em>at&lt;/em> &lt;a href="https://webflow.com/">&lt;em>Webflow&lt;/em>&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>This advice is particularly important at fast-growing startups like Carta, where your manager may change a couple of times between one level and the next. Talk to your manager regularly about your career so that you understand the portfolio of work they’d need to see to support your promotion, and keep a record of your contributions (with documentation) so that it’s easy to explain what you’ve accomplished to people who don’t interact with you every day. When you get constructive feedback, document the feedback and what you do to address it over time. Think about the difference between going to your manager and saying “I want a promotion,” versus showing them a comprehensive written summary of your accomplishments and asking, “what else do I need to do to demonstrate that I’m performing at the next level?”&lt;/p>
+&lt;h2 id="manager-vs-individual-contributor">&lt;strong>Manager vs. individual contributor&lt;/strong>&lt;/h2>
+&lt;p>At Carta, engineering management and individual contributor are parallel tracks. Management is never a promotion from being an engineer, it’s a lateral move. The salary bands for managers and ICs are identical. You can make just as much money being a senior staff software engineer as you can being a director. Management can be an intensely rewarding career path, but it also comes with little glamour and much responsibility: choose it wisely!&lt;/p>
+&lt;p>Since you can’t manage engineers if you don’t deeply understand the work they do, we expect everyone who makes the transition to management to reach at &lt;em>least&lt;/em> senior engineer I (L4) — and more often senior engineer II (L5) — before they do it. Many people who decide to become engineering managers stick with it once they’ve made the transition, but some managers eventually decide they’d be happier and more productive as ICs. Both of these transitions are perfectly okay.&lt;/p>
+&lt;p>If you do decide to transition between tracks, your compensation won’t go down, but we &lt;em>may&lt;/em> drop you a level in the new track, depending on your recent experience (for example, an L6 engineer becoming a manager for the first time might start at M2 instead of M3 if they’ve never led a team before). This isn’t an insult: it’s a reflection of the fact that management and software engineering are different jobs that require different skills. Being good at one doesn’t automatically make you good at the other. If this happens to you, your manager will keep a close eye on your progress toward your next promotion, but expect a smaller compensation increase when it lands.&lt;/p>
+&lt;p>One important difference between the individual contributor and management tracks is that &lt;strong>business need&lt;/strong> features much more prominently in a managerial career than it does for an IC software engineer. Carta doesn’t have quotas for IC levels, so if you deliver a ton of disproportionate value in a very short period of time, the company can respond to recognize that value quickly. To move up as a manager, on the other hand, you have to have &lt;em>both&lt;/em> a demonstrated track record of achievement &lt;em>and&lt;/em> there must exist a clear business need for a manager at that level in the organization. This dependency on the business can be frustrating when it feels like it’s gating your career advancement, but it’s a wind that blows both ways. People need managers, so if you’re the best person to step into an opening, you might get a shot at more responsibility quickly.&lt;/p>
+&lt;p>A last point on management career trajectory is that &lt;strong>headcount&lt;/strong> is a &lt;a href="https://tim.blog/2009/05/19/vanity-metrics-vs-actionable-metrics/">vanity metric&lt;/a>. If you’re optimizing for the number of people you manage, or trying to build and define the bounds of your personal empire, you’re optimizing for the wrong things. &lt;a href="https://firstround.com/review/give-away-your-legos-and-other-commandments-for-scaling-startups/">Give away your Legos&lt;/a> as fast as possible and focus on scaling up the &lt;em>impact&lt;/em> your team has. Delivering $10 million of value with a team of four people is much more impressive than doing it with a team of thirty.&lt;/p>
+&lt;h2 id="the-individual-contributor-levels">&lt;strong>The individual contributor levels&lt;/strong>&lt;/h2>
+&lt;p>&lt;strong>Associate software engineer (L1)&lt;/strong> is Carta’s entry-level for engineers. This is where we level recent coding bootcamp graduates, and where we transfer employees who want to give engineering a try without any formal job experience. Some of our competitors don’t have a level analogous to our L1 because they don’t hire software engineers who don’t have a four-year degree in computer science (or equivalent work experience)—but much of Carta was built by people with nontraditional backgrounds, so we think it’s important to be a place that supports smart, determined people who want to transition into engineering.&lt;/p>
+&lt;p>&lt;strong>L1&lt;/strong> is a learning level, which means the primary focus is not on producing value for Carta—it’s learning all the things you need to know to be able to produce value in the future. The goal for an L1 engineer is to be able to write small, tightly scoped pieces of code; understand how Carta’s codebase and systems work; and deepen your understanding of fundamental computer science concepts like programming languages, algorithmic complexity, and abstract data structures. If you’re hired at Carta at L1, we expect you to progress out of the level in a year or two.&lt;/p>
+&lt;p>&lt;strong>Software engineer I (L2)&lt;/strong> is Carta’s new-grad level. This is where almost all recent graduates of traditional four-year computer science degree programs will start. At L2, we expect you to know the basics of software engineering cold, be able to independently solve tightly scoped tasks with some supervision from more senior engineers, and understand your part of our business well. At L2, you’re learning rapidly, but also driving business impact. We expect you to progress out of the L2 level in about a year or two.&lt;/p>
+&lt;p>&lt;strong>Software engineer II (L3)&lt;/strong> is Carta’s last non-senior level, and the level where we hire new-grad MS/PhDs, most college grads who are a few years out of school, and a &lt;em>very&lt;/em> small number of truly exceptional new grads (from highly competitive programs who’ve already shipped meaningful features to production at several previous internships). Here, you should demonstrate mastery over the fundamentals of computer science, be comfortable implementing and shipping end-to-end features, and start to understand the deeper problems in your part of the business. We expect you to progress out of the L3 level within two years.&lt;/p>
+&lt;p>&lt;strong>Senior software engineer I (L4)&lt;/strong> is the first of Carta’s two senior levels. This is the first inflection point where leadership starts to feature as a defining requirement: Your job is no longer just to get things done, it’s to guide others to help them deliver value, too. At this level, your total mastery of foundational computer and software engineering concepts is taken as a given, and we expect you to start mentoring more junior engineers and pitching in on interviewing. This is also the first level where you’re expected to do more than merely complete the work that’s been assigned to you: At L4, you should start to create your &lt;em>own&lt;/em> work by understanding the problems your team faces and proposing, implementing, and delivering solutions to them. If you want to make the jump to manager, we expect you to reach at least L4 before you do it. Carta expects you to progress out of the L4 level in a few years.&lt;/p>
+&lt;p>&lt;strong>Senior software engineer II (L5)&lt;/strong> is the second of Carta’s two senior levels, our first terminal level, and by far the hardest promotion to achieve up to this point in the career ladder. At L5, we expect you to know everything you need to know to be a professional software engineer: You should have acquired all the technical and leadership skills you need to land a job at any other top-tier tech company. L5 engineers must have demonstrated technical breadth &lt;em>and&lt;/em> depth. You should be an expert in your part of the business, a strong communicator, a trusted mentor, a role-model for more junior engineers, a driver of best practices for hiring and interviewing, and have delivered multiple projects that move the needle for your team. At L5, your job starts to become just as much about exercising technical &lt;em>judgment&lt;/em> as it does about implementation. Once you hit L5, there’s no longer a default expectation that you’ll eventually be promoted, so you can stay at this level indefinitely.&lt;/p>
+&lt;p>&lt;strong>Staff software engineer (L6)&lt;/strong> is the next inflection point in our levels, and an even harder promotion to achieve than L5. At L6, you’re expected to solve problems and deliver solutions that impact the engineering organization as a whole. Your manager might occasionally point you in the general direction of a project, but everything after that is you: identifying and formalizing the problem, devising a solution, leading its implementation, and training the rest of the organization to leverage it. At this level, you’re expected to have the knowledge, judgment, and understanding to work cross-functionally with your business and product partners to make decisions about your business unit’s roadmap. You are capable of mentoring anyone, including your more senior counterparts, in your particular areas of expertise. Staff engineers are expected to be a force multiplier for any project upon which they are deployed, and to make the entire engineering organization better.&lt;/p>
+&lt;p>&lt;strong>Senior staff software engineer (L7)&lt;/strong> is the highest level even most “great” software engineers will ever achieve in their career. At L7, you are expected to deliver value that materially changes outcomes for the company, and your job is not just about your superior technical judgment but your ability to &lt;em>influence&lt;/em> others to deliver results. You are an authority on more than one technical area, and you’re comfortable inventing novel technologies that do not exist yet to solve problems. Senior staff engineers, in particular, must be unimpeachable role models at Carta.&lt;/p>
+&lt;p>&lt;strong>Principal software engineer (L8)&lt;/strong> is the final engineering level at Carta (for now). At this level, you have a demonstrated ability to deliver software that changes the trajectory of the industry. You are recognized as a thought leader outside the company. There are not many principal engineers in the industry.&lt;/p>
+&lt;h2 id="the-manager-levels">&lt;strong>The manager levels&lt;/strong>&lt;/h2>
+&lt;p>&lt;strong>Tech lead manager (M1)&lt;/strong> is Carta’s first manager level: the equivalent of an L4 engineer on the management track. At M1, we expect you to split your time between hands-on technical work and people management for a small team of engineers. The predominant focus at this level is mentorship, technical planning, resource allocation, and project delivery. The difference between M1 and being an IC technical lead on a team is small by design; this level is a low-risk way for an engineer to decide whether people management is the right path for them. TLM is the only non-terminal manager level at Carta. We expect you to progress out of M1 in a year or two.&lt;/p>
+&lt;p>&lt;strong>Engineering manager (M2)&lt;/strong> is the first manager level where we expect people management to be the majority of your focus, although at M2 it’s likely that you’re still writing and reviewing code a substantive minority of the time. Engineering managers generally lead a single, larger team that is responsible for multiple projects, drive all the hiring and interviewing for it, mentor and guide the career development of their direct reports, and work closely with their product partners to prioritize and scope work. Like its IC equivalent, senior engineer II (L5), M2 is the first terminal manager level: Once you reach it, there’s no longer an expected timeline for any subsequent promotions.&lt;/p>
+&lt;p>&lt;strong>Senior engineering manager (M3)&lt;/strong> is an inflection point in your management career, where you generally start to manage other engineering managers or TLMs, and you likely relinquish personal &lt;em>ownership&lt;/em> of code (although it’s expected that you stay embroiled in the details of your team’s projects, and still do some technical work yourself). Like L6 on the IC track, at M3 you’re self-directed, working cross-functionally with stakeholders across the business, delivering work that impacts the engineering organization as a whole, and driving your part of your BU’s roadmap.&lt;/p>
+&lt;p>&lt;strong>Director (M4)&lt;/strong> is the management equivalent of a senior staff (L7) engineer. At the director level, your teams are expected to deliver a portfolio of work that moves the needle on the trajectory of the company. You are a deep technical expert in multiple parts of our business, driving continuous improvements to our hiring and recruiting processes, proactively looking for opportunities to create inordinate value that are not obvious to other stakeholders, and capable of resourcing, planning and strategizing with your teams to solve business and technical problems at scale for which solutions are not already known. M4 managers must be role models for the entire organization.&lt;/p>
+&lt;p>&lt;strong>Senior director (M5)&lt;/strong> is an executive role and the managerial equivalent of a principal (L8) engineer. A senior director’s primary focus is on strategic thinking and execution. They are able to identify new, material opportunities for the company, plan and resource to tackle them, execute against that plan, and deliver value to both internal and external stakeholders. M5 managers are experts at managing to results and organizational alignment.&lt;/p>
+&lt;p>&lt;strong>VP (M6)&lt;/strong> is an executive role, usually leading an entire scaled business unit or a mission-critical cross-functional organization. Your primary stakeholders are C-suite executives. You’re actively involved in setting the strategic direction of the company &lt;em>and&lt;/em> held directly accountable for the performance of your entire org.&lt;/p>
+&lt;h2 id="put-together">Put together&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Engineering Ladder&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">Management Ladder&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;strong>Level&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Name&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Level&lt;/strong>&lt;/td>
+&lt;td style="text-align:center">&lt;strong>Name&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">L2&lt;/td>
+&lt;td style="text-align:center">Software engineer I&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">L3&lt;/td>
+&lt;td style="text-align:center">Software engineer II&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">L4&lt;/td>
+&lt;td style="text-align:center">Senior software engineer I&lt;/td>
+&lt;td style="text-align:center">M1&lt;/td>
+&lt;td style="text-align:center">Tech lead manager&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">L5 (first terminal level)&lt;/td>
+&lt;td style="text-align:center">Senior software engineer II&lt;/td>
+&lt;td style="text-align:center">M2&lt;/td>
+&lt;td style="text-align:center">Engineering manager&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">L6&lt;/td>
+&lt;td style="text-align:center">Staff software engineer&lt;/td>
+&lt;td style="text-align:center">M3&lt;/td>
+&lt;td style="text-align:center">Senior engineering manager&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">L7&lt;/td>
+&lt;td style="text-align:center">Senior staff software engineer&lt;/td>
+&lt;td style="text-align:center">M4&lt;/td>
+&lt;td style="text-align:center">Director&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">L8&lt;/td>
+&lt;td style="text-align:center">Principal software engineer&lt;/td>
+&lt;td style="text-align:center">M5&lt;/td>
+&lt;td style="text-align:center">Senior director&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">M6&lt;/td>
+&lt;td style="text-align:center">VP&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Topics: Practical advice for designing REST APIs</title><link>/topics/api-management/design-restful-api/practical-advice-for-designing-rest-apis/</link><pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate><guid>/topics/api-management/design-restful-api/practical-advice-for-designing-rest-apis/</guid><description>
+&lt;h2 id="first-some-terminology">First, Some Terminology&lt;/h2>
+&lt;p>Any API design follows something called &lt;code>Resource Oriented Design&lt;/code> It consists of three key concepts&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Resource:&lt;/strong> A resource is a piece of data, For example, &lt;strong>a User&lt;/strong>.&lt;/li>
+&lt;li>&lt;strong>Collection:&lt;/strong> A group of resources is called a collection. Example: &lt;strong>A list of users&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>URL:&lt;/strong> Identifies the location of resource or collection. Example: &lt;code>/user&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-use-kebab-case-for-urls">1. Use kebab-case for URLs&lt;/h2>
+&lt;p>For example, if you want to get the list of orders.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>/systemOrders or /system_orders&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>/system-orders&lt;/code>&lt;/p>
+&lt;h2 id="2-use-camelcase-for-parameters">2. Use camelCase for Parameters&lt;/h2>
+&lt;p>For example, if you want to get products from a particular shop.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>/system-orders/{order_id} or /system-orders/{OrderId}&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>/system-orders/{orderId}&lt;/code>&lt;/p>
+&lt;h2 id="3-plural-name-to-point-to-a-collection">3. Plural Name to Point to a Collection&lt;/h2>
+&lt;p>If you want to get all the users of a system.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>GET /user or GET /User&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>GET /users&lt;/code>&lt;/p>
+&lt;h2 id="4-url-starts-with-a-collection-and-ends-with-an-identifier">4. URL Starts With a Collection and Ends With an Identifier&lt;/h2>
+&lt;p>If want to keep the concept singular and consistent.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>GET /shops/:shopId/category/:categoryId/price&lt;/code>&lt;/p>
+&lt;p>This is bad because it’s pointing to a property instead of a resource.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>GET /shops/:shopId/ or GET /category/:categoryId&lt;/code>&lt;/p>
+&lt;h2 id="5-keep-verbs-out-of-your-resource-url">5. Keep Verbs Out of Your Resource URL&lt;/h2>
+&lt;p>Don’t use verbs to express your intention in the URL. Instead, use proper HTTP methods to describe the operation.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>POST /updateuser/{userId} or GET /getusers&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>PUT /user/{userId}&lt;/code>&lt;/p>
+&lt;h2 id="6-use-verbs-for-non-resource-url">6. Use Verbs for Non-Resource URL&lt;/h2>
+&lt;p>You have an endpoint that returns nothing but an operation. In this case, you can use verbs. For example, if you want to resend the alert to a user.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>POST /alerts/245743/resend&lt;/code>&lt;/p>
+&lt;p>Keep in mind that these are not our CRUD operations. Rather, these are considered functions that do a specific job in our system.&lt;/p>
+&lt;h2 id="7-use-camelcase-for-json-property">7. Use camelCase for JSON property&lt;/h2>
+&lt;p>If you’re building a system in which the request body or response is JSON, the property names should be in &lt;code>camelCase&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">{
+user_name: &amp;#34;Mohammad Faisal&amp;#34;
+user_id: &amp;#34;1&amp;#34;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">{
+userName: &amp;#34;Mohammad Faisal&amp;#34;
+userId: &amp;#34;1&amp;#34;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="8-monitoring">8. Monitoring&lt;/h2>
+&lt;p>RESTful HTTP services MUST implement the &lt;code>/health&lt;/code> and &lt;code>/version&lt;/code> and &lt;code>/metrics&lt;/code> API endpoints. They will provide the following info.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>/health&lt;/strong>: Respond to requests to &lt;code>/health&lt;/code> with a &lt;code>200 OK&lt;/code> status code.&lt;/li>
+&lt;li>&lt;strong>/version&lt;/strong>: Respond to request to &lt;code>/version&lt;/code> with the version number.&lt;/li>
+&lt;li>&lt;strong>/metrics&lt;/strong>: This endpoint will provide various metrics like average response time.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>/debug&lt;/code> and &lt;code>/status&lt;/code> endpoints are also highly recommended.&lt;/p>
+&lt;h2 id="9-dont-use-table_name-for-the-resource-name">9. Don’t Use table_name for the Resource Name&lt;/h2>
+&lt;p>Don’t just use the table name as your resource name. In the long run, this kind of laziness can be harmful.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>product_order&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>product-orders&lt;/code>&lt;/p>
+&lt;p>This is because exposing the underlying architecture is not your purpose.&lt;/p>
+&lt;h2 id="10-use-api-design-tools">10. Use API Design Tools&lt;/h2>
+&lt;p>There are many good API design tools for good documentation, such as:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://apiblueprint.org/">API Blueprint&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://swagger.io/">Swagger&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Having good and detailed documentation results in a great user experience for your API consumers.&lt;/p>
+&lt;h2 id="11-use-simple-ordinal-number-as-version">11. Use Simple Ordinal Number as Version&lt;/h2>
+&lt;p>Always use versioning for the API and move it all the way to the left so that it has the highest scope. The version number should be &lt;code>v1&lt;/code>, &lt;code>v2&lt;/code> etc.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>http://api.domain.com/v1/shops/3/products&lt;/code>&lt;/p>
+&lt;p>Always use versioning in your API because if the API is being used by external entities, changing the endpoint can break their functionality.&lt;/p>
+&lt;h2 id="12-include-total-number-of-resources-in-your-response">12. Include Total Number of Resources in Your Response&lt;/h2>
+&lt;p>If an API returns a list of objects always include the total number of resources in the response. You can use the &lt;code>total&lt;/code> property for this.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">{
+users: [
+...
+]
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text">{
+users: [
+...
+], total: 34
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="13-accept-limit-and-offset-parameters">13. Accept limit and offset Parameters&lt;/h2>
+&lt;p>Always accept &lt;code>limit&lt;/code> and &lt;code>offset&lt;/code> parameters in &lt;code>GET&lt;/code> operations.&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong> &lt;code>GET /shops?offset=5&amp;amp;limit=5&lt;/code>&lt;/p>
+&lt;p>This is because it’s necessary for pagination on the front end.&lt;/p>
+&lt;h2 id="14-take-fields-query-parameter">14. Take fields Query Parameter&lt;/h2>
+&lt;p>The amount of data being returned should also be taken into consideration. Add a &lt;code>fields&lt;/code> parameter to expose only the required fields from your API.&lt;/p>
+&lt;h3 id="example">Example&lt;/h3>
+&lt;p>Only return the name, address, and contact of the shops.&lt;/p>
+&lt;p>&lt;code>GET /shops?fields=id,name,address,contact&lt;/code>&lt;/p>
+&lt;p>It also helps to reduce the response size in some cases.&lt;/p>
+&lt;h2 id="15-dont-pass-authentication-tokens-in-url">15. Don’t Pass Authentication Tokens in URL&lt;/h2>
+&lt;p>This is a very bad practice because often URLs are logged and the authentication token will also be logged unnecessarily.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong> &lt;code>GET /shops/123?token=some_kind_of_authenticaiton_token&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;p>Instead, pass them with the header:&lt;/p>
+&lt;p>&lt;code>Authorization: Bearer xxxxxx, Extra yyyyy&lt;/code>&lt;/p>
+&lt;p>Also, authorization tokens should be short-lived&lt;/p>
+&lt;h2 id="16-validate-the-content-type">16. Validate the Content-Type&lt;/h2>
+&lt;p>The server should not assume the content type. For example, if you accept &lt;code>application/x-www-form-urlencoded&lt;/code> then an attacker can create a form and trigger a simple POST request.&lt;/p>
+&lt;p>So, always validate the &lt;code>content-type&lt;/code> and if you want to go with a default one use &lt;code>content-type: application/json&lt;/code>&lt;/p>
+&lt;h2 id="17-use-http-methods-for-crud-functions">17. Use HTTP Methods for CRUD Functions&lt;/h2>
+&lt;p>HTTP methods serve the purpose of explaining CRUD functionality.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>GET&lt;/code>: To retrieve a representation of a resource.&lt;/li>
+&lt;li>&lt;code>POST&lt;/code>: To create new resources and sub-resources.&lt;/li>
+&lt;li>&lt;code>PUT&lt;/code>: To update existing resources.&lt;/li>
+&lt;li>&lt;code>PATCH&lt;/code>: To update existing resources. It only updates the fields that were supplied, leaving the others alone&lt;/li>
+&lt;li>&lt;code>DELETE&lt;/code>: To delete existing resources.&lt;/li>
+&lt;/ul>
+&lt;h2 id="18-use-the-relation-in-the-url-for-nested-resources">18. Use the Relation in the URL For Nested Resources&lt;/h2>
+&lt;p>Some practical examples are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>GET /shops/2/products&lt;/code> : Get the list of all products from shop 2.&lt;/li>
+&lt;li>&lt;code>GET /shops/2/products/31&lt;/code>: Get the details of product 31, which belongs to shop 2.&lt;/li>
+&lt;li>&lt;code>DELETE /shops/2/products/31&lt;/code> , should delete product 31, which belongs to shop 2.&lt;/li>
+&lt;li>&lt;code>PUT /shops/2/products/31&lt;/code> , should update the info of product 31, Use PUT on resource-URL only, not the collection.&lt;/li>
+&lt;li>&lt;code>POST /shops&lt;/code> , should create a new shop and return the details of the new shop created. Use POST on collection-URLs.&lt;/li>
+&lt;/ul>
+&lt;h2 id="19-cors">19. CORS&lt;/h2>
+&lt;p>Do support CORS (Cross-Origin Resource Sharing) headers for all public-facing APIs.&lt;/p>
+&lt;p>Consider supporting a CORS allowed origin of “*”, and enforcing authorization through valid OAuth tokens.&lt;/p>
+&lt;p>Avoid combining user credentials with origin validation.&lt;/p>
+&lt;h2 id="20-security">20. Security&lt;/h2>
+&lt;p>Enforce HTTPS (TLS-encrypted) across all endpoints, resources, and services.&lt;/p>
+&lt;p>Enforce and require HTTPS for all callback URLs, push notification endpoints, and webhooks.&lt;/p>
+&lt;h2 id="21-errors">21. Errors&lt;/h2>
+&lt;p>Errors, or more specifically service errors, occur when a client makes an invalid or incorrect request to a service or passes invalid or incorrect data to a service, and the service rejects the request.&lt;/p>
+&lt;p>Examples include invalid authentication credentials, incorrect parameters, unknown version IDs, etc.&lt;/p>
+&lt;ul>
+&lt;li>Do return &lt;code>4xx&lt;/code> HTTP error codes when rejecting a client request due to one or more Service Errors.&lt;/li>
+&lt;li>Consider processing all attributes and then returning multiple validation problems in a single response.&lt;/li>
+&lt;/ul>
+&lt;h2 id="22-golden-rules">22. Golden Rules&lt;/h2>
+&lt;p>If you are ever in doubt about an API formatting decision, these golden rules can help guide us to making the right decision.&lt;/p>
+&lt;ul>
+&lt;li>Flat is better than nested.&lt;/li>
+&lt;li>Simple is better than complex.&lt;/li>
+&lt;li>Strings are better than numbers.&lt;/li>
+&lt;li>Consistency is better than customization.&lt;/li>
+&lt;/ul></description></item><item><title>Topics: Internal Platform Teams - What Are They and Do You Need One</title><link>/topics/platform-engineering/internal-developer-platform-idp/internal-platform-teams-what-are-they-and-do-you-need-one/</link><pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate><guid>/topics/platform-engineering/internal-developer-platform-idp/internal-platform-teams-what-are-they-and-do-you-need-one/</guid><description>
+&lt;p>The early 2000s, the era of the SysAdmin. They were the ultimate rulers of the infrastructure, the gatekeepers of any setup. If your app developers wanted anything done, they needed to pass through them. Specifically, this meant every script and piece of code was thrown over the fence to SysAdmins to figure out what to do with it and how to deploy it. Not a great experience on either side of the fence. Then 2007 came and Werner Vogels &lt;a href="https://queue.acm.org/detail.cfm?id=1142065">famously yelled&lt;/a>: “You build it, you run it”. And a whole generation of SysAdmins was fired. Cloud native was finally allowing developers to provision the resources they needed, whenever they needed them. The answer to every dev teams’ problems. Or was it?&lt;/p>
+&lt;p>While it did bring about a plethora of improvements around scalability, availability and ease of operation, it turns out Cloud native also meant things got a lot more complicated. As every company’s value proposition becomes digitized (&lt;a href="https://www.youtube.com/watch?v=ZAKn9qkYEwU&amp;amp;t=1978s">as Twilio’s CEO explains&lt;/a>), the degree of complexity of its systems grows exponentially. They suddenly need to integrate with countless new technologies, be deployed across multiple clusters and vendors in different regions, all while offering an effortless end experience to customers. The result of all of this is that your frontend app developers are completely overwhelmed by the sheer amount of tools that make up your infrastructure. And whenever they are supposed to be using those YAML files for their deployments, they end up going to your Ops team to ask for help. So much for “you build it, you run it”.&lt;/p>
+&lt;h2 id="the-key-to-true-devops">The key to true DevOps&lt;/h2>
+&lt;p>Once they realized this approach to DevOps just wasn’t going to scale the way they needed it to, top-tier engineering organizations started looking at alternative solutions. In order to grow rapidly, while keeping their systems reliable and maintainable, and without compromising their developers' end experience of working with the infrastructure, leading tech organizations introduced Internal Platform teams.&lt;/p>
+&lt;p>Platform teams build internal workflows and tooling, such as &lt;a href="https://humanitec.com/blog/what-is-an-internal-developer-platform">Internal Developer Platforms (IDPs)&lt;/a>, to ensure application developers are shielded from the evolving complexities of the underlying infrastructure. They create a smooth development and deployment experience for everyone involved.&lt;/p>
+&lt;p>The common thread in everything they do: enable developer self-service across the organization. As Skelton and Pais explain in &lt;a href="https://teamtopologies.com/book">Team Topologies&lt;/a>,&lt;/p>
+&lt;p>“The Platform team’s knowledge is best made available via self-service capabilities via a web portal and or/programmable API [i.e. an IDP] (as opposed to lengthy instruction manuals)”.&lt;/p>
+&lt;p>&lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">The 2020 State of DevOps report by Puppet&lt;/a> clearly surfaces this by mapping the level of DevOps sophistication against the use of self-service platforms built by Platform teams.&lt;/p>
+&lt;p>&lt;img src="images/1.png" alt="1">&lt;/p>
+&lt;p>Source: &lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">2020 State of DevOps report by Puppet&lt;/a>&lt;/p>
+&lt;p>Jason Warner, CTO at GitHub, &lt;a href="https://humanitec.com/blog/jason-warner-why-github-built-their-own-internal-developer-platform">explained in his interview with us&lt;/a> how building their platform team and their IDP wasn’t really a cosmetic choice but rather a vital move on their part, which allowed GitHub to scale the way they did. Jan Löffler, Head of Platform at Zalando (largest e-commerce in Germany), &lt;a href="https://humanitec.com/blog/why-zalando-builds-an-own-developer-platform">agrees that an Internal Platform team&lt;/a>, in combination with an Internal Developer Platform, is an essential component of what makes such a large organization function and ship software so much faster than a regular team.&lt;/p>
+&lt;h2 id="impressive-impact">Impressive impact&lt;/h2>
+&lt;p>The strategic focus on Platform teams and developer self-service in these elite organizations clearly pays off. The results of well-trimmed Internal Platform teams are quite astounding: top performers deploy a stunning 208 times more frequently than low performers. &lt;a href="https://services.google.com/fh/files/misc/state-of-devops-2019.pdf">The 2019 Accelerate State of DevOps Report&lt;/a> shows very interesting data on the top percentile teams:&lt;/p>
+&lt;p>&lt;img src="images/2.png" alt="02">&lt;/p>
+&lt;p>Source: &lt;a href="https://services.google.com/fh/files/misc/state-of-devops-2019.pdf">2019 Accelerate State of DevOps Report&lt;/a>&lt;/p>
+&lt;p>While these “elite performers” only make up for a fraction of the market, this trend is catching the attention of many others. According to the &lt;a href="https://www.gartner.com/en/documents/3906678/how-to-scale-devops-by-building-platform-teams">2019 Gartner DevOps report&lt;/a>, IDPs and Platform teams are increasingly the go-to approach to solve problems holistically and handle multiple teams and applications, instead of just the projects at hand. According to this report, 60% of surveyed teams are currently embarking onto the platform journey.&lt;/p>
+&lt;p>We have already written at length about &lt;a href="https://humanitec.com/blog/the-rise-of-internal-developer-platforms">the rise of Internal Developer Platforms&lt;/a> in the industry and &lt;a href="https://humanitec.com/blog/what-is-an-internal-developer-platform">what they are&lt;/a>. A match made in DevOps heaven, IDPs are the indispensable companion of any Platform team. Together, they provide app developers with the best tools and workflows to do their job as efficiently and effortlessly as possible.&lt;/p>
+&lt;p>&lt;strong>In this article&lt;/strong>, we will dive deeper into the Platform team side of things: the different aspects of building and scaling one, while ensuring that it continuously generates value for all your app dev teams.&lt;/p>
+&lt;h2 id="how-to-build-an-internal-platform-team">How to build an Internal Platform team&lt;/h2>
+&lt;p>Alright, Internal Platform teams are pretty damn important when your organization is scaling up. And if that’s you, right now you might be thinking to yourself you need one. So where do you start?&lt;/p>
+&lt;h3 id="the-mission">The mission&lt;/h3>
+&lt;p>As usual, from the why. When building an Internal Platform team, it is key you clearly define its purpose and mission. “To build the tools (IDPs) that enable developers to shio scalable applications with high speed, quality and performance” is an example. Whatever makes the most sense for your organization, make sure you set this in stone. Along with the mission statement, it is important you establish early on that the Platform team is not to be seen as some sort of extension of the SRE or Ops teams, but rather as its own product team, serving customers (app developers) within your organization.&lt;/p>
+&lt;p>This differentiation is crucial not only from an engineering and product point of view, but also from a management perspective. In order to get buy-in on different levels, Platform teams cannot afford to be speaking only the technical language, but need to master the business lingo too. It is critical for the long term success of any Internal Platform team that it gets seen within the organization as not yet another cost center we are adding to our already expensive engineering balance sheet. Instead, it is a value center for all other app development teams and, eventually, for the end consumer.&lt;/p>
+&lt;h3 id="internal-balance">Internal balance&lt;/h3>
+&lt;p>Once that is cleared up, you need to strike the right balance. Successful Internal Platform teams manage to put in place strong guardrails and standards for their development teams, but without taking away too much of their autonomy. To have meaningful impact, Platform teams depend on having standards in their organization. Trying to support every possible programming language, framework, DB, and whatever exotic tech engineers like that month only results in Platform teams spreading themselves too thin. On the flip side, you don’t want to come across as a patronizing ruler of infrastructure by imposing your standards on every other team. &lt;a href="https://humanitec.com/blog/devops-standards-vs-freedom">Standards vs. freedom&lt;/a> is a complex topic we have covered before. There’s no one-size-fits-all solution here, but you have to be mindful of the challenges of introducing a centralized set of standards in your organization.&lt;/p>
+&lt;p>Finally, ensure you select the right SREs and DevOps engineers to build out your team. This sounds obvious, but there’s quite some &lt;a href="https://www.reddit.com/r/sre/comments/m12sdl/becoming_a_platform_engineer/">debate around what makes for a good Platform engineer&lt;/a>. It is paramount he or she fully appreciates internal tooling as a real product to iterate on, based on the feedback of their end customer: the rest of the engineering teams. Deep technical capabilities like language skills are key for a Platform engineer, but make sure you don’t only consider technical sophistication when hiring for this position, also look for candidates with a multidisciplinary understanding of their role within the organization. Alongside these core Ops competencies, you’ll also need front-end and design roles to build a complete Platform team. Remember, they are building a full fledged product for your organization.&lt;/p>
+&lt;h3 id="the-values-of-platform-teams">The value(s) of Platform teams&lt;/h3>
+&lt;p>Congratulations, you convinced management to give you the green light and went off to build a world class Internal Platform team. So how do you make sure it was all worth it? At the end of the day, they are not shipping anything that’s customer facing, so how do you know they are working on the right things to maximize value for the rest of the engineering org?&lt;/p>
+&lt;p>We compiled the key areas that we have seen Internal Platform teams focus on, in order to deliver the right internal tooling, standards and workflows to their application developers. The cornerstone is always the reduction of complexity and cognitive load for the end user of the Internal Developer Platform. If that is unstable, your engineering productivity will drop dramatically. But let’s get into the details.&lt;/p>
+&lt;h3 id="treat-your-platform-as-a-product">Treat your platform as a product&lt;/h3>
+&lt;p>We mentioned this already, but it is probably the most important takeaway: your Internal Platform team needs to be driven by a &lt;a href="https://martinfowler.com/articles/talk-about-platforms.html">product mindset&lt;/a>. They need to focus on what provides real value (as opposed to what is “cool” to work on) for their internal customers, the app developers, based on the feedback they gave them. This philosophy needs to be drilled into every aspect of your Platform team’s activities. Iterate on your Internal Developer Platform, ship new features. At the same time, don’t forget you are also responsible for maintaining a reliable and scalable Ops setup. If something goes wrong in your team, all other teams will suffer from it.&lt;/p>
+&lt;p>&lt;img src="images/3.png" alt="3">&lt;/p>
+&lt;p>Source: &lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">2020 State of DevOps report by Puppet&lt;/a>&lt;/p>
+&lt;h3 id="optimize-iteration-speed">Optimize iteration speed&lt;/h3>
+&lt;p>When you think about it, the speed at which your organization innovates is directly correlated to (and constrained by) your iteration speed. Increase that, and your app developers will be able to consistently ship more features and products to your customers, confident that things won’t break.&lt;/p>
+&lt;p>In order to do so, Internal Platform teams need to focus on optimizing every step of the software delivery process. In particular, they should:&lt;/p>
+&lt;ul>
+&lt;li>Make local development and testing as fast and painless as possible&lt;/li>
+&lt;li>Critically simplify the way developers interact with their infrastructure (and remove the &lt;a href="https://humanitec.com/blog/tame-your-zoo-of-scripts">zoo of scripts&lt;/a> from their day to day)&lt;/li>
+&lt;li>Lower barrier to entry by building the right tools and documentation that enable engineers to onboard faster. You should move away from tribal knowledge as much as you can.&lt;/li>
+&lt;/ul>
+&lt;h3 id="solve-common-problems">Solve common problems&lt;/h3>
+&lt;p>A good Platform team prevents other teams from reinventing the wheel by solving common problems time and again. It’s key to figure out what these common problems are: start by understanding developer pain points and friction areas that cause slowdowns in development. You can gather this information both qualitatively through developers’ feedback and quantitatively via engineering KPIs. This intel, combined with an understanding of the future direction of the product, can help the Internal Platform team shape a good roadmap and pick the right battles to fight. The Puppet report gives us some insights on what the core responsibilities of Platform teams are.&lt;/p>
+&lt;p>&lt;img src="images/4.png" alt="4">&lt;/p>
+&lt;p>Source: &lt;a href="https://puppet.com/resources/report/2020-state-of-devops-report/">2020 State of DevOps report by Puppet&lt;/a>&lt;/p>
+&lt;h3 id="be-glue-my-friend">Be glue, my friend&lt;/h3>
+&lt;p>Platform teams need to define a golden path for their developers: a reduced set of sane, proven choices of tools that get the job done and allow you to build, deploy, and operate your services. Once you have defined this path, the main value you create as an Internal Platform team is to be the sticky glue that brings all the tools together and ensures a smooth development and deployment experience for your engineers.&lt;/p>
+&lt;p>It’s important you don’t go to war with commercial vendors. It doesn’t matter if your homegrown CI/CD solution is superior today. AWS, GCP, Humanitec will catch up, faster than expected, and make that tool and team redundant. Every Platform team should be asking themselves: what is our differentiator? Instead of building in-house alternatives to a CI system, a CD tool or a metrics platform and compete against businesses that have 20 or 50 times your capacity, focus on the specific needs of your teams and tailor off-the-shelf solutions to your requirements. Commercial competitors are more likely to optimize for more generic needs of the industry anyway.&lt;/p>
+&lt;p>&lt;img src="images/5.png" alt="5">&lt;/p>
+&lt;h3 id="educate-and-empower-your-teams">Educate and empower your teams&lt;/h3>
+&lt;p>Finally, a good Platform team is a central source of education and best practices for the rest of the company. Some of the most impactful activities we saw elite teams routinely perform in this area include:&lt;/p>
+&lt;ul>
+&lt;li>Fostering regular architectural design reviews for new functional projects and proposing common ways of development across dev teams.&lt;/li>
+&lt;li>Sharing knowledge, experiences and collectively define best practices and architectural guidelines.&lt;/li>
+&lt;li>Ensuring engineers have the right tools in place to validate and check for common pitfalls like code smells, bugs and performance degradations.&lt;/li>
+&lt;li>Organizing internal hackathons so dev teams can surface their requirements for internal tooling needs. Nigel Simons (Director Enterprise Tech at a Fortune 100) explained in a &lt;a href="https://humanitec.com/blog/developer-experience-roundtable-continuous-improvement-nigel-simpson-erik-muttersbach">conversation with us&lt;/a> that 50% of their teams’ hackathon ideas actually make it to production.&lt;/li>
+&lt;/ul>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;p>If you and your team are scaling up your infrastructure and adding engineers at an increasing pace, you are likely considering (or hopefully will consider, after reading this) to build an Internal Platform team. The benefits can be many and if done right, a Platform team can allow your organization to scale considerably faster and more efficiently than with a less standardized approach and product driven mentality.&lt;/p></description></item><item><title>Topics: Backend as a Service - What is a BaaS</title><link>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</link><pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate><guid>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</guid><description>
+&lt;h2 id="what-is-a-backend-as-a-service">What is a backend as a service?&lt;/h2>
+&lt;p>&lt;img src="images/0.png" alt="0">&lt;/p>
+&lt;p>A BaaS or mBaaS or Backend as a Service is a platform that automates backend side development and takes care of the cloud infrastructure. Using a BaaS, you will outsource the responsibilities of running and maintaining servers to a third party and focus on the frontend or client-side development.&lt;/p>
+&lt;p>On top of that, a BaaS will provide tools to help you create a backend code and speed up the development process. It has ready to use features like scalable databases, APIs, cloud code functions, social media integrations, file storage, and push notifications.&lt;/p>
+&lt;h3 id="frontend-vs-backend">Frontend vs. Backend&lt;/h3>
+&lt;p>&lt;img src="images/1.png" alt="1">&lt;/p>
+&lt;p>First things, first! Here is a simple explanation of the differences between the frontend and backend.&lt;/p>
+&lt;ul>
+&lt;li>Frontend: Every software application has a section that the user sees that is called the frontend.&lt;/li>
+&lt;li>Backend: There is also a part that the user does not see that is named backend. These two portions combine through APIs.&lt;/li>
+&lt;/ul>
+&lt;p>Please refer to Wikipedia know more about Frontend vs. Backend.&lt;/p>
+&lt;h3 id="baas-vs-custom-backend">BaaS vs. Custom Backend&lt;/h3>
+&lt;p>For every app you build, there is a choice to develop it, creating a custom backend, or using a BaaS framework. Let’s understand the difference between these two approaches.&lt;/p>
+&lt;p>Going for a custom backend, you will have to create your backend from scratch and handle the infrastructure. The pros of this approach are the flexibility it provides and customization possibilities. The downsides will be higher development costs and a longer time to market.&lt;/p>
+&lt;p>On the other hand, a BaaS will deliver ready to use building blocks and code generation tools. The advantages of this approach are a much faster development process and reduced time to market. The cons will be lower flexibility and following a standardized architecture.&lt;/p>
+&lt;p>The following examples will help you to understand the differences between custom coding and using a BaaS.&lt;/p>
+&lt;h4 id="example-01--baas-vs-aws-ec2-instances">Example 01 – BaaS vs. AWS EC2 Instances&lt;/h4>
+&lt;p>Imagine you would like to build a new software project and that you will not use a BaaS. The first step before you start developing the backend side code is to set up the servers. Here is how it will work:&lt;/p>
+&lt;ul>
+&lt;li>Login on AWS or any other cloud.&lt;/li>
+&lt;li>Go to Instances&lt;/li>
+&lt;li>Launch Instance&lt;/li>
+&lt;li>Select the Operating System&lt;/li>
+&lt;li>Instance Size, Type&lt;/li>
+&lt;li>Configure Instance Details
+&lt;ul>
+&lt;li>Number of instances&lt;/li>
+&lt;li>Network&lt;/li>
+&lt;li>IP&lt;/li>
+&lt;li>Monitoring&lt;/li>
+&lt;li>Other settings like Auto Scaling, IAM, etc&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Add Storage&lt;/li>
+&lt;li>Security Settings&lt;/li>
+&lt;/ul>
+&lt;p>All right, your instance is up and running, and now you can start coding! Not really! That is only the first step of the process, and you will still need to install the web-server, database, framework, etc. After all that is done, you can start coding. The time to perform this process can range from a few hours (for a small project with skilled backend developers) to more than a day for large environments.&lt;/p>
+&lt;p>This same process using a backend as a service will be done with a few clicks and take no more than a few minutes.&lt;/p>
+&lt;h4 id="example-02--baas-vs-custom-coding-login-feature">Example 02 – BaaS vs. Custom coding Login feature&lt;/h4>
+&lt;p>Imagine that after your server setup is ready and you want to develop your application’s first feature. Let’s consider the first feature you will code is a social login to Facebook. I will assume outsourcing development to an offshore company, which will cost $25/hour. This simple task will take around 16 hours and cost $400.&lt;/p>
+&lt;p>On the other hand, using a BaaS will allow you to implement the same feature in less than one hour. You will have a saving of 15 hours and $375. Not bad for a simple task implementation!&lt;/p>
+&lt;h4 id="example-03--gdpr-security-settings">Example 03 – GDPR security settings&lt;/h4>
+&lt;p>GDPR privacy requirements are pretty complicated, and the implementation will demand a lot of engineering effort. The requirements will range from implementing HTTPS for transit data to encrypt server-side data in rest (and several other conditions). The exact amount of engineering hours to fulfill all the elements will depend on the project’s size and complexity, but can easily surpass 100 hours of implementation.&lt;/p>
+&lt;p>Outsourcing this implementation to a backend as a service company makes sense, especially for small to medium projects. Because the backend platforms can dilute the investment made to implement GDPR settings among hundreds or thousands of apps, the stake per app will be minimal. A company with a single project will have to offset all the investments under only one application. Even if the app is successful, it will demand much more time to return the investment.&lt;/p>
+&lt;h3 id="baas-vs-mbaas">BaaS vs. MBaaS&lt;/h3>
+&lt;p>BaaS and MBaaS are pretty much the same things! You can use a backend as a service for web projects or mobile projects. It’s recognized as a mobile backend as a service (MBaaS) or mobile BaaS when used for mobile development.&lt;/p>
+&lt;p>Why use a backend as a service?
+A BaaS platform will help you to solve two problems:&lt;/p>
+&lt;p>Manage and scale cloud infrastructure
+Speed up backend development
+There are many benefits of using a BaaS cloud, and the reasons to use a backend as a service classifies into business and technical aspects.&lt;/p>
+&lt;h2 id="why-use-a-backend-as-a-service">Why use a backend as a service?&lt;/h2>
+&lt;p>A BaaS platform will help you to solve two problems:&lt;/p>
+&lt;ul>
+&lt;li>Manage and scale cloud infrastructure&lt;/li>
+&lt;li>Speed up backend development&lt;/li>
+&lt;/ul>
+&lt;p>There are many benefits of using a BaaS cloud, and the reasons to use a backend as a service classifies into business and technical aspects.&lt;/p>
+&lt;h3 id="business-reasons-to-use-a-baas">Business reasons to use a BaaS&lt;/h3>
+&lt;p>The business advantages of a backend as a service are mainly related to productivity gains and outsourcing cloud management responsibilities. In particular, for small to medium size projects, you will have substantial benefits using a backend platform. The math is pretty simple; a backend/infrastructure engineer will cost around $80k/year in the USA. Outsourcing part of the work to a third party will allow offsetting this cost.&lt;/p>
+&lt;p>The other advantage is delivering faster time to market to a software project. Waiting for several months to provide a software product will kill the market opportunity or make you start behind the competition. So, the business advantages of a BaaS are:&lt;/p>
+&lt;ul>
+&lt;li>Reduce time to market&lt;/li>
+&lt;li>Save money and decrease the cost of development&lt;/li>
+&lt;li>Assign fewer backend developers to a project (same results with fewer developers)&lt;/li>
+&lt;li>Outsource cloud infrastructure management&lt;/li>
+&lt;/ul>
+&lt;h3 id="technical-reasons-to-use-a-baas">Technical reasons to use a BaaS&lt;/h3>
+&lt;p>Good backend developers are difficult to find and are well-paid professionals. If you find one of them, make sure you use their time wisely and ask them to deliver high-value code. Programming, repetitive activities, and boilerplate code is a waste of time and money. So, it has to be avoided.&lt;/p>
+&lt;p>The other advantage of a backend service is that it will let your frontend developers concentrate on what they are best at. That is, delivering frontend code and excellent usability for your application. So, the technical advantages of a BaaS are:&lt;/p>
+&lt;ul>
+&lt;li>Focus on frontend development&lt;/li>
+&lt;li>Excludes redundant stack setup&lt;/li>
+&lt;li>No need to program boilerplate code&lt;/li>
+&lt;li>Standardize the coding environment&lt;/li>
+&lt;li>Let backend developers program high-value lines of code&lt;/li>
+&lt;li>Provides ready to use features like authentication, data storage, and search&lt;/li>
+&lt;li>Let you clone apps and run testing environments&lt;/li>
+&lt;li>Focus on coding business logic rather than boiler plate code&lt;/li>
+&lt;li>Has ready to use security settings and backup procedures&lt;/li>
+&lt;/ul>
+&lt;h2 id="when-to-use-a-backend-as-a-service">When to use a backend as a service?&lt;/h2>
+&lt;p>Here are three everyday use cases for using a backend as a service platform:&lt;/p>
+&lt;ul>
+&lt;li>Making an MVP – Minimum Viable Product&lt;/li>
+&lt;li>Stand-alone apps or applications that require a small number of integrations&lt;/li>
+&lt;li>Enterprise apps that are not mission-critical&lt;/li>
+&lt;/ul>
+&lt;p>For these cases, using a BaaS is a no-brain and will save you a lot of time and money.&lt;/p>
+&lt;h3 id="advantages-and-disadvantages-of-a-baas">Advantages and Disadvantages of a BaaS&lt;/h3>
+&lt;p>Here are the pros and cons of using a backend as a service.&lt;/p>
+&lt;p>Advantages of a Backend as a Service&lt;/p>
+&lt;ul>
+&lt;li>Development speed – It’s super fast&lt;/li>
+&lt;li>Development price – It’s really cheap&lt;/li>
+&lt;li>It’s serverless, and you don’t need to manage infrastructure&lt;/li>
+&lt;/ul>
+&lt;p>To know all the benefits of using a BaaS, please read: BaaS – 22 Benefits &lt;a href="https://blog.back4app.com/2019/10/24/what-are-the-benefits-baas-backend-as-a-service/">https://blog.back4app.com/2019/10/24/what-are-the-benefits-baas-backend-as-a-service/&lt;/a> you will enjoy&lt;/p>
+&lt;h3 id="disadvantages-of-a-backend-as-a-service">Disadvantages of a Backend as a Service&lt;/h3>
+&lt;ul>
+&lt;li>Less flexibility in comparison to custom coding&lt;/li>
+&lt;li>A lower level of customization in comparison to a custom backend&lt;/li>
+&lt;li>Vendor lock-in for closed source platforms&lt;/li>
+&lt;/ul>
+&lt;h2 id="iaas-x-paas-x-baas">IaaS x PaaS x BaaS&lt;/h2>
+&lt;p>Every time you move from IaaS to PaaS and from PaaS to BaaS, you add layers of service (or segments of value) to your application. Here is a simple overview:&lt;/p>
+&lt;ul>
+&lt;li>IAAS = Data Center + Servers + Storage +Networking&lt;/li>
+&lt;li>PAAS = IAAS + Deploy + Manage + Scale&lt;/li>
+&lt;li>BAAS = PAAS + Features to Build Backend&lt;/li>
+&lt;/ul>
+&lt;h2 id="what-features-have-a-backend-as-a-service">What features have a backend as a service?&lt;/h2>
+&lt;p>A backend as a service will provide you with features that can be deployed across all types of applications. Here are the most common features of a backend as a service.&lt;/p>
+&lt;ul>
+&lt;li>Scalable Database (NoSQL or SQL)&lt;/li>
+&lt;li>APIs (GraphQL and REST)&lt;/li>
+&lt;li>Business Logic via Cloud Code Functions&lt;/li>
+&lt;li>User authentication&lt;/li>
+&lt;li>Social Integration (Facebook, LinkedIn, Twitter, etc.)&lt;/li>
+&lt;li>Email Verification&lt;/li>
+&lt;li>Push Notifications&lt;/li>
+&lt;li>Geolocation&lt;/li>
+&lt;li>Database Graphical User Interface (GUI)&lt;/li>
+&lt;li>Logs&lt;/li>
+&lt;li>CDN and Cache&lt;/li>
+&lt;li>Infrastructure (Security settings, auto-scaling, data backup, DB optimization)&lt;/li>
+&lt;/ul>
+&lt;h2 id="how-does-a-baas-architecture-look-like">How does a BaaS architecture look like?&lt;/h2>
+&lt;p>Generally speaking, a mobile backend as a service architecture is divided into three different layers.&lt;/p>
+&lt;p>The first layer is the foundation and contains the database servers. A database cluster will have at least two servers to replicate data and a backup routine to retrieve data.&lt;/p>
+&lt;p>The second layer is the application cluster and contains multiple servers to process requests. The quantity of servers fluctuates throughout the time of the day, and auto-scaling procedures are necessary to fulfill the group with the correct amount of servers.&lt;/p>
+&lt;p>The third layer connects the application servers to the Internet, and it’s composed of load balancers and CDNs.&lt;/p>
+&lt;p>&lt;img src="images/2.png" alt="2">&lt;/p>
+&lt;h2 id="what-types-of-projects-run-best-on-a-backend-as-a-service">What types of projects run best on a Backend as a Service?&lt;/h2>
+&lt;ul>
+&lt;li>Real-time applications (chat, messaging apps)&lt;/li>
+&lt;li>Transportation apps (similar to Uber)&lt;/li>
+&lt;li>Social-network type apps&lt;/li>
+&lt;li>Ecommerce apps&lt;/li>
+&lt;li>Music or Video streaming apps&lt;/li>
+&lt;li>Games&lt;/li>
+&lt;/ul>
+&lt;h2 id="baas-providers-and-features">BaaS Providers and features&lt;/h2>
+&lt;p>Refer to &lt;a href="https://blog.back4app.com/backend-as-a-service-baas/">https://blog.back4app.com/backend-as-a-service-baas/&lt;/a>&lt;/p>
+&lt;h3 id="baas-providers-comparison">BaaS Providers Comparison&lt;/h3>
+&lt;p>&lt;img src="images/3.png" alt="">&lt;/p>
+&lt;p>&lt;img src="images/4.png" alt="4">&lt;/p>
+&lt;p>&lt;img src="images/5.png" alt="5">&lt;/p>
+&lt;p>&lt;img src="images/6.png" alt="6">&lt;/p></description></item><item><title>Topics: 12 Factor App Principles and Cloud-Native Microservices</title><link>/topics/cloud-native/12-factor-apps/12-factor-app-principles-and-cloud-native-microservices/</link><pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate><guid>/topics/cloud-native/12-factor-apps/12-factor-app-principles-and-cloud-native-microservices/</guid><description>
+&lt;p>&lt;img src="images/12-factor-app-principles.png" alt="img">&lt;/p>
+&lt;p>12-factor app is a methodology or set of principles for building the scalable and performant, independent, and most resilient enterprise applications. It establishes the general principles and guidelines for creating robust enterprise applications. 12-factor app principles got very popular as it aligns with Microservice principles.&lt;/p>
+&lt;h2 id="the-12-factor-principles">The 12-Factor Principles&lt;/h2>
+&lt;ul>
+&lt;li>Codebase (One codebase tracked in revision control, many deploys)&lt;/li>
+&lt;li>Dependencies (Explicitly declare and isolate the dependencies)&lt;/li>
+&lt;li>Config (Store configurations in an environment)&lt;/li>
+&lt;li>Backing Services (treat backing resources as attached resources)&lt;/li>
+&lt;li>Build, release, and Run (Strictly separate build and run stages)&lt;/li>
+&lt;li>Processes (execute the app as one or more stateless processes)&lt;/li>
+&lt;li>Port Binding (Export services via port binding)&lt;/li>
+&lt;li>Concurrency (Scale out via the process model)&lt;/li>
+&lt;li>Disposability (maximize the robustness with fast startup and graceful shutdown)&lt;/li>
+&lt;li>Dev/prod parity (Keep development, staging, and production as similar as possible)&lt;/li>
+&lt;li>Logs (Treat logs as event streams)&lt;/li>
+&lt;li>Admin processes (Run admin/management tasks as one-off processes)&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-codebase-one-codebase-tracked-in-revision-control-many-deploys">1. Codebase (One Codebase Tracked In Revision Control, Many Deploys)&lt;/h2>
+&lt;p>12-factor app advocates that every application should have its own codebase (repos). Multiple codebases for multiple versions must be avoided. Please do note that having branches would be fine. I.e. For all the deployment environments there should be only one repo but not multiple.&lt;/p>
+&lt;p>Multiple apps sharing the same code are a violation of the twelve-factor. Here you should opt-in for shared libraries.&lt;/p>
+&lt;p>From the 12-factor app perspective app, deploy meaning the running instance of an app like production, staging, QA, etc. Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.&lt;/p>
+&lt;p>Different versions (the version is like a code change that is available in one environment but not in other) may be active in multiple deploys.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In Microservices, every service should have its own codebase. Having an independent codebase helps you to easy CI/CD process for your applications.&lt;/li>
+&lt;/ul>
+&lt;p>Twelve-factor app advocates of not sharing the code between the application. If you need to share you need to build a library and make it as a dependency and manage through package repository like maven.&lt;/p>
+&lt;h2 id="2-dependencies-explicitly-declare-and-isolate-the-dependencies">2. Dependencies (Explicitly Declare and Isolate the Dependencies)&lt;/h2>
+&lt;p>It talks about managing the dependencies externally using dependency management tools instead of adding them to your codebase.&lt;/p>
+&lt;p>From the perspective of the Java, you can think of Gradle as a dependency manager. You will mention all the dependencies in build.gradle file and your application will download all the mentioned dependencies from maven repository or various other repositories.&lt;/p>
+&lt;p>You also need to consider the dependencies from the operating system/ execution environment perspective as well.&lt;/p>
+&lt;p>Microservices: All the application packages will be managed through package managers like sbt, maven.&lt;/p>
+&lt;ul>
+&lt;li>In non-containerized environments, you can go for configuration management tools like chef, ansible, etc. to install system-level dependencies.&lt;/li>
+&lt;li>For a containerized environment, you can go for dockerfile.&lt;/li>
+&lt;/ul>
+&lt;h2 id="3-config-store-configurations-in-an-environment">3. Config (Store Configurations In an Environment&lt;/h2>
+&lt;p>Anything that varies between the deployment environments is considered as configuration. This includes:&lt;/p>
+&lt;ul>
+&lt;li>Database connections and credentials, system integration endpoints&lt;/li>
+&lt;li>Credentials to external services such as Amazon S3 or Twitter or any other external apps&lt;/li>
+&lt;li>Application-specific information like IP Addresses, ports, and hostnames, etc.&lt;/li>
+&lt;/ul>
+&lt;p>You should not hardcode any configuration values as constants in the codebase. This is a direct violation of 12-factor app principles.&lt;/p>
+&lt;p>12-factor app principles suggest saving the configuration values in the environment variables.&lt;/p>
+&lt;p>It advocates the strict separation between the code and configurations. The code must be the same irrespective of where the application being deployed.&lt;/p>
+&lt;p>As per &amp;ldquo;config&amp;rdquo;, what varies for the environment to the environment must be moved to configurations and managed via environment variables.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Externalize the configurations from the application. In a microservice service environment, you can manage the configurations for your applications from a source control like git (spring-cloud-config) and use the environment variables to not to maintain the sensitive information in the source control.&lt;/li>
+&lt;/ul>
+&lt;h2 id="4-backing-services-treat-backing-resources-as-attached-resources">4. Backing Services (Treat Backing Resources as Attached Resources)&lt;/h2>
+&lt;p>As per 12 factor app principles, a backing service is an application/service the app consumes over the network as part of its normal operation.&lt;/p>
+&lt;p>Database, Message Brokers, any other external systems that the app communicates is treated as Backing service.&lt;/p>
+&lt;p>12-factor app can automatically swap the application from one provider to another without making any further modifications to the code base. Let us say, you would like to change the database server from MySQL to Aurora. To do so, you should not make any code changes to your application. Only configuration change should be able to take care of it.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In a microservice ecosystem, anything external to service is treated as attached resource. The resource can be swapped at any given point of time without impacting the service.&lt;/li>
+&lt;/ul>
+&lt;p>By following the interfaced based programming allow to swap the provider dynamically without impact on the system. Plug-in based implementation also helps you to support multiple providers.&lt;/p>
+&lt;h2 id="5-build-release-and-run-strictly-separate-build-and-run-stages">5. Build, Release, and Run (Strictly Separate Build and Run Stages)&lt;/h2>
+&lt;p>The application must have a strict separation between the build, release, and run stages. Let us understand each stage in more detail.&lt;/p>
+&lt;ul>
+&lt;li>Build stage: transform the code into an executable bundle/ build package.&lt;/li>
+&lt;li>Release stage: get the build package from the build stage and combines with the configurations of the deployment environment and make your application ready to run.&lt;/li>
+&lt;li>Run stage: It is like running your app in the execution environment.&lt;/li>
+&lt;/ul>
+&lt;p>Microservices: You can use CI/CD tools to automate the builds and deployment process. Docker images make it easy to separate the build, release, and run stages more efficiently.&lt;/p>
+&lt;h2 id="6-processes-execute-the-app-as-one-or-more-stateless-processes">6. Processes (Execute the App as One or More Stateless Processes)&lt;/h2>
+&lt;p>The app is executed inside the execution environment as a process. An app can have one or more instances/processes to meet the user/customer demands.&lt;/p>
+&lt;p>As per 12-factor principles, the application should not store the data in in-memory and it must be saved to a store and use from there. As far as the state concern, your application should store the state in the database instead of in memory of the process.&lt;/p>
+&lt;p>Avoid using sticky sessions, using sticky sessions are a violation of 12-factor app principles. If you would store the session information, you can choose redis or memcached or any other cache provider based on your requirements.&lt;/p>
+&lt;p>By following these, your app can be highly scalable without any impact on the system&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the stateless nature of REST, your services can be horizontally scaled as per the needs with zero impact. If your system still requires to maintain the state use the attached resources (redis, Memcached, or datastore) to store the state instead of in-memory.&lt;/li>
+&lt;/ul>
+&lt;h2 id="7-port-binding-export-services-via-port-binding">7. Port Binding (Export Services Via Port Binding)&lt;/h2>
+&lt;p>The twelve-factor app is completely self-contained and doesn&amp;rsquo;t rely on runtime injection of a webserver into the execution environment to create a web-facing service. The web app exports HTTP as a service by binding to a port, and listening to requests coming in on that port.&lt;/p>
+&lt;p>In short, this is all about having your application as a standalone instead of deploying them into any of the external web servers.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Spring boot is one example of this one. Spring boot by default comes with embedded tomcat, jetty, or undertow.&lt;/li>
+&lt;/ul>
+&lt;h2 id="8-concurrency-scale-out-via-the-process-model">8. Concurrency (Scale Out Via the Process Model)&lt;/h2>
+&lt;p>This talks about scaling the application. Twelve-factor app principles suggest to consider running your application as multiple processes/instances instead of running in one large system. You can still opt-in for threads to improve the concurrent handling of the requests.&lt;/p>
+&lt;p>In a nutshell, twelve-factor app principles advocate to opt-in for horizontal scaling instead of vertical scaling.&lt;/p>
+&lt;p>(vertical scaling- Add additional hardware to the system&lt;/p>
+&lt;p>Horizontal scaling - Add additional instances of the application)&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the containerization, applications can be scaled horizontally as per the demands.&lt;/li>
+&lt;/ul>
+&lt;h2 id="9-disposability-maximize-the-robustness-with-fast-startup-and-graceful-shutdown">9. Disposability (Maximize the Robustness with Fast Startup and Graceful Shutdown)&lt;/h2>
+&lt;p>The twelve-factor app&amp;rsquo;s processes are disposable, meaning they can be started or stopped at a moment&amp;rsquo;s notice. When the application is shutting down or starting, an instance should not impact the application state.&lt;/p>
+&lt;p>Graceful shutdowns are very important. The system must ensure the correct state.&lt;/p>
+&lt;p>The system should not get impacted when new instances are added or takedown the existing instances as per need. This is also known as system disposability.&lt;/p>
+&lt;p>Systems do crash due to various reasons. the system should ensure that the impact would be minimal and the application should be stored in a valid state.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: By adopting the containerization into the deployment process of microservices, your application implicitly follows this principle at a maximum extent. Docker containers can be started or stopped instantly. Storing request, state, or session data in queues or other backing services ensures that a request is handled seamlessly in the event of a container crash.&lt;/li>
+&lt;/ul>
+&lt;h2 id="10-devprod-parity-keep-development-staging-and-production-as-similar-as-possible">10. Dev/Prod Parity (Keep Development, Staging, and Production as Similar as Possible)&lt;/h2>
+&lt;p>The twelve-factor methodology suggests keeping the gap between development and production environment as minimal as possible. This reduces the risks of showing up bugs in a specific environment.&lt;/p>
+&lt;p>The twelve-factor developer resists the urge to use different backing services between development and production.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: This is an inherent feature of the Microservices that is run using the containerization techniques.&lt;/li>
+&lt;/ul>
+&lt;h2 id="11-logs-treat-logs-as-event-streams">11. Logs (Treat Logs as Event Streams)&lt;/h2>
+&lt;p>Logs become paramount in troubleshooting the production issues or understanding the user behavior. Logs provide visibility into the behavior of a running application.&lt;/p>
+&lt;p>Twelve-factor app principles advocate separating the log generation and processing the log&amp;rsquo;s information. From the application logs will be written as a standard output and the execution environment takes care of capture, storage, curation, and archival of such stream should be handled by the execution environment.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: In Microservices, observability is the first-class citizen. Observability can be achieved through using APM tools (ELK, Newrelic, and other tools) or log aggregations tools like Splunk, logs, etc.&lt;/li>
+&lt;/ul>
+&lt;p>By following the above-mentioned guidelines all you need is to debug an issue is to go to the central dashboard of your tool and search for it.&lt;/p>
+&lt;h2 id="12-admin-processes-run-adminmanagement-tasks-as-one-off-processes">12. Admin Processes (Run Admin/Management Tasks as One-Off Processes)&lt;/h2>
+&lt;p>There is a number of one-off processes as part of the application deployment like data migration, executing one-off scripts in a specific environment.&lt;/p>
+&lt;p>Twelve-factor principles advocates for keeping such administrative tasks as part of the application codebase in the repository. By doing so, one-off scripts follow the same process defined for your codebase.&lt;/p>
+&lt;p>Ensure one-off scripts are automated so that you don&amp;rsquo;t need to worry about executing them manually before releasing the build.&lt;/p>
+&lt;p>Twelve-factor principles also suggest using the built-in tool of the execution environment to run those scripts on production servers.&lt;/p>
+&lt;ul>
+&lt;li>Microservices: Containerization also helps here to run the one-off processes as a task and shutdown automatically one done with the implementation.&lt;/li>
+&lt;/ul>
+&lt;p>That&amp;rsquo;s all for today. Hope you have enjoyed the article. Please share your thoughts or ideas or improvements in the below comments box.&lt;/p></description></item><item><title>Topics: Spring 5.0 Microservice 2nd - Twelve-Factor Apps</title><link>/topics/cloud-native/12-factor-apps/spring-5.0-microservice-2nd-twelve-factor-apps/</link><pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate><guid>/topics/cloud-native/12-factor-apps/spring-5.0-microservice-2nd-twelve-factor-apps/</guid><description>
+&lt;h2 id="1-single-code-base">1. Single code base&lt;/h2>
+&lt;p>&lt;img src="images/single-code-base.png" alt="">&lt;/p>
+&lt;p>Extending the same philosophy for microservices, each microservice should have its own code base, and this code base is not shared with any other microservice. It also means that one microservice will have exactly one code base.&lt;/p>
+&lt;h2 id="2-bundle-dependencies">2. Bundle dependencies&lt;/h2>
+&lt;h2 id="3-externalizing-configurations">3. Externalizing configurations&lt;/h2>
+&lt;p>The Externalize configurations principle gives you an advice to externalize all configuration parameters from the code. An application&amp;rsquo;s configuration parameters vary between environments such as support email IDs or URL of an external system, username, passwords, queue name, and more. These will be different for development, testing, and production. All service configurations should be externalized&lt;/p>
+&lt;p>&lt;img src="images/externalizing-configurations.png" alt="">&lt;/p>
+&lt;h2 id="4-backing-services-are-addressable">4. Backing services are addressable&lt;/h2>
+&lt;p>All backing services should be accessible through an addressable URL. All services need to talk to some external resources during the life cycle of their execution. For example, they could be listening to or sending messages to a messaging system, sending an email, or persisting data to a database. All these services should be reachable through a URL without complex communication requirements&lt;/p>
+&lt;p>&lt;img src="images/backing-services-are-addressable.png" alt="">&lt;/p>
+&lt;h2 id="5-isolation-between-build-release-and-run">5. Isolation between build, release, and run&lt;/h2>
+&lt;p>&lt;img src="images/isolation-between-build-release-and-run.png" alt="">&lt;/p>
+&lt;h2 id="6-stateless-shared-nothing-processes">6. Stateless, shared nothing processes&lt;/h2>
+&lt;h2 id="7-expose-services-through-port-bindings">7. Expose services through port bindings&lt;/h2>
+&lt;p>A Twelve-Factor App ideally does not relay on an external web server. A HTTP listener, such as Tomcat, Jetty, and more, has to be embedded in the service or application itself.&lt;/p>
+&lt;h2 id="8-concurrency-for-scale-out">8. Concurrency for scale out&lt;/h2>
+&lt;p>In the microservices world, services are designed for a scale out rather than scale up.&lt;/p>
+&lt;h2 id="9-disposability-with-minimal-overhead">9. Disposability, with minimal overhead&lt;/h2>
+&lt;p>In the microservices context, in order to achieve full automation, it is extremely important to keep the size of the application as thin as possible, with minimal startup and shutdown times. Microservices should also consider lazy loading of objects and data.&lt;/p>
+&lt;h2 id="10-development-production-parity">10. Development, production parity&lt;/h2>
+&lt;p>The development, production parity principle states the importance of keeping the development and production environments as identical as possible. For example, let&amp;rsquo;s consider an application with multiple services or processes, such as a job scheduler service, cache services, or one or more application services. In a development environment, we tend to run all of them on a single machine. Whereas, in production, we will facilitate independent machines to run each of these processes.&lt;/p>
+&lt;h2 id="11-externalizing-logs">11. Externalizing logs&lt;/h2>
+&lt;p>If the I/Os are not fast enough in a given infrastructure, they could create a bottleneck. The solution to this is to use a centralized logging framework. &lt;strong>Splunk, greylog, Logstash, Logplex, Loggly&lt;/strong> are some examples of log shipping and analysis tools. The recommended approach is to ship logs to a central repository by tapping the logback appenders and write to one of the shipper&amp;rsquo;s endpoints.&lt;/p>
+&lt;p>&lt;img src="images/externalizing-logs.png" alt="">&lt;/p>
+&lt;h2 id="12-package-admin-processes">12. Package admin processes&lt;/h2>
+&lt;p>Apart from application requests, most of the applications provision for admin tasks. This principle advices you to target the same release and an identical environment as the long running processes runs to perform these activities. Admin code should also be packaged along with the application code.&lt;/p></description></item><item><title>Topics: Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</title><link>/topics/api-management/api-architectural-styles/soap-vs-rest-vs-graphql-vs-rpc/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>/topics/api-management/api-architectural-styles/soap-vs-rest-vs-graphql-vs-rpc/</guid><description>
+&lt;p>Two separate applications need an intermediary to talk to each other. So, developers often build bridges – &lt;a href="https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/">Application Programming Interfaces&lt;/a> – to allow one system to access the information or functionality of another.&lt;/p>
+&lt;p>In order to integrate applications quickly and at scale, APIs are realized using protocols and/or specifications to define the semantics and syntax of the messages passed across the wire. These specifications make up the API architecture.&lt;/p>
+&lt;p>Over time, different API architectural styles have been released. Each of them has its own patterns of standardizing data exchange. A pull of choices raises endless debates as to which architectural style is best.&lt;/p>
+&lt;p>&lt;img src="images/1.png" alt="API timeline">&lt;/p>
+&lt;p>&lt;em>API styles over time, Source:&lt;/em> &lt;a href="https://twitter.com/robdcrowley?lang=en">&lt;em>Rob Crowley&lt;/em>&lt;/a>&lt;/p>
+&lt;p>Today, many API consumers refer to REST as “&lt;em>REST in peace&lt;/em>” and cheer for GraphQL, while ten years ago it was a reverse story with REST as the winner to replace SOAP. The problem with these opinions is that they are one-sided picking a technology itself instead of considering how its actual properties and characteristics match the situation at hand.&lt;/p>
+&lt;p>In this article, we’ll stay objective and discuss the four major API styles in the order of their appearance, compare their strong and weak sides, and highlight the scenarios where each of them fits best.&lt;/p>
+&lt;p>&lt;img src="images/2.png" alt="Four major API styles compared">&lt;/p>
+&lt;p>&lt;em>Four major API styles compared&lt;/em>&lt;/p>
+&lt;h2 id="1-remote-procedure-call-rpc-invoking-a-function-on-another-system">1. Remote Procedure Call (RPC): invoking a function on another system&lt;/h2>
+&lt;p>A &lt;strong>Remote Procedure Call&lt;/strong> is a specification that allows for remote execution of a function in a different context. RPC extends the notion of local procedure calling but puts it in the context of an HTTP API.&lt;/p>
+&lt;p>Initial XML-RPC was problematic because ensuring data types of XML payloads is tough. So, later an RPC API started using a more concrete &lt;a href="https://www.jsonrpc.org/">JSON-RPC&lt;/a> specification which is considered a simpler alternative to SOAP. &lt;a href="https://grpc.io/">gRPC&lt;/a> is the latest RPC version developed by Google in 2015. With pluggable support for load balancing, tracing, health checking, and authentication, gRPC is well-suited for connecting microservices.&lt;/p>
+&lt;h3 id="11-how-rpc-works">1.1 How RPC works&lt;/h3>
+&lt;p>A client invokes a remote procedure, serializes the parameters and additional information into a message, and sends the message to a server. On receiving the message, the server deserializes its content, executes the requested operation, and sends a result back to the client. The server stub and client stub take care of the serialization and deserialization of the parameters.&lt;/p>
+&lt;p>&lt;img src="images/3.png" alt="Remote Procedure Calling Mechanism">&lt;/p>
+&lt;p>&lt;em>Remote Procedure Calling Mechanism, Source:&lt;/em> &lt;a href="https://www.guru99.com/remote-procedure-call-rpc.html#1">&lt;em>Guru99&lt;/em>&lt;/a>&lt;/p>
+&lt;h3 id="12-rpc-pros">1.2 RPC Pros&lt;/h3>
+&lt;p>&lt;strong>Straightforward and simple interaction.&lt;/strong> RPC uses GET to fetch information and POST for everything else. The mechanics of the interaction between a server and a client come down to calling an endpoint and getting a response.&lt;/p>
+&lt;p>&lt;strong>Easy-to-add functions.&lt;/strong> If we get a new requirement for our API, we can easily add another endpoint executing this requirement: 1) Write a new function and throw it behind an endpoint and 2) now a client can hit this endpoint and get the info meeting the set requirement.&lt;/p>
+&lt;p>&lt;strong>High performance.&lt;/strong> Lightweight payloads go easy on the network providing high performance, which is important for shared servers and for parallel computations executing on networks of workstations. RPC is able to optimize the network layer and make it very efficient with sending tons of messages per day between different services.&lt;/p>
+&lt;h3 id="13-rpc-cons">1.3 RPC Cons&lt;/h3>
+&lt;p>&lt;strong>Tight coupling to the underlying system.&lt;/strong> An API’s abstraction level contributes to its reusability. The tighter it is to the underlying system, the less reusable it will be for other systems. RPC’s tight coupling to the underlying system doesn’t allow for an abstraction layer between the functions in the system and the external API. This raises security issues as it’s quite easy to leak implementation details about the underlying system into the API. An RPC’s tight coupling makes scalability requirements and loosely coupled teams hard to achieve. So, the client either worries about any possible side effects of calling a particular endpoint or tries figuring out what endpoint to call because it doesn’t understand how the server is naming its functions.&lt;/p>
+&lt;p>&lt;strong>Low discoverability.&lt;/strong> In RPC there’s no way to introspect the API or send a request and start understanding what function to call based on its requests.&lt;/p>
+&lt;p>&lt;strong>Function explosion.&lt;/strong> It’s so easy to create new functions. So, instead of editing the existing ones, we create new ones ending up with a huge list of overlapping functions that are hard to understand.&lt;/p>
+&lt;h3 id="14-rpc-use-cases">1.4 RPC use cases&lt;/h3>
+&lt;p>The RPC pattern started being used around the 80s, but this doesn’t automatically make it obsolete. Big companies like Google, Facebook (&lt;a href="https://thrift.apache.org/">Apache Thrift&lt;/a>), and Twitch (&lt;a href="https://twitchtv.github.io/twirp/docs/intro.html">Twirp&lt;/a>) are using RPC high-performance variates internally to perform extremely high-performance, low-overhead messaging. Their massive microservices systems require internal communication to be clear while arranged in short messages.&lt;/p>
+&lt;p>&lt;strong>Command API.&lt;/strong> An RPC is the proper choice for sending commands to a remote system. For instance, a Slack API is very command-focused: Join a channel, leave a channel, send a message. So, the designers of the Slack API modeled it in an RPC-like style making it small, tight, and easy to use.&lt;/p>
+&lt;p>&lt;strong>Customer-specific APIs for internal microservices&lt;/strong>. Having direct integration between a single provider and consumer, we don’t want to spend a lot of time transmitting a lot of metadata over the wire, like a REST API does. With high message rate and message performance, gRPC and Twirp are strong cases for microservices. Using HTTP 2 under the hood, gRPC is able to optimize the network layer and make it very efficient with sending tons of messages per day between different services. However, if you’re not aiming at high network performance, but rather at a stable API contact between teams publishing highly distinctive microservices, REST will ensure that.&lt;/p>
+&lt;h2 id="2-simple-objects-access-protocol-soap-making-data-available-as-services">2. Simple Objects Access Protocol (SOAP): making data available as services&lt;/h2>
+&lt;p>&lt;a href="https://www.altexsoft.com/blog/engineering/what-is-soap-formats-protocols-message-structure-and-how-soap-is-different-from-rest/#soap-use-cases">&lt;strong>SOAP&lt;/strong>&lt;/a> is an XML-formatted, highly standardized web communication protocol. Released by Microsoft a year after XML-RPC, SOAP inherited a lot from it. When REST followed, they were first used in parallel, but soon REST won the popularity contest.&lt;/p>
+&lt;h3 id="21-how-soap-works">2.1 How SOAP works&lt;/h3>
+&lt;p>XML data format drags behind a lot of formality. Paired with the massive message structure, it makes SOAP the most verbose API style.&lt;/p>
+&lt;p>A SOAP message is composed of:&lt;/p>
+&lt;ul>
+&lt;li>an envelope tag that begins and ends every message,&lt;/li>
+&lt;li>a body containing the request or response&lt;/li>
+&lt;li>a header if a message must determine any specifics or extra requirements, and&lt;/li>
+&lt;li>a fault informing of any errors that can occur throughout the request processing.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="images/4.png" alt="An example of the SOAP message">&lt;/p>
+&lt;p>&lt;em>An example of the SOAP message. Source:&lt;/em> &lt;a href="https://www.ibm.com/support/knowledgecenter/en/SSMKHH_10.0.0/com.ibm.etools.mft.doc/ac55780_.htm">&lt;em>IBM&lt;/em>&lt;/a>&lt;/p>
+&lt;p>The SOAP API logic is written in Web Service Description Language (WSDL). This API description language defines the endpoints and describes all processes that can be performed. This allows different programming languages and IDEs to quickly set up communication.&lt;/p>
+&lt;p>SOAP supports both stateful and stateless messaging. In a stateful scenario, the server stores the received information that can be really heavy. But it’s justified for operations involving multiple parties and complex transactions.&lt;/p>
+&lt;h3 id="22-soap-pros">2.2 SOAP Pros&lt;/h3>
+&lt;p>&lt;strong>Language- and platform-agnostic.&lt;/strong> The built-in functionality to create web-based services allows SOAP to handle communications and make responses language- and platform-independent.&lt;/p>
+&lt;p>&lt;strong>Bound to a variety of transport protocols.&lt;/strong> SOAP is flexible in terms of transfer protocols to accommodate for multiple scenarios.&lt;/p>
+&lt;p>&lt;strong>Built-in error handling.&lt;/strong> SOAP API specification allows for returning the Retry XML message with error code and its explanation.&lt;/p>
+&lt;p>&lt;strong>A number of security extensions.&lt;/strong> Integrated with the WS-Security protocols, SOAP meets an enterprise-grade transaction quality. It provides privacy and integrity inside the transactions while allowing for encryption on the message level.&lt;/p>
+&lt;p>&lt;img src="images/5.png" alt="SOAP message-level security: authentication data in the header element and encrypted body">&lt;/p>
+&lt;p>&lt;em>SOAP message-level security: authentication data in the header element and encrypted body&lt;/em>&lt;/p>
+&lt;h3 id="23-soap-cons">2.3 SOAP Cons&lt;/h3>
+&lt;p>These days, many developers shudder at the idea of having to integrate a SOAP API for several reasons.&lt;/p>
+&lt;p>&lt;strong>XML only.&lt;/strong> SOAP messages contain a lot of metadata and only support verbose XML structures for requests and responses.&lt;/p>
+&lt;p>&lt;strong>Heavyweight.&lt;/strong> Due to the large size of XML-files, SOAP services require a large bandwidth.&lt;/p>
+&lt;p>&lt;strong>Narrowly specialized knowledge.&lt;/strong> Building SOAP API servers requires a deep understanding of all protocols involved and their highly restricted rules.&lt;/p>
+&lt;p>&lt;strong>Tedious message updating.&lt;/strong> Requiring additional effort to add or remove the message properties, rigid SOAP schema slows down adoption.&lt;/p>
+&lt;h3 id="24-soap-use-cases">2.4 SOAP use cases&lt;/h3>
+&lt;p>Right now, the SOAP architecture is most commonly used for internal integration within enterprises or with their trusted partners.&lt;/p>
+&lt;p>&lt;strong>Highly secured data transmission.&lt;/strong> SOAP rigid structure, security and authorization capabilities make it the most suitable option for enforcing a formal software contract between API and client while complying with the legal contract between the API provider and API consumer. That’s why financial organizations and other corporate users opt for SOAP.&lt;/p>
+&lt;h2 id="3-representational-state-transfer-rest-making-data-available-as-resources">3. Representational state transfer (REST): making data available as resources&lt;/h2>
+&lt;p>&lt;strong>REST&lt;/strong> is a self-explanatory API architectural style defined by a set of architectural constraints and intended for wide adoption with many API consumers.&lt;/p>
+&lt;p>The most common API style today was originally described in 2000 by Roy Fielding in his &lt;a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">doctoral dissertation&lt;/a>. REST makes server-side data available representing it in simple formats, often JSON and XML.&lt;/p>
+&lt;h3 id="31-how-rest-works">3.1 How REST works&lt;/h3>
+&lt;p>REST isn’t as strictly defined as SOAP. RESTful architecture should comply with six architectural constraints:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>uniform interface:&lt;/strong> permitting a uniform way of interacting with a given server regardless of device or application type&lt;/li>
+&lt;li>&lt;strong>stateless&lt;/strong>: the necessary state to handle the request as contained within the request itself and without the server storing anything related to the session&lt;/li>
+&lt;li>&lt;strong>caching&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>client-server architecture:&lt;/strong> allowing for independent evolution of either side&lt;/li>
+&lt;li>&lt;strong>layered system&lt;/strong> of the application&lt;/li>
+&lt;li>the ability for servers to &lt;strong>provide executable code&lt;/strong> to the client&lt;/li>
+&lt;/ul>
+&lt;p>In fact, some services are RESTful only to a degree. They have RPC style at the core, break down larger services into resources, and use HTTP infrastructure efficiently. But the key part is using hypermedia aka HATEOAS, short for &lt;a href="https://en.wikipedia.org/wiki/HATEOAS">Hypertext As The Engine of Application State&lt;/a>. Basically, it means that with each response, a REST API provides metadata linking to all the related info about how to use the API. That’s what enables decoupling the client and the server. As a result, both API provider and API consumer can evolve independently without hindering their communication.&lt;/p>
+&lt;p>&lt;img src="images/6.png" alt="Richardson Maturity Model as a goalpost to achieving truly complete and useful APIs">&lt;/p>
+&lt;p>&lt;em>Richardson Maturity Model as a goalpost to achieving truly complete and useful APIs, Source:&lt;/em> &lt;a href="https://nordicapis.com/what-is-the-richardson-maturity-model/">&lt;em>Kristopher Sandoval&lt;/em>&lt;/a>&lt;/p>
+&lt;p>&lt;em>“HATEOAS is a key feature of REST. It’s really what makes REST REST. Since most people don’t use HATEOAS, they are actually using HTTP RPC,”&lt;/em> that’s some radical opinion expressed on &lt;a href="https://www.reddit.com/r/golang/comments/7qvi0w/twirp_a_sweet_new_rpc_framework_for_go_twitch_blog/dstkrnm/">Reddit&lt;/a>. Indeed, HATEOAS is the most mature version of REST. However, it’s difficult to achieve requiring much more advanced and intelligent API clients than those typically used and built today. So, even really good REST APIs today don’t always do it. This is why HATEOAS mainly serves as a vision for the long term development of a RESTful API design.&lt;/p>
+&lt;p>There really may be a gray zone between REST and RPC, when a service implements some features of REST and some of RPC. REST is based on the resource or noun instead of action or verb-based.&lt;/p>
+&lt;p>&lt;img src="images/7.png" alt="Opposing operations in verb-centric RPC to the ones in noun-centric REST">&lt;/p>
+&lt;p>&lt;em>Opposing operations in verb-centric RPC to the ones in noun-centric REST&lt;/em>&lt;/p>
+&lt;p>In REST, things are done using HTTP methods such as GET, POST, PUT, DELETE, OPTIONS, and, hopefully, PATCH.&lt;/p>
+&lt;p>&lt;img src="images/8.png" alt="REST API">&lt;/p>
+&lt;p>&lt;em>Source: Thomas Davis&lt;/em>&lt;/p>
+&lt;h3 id="32-rest-pros">3.2 REST Pros&lt;/h3>
+&lt;p>&lt;strong>Decoupled client and server.&lt;/strong> Decoupling the client and the server as much as possible, REST allows for a better abstraction than RPC. A system with abstraction levels is able to encapsulate its details to better identify and sustain its properties. This makes a REST API flexible enough to evolve over time while remaining a stable system.&lt;/p>
+&lt;p>&lt;strong>Discoverability.&lt;/strong> Communication between the client and server describes everything so that no external documentation is required to understand how to interact with the REST API.&lt;/p>
+&lt;p>&lt;strong>Cache-friendly.&lt;/strong> Reusing a lot of HTTP tools, REST is the only style that allows caching data on the HTTP level. In contrast, caching implementation on any other API will require configuring an additional cache module.&lt;/p>
+&lt;p>&lt;strong>Multiple formats support.&lt;/strong> The ability to support multiple formats for storing and exchanging data is one of the reasons REST is currently a prevailing choice for building public APIs.&lt;/p>
+&lt;h3 id="33-rest-cons">3.3 REST Cons:&lt;/h3>
+&lt;p>&lt;strong>No single REST structure.&lt;/strong> There’s no exact right way to build a REST API. How to model resources and which resources to model will depend on each scenario. This makes REST simple in theory, but difficult in practice.&lt;/p>
+&lt;p>&lt;strong>Big payloads.&lt;/strong> REST returns a lot of rich metadata so that the client can understand everything necessary about the state of the application just from its responses. And this chattiness is no big deal for a big network pipe with lots of bandwidth capacity. But that’s not always the case. This was the key driving factor for Facebook coming up with the description of GraphQL style in 2012.&lt;/p>
+&lt;p>&lt;strong>Over- and under-fetching problems.&lt;/strong> Containing either too much data or not enough of it, REST responses often create the need for another request.&lt;/p>
+&lt;h3 id="34-rest-use-cases">3.4 REST use cases&lt;/h3>
+&lt;p>&lt;strong>Management APIs.&lt;/strong> APIs focused on managing objects in a system and intended for many consumers are the most common API type. REST helps such APIs to have strong discoverability, good documentation, and it fits this object model well.&lt;/p>
+&lt;p>&lt;strong>Simple resource-driven apps.&lt;/strong> REST is a valuable approach for connecting resource-driven apps that don’t need flexibility in queries.&lt;/p>
+&lt;h2 id="4-graphql-querying-just-the-needed-data">4. GraphQL: querying just the needed data&lt;/h2>
+&lt;p>It takes a number of calls to the REST API for it to return the needed staff. So GraphQL was invented to be a game-changer.&lt;/p>
+&lt;p>&lt;a href="https://www.altexsoft.com/blog/engineering/graphql-core-features-architecture-pros-and-cons/">&lt;strong>GraphQL&lt;/strong>&lt;/a> is a syntax that describes how to make a precise data request. Implementing GraphQL is worth it for an application’s data model with a lot of complex entities referencing each other.&lt;/p>
+&lt;p>&lt;img src="images/9.png" alt="How to retrieve only the needed data from the GraphQL endpoint">&lt;/p>
+&lt;p>&lt;em>How to retrieve only the needed data from the GraphQL endpoint, Source:&lt;/em> &lt;a href="https://medium.com/@mohittikoo/rest-vs-graphql-will-graphql-do-to-rest-what-xml-did-to-json-c99e4fa639c3">&lt;em>Mohit Tikoo&lt;/em>&lt;/a>&lt;/p>
+&lt;p>These days the GraphQL ecosystem is expanding with libraries and powerful tools like Apollo, GraphiQL, and GraphQL Explorer.&lt;/p>
+&lt;h3 id="41-how-graphql-works">4.1 How GraphQL works&lt;/h3>
+&lt;p>GraphQL starts with building a &lt;em>schema,&lt;/em> which is a description of all the queries you can possibly make in a GraphQL API and all the &lt;em>types&lt;/em> that they return. Schema-building is hard as it requires strong typing in the Schema Definition Language (SDL).&lt;/p>
+&lt;p>Having the schema before querying, a client can validate their query against making sure the server will be able to respond to it. On reaching the backend application, a GraphQL operation is interpreted against the entire schema, and resolved with data for the frontend application. Sending one massive query to the server, the API returns a JSON response with exactly the shape of the data we asked for.&lt;/p>
+&lt;p>&lt;img src="images/10.png" alt="Query execution in GraphQL">&lt;/p>
+&lt;p>&lt;em>Query execution in GraphQL, Source:&lt;/em> &lt;a href="https://www.apollographql.com/blog/graphql-explained-5844742f195e">&lt;em>Jonas Helfer&lt;/em>&lt;/a>&lt;/p>
+&lt;p>In addition to the RESTful CRUD operations, GraphQL has &lt;em>subscriptions&lt;/em> allowing for real-time notifications from the server.&lt;/p>
+&lt;h3 id="42-graphql-pros">4.2 GraphQL Pros&lt;/h3>
+&lt;p>&lt;strong>Typed schema.&lt;/strong> GraphQL publishes in advance what it can do, which improves its discoverability. By pointing a client at the GraphQL API, we can find out what queries are available.&lt;/p>
+&lt;p>&lt;strong>Fits graph-like data very well.&lt;/strong> Data that goes far into linked relations but not good for flat data.&lt;/p>
+&lt;p>&lt;strong>No versioning.&lt;/strong> The best practice with versioning is not to version the API at all.&lt;/p>
+&lt;p>While REST offers multiple API versions, GraphQL uses a single, evolving version that gives continuous access to new features and contributes to cleaner, more maintainable server code.&lt;/p>
+&lt;p>&lt;strong>Detailed error messages.&lt;/strong> In a similar fashion to SOAP, GraphQL provides details to errors that occurred. Its error message includes all the resolvers and refers to the exact query part at fault.&lt;/p>
+&lt;p>&lt;strong>Flexible permissions.&lt;/strong> GraphQL allows for selectively exposing certain functions while preserving private information. Meanwhile, REST architecture doesn’t reveal data in portions. It’s either all or nothing.&lt;/p>
+&lt;h3 id="43-graphql-cons">4.3 GraphQL Cons&lt;/h3>
+&lt;p>&lt;strong>Performance issues.&lt;/strong> GraphQL trades off complexity for its power. Having too many nested fields in one request can lead to system overload. So, REST remains a better option for complex queries.&lt;/p>
+&lt;p>&lt;strong>Caching complexity.&lt;/strong> As GraphQL isn’t reusing HTTP caching semantics, it requires a custom caching effort.&lt;/p>
+&lt;p>&lt;strong>A lot of pre-development education.&lt;/strong> Not having enough time to figure out GraphQL niche operations and SDL, many projects decide to follow the well-known path of REST.&lt;/p>
+&lt;h3 id="44-graphql-use-cases">4.4 GraphQL use cases&lt;/h3>
+&lt;p>&lt;strong>Mobile API.&lt;/strong> In this case, network performance and single message payload optimization is important. So, GraphQL offers a more efficient data loading for mobile devices.&lt;/p>
+&lt;p>&lt;strong>Complex systems and microservices.&lt;/strong> GraphQL is able to hide the complexity of multiple systems integration behind its API. Aggregating data from multiple places, it merges them into one global schema. This is particularly relevant for &lt;a href="https://www.altexsoft.com/whitepapers/legacy-system-modernization-how-to-transform-the-enterprise-for-digital-future/">legacy infrastructures&lt;/a> or third-party APIs that have expanded over time.&lt;/p>
+&lt;h2 id="5-which-api-pattern-fits-your-use-case-best">5. Which API pattern fits your use case best?&lt;/h2>
+&lt;p>Every API project has different requirements and needs. Usually, the architectural choice depends on&lt;/p>
+&lt;ul>
+&lt;li>the programming language in use,&lt;/li>
+&lt;li>the environment in which you’re developing, and&lt;/li>
+&lt;li>the resources you have to spare, both human and financial.&lt;/li>
+&lt;/ul>
+&lt;p>Knowing all the tradeoffs that go into each design style, API designers can pick the one that’s going to fit the project best.&lt;/p>
+&lt;p>With its tight coupling, RPC works for internal microservices but it’s not an option for a strong external API or an API service.&lt;/p>
+&lt;p>SOAP is troublesome but its rich security features remain irreplaceable for billing operations, booking systems, and payments.&lt;/p>
+&lt;p>REST has the highest abstraction and best modeling of the API. But it tends to be heavier on the wire and chattier – a downside if you’re working on mobile.&lt;/p>
+&lt;p>GraphQL is a big step forward in terms of data fetching but not everyone has enough time and effort to get the hang of it.&lt;/p>
+&lt;p>At the end of the day, it makes sense to try a few small use cases with a particular style, and see if it fits your use case and solves your problems. If it does, try expanding and see if it fits more use cases.&lt;/p></description></item><item><title>Topics: Easy documentation with Docsy</title><link>/topics/news/first-post/</link><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid>/topics/news/first-post/</guid><description>
+&lt;img src="/topics/news/first-post/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_640x0_resize_catmullrom_3.png" width="640" height="253"/>
+&lt;p>&lt;strong>This is a typical blog post that includes images.&lt;/strong>&lt;/p>
+&lt;p>The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&lt;/p>
+&lt;h2 id="including-images">Including images&lt;/h2>
+&lt;p>Here&amp;rsquo;s an image (&lt;code>featured-sunset-get.png&lt;/code>) that includes a byline and a caption.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+&lt;img class="card-img-top" src="/topics/news/first-post/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png" width="600" height="300">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+Fetch and scale an image in the upcoming Hugo 0.43.
+&lt;small class="text-muted">&lt;br/>Photo: Riona MacNamara / CC-BY-CA&lt;/small>&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>The front matter of this post specifies properties to be assigned to all image resources:&lt;/p>
+&lt;pre tabindex="0">&lt;code>resources:
+- src: &amp;quot;**.{png,jpg}&amp;quot;
+title: &amp;quot;Image #:counter&amp;quot;
+params:
+byline: &amp;quot;Photo: Riona MacNamara / CC-BY-CA&amp;quot;
+&lt;/code>&lt;/pre>&lt;p>To include the image in a page, specify its details like this:&lt;/p>
+&lt;pre tabindex="0">&lt;code>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+&lt;img class="card-img-top" src="/topics/news/first-post/featured-sunset-get_hu69849a7cdb847c2393a7b3a7f6061c86_387442_600x300_fill_catmullrom_smart1_3.png" width="600" height="300">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+Fetch and scale an image in the upcoming Hugo 0.43.
+&lt;small class="text-muted">&lt;br/>Photo: Riona MacNamara / CC-BY-CA&lt;/small>&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/code>&lt;/pre>&lt;p>The image will be rendered at the size and byline specified in the front matter.&lt;/p></description></item><item><title>Topics: Another Great Release</title><link>/topics/releases/in-depth-monoliths-detailed-spec/</link><pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate><guid>/topics/releases/in-depth-monoliths-detailed-spec/</guid><description>
+&lt;p>Text can be &lt;strong>bold&lt;/strong>, &lt;em>italic&lt;/em>, or &lt;del>strikethrough&lt;/del>. &lt;a href="https://github.com">Links&lt;/a> should be blue with no underlines (unless hovered over).&lt;/p>
+&lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>
+&lt;p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p>
+&lt;blockquote>
+&lt;p>There should be no margin above this first sentence.&lt;/p>
+&lt;p>Blockquotes should be a lighter gray with a border along the left side in the secondary color.&lt;/p>
+&lt;p>There should be no margin below this final sentence.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="first-header">First Header&lt;/h2>
+&lt;p>This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;p>On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.&lt;/p>
+&lt;p>Lorem markdownum tuta hospes stabat; idem saxum facit quaterque repetito
+occumbere, oves novem gestit haerebat frena; qui. Respicit recurvam erat:
+pignora hinc reppulit nos &lt;strong>aut&lt;/strong>, aptos, ipsa.&lt;/p>
+&lt;p>Meae optatos &lt;em>passa est&lt;/em> Epiros utiliter &lt;em>Talibus niveis&lt;/em>, hoc lata, edidit.
+Dixi ad aestum.&lt;/p>
+&lt;h2 id="header-2">Header 2&lt;/h2>
+&lt;blockquote>
+&lt;p>This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="header-3">Header 3&lt;/h3>
+&lt;pre tabindex="0">&lt;code>This is a code block following a header.
+&lt;/code>&lt;/pre>&lt;h4 id="header-4">Header 4&lt;/h4>
+&lt;ul>
+&lt;li>This is an unordered list following a header.&lt;/li>
+&lt;li>This is an unordered list following a header.&lt;/li>
+&lt;li>This is an unordered list following a header.&lt;/li>
+&lt;/ul>
+&lt;h5 id="header-5">Header 5&lt;/h5>
+&lt;ol>
+&lt;li>This is an ordered list following a header.&lt;/li>
+&lt;li>This is an ordered list following a header.&lt;/li>
+&lt;li>This is an ordered list following a header.&lt;/li>
+&lt;/ol>
+&lt;h6 id="header-6">Header 6&lt;/h6>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>What&lt;/th>
+&lt;th>Follows&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>A table&lt;/td>
+&lt;td>A header&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A table&lt;/td>
+&lt;td>A header&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A table&lt;/td>
+&lt;td>A header&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>There&amp;rsquo;s a horizontal rule above and below this.&lt;/p>
+&lt;hr>
+&lt;p>Here is an unordered list:&lt;/p>
+&lt;ul>
+&lt;li>Salt-n-Pepa&lt;/li>
+&lt;li>Bel Biv DeVoe&lt;/li>
+&lt;li>Kid &amp;lsquo;N Play&lt;/li>
+&lt;/ul>
+&lt;p>And an ordered list:&lt;/p>
+&lt;ol>
+&lt;li>Michael Jackson&lt;/li>
+&lt;li>Michael Bolton&lt;/li>
+&lt;li>Michael Bublé&lt;/li>
+&lt;/ol>
+&lt;p>And an unordered task list:&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Create a sample markdown document&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Add task lists to it&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Take a vacation&lt;/li>
+&lt;/ul>
+&lt;p>And a &amp;ldquo;mixed&amp;rdquo; task list:&lt;/p>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Steal underpants&lt;/li>
+&lt;li>?&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Profit!&lt;/li>
+&lt;/ul>
+&lt;p>And a nested list:&lt;/p>
+&lt;ul>
+&lt;li>Jackson 5
+&lt;ul>
+&lt;li>Michael&lt;/li>
+&lt;li>Tito&lt;/li>
+&lt;li>Jackie&lt;/li>
+&lt;li>Marlon&lt;/li>
+&lt;li>Jermaine&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>TMNT
+&lt;ul>
+&lt;li>Leonardo&lt;/li>
+&lt;li>Michelangelo&lt;/li>
+&lt;li>Donatello&lt;/li>
+&lt;li>Raphael&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Definition lists can be used with Markdown syntax. Definition terms are bold.&lt;/p>
+&lt;dl>
+&lt;dt>Name&lt;/dt>
+&lt;dd>Godzilla&lt;/dd>
+&lt;dt>Born&lt;/dt>
+&lt;dd>1952&lt;/dd>
+&lt;dt>Birthplace&lt;/dt>
+&lt;dd>Japan&lt;/dd>
+&lt;dt>Color&lt;/dt>
+&lt;dd>Green&lt;/dd>
+&lt;/dl>
+&lt;hr>
+&lt;p>Tables should have bold headings and alternating shaded rows.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Artist&lt;/th>
+&lt;th>Album&lt;/th>
+&lt;th>Year&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Michael Jackson&lt;/td>
+&lt;td>Thriller&lt;/td>
+&lt;td>1982&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prince&lt;/td>
+&lt;td>Purple Rain&lt;/td>
+&lt;td>1984&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Beastie Boys&lt;/td>
+&lt;td>License to Ill&lt;/td>
+&lt;td>1986&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>If a table is too wide, it should scroll horizontally.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Artist&lt;/th>
+&lt;th>Album&lt;/th>
+&lt;th>Year&lt;/th>
+&lt;th>Label&lt;/th>
+&lt;th>Awards&lt;/th>
+&lt;th>Songs&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Michael Jackson&lt;/td>
+&lt;td>Thriller&lt;/td>
+&lt;td>1982&lt;/td>
+&lt;td>Epic Records&lt;/td>
+&lt;td>Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical&lt;/td>
+&lt;td>Wanna Be Startin&amp;rsquo; Somethin', Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prince&lt;/td>
+&lt;td>Purple Rain&lt;/td>
+&lt;td>1984&lt;/td>
+&lt;td>Warner Brothers Records&lt;/td>
+&lt;td>Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal&lt;/td>
+&lt;td>Let&amp;rsquo;s Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I&amp;rsquo;m a Star, Purple Rain&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Beastie Boys&lt;/td>
+&lt;td>License to Ill&lt;/td>
+&lt;td>1986&lt;/td>
+&lt;td>Mercury Records&lt;/td>
+&lt;td>noawardsbutthistablecelliswide&lt;/td>
+&lt;td>Rhymin &amp;amp; Stealin, The New Style, She&amp;rsquo;s Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>Code snippets like &lt;code>var foo = &amp;quot;bar&amp;quot;;&lt;/code> can be shown inline.&lt;/p>
+&lt;p>Also, &lt;code>this should vertically align&lt;/code> &lt;del>&lt;code>with this&lt;/code>&lt;/del> &lt;del>and this&lt;/del>.&lt;/p>
+&lt;p>Code can also be shown in a block element.&lt;/p>
+&lt;pre tabindex="0">&lt;code>foo := &amp;quot;bar&amp;quot;;
+bar := &amp;quot;foo&amp;quot;;
+&lt;/code>&lt;/pre>&lt;p>Code can also use syntax highlighting.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="color:#204a87;font-weight:bold">func&lt;/span> &lt;span style="color:#000">main&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">input&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#4e9a06">`var foo = &amp;#34;bar&amp;#34;;`&lt;/span>
+&lt;span style="color:#000">lexer&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">lexers&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;javascript&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">iterator&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">_&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">lexer&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Tokenise&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">nil&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">input&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">style&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">styles&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;github&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">formatter&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">html&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">New&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">html&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">WithLineNumbers&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">var&lt;/span> &lt;span style="color:#000">buff&lt;/span> &lt;span style="color:#000">bytes&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Buffer&lt;/span>
+&lt;span style="color:#000">formatter&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Format&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&lt;/span>&lt;span style="color:#000">buff&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">style&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">iterator&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000">fmt&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Println&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">buff&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">String&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+&lt;/code>&lt;/pre>&lt;p>Inline code inside table cells should still be distinguishable.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Language&lt;/th>
+&lt;th>Code&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Javascript&lt;/td>
+&lt;td>&lt;code>var foo = &amp;quot;bar&amp;quot;;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ruby&lt;/td>
+&lt;td>&lt;code>foo = &amp;quot;bar&amp;quot;{&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>Small images should be shown at their actual size.&lt;/p>
+&lt;p>&lt;img src="https://placekitten.com/g/300/200/" alt="">&lt;/p>
+&lt;p>Large images should always scale down and fit in the content container.&lt;/p>
+&lt;p>&lt;img src="https://placekitten.com/g/1200/800/" alt="">&lt;/p>
+&lt;h2 id="components">Components&lt;/h2>
+&lt;h3 id="alerts">Alerts&lt;/h3>
+&lt;p>
+&lt;div class="alert alert-primary" role="alert">
+This is an alert.
+&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This is an alert with a title.
+&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+This is a successful alert.
+&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+This is a warning!
+&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Warning!&lt;/h4>
+This is a warning with a title!
+&lt;/div>
+&lt;/p>
+&lt;h2 id="sizing">Sizing&lt;/h2>
+&lt;p>Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;h3 id="parameters-available">Parameters available&lt;/h3>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;h3 id="using-pixels">Using pixels&lt;/h3>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;h3 id="using-rem">Using rem&lt;/h3>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;h2 id="memory">Memory&lt;/h2>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;h3 id="ram-to-use">RAM to use&lt;/h3>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;h3 id="more-is-better">More is better&lt;/h3>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;h3 id="used-ram">Used RAM&lt;/h3>
+&lt;p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p>
+&lt;pre tabindex="0">&lt;code>This is the final element on the page and there should be no margin below this.
+&lt;/code>&lt;/pre></description></item><item><title>Topics: Introduction to API Versioning Best Practices</title><link>/topics/api-management/api-versioning/introduction-to-api-versioning-best-practices/</link><pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate><guid>/topics/api-management/api-versioning/introduction-to-api-versioning-best-practices/</guid><description>
+&lt;p>Change is inevitable and growth is a good thing. When your API has reached the point of expanding beyond it’s original intent and capacity, it’s time to consider the next &lt;strong>version&lt;/strong>.&lt;/p>
+&lt;p>Whether that next iteration is a whole number version bump or just a feature expansion, it’s important to consider the pros and cons of how you let your developers know about it. Far different than traditional software versioning, &lt;strong>API versioning&lt;/strong> can have complex implications for the products using it downstream.&lt;/p>
+&lt;p>The big version bumps usually indicate a significant &lt;strong>milestone&lt;/strong> in the codebase of the API. It declares a &lt;strong>significant change&lt;/strong> in the requirements of API consumption and implementation. Feature additions that don’t necessarily change existing calls is part of the organic growth of a product and aren’t subject to the same considerations.&lt;/p>
+&lt;p>Once you start taking things away, or dramatically changing what’s in place, it’s time to consider another version. Often, these new versions become whole new products. Although they share a common ancestry, new versions of legacy APIs require careful thought into their implementation.&lt;/p>
+&lt;blockquote>
+&lt;p>For more advanced API versioning insights, read &lt;a href="https://nordicapis.com/api-change-strategy/">API Change Strategy&lt;/a> or &lt;a href="https://nordicapis.com/whats-the-difference-between-versioning-and-revisioning-apis/">What’s The Difference Between Versioning and Revisioning APIs?&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="traditional-api-versioning-n1">Traditional API Versioning: n+1&lt;/h2>
+&lt;p>Service changes that can warrant a new version include: removing an operation, renaming an operation, operation parameter changes that shift data types or order, and complex structural changes of data type.&lt;/p>
+&lt;p>A version increment can also indicate significant changes to API consumption requirements. It can also advertise a radical change in the underlying resources offered by the API. In either case, products and platforms that rely on an API for core functionality may need a &lt;strong>code refactor&lt;/strong> to adapt.&lt;/p>
+&lt;p>That can be time and resource intensive, so a sane and &lt;strong>well documented&lt;/strong> approach to URI versioning is crucial for multiple stakeholders. Versioning can be a controversial topic within teams, and often the first question is whether to even use it.&lt;/p>
+&lt;h2 id="one-uri-to-rule-them-all">One URI to Rule Them All&lt;/h2>
+&lt;p>One school of thought is to focus on &lt;strong>one unchanging URI&lt;/strong> with just one set of criteria for consumption. If the API structure is changed, resources altered, or parameter set modified, then the product is re-launched with the same URI. This pushes the obligation to refactor code to downstream developers.&lt;/p>
+&lt;p>Tim Berners-Lee gets name dropped by proponents of this approach. He is often &lt;a href="https://www.technologyreview.com/s/403095/sir-tim-berners-lee/">quoted as saying&lt;/a> “a cool URI is one which does not change.” In context, that quote was intended to address the nascent internet which depended on hyperlinks within web pages to endure. The &lt;a href="http://nordicapis.com/what-is-json-ld/">connected web&lt;/a>, at that time, was a series of information nodes.&lt;/p>
+&lt;p>The world has changed, though, and we work with a interconnected matrix of powerful and resource heavy web services. Once services became widespread, early approaches were similar to software version numbers. But, standalone software has very different downstream implications than interdependent web services.&lt;/p>
+&lt;p>IBM addresses this in their own “&lt;a href="https://www.ibm.com/developerworks/webservices/library/ws-version/">Best practices for Web services&lt;/a>“:&lt;/p>
+&lt;blockquote>
+&lt;p>“The correct handling of API versioning has been one of the most difficult issues faced by developers of distributed systems. Various schemes have been proposed, ranging from the laissez faire approach taken by CORBA (Common Object Request Broker Architecture) to the stricter schemes used in DCOM (Distributed Component Object Model). With the advent of Web services, there are some new features that you can take advantage of that can help alleviate the problem, but the brutal fact of the matter is that versioning has not been built into the Web services architecture.”&lt;/p>
+&lt;/blockquote>
+&lt;p>What constitutes “best practices” has evolved over time and is determined by provider choices for their own products, not necessarily from any outside governing body. So, when it comes to choosing an approach to versioning, there are a wide variety of practices.&lt;/p>
+&lt;h2 id="on-backwards-compatibility">On Backwards Compatibility&lt;/h2>
+&lt;p>Another consideration is &lt;strong>backwards compatibility&lt;/strong>. For many providers of web resource APIs, this is the primary consideration. Maintaining multiple versions of a resource intensive API can be a serious drain on the time and focus of engineering teams. It can also introduce long term stability problems to services that have moved on to more modern architectures.&lt;/p>
+&lt;p>For many, introducing a new version that substantially changes an API is, in fact, launching a &lt;strong>whole new service.&lt;/strong> Treating it as a &lt;strong>new product&lt;/strong>, with &lt;strong>new documentation&lt;/strong>, Service Level Agreements, tier access changes, etc., can have major business implications. Many a whiteboard has been filled with figures debating whether a change is an engineering choice or a &lt;em>business shift&lt;/em>.&lt;/p>
+&lt;p>Once the decision has been made to introduce a new version, it’s helpful to look around at established providers for battle tested solutions.&lt;/p>
+&lt;blockquote>
+&lt;p>Related: &lt;a href="https://nordicapis.com/api-lifecycle-retirement-stage-a-history-of-major-public-api-retirements/">The 5 Main Business Reasons for API Retirement&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="examples-of-versioning-in-the-wild">Examples of Versioning in the Wild&lt;/h2>
+&lt;p>What can we learn from the versioning practices of established web API providers? &lt;a href="https://cloud.google.com/apis/design/versioning">Google&lt;/a> comes out of the gate with a blunt affirmation of numbered versioning: “Networked APIs should use &lt;strong>Semantic Versioning&lt;/strong>.” Not much wiggle room there. They also have a similarly plain system. Version indicators use the form &lt;strong>v.MAJOR.MINOR.PATCH&lt;/strong>.&lt;/p>
+&lt;p>&lt;a href="https://www.twilio.com/docs/api/rest">Twilio&lt;/a> uses a &lt;strong>timestamp&lt;/strong> in the URL, instead of a version number. &lt;a href="https://developer.salesforce.com/blogs/developer-relations/2013/10/api-versions-and-the-salesforce-metadata-api.html">Salesforce&lt;/a> opts for vXX.X in the &lt;strong>middle&lt;/strong> of the URL. &lt;a href="https://developers.facebook.com/docs/apps/versions">Facebook&lt;/a> goes for prepending the version to the endpoint path. The version is actually optional, with unspecified version requests being routed to the oldest version available.&lt;/p>
+&lt;p>Note that the granularity offered by vX.X is usually intended for development and not necessarily for production. Check the docs first, but it’s a good idea to opt for ordinal number references in production code.&lt;/p>
+&lt;p>&lt;a href="http://nordicapis.com/avoid-walking-on-eggshells-and-use-devops/">DevOps&lt;/a> folks may be familiar with the &lt;strong>UDDI&lt;/strong> and &lt;strong>WDSL&lt;/strong> approach to version definitions. HTTP solutions are much more popular, but there is support for this kind of approach. It entails a version request through an &lt;strong>XML&lt;/strong> exchange to get the proper version.&lt;/p>
+&lt;p>Megalithic companies like Microsoft, IBM, and Oracle have references to this method in some of their documentation. Although, HTTP version indications are accepted in many divisions and products.&lt;/p>
+&lt;p>Dating network &lt;strong>Badoo&lt;/strong> opts for &lt;a href="https://nordicapis.com/continuous-versioning-strategy-for-internal-apis/">continuous versioning&lt;/a>, where features are added and endpoints stay the same. Legacy clients can use old fields and new clients use added fields. API requests are transactional, with a feature request call made and a list of available options returned. Feature checks can serve as a sort of state request.&lt;/p>
+&lt;p>The &lt;a href="http://apistylebook.com/design/topics/versioning">API stylebook&lt;/a> has a few more paths to explore on versioning. Without a codified set of specifications, companies continue to explore different options.&lt;/p>
+&lt;h2 id="version-with-accept-header">Version With Accept Header&lt;/h2>
+&lt;p>A common alternative to path parameters is &lt;strong>header exchanges&lt;/strong>. They can be more verbose about the expected response and are usually included anyway for an HTTP request. Having a resource specific header approach allows for other parameters (such as caching, compression, and &lt;a href="http://nordicapis.com/content-negotiation/">content negotiation&lt;/a>) to be included.&lt;/p>
+&lt;p>API providers often communicate &lt;strong>resource criteria&lt;/strong> and limitations in their response, so developers will need to examine the header exchange anyway. Besides just response codes, common header responses include &lt;a href="http://nordicapis.com/stemming-the-flood-how-to-rate-limit-an-api/">rate limit bounds&lt;/a>, &lt;a href="http://nordicapis.com/best-practices-api-error-handling/">specific error messages&lt;/a>, time-based data, and more.&lt;/p>
+&lt;p>A clever outlier is using &lt;strong>MIME&lt;/strong> types to include a version indicator. API providers register these MIME types on their backend and then users include &lt;strong>Accept&lt;/strong> and &lt;strong>Content-type headers&lt;/strong>. IETF legitimized this approach in &lt;a href="http://www.ietf.org/rfc/rfc4627.txt">RFC4627&lt;/a>. While this does work, developers choosing this approach will inevitably end up explaining their choice to management types who state, “but it doesn’t work on HTML forms, so why do you want to do it that way?”&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#a40000">Accept: application/pre.company.app-v1+json
+&lt;/span>&lt;span style="color:#a40000">Content-Type: application/pre.company.app-v1+json
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The debate over implementation is deep and will continue. So, developers and providers will have to make choices based on their specific needs. In general, the most common approach is a combination of &lt;strong>URI parameters&lt;/strong> and &lt;strong>header criteria&lt;/strong>. APIs accept URI requests with parameters and then return a payload with proper response codes and (hopefully) verbose &lt;strong>metadata&lt;/strong> in the header of the response.&lt;/p>
+&lt;p>What constitutes a proper response code is something engineers will debate gleefully and loudly at company happy hours. But, here are some useful negative responses that are verbose enough to be helpful downstream.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-http" data-lang="http">&lt;span style="color:#a40000">400: BAD_REQUEST: ApiVersionUnspecified: An API version is required, but was not specified
+&lt;/span>&lt;span style="color:#a40000">400: BAD_REQUEST: InvalidApiVersion: An API version was specified, but it is invalid
+&lt;/span>&lt;span style="color:#a40000">400: BAD_REQUEST: AmbiguousApiVersion: An API version was specified multiple times with different values
+&lt;/span>&lt;span style="color:#a40000">400, 405: BAD_REQUEST, METHOD_NOT_ALLOWED: UnsupportedApiVersion: The specified API version is not supported
+&lt;/span>&lt;span style="color:#a40000">301: MOVED_PERMANENTLY: movedPermanently: This request and future requests for the same operation have
+&lt;/span>&lt;span style="color:#a40000">to be sent to the URL specified in the Location header of this response
+&lt;/span>&lt;span style="color:#a40000">instead of to the URL to which this request was sent
+&lt;/span>&lt;span style="color:#a40000">410: GONE: deleted: The request failed because the resource associated with the request has been deleted
+&lt;/span>&lt;span style="color:#a40000">299: OK: Warning: &amp;#34;Deprecated API&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For More on Error Responses read: &lt;a href="https://nordicapis.com/best-practices-api-error-handling/">Best Practices for API Error Handling&lt;/a>&lt;/p>
+&lt;h2 id="business-motives-will-direct-versioning-choices">Business Motives Will Direct Versioning Choices&lt;/h2>
+&lt;p>In some ways, the technical aspects of versioning are the easiest to work out. The real debate comes down to product needs, &lt;strong>business concerns&lt;/strong>, and future plans. The requirements for supporting multiple versions of an API can be very high in terms of engineering support, backend resources, and simple bandwidth.&lt;/p>
+&lt;p>Also, to be done well, a new version needs &lt;strong>rich documentation&lt;/strong> to successfully transition. Since up-to-date documentation is often low on the priorities of fast moving companies, it can end up getting launched poorly as a mashup of old documentation and new. Bad documentation can yield deep costs in time and money.&lt;/p>
+&lt;p>The main takeaway here is that versioning is a &lt;strong>multi-faceted&lt;/strong> conversation. It’s not just a technical problem. The downstream effects and legacy costs can be substantial and the entire process should be well thought out for effective growth.&lt;/p></description></item></channel></rss>

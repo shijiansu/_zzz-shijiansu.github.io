@@ -36,7 +36,7 @@ This is the classic ‘throw it over the wall’ split between Dev and Ops. It m
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
-<body class=td-page>
+<body class="td-page td-blog">
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -265,25 +265,13 @@ This is the classic ‘throw it over the wall’ split between Dev and Ops. It m
 </ul>
 </div>
 </aside>
-<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
-<nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
-<ol class="breadcrumb spb-1">
-<li class=breadcrumb-item>
-<a href=/topics/>Topics</a>
-</li>
-<li class=breadcrumb-item>
-<a href=/topics/devops/>DevOps</a>
-</li>
-<li class=breadcrumb-item>
-<a href=/topics/devops/devops-team-structure/>DevOps Team Structure</a>
-</li>
-<li class="breadcrumb-item active" aria-current=page>
-<a href=/topics/devops/devops-team-structure/devops-anti-types/>DevOps Anti-Types</a>
-</li>
-</ol>
-</nav>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
 <div class=td-content>
 <h1>DevOps Anti-Types</h1>
+<div class="td-byline mb-4">
+By <b><a href=https://web.devopstopologies.com/>https://web.devopstopologies.com/</a></b> |
+<time datetime=2021-10-06 class=text-muted>2021-10-06</time>
+</div>
 <header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
@@ -328,9 +316,13 @@ This is the classic ‘throw it over the wall’ split between Dev and Ops. It m
 <p>This is a form of <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A (Dev and Ops Silos)</a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).</p>
 <p>Furthermore, just like Ops in <a href=https://web.devopstopologies.com/#anti-type-a>Anti-Type A</a>, the DBA team is not involved early in the application development, thus data problems (migrations, performance, etc) are found late in the delivery cycle. Coupled with the overload of supporting multiple applications databases, the end result is constant firefighting and mounting pressure to deliver.</p>
 <p><img src=images/anti-type-g.png alt="Anti-Type G"></p>
-<div class="text-muted mt-5 pt-3 border-top">
-Last modified 2021-10-06: <a href=https://github.com//commit/23d740675915909c63e9e57174f482d5eeed5170>Add DevOps (23d7406)</a>
-</div>
+<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+<li>
+<a href=/topics/devops/devops-team-structure/devops-team-topologies/ aria-label="Previous - DevOps Team Topologies" class="btn btn-primary"><span class=mr-1>←</span>Previous</a>
+</li>
+<a class="btn btn-primary disabled">Next<span class=ml-1>→</span></a>
+</li>
+</ul>
 </div>
 </main>
 </div>

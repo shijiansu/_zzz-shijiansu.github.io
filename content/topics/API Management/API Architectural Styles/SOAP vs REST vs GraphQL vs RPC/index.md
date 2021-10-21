@@ -8,6 +8,8 @@ categories: ["API Management", "API Architectural Styles"]
 description: >
 ---
 
+> https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/ | 2020-05-29
+
 Two separate applications need an intermediary to talk to each other. So, developers often build bridges – [Application Programming Interfaces](https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/) – to allow one system to access the information or functionality of another.
 
 In order to integrate applications quickly and at scale, APIs are realized using protocols and/or specifications to define the semantics and syntax of the messages passed across the wire. These specifications make up the API architecture.

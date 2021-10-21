@@ -6,7 +6,7 @@ menu:
     weight: 10
     pre: <i class='fas fa-flask'></i>
 cascade:
-- type: "blog"
+- type: "docs"
   simple_list: true
   toc_root: true
   _target:

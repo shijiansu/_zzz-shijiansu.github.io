@@ -7,7 +7,7 @@ categories: ["Agile", "Lean Software Development", "Lean Metrics"]
 description: >
 ---
 
-> #### What Is Lead Time?
+> **What Is Lead Time?**
 >
 > In Kanban, lead time is defined as the time it takes from a user story being ready for implementation to when it’s ready for delivery (release). This includes the time it’s sitting on the backlog waiting to be picked up.
 >
@@ -15,5 +15,3 @@ description: >
 
 - https://www.digite.com/agile/lead-time-cycle-time/
 - Date: Unknown
-
-

@@ -7,6 +7,8 @@ categories: ["DevOps", "DevOps Team Structure"]
 description: >
 ---
 
+> https://web.devopstopologies.com/ | 2021-10-06
+
 ## **Anti-Type A:** Dev and Ops Silos
 
 This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.

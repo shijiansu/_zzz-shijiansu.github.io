@@ -7,6 +7,8 @@ categories: ["API Management", "API Versioning"]
 description: >
 ---
 
+> https://nordicapis.com/introduction-to-api-versioning-best-practices/ | 2017-11-03
+
 Change is inevitable and growth is a good thing. When your API has reached the point of expanding beyond it’s original intent and capacity, it’s time to consider the next **version**.
 
 Whether that next iteration is a whole number version bump or just a feature expansion, it’s important to consider the pros and cons of how you let your developers know about it. Far different than traditional software versioning, **API versioning** can have complex implications for the products using it downstream.

@@ -7,6 +7,8 @@ categories: ["API Management", "Design RESTFul API"]
 description: >
 ---
 
+> https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9 | 2021-04-16
+
 ## First, Some Terminology
 
 Any API design follows something called `Resource Oriented Design` It consists of three key concepts

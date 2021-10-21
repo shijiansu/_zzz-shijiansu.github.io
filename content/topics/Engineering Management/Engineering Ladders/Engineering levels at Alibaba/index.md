@@ -7,6 +7,8 @@ categories: ["Engineering Management", "Engineering Ladders"]
 description: >
 ---
 
+> Internet (aggregating multiple sources) / Su Shijian | 2021-09-27
+
 ## Put together
 
 |     Engineering Ladder     |                           | Management Ladder |                 |

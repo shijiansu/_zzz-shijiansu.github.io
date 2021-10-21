@@ -8,6 +8,8 @@ weight: 1
 description: >
 ---
 
+> https://oam.dev/ | 2021-05-25
+
 An open standard for defining cloud native apps.
 
 Focused on application rather than container or orchestrator, Open Application Model [OAM] brings modular, extensible, and portable design for modeling application deployment with higher level yet consistent API.

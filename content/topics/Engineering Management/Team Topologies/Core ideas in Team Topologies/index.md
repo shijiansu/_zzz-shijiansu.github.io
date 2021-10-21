@@ -7,6 +7,8 @@ categories: ["Team Topologies", "Core ideas in Team Topologies"]
 description: >
 ---
 
+> https://teamtopologies.com/key-concepts/ | 2021-10-06
+
 ## Four Fundamental Topologies
 
 - Stream-aligned team: aligned to a flow of work from (usually) a segment of the business domain

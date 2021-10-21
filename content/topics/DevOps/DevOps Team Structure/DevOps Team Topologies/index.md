@@ -7,6 +7,8 @@ categories: ["DevOps", "DevOps Team Structure"]
 description: >
 ---
 
+> https://web.devopstopologies.com/ | 2021-10-06
+
 ## **Type 1:** Dev and Ops Collaboration
 
 This is the ‘promised land’ of DevOps: smooth collaboration between Dev teams and Ops teams, each specialising where needed, but also sharing where needed. There are likely many separate Dev teams, each working on a separate or semi-separate product stack.

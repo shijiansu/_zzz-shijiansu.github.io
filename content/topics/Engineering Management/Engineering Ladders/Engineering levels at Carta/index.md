@@ -7,6 +7,8 @@ categories: ["Engineering Management", "Engineering Ladders"]
 description: >
 ---
 
+> https://medium.com/building-carta/engineering-levels-at-carta-d33db2a55a20/ | 2021-05-19
+
 At Carta, we follow Jim Barksdale’s [maxim](https://www.forbes.com/sites/michaellindenmayer/2014/03/07/4-hard-earned-lessons-from-ben-horowitz/): “take care of the people, the products, and the profits…in that order.” We believe [people *are* the business](https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/05/05/three-ways-businesses-can-get-ahead-by-prioritizing-people/amp/): building an environment where our engineers *want* to come to work every day and know they can grow their careers is the best technical leverage we could hope for.
 
 To that end, having a fair, equitable, and *clear* framework for leveling and career progression is one of our most important goals. Engineering leaders talk about levels and promotion processes a lot, but they focus more on the *what* and not the *why*. At Carta, we want everyone to understand how the company thinks about fairness and compensation, why our leveling processes exist, and what they’re trying to achieve.

@@ -7,6 +7,8 @@ categories: ["Backend Engineering", "Cloud Native", "Twelve-Factor Apps"]
 description: >
 ---
 
+> https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser/ | 2020-09-22
+
 ![img](images/12-factor-app-principles.png)
 
 12-factor app is a methodology or set of principles for building the scalable and performant, independent, and most resilient enterprise applications. It establishes the general principles and guidelines for creating robust enterprise applications. 12-factor app principles got very popular as it aligns with Microservice principles.

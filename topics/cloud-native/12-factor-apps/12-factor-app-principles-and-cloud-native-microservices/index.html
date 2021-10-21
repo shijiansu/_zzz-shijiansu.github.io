@@ -39,7 +39,7 @@ The 12-Factor Principles  Codebase (One codebase tracked in revision control, ma
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
-<body class="td-page td-blog">
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -274,13 +274,25 @@ The 12-Factor Principles  Codebase (One codebase tracked in revision control, ma
 </ul>
 </div>
 </aside>
-<main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
+<nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
+<ol class="breadcrumb spb-1">
+<li class=breadcrumb-item>
+<a href=/topics/>Topics</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/topics/cloud-native/>Cloud Native</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/topics/cloud-native/12-factor-apps/>12 Factor Apps</a>
+</li>
+<li class="breadcrumb-item active" aria-current=page>
+<a href=/topics/cloud-native/12-factor-apps/12-factor-app-principles-and-cloud-native-microservices/>12 Factor App Principles and Cloud-Native Microservices</a>
+</li>
+</ol>
+</nav>
 <div class=td-content>
 <h1>12 Factor App Principles and Cloud-Native Microservices</h1>
-<div class="td-byline mb-4">
-By <b><a href=https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser/>https://dzone.com/articles/12-factor-app-principles-and-cloud-native-microser/</a></b> |
-<time datetime=2020-09-22 class=text-muted>22229-09-22</time>
-</div>
 <header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
@@ -414,13 +426,9 @@ By <b><a href=https://dzone.com/articles/12-factor-app-principles-and-cloud-nati
 <li>Microservices: Containerization also helps here to run the one-off processes as a task and shutdown automatically one done with the implementation.</li>
 </ul>
 <p>That&rsquo;s all for today. Hope you have enjoyed the article. Please share your thoughts or ideas or improvements in the below comments box.</p>
-<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
-<li>
-<a href=/topics/cloud-native/12-factor-apps/spring-5.0-microservice-2nd-twelve-factor-apps/ aria-label="Previous - Spring 5.0 Microservice 2nd - Twelve-Factor Apps" class="btn btn-primary"><span class=mr-1>←</span>Previous</a>
-</li>
-<a class="btn btn-primary disabled">Next<span class=ml-1>→</span></a>
-</li>
-</ul>
+<div class="text-muted mt-5 pt-3 border-top">
+Last modified 2021-09-26: <a href=https://github.com//commit/204a3e6d301fec59f02200904fae84d7c2a03038>Update to topics folder (204a3e6)</a>
+</div>
 </div>
 </main>
 </div>

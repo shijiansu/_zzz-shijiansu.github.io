@@ -40,7 +40,7 @@ Extending the same philosophy for microservices, each microservice should have i
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
-<body class="td-page td-blog">
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -274,13 +274,25 @@ Extending the same philosophy for microservices, each microservice should have i
 </ul>
 </div>
 </aside>
-<main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
+<nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
+<ol class="breadcrumb spb-1">
+<li class=breadcrumb-item>
+<a href=/topics/>Topics</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/topics/cloud-native/>Cloud Native</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/topics/cloud-native/12-factor-apps/>12 Factor Apps</a>
+</li>
+<li class="breadcrumb-item active" aria-current=page>
+<a href=/topics/cloud-native/12-factor-apps/spring-5.0-microservice-2nd-twelve-factor-apps/>Spring 5.0 Microservice 2nd - Twelve-Factor Apps</a>
+</li>
+</ol>
+</nav>
 <div class=td-content>
 <h1>Spring 5.0 Microservice 2nd - Twelve-Factor Apps</h1>
-<div class="td-byline mb-4">
-By <b>Spring 5.0 Microservice 2nd (2017)</b> |
-<time datetime=2020-08-30 class=text-muted>30308-08-30</time>
-</div>
 <header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
@@ -323,13 +335,9 @@ By <b>Spring 5.0 Microservice 2nd (2017)</b> |
 <p><img src=images/externalizing-logs.png alt></p>
 <h2 id=12-package-admin-processes>12. Package admin processes</h2>
 <p>Apart from application requests, most of the applications provision for admin tasks. This principle advices you to target the same release and an identical environment as the long running processes runs to perform these activities. Admin code should also be packaged along with the application code.</p>
-<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
-<li>
-<a class="btn btn-primary disabled"><span class=mr-1>←</span>Previous</a>
-</li>
-<a href=/topics/cloud-native/12-factor-apps/12-factor-app-principles-and-cloud-native-microservices/ aria-label="Next - 12 Factor App Principles and Cloud-Native Microservices" class="btn btn-primary">Next<span class=ml-1>→</span></a>
-</li>
-</ul>
+<div class="text-muted mt-5 pt-3 border-top">
+Last modified 2021-09-26: <a href=https://github.com//commit/204a3e6d301fec59f02200904fae84d7c2a03038>Update to topics folder (204a3e6)</a>
+</div>
 </div>
 </main>
 </div>

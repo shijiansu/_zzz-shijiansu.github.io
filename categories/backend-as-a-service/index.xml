@@ -1,4 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – Backend as a Service</title><link>/categories/backend-as-a-service/</link><description>Recent content in Backend as a Service on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 09 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/backend-as-a-service/index.xml" rel="self" type="application/rss+xml"/><item><title>Topics: Backend as a Service - What is a BaaS</title><link>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</link><pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate><guid>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://blog.back4app.com/backend-as-a-service-baas/">https://blog.back4app.com/backend-as-a-service-baas/&lt;/a> | 2021-02-09&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="what-is-a-backend-as-a-service">What is a backend as a service?&lt;/h2>
 &lt;p>&lt;img src="images/0.png" alt="0">&lt;/p>
 &lt;p>A BaaS or mBaaS or Backend as a Service is a platform that automates backend side development and takes care of the cloud infrastructure. Using a BaaS, you will outsource the responsibilities of running and maintaining servers to a third party and focus on the frontend or client-side development.&lt;/p>

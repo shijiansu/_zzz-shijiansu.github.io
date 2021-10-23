@@ -1,4 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – API Management</title><link>/categories/api-management/</link><description>Recent content in API Management on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 16 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/api-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Topics: Practical advice for designing REST APIs</title><link>/topics/api-management/design-restful-api/practical-advice-for-designing-rest-apis/</link><pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate><guid>/topics/api-management/design-restful-api/practical-advice-for-designing-rest-apis/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9">https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9&lt;/a> | 2021-04-16&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="first-some-terminology">First, Some Terminology&lt;/h2>
 &lt;p>Any API design follows something called &lt;code>Resource Oriented Design&lt;/code> It consists of three key concepts&lt;/p>
 &lt;ul>
@@ -277,6 +280,9 @@ users: [
 &lt;p>REST has the highest abstraction and best modeling of the API. But it tends to be heavier on the wire and chattier – a downside if you’re working on mobile.&lt;/p>
 &lt;p>GraphQL is a big step forward in terms of data fetching but not everyone has enough time and effort to get the hang of it.&lt;/p>
 &lt;p>At the end of the day, it makes sense to try a few small use cases with a particular style, and see if it fits your use case and solves your problems. If it does, try expanding and see if it fits more use cases.&lt;/p></description></item><item><title>Topics: Introduction to API Versioning Best Practices</title><link>/topics/api-management/api-versioning/introduction-to-api-versioning-best-practices/</link><pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate><guid>/topics/api-management/api-versioning/introduction-to-api-versioning-best-practices/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://nordicapis.com/introduction-to-api-versioning-best-practices/">https://nordicapis.com/introduction-to-api-versioning-best-practices/&lt;/a> | 2017-11-03&lt;/p>
+&lt;/blockquote>
 &lt;p>Change is inevitable and growth is a good thing. When your API has reached the point of expanding beyond it’s original intent and capacity, it’s time to consider the next &lt;strong>version&lt;/strong>.&lt;/p>
 &lt;p>Whether that next iteration is a whole number version bump or just a feature expansion, it’s important to consider the pros and cons of how you let your developers know about it. Far different than traditional software versioning, &lt;strong>API versioning&lt;/strong> can have complex implications for the products using it downstream.&lt;/p>
 &lt;p>The big version bumps usually indicate a significant &lt;strong>milestone&lt;/strong> in the codebase of the API. It declares a &lt;strong>significant change&lt;/strong> in the requirements of API consumption and implementation. Feature additions that don’t necessarily change existing calls is part of the organic growth of a product and aren’t subject to the same considerations.&lt;/p>

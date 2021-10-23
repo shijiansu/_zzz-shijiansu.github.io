@@ -1,4 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shijian Homepage – 2021</title><link>/tags/2021/</link><description>Recent content in 2021 on Shijian Homepage</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>Topics: Introduction to Open Application Model</title><link>/topics/cloud-native/open-application-model/introduction-to-open-application-model/</link><pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate><guid>/topics/cloud-native/open-application-model/introduction-to-open-application-model/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://oam.dev/">https://oam.dev/&lt;/a> | 2021-05-25&lt;/p>
+&lt;/blockquote>
 &lt;p>An open standard for defining cloud native apps.&lt;/p>
 &lt;p>Focused on application rather than container or orchestrator, Open Application Model [OAM] brings modular, extensible, and portable design for modeling application deployment with higher level yet consistent API.&lt;/p>
 &lt;p>This is the key to enable simple yet robust application delivery across hybrid environments including Kubernetes, cloud, or even IoT devices.&lt;/p>
@@ -41,6 +44,9 @@
 &lt;blockquote>
 &lt;p>&lt;a href="https://github.com/oam-dev/kubevela">https://github.com/oam-dev/kubevela&lt;/a>&lt;/p>
 &lt;/blockquote></description></item><item><title>Topics: Core ideas in Team Topologies</title><link>/topics/engineering-management/team-topologies/core-ideas-in-team-topologies/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/team-topologies/core-ideas-in-team-topologies/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://teamtopologies.com/key-concepts/">https://teamtopologies.com/key-concepts/&lt;/a> | 2021-10-06&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="four-fundamental-topologies">Four Fundamental Topologies&lt;/h2>
 &lt;ul>
 &lt;li>Stream-aligned team: aligned to a flow of work from (usually) a segment of the business domain&lt;/li>
@@ -68,6 +74,9 @@
 &lt;li>&lt;a href="https://teamtopologies.com/resources">Useful tools and guides for team-first organization design for software delivery&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://academy.teamtopologies.com/courses/team-topologies-distilled">Team Topologies Distilled&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Topics: DevOps Anti-Types</title><link>/topics/devops/devops-team-structure/devops-anti-types/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>/topics/devops/devops-team-structure/devops-anti-types/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://web.devopstopologies.com/">https://web.devopstopologies.com/&lt;/a> | 2021-10-06&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="anti-type-a-dev-and-ops-silos">&lt;strong>Anti-Type A:&lt;/strong> Dev and Ops Silos&lt;/h2>
 &lt;p>This is the classic ‘throw it over the wall’ split between Dev and Ops. It means that story points can be claimed early (DONE means ‘feature-complete’, but not working in Production), and software operability suffers because Devs do not have enough context for operational features and Ops folks do not have time or inclination to engage Devs in order to fix the problems before the software goes live.&lt;/p>
 &lt;p>We likely all know this topology is bad, but I think there are actually worse topologies; at least with Anti-Type A (Dev and Ops Silos), we know there is a problem.&lt;/p>
@@ -97,6 +106,9 @@
 &lt;p>This is a form of &lt;a href="https://web.devopstopologies.com/#anti-type-a">Anti-Type A (Dev and Ops Silos)&lt;/a> which is prominent in medium-to-large companies where multiple legacy systems depend on the same core set of data. Because these databases are so vital for the business, a dedicated DBA team, often under the Ops umbrella, is responsible for their maintenance, performance tuning and disaster recovery. That is understandable. The problem is when this team becomes a gate keeper for any and every database change, effectively becoming an obstacle to small and frequent deployments (a core tenet of DevOps and Continuous Delivery).&lt;/p>
 &lt;p>Furthermore, just like Ops in &lt;a href="https://web.devopstopologies.com/#anti-type-a">Anti-Type A&lt;/a>, the DBA team is not involved early in the application development, thus data problems (migrations, performance, etc) are found late in the delivery cycle. Coupled with the overload of supporting multiple applications databases, the end result is constant firefighting and mounting pressure to deliver.&lt;/p>
 &lt;p>&lt;img src="images/anti-type-g.png" alt="Anti-Type G">&lt;/p></description></item><item><title>Topics: DevOps Team Topologies</title><link>/topics/devops/devops-team-structure/devops-team-topologies/</link><pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate><guid>/topics/devops/devops-team-structure/devops-team-topologies/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://web.devopstopologies.com/">https://web.devopstopologies.com/&lt;/a> | 2021-10-06&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="type-1-dev-and-ops-collaboration">&lt;strong>Type 1:&lt;/strong> Dev and Ops Collaboration&lt;/h2>
 &lt;p>This is the ‘promised land’ of DevOps: smooth collaboration between Dev teams and Ops teams, each specialising where needed, but also sharing where needed. There are likely many separate Dev teams, each working on a separate or semi-separate product stack.&lt;/p>
 &lt;p>My sense is that this Type 1 model needs quite substantial organisational change to establish it, and a good degree of competence higher up in the technical management team. Dev and Ops must have a clearly expressed and demonstrably effective shared goal (‘Delivering Reliable, Frequent Changes’, or whatever). Ops folks must be comfortable pairing with Devs and get to grips with test-driven coding and Git, and Devs must take operational features seriously and seek out Ops people for input into logging implementations, and so on, all of which needs quite a culture change from the recent past.&lt;/p>
@@ -170,6 +182,9 @@
 &lt;p>&lt;strong>Type 9 suitability:&lt;/strong> for organisations with one or more large, central databases with multiple connected applications.
 &lt;strong>Potential effectiveness:&lt;/strong> &lt;strong>MEDIUM&lt;/strong>&lt;/p>
 &lt;/blockquote></description></item><item><title>Topics: Engineering levels at Alibaba</title><link>/topics/engineering-management/engineering-ladders/engineering-levels-at-alibaba/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/engineering-ladders/engineering-levels-at-alibaba/</guid><description>
+&lt;blockquote>
+&lt;p>Internet (aggregating multiple sources) / Su Shijian | 2021-09-27&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="put-together">Put together&lt;/h2>
 &lt;table>
 &lt;thead>
@@ -267,6 +282,9 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Topics: Engineering levels at Carta</title><link>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</link><pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate><guid>/topics/engineering-management/engineering-ladders/engineering-levels-at-carta/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://medium.com/building-carta/engineering-levels-at-carta-d33db2a55a20/">https://medium.com/building-carta/engineering-levels-at-carta-d33db2a55a20/&lt;/a> | 2021-05-19&lt;/p>
+&lt;/blockquote>
 &lt;p>At Carta, we follow Jim Barksdale’s &lt;a href="https://www.forbes.com/sites/michaellindenmayer/2014/03/07/4-hard-earned-lessons-from-ben-horowitz/">maxim&lt;/a>: “take care of the people, the products, and the profits…in that order.” We believe &lt;a href="https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/05/05/three-ways-businesses-can-get-ahead-by-prioritizing-people/amp/">people &lt;em>are&lt;/em> the business&lt;/a>: building an environment where our engineers &lt;em>want&lt;/em> to come to work every day and know they can grow their careers is the best technical leverage we could hope for.&lt;/p>
 &lt;p>To that end, having a fair, equitable, and &lt;em>clear&lt;/em> framework for leveling and career progression is one of our most important goals. Engineering leaders talk about levels and promotion processes a lot, but they focus more on the &lt;em>what&lt;/em> and not the &lt;em>why&lt;/em>. At Carta, we want everyone to understand how the company thinks about fairness and compensation, why our leveling processes exist, and what they’re trying to achieve.&lt;/p>
 &lt;p>What follows is our internal engineering leveling guide, lightly edited for public consumption. We hope that by sharing it here we can help demystify some common questions about engineering career ladders and communicate our values to candidates and prospects alike.&lt;/p>
@@ -382,6 +400,9 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Topics: Practical advice for designing REST APIs</title><link>/topics/api-management/design-restful-api/practical-advice-for-designing-rest-apis/</link><pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate><guid>/topics/api-management/design-restful-api/practical-advice-for-designing-rest-apis/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9">https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9&lt;/a> | 2021-04-16&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="first-some-terminology">First, Some Terminology&lt;/h2>
 &lt;p>Any API design follows something called &lt;code>Resource Oriented Design&lt;/code> It consists of three key concepts&lt;/p>
 &lt;ul>
@@ -524,6 +545,9 @@ users: [
 &lt;li>Strings are better than numbers.&lt;/li>
 &lt;li>Consistency is better than customization.&lt;/li>
 &lt;/ul></description></item><item><title>Topics: Internal Platform Teams - What Are They and Do You Need One</title><link>/topics/platform-engineering/internal-developer-platform-idp/internal-platform-teams-what-are-they-and-do-you-need-one/</link><pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate><guid>/topics/platform-engineering/internal-developer-platform-idp/internal-platform-teams-what-are-they-and-do-you-need-one/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://humanitec.com/blog/internal-platform-teams-what-are-they-and-do-you-need-one/">https://humanitec.com/blog/internal-platform-teams-what-are-they-and-do-you-need-one/&lt;/a> | 2021-04-01&lt;/p>
+&lt;/blockquote>
 &lt;p>The early 2000s, the era of the SysAdmin. They were the ultimate rulers of the infrastructure, the gatekeepers of any setup. If your app developers wanted anything done, they needed to pass through them. Specifically, this meant every script and piece of code was thrown over the fence to SysAdmins to figure out what to do with it and how to deploy it. Not a great experience on either side of the fence. Then 2007 came and Werner Vogels &lt;a href="https://queue.acm.org/detail.cfm?id=1142065">famously yelled&lt;/a>: “You build it, you run it”. And a whole generation of SysAdmins was fired. Cloud native was finally allowing developers to provision the resources they needed, whenever they needed them. The answer to every dev teams’ problems. Or was it?&lt;/p>
 &lt;p>While it did bring about a plethora of improvements around scalability, availability and ease of operation, it turns out Cloud native also meant things got a lot more complicated. As every company’s value proposition becomes digitized (&lt;a href="https://www.youtube.com/watch?v=ZAKn9qkYEwU&amp;amp;t=1978s">as Twilio’s CEO explains&lt;/a>), the degree of complexity of its systems grows exponentially. They suddenly need to integrate with countless new technologies, be deployed across multiple clusters and vendors in different regions, all while offering an effortless end experience to customers. The result of all of this is that your frontend app developers are completely overwhelmed by the sheer amount of tools that make up your infrastructure. And whenever they are supposed to be using those YAML files for their deployments, they end up going to your Ops team to ask for help. So much for “you build it, you run it”.&lt;/p>
 &lt;h2 id="the-key-to-true-devops">The key to true DevOps&lt;/h2>
@@ -583,6 +607,9 @@ users: [
 &lt;/ul>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>If you and your team are scaling up your infrastructure and adding engineers at an increasing pace, you are likely considering (or hopefully will consider, after reading this) to build an Internal Platform team. The benefits can be many and if done right, a Platform team can allow your organization to scale considerably faster and more efficiently than with a less standardized approach and product driven mentality.&lt;/p></description></item><item><title>Topics: Backend as a Service - What is a BaaS</title><link>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</link><pubDate>Tue, 09 Feb 2021 00:00:00 +0000</pubDate><guid>/topics/backend-as-a-service-baas/backend-as-a-service-what-is-a-baas/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://blog.back4app.com/backend-as-a-service-baas/">https://blog.back4app.com/backend-as-a-service-baas/&lt;/a> | 2021-02-09&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="what-is-a-backend-as-a-service">What is a backend as a service?&lt;/h2>
 &lt;p>&lt;img src="images/0.png" alt="0">&lt;/p>
 &lt;p>A BaaS or mBaaS or Backend as a Service is a platform that automates backend side development and takes care of the cloud infrastructure. Using a BaaS, you will outsource the responsibilities of running and maintaining servers to a third party and focus on the frontend or client-side development.&lt;/p>

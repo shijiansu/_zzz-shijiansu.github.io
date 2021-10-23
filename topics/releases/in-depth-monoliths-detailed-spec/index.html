@@ -39,7 +39,7 @@
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
-<body class="td-page td-blog">
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -286,13 +286,23 @@
 </ul>
 </div>
 </aside>
-<main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
+<nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
+<ol class="breadcrumb spb-1">
+<li class=breadcrumb-item>
+<a href=/topics/>Topics</a>
+</li>
+<li class=breadcrumb-item>
+<a href=/topics/releases/>Releases</a>
+</li>
+<li class="breadcrumb-item active" aria-current=page>
+<a href=/topics/releases/in-depth-monoliths-detailed-spec/>Release New Features</a>
+</li>
+</ol>
+</nav>
 <div class=td-content>
 <h1>Another Great Release</h1>
 <div class=lead>A short lead description about this content page. Text here can also be <strong>bold</strong> or <em>italic</em> and can even be split over multiple paragraphs.</div>
-<div class="td-byline mb-4">
-<time datetime=2018-01-04 class=text-muted>2018-01-04</time>
-</div>
 <header class=article-meta>
 </header>
 <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>. <a href=https://github.com>Links</a> should be blue with no underlines (unless hovered over).</p>
@@ -562,13 +572,9 @@ This is a warning with a title!
 <p>Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.</p>
 <pre tabindex=0><code>This is the final element on the page and there should be no margin below this.
 </code></pre>
-<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
-<li>
-<a class="btn btn-primary disabled"><span class=mr-1>←</span>Previous</a>
-</li>
-<a class="btn btn-primary disabled">Next<span class=ml-1>→</span></a>
-</li>
-</ul>
+<div class="text-muted mt-5 pt-3 border-top">
+Last modified 2021-09-26: <a href=https://github.com//commit/204a3e6d301fec59f02200904fae84d7c2a03038>Update to topics folder (204a3e6)</a>
+</div>
 </div>
 </main>
 </div>

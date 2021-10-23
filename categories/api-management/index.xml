@@ -141,6 +141,9 @@ users: [
 &lt;li>Strings are better than numbers.&lt;/li>
 &lt;li>Consistency is better than customization.&lt;/li>
 &lt;/ul></description></item><item><title>Topics: Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</title><link>/topics/api-management/api-architectural-styles/soap-vs-rest-vs-graphql-vs-rpc/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>/topics/api-management/api-architectural-styles/soap-vs-rest-vs-graphql-vs-rpc/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;a href="https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/">https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/&lt;/a> | 2020-05-29&lt;/p>
+&lt;/blockquote>
 &lt;p>Two separate applications need an intermediary to talk to each other. So, developers often build bridges – &lt;a href="https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/">Application Programming Interfaces&lt;/a> – to allow one system to access the information or functionality of another.&lt;/p>
 &lt;p>In order to integrate applications quickly and at scale, APIs are realized using protocols and/or specifications to define the semantics and syntax of the messages passed across the wire. These specifications make up the API architecture.&lt;/p>
 &lt;p>Over time, different API architectural styles have been released. Each of them has its own patterns of standardizing data exchange. A pull of choices raises endless debates as to which architectural style is best.&lt;/p>

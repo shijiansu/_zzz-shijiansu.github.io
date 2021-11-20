@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.88.1"><link rel=canonical type=text/html href=/topics/api-management/>
+<meta name=generator content="Hugo 0.88.1"><link rel=canonical type=text/html href=/topics/api-architecture/api-architectural-styles/>
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
@@ -14,15 +14,15 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>API Management | Shijian Homepage</title>
+<title>API Architectural Styles | Shijian Homepage</title>
 <meta name=description content>
-<meta property="og:title" content="API Management">
+<meta property="og:title" content="API Architectural Styles">
 <meta property="og:description" content="Shijian Homepage">
 <meta property="og:type" content="website">
-<meta property="og:url" content="/topics/api-management/"><meta property="og:site_name" content="Shijian Homepage">
-<meta itemprop=name content="API Management">
+<meta property="og:url" content="/topics/api-architecture/api-architectural-styles/"><meta property="og:site_name" content="Shijian Homepage">
+<meta itemprop=name content="API Architectural Styles">
 <meta itemprop=description content="Shijian Homepage"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="API Management">
+<meta name=twitter:title content="API Architectural Styles">
 <meta name=twitter:description content="Shijian Homepage">
 <link rel=preload href=/scss/main.min.67cc959ef105df1e2ec85813cf31ce275a9816ceee54062bd54d5ff6d04833f7.css as=style>
 <link href=/scss/main.min.67cc959ef105df1e2ec85813cf31ce275a9816ceee54062bd54d5ff6d04833f7.css rel=stylesheet integrity>
@@ -72,32 +72,18 @@
 This the multi-page printable view of this section.
 <a href=# onclick="return print(),!1">Click here to print</a>.
 </p><p>
-<a href=/topics/api-management/>Return to the regular view of this page</a>.
+<a href=/topics/api-architecture/api-architectural-styles/>Return to the regular view of this page</a>.
 </p>
 </div>
-<h1 class=title>API Management</h1>
+<h1 class=title>API Architectural Styles</h1>
 <ul>
-<li>1: <a href=#pg-b6ac75f0e5022b5c590a2fbb85e7732b>API Architectural Styles</a></li>
-<ul>
-<li>1.1: <a href=#pg-5c87c6889e2d99798fb08b95e3f30e47>Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</a></li>
-</ul>
-<li>2: <a href=#pg-6326cdc184dfc5babdaddca4740a7fd9>API Versioning</a></li>
-<ul>
-<li>2.1: <a href=#pg-1b52f9e91f300089e4b3c6aada5e153e>Introduction to API Versioning Best Practices</a></li>
-</ul>
-<li>3: <a href=#pg-0ed8876273e6ac030821cc5482b6b68c>Design RESTFul API</a></li>
-<ul>
-<li>3.1: <a href=#pg-42068dd39eadc2f40b2fe49907766cd7>Practical advice for designing REST APIs</a></li>
-</ul>
+<li>1: <a href=#pg-eca74bef4c7151c72c8a4f6bb40f11b1>Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</a></li>
 </ul>
 <div class=content>
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-b6ac75f0e5022b5c590a2fbb85e7732b>1 - API Architectural Styles</h1>
-</div>
-<div class=td-content>
-<h1 id=pg-5c87c6889e2d99798fb08b95e3f30e47>1.1 - Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</h1>
+<h1 id=pg-eca74bef4c7151c72c8a4f6bb40f11b1>1 - Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC</h1>
 <blockquote>
 <p><a href=https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/>https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/</a> | 2020-05-29</p>
 </blockquote>
@@ -234,223 +220,6 @@ This the multi-page printable view of this section.
 <p>REST has the highest abstraction and best modeling of the API. But it tends to be heavier on the wire and chattier – a downside if you’re working on mobile.</p>
 <p>GraphQL is a big step forward in terms of data fetching but not everyone has enough time and effort to get the hang of it.</p>
 <p>At the end of the day, it makes sense to try a few small use cases with a particular style, and see if it fits your use case and solves your problems. If it does, try expanding and see if it fits more use cases.</p>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-6326cdc184dfc5babdaddca4740a7fd9>2 - API Versioning</h1>
-</div>
-<div class=td-content>
-<h1 id=pg-1b52f9e91f300089e4b3c6aada5e153e>2.1 - Introduction to API Versioning Best Practices</h1>
-<blockquote>
-<p><a href=https://nordicapis.com/introduction-to-api-versioning-best-practices/>https://nordicapis.com/introduction-to-api-versioning-best-practices/</a> | 2017-11-03</p>
-</blockquote>
-<p>Change is inevitable and growth is a good thing. When your API has reached the point of expanding beyond it’s original intent and capacity, it’s time to consider the next <strong>version</strong>.</p>
-<p>Whether that next iteration is a whole number version bump or just a feature expansion, it’s important to consider the pros and cons of how you let your developers know about it. Far different than traditional software versioning, <strong>API versioning</strong> can have complex implications for the products using it downstream.</p>
-<p>The big version bumps usually indicate a significant <strong>milestone</strong> in the codebase of the API. It declares a <strong>significant change</strong> in the requirements of API consumption and implementation. Feature additions that don’t necessarily change existing calls is part of the organic growth of a product and aren’t subject to the same considerations.</p>
-<p>Once you start taking things away, or dramatically changing what’s in place, it’s time to consider another version. Often, these new versions become whole new products. Although they share a common ancestry, new versions of legacy APIs require careful thought into their implementation.</p>
-<blockquote>
-<p>For more advanced API versioning insights, read <a href=https://nordicapis.com/api-change-strategy/>API Change Strategy</a> or <a href=https://nordicapis.com/whats-the-difference-between-versioning-and-revisioning-apis/>What’s The Difference Between Versioning and Revisioning APIs?</a></p>
-</blockquote>
-<h2 id=traditional-api-versioning-n1>Traditional API Versioning: n+1</h2>
-<p>Service changes that can warrant a new version include: removing an operation, renaming an operation, operation parameter changes that shift data types or order, and complex structural changes of data type.</p>
-<p>A version increment can also indicate significant changes to API consumption requirements. It can also advertise a radical change in the underlying resources offered by the API. In either case, products and platforms that rely on an API for core functionality may need a <strong>code refactor</strong> to adapt.</p>
-<p>That can be time and resource intensive, so a sane and <strong>well documented</strong> approach to URI versioning is crucial for multiple stakeholders. Versioning can be a controversial topic within teams, and often the first question is whether to even use it.</p>
-<h2 id=one-uri-to-rule-them-all>One URI to Rule Them All</h2>
-<p>One school of thought is to focus on <strong>one unchanging URI</strong> with just one set of criteria for consumption. If the API structure is changed, resources altered, or parameter set modified, then the product is re-launched with the same URI. This pushes the obligation to refactor code to downstream developers.</p>
-<p>Tim Berners-Lee gets name dropped by proponents of this approach. He is often <a href=https://www.technologyreview.com/s/403095/sir-tim-berners-lee/>quoted as saying</a> “a cool URI is one which does not change.” In context, that quote was intended to address the nascent internet which depended on hyperlinks within web pages to endure. The <a href=http://nordicapis.com/what-is-json-ld/>connected web</a>, at that time, was a series of information nodes.</p>
-<p>The world has changed, though, and we work with a interconnected matrix of powerful and resource heavy web services. Once services became widespread, early approaches were similar to software version numbers. But, standalone software has very different downstream implications than interdependent web services.</p>
-<p>IBM addresses this in their own “<a href=https://www.ibm.com/developerworks/webservices/library/ws-version/>Best practices for Web services</a>“:</p>
-<blockquote>
-<p>“The correct handling of API versioning has been one of the most difficult issues faced by developers of distributed systems. Various schemes have been proposed, ranging from the laissez faire approach taken by CORBA (Common Object Request Broker Architecture) to the stricter schemes used in DCOM (Distributed Component Object Model). With the advent of Web services, there are some new features that you can take advantage of that can help alleviate the problem, but the brutal fact of the matter is that versioning has not been built into the Web services architecture.”</p>
-</blockquote>
-<p>What constitutes “best practices” has evolved over time and is determined by provider choices for their own products, not necessarily from any outside governing body. So, when it comes to choosing an approach to versioning, there are a wide variety of practices.</p>
-<h2 id=on-backwards-compatibility>On Backwards Compatibility</h2>
-<p>Another consideration is <strong>backwards compatibility</strong>. For many providers of web resource APIs, this is the primary consideration. Maintaining multiple versions of a resource intensive API can be a serious drain on the time and focus of engineering teams. It can also introduce long term stability problems to services that have moved on to more modern architectures.</p>
-<p>For many, introducing a new version that substantially changes an API is, in fact, launching a <strong>whole new service.</strong> Treating it as a <strong>new product</strong>, with <strong>new documentation</strong>, Service Level Agreements, tier access changes, etc., can have major business implications. Many a whiteboard has been filled with figures debating whether a change is an engineering choice or a <em>business shift</em>.</p>
-<p>Once the decision has been made to introduce a new version, it’s helpful to look around at established providers for battle tested solutions.</p>
-<blockquote>
-<p>Related: <a href=https://nordicapis.com/api-lifecycle-retirement-stage-a-history-of-major-public-api-retirements/>The 5 Main Business Reasons for API Retirement</a></p>
-</blockquote>
-<h2 id=examples-of-versioning-in-the-wild>Examples of Versioning in the Wild</h2>
-<p>What can we learn from the versioning practices of established web API providers? <a href=https://cloud.google.com/apis/design/versioning>Google</a> comes out of the gate with a blunt affirmation of numbered versioning: “Networked APIs should use <strong>Semantic Versioning</strong>.” Not much wiggle room there. They also have a similarly plain system. Version indicators use the form <strong>v.MAJOR.MINOR.PATCH</strong>.</p>
-<p><a href=https://www.twilio.com/docs/api/rest>Twilio</a> uses a <strong>timestamp</strong> in the URL, instead of a version number. <a href=https://developer.salesforce.com/blogs/developer-relations/2013/10/api-versions-and-the-salesforce-metadata-api.html>Salesforce</a> opts for vXX.X in the <strong>middle</strong> of the URL. <a href=https://developers.facebook.com/docs/apps/versions>Facebook</a> goes for prepending the version to the endpoint path. The version is actually optional, with unspecified version requests being routed to the oldest version available.</p>
-<p>Note that the granularity offered by vX.X is usually intended for development and not necessarily for production. Check the docs first, but it’s a good idea to opt for ordinal number references in production code.</p>
-<p><a href=http://nordicapis.com/avoid-walking-on-eggshells-and-use-devops/>DevOps</a> folks may be familiar with the <strong>UDDI</strong> and <strong>WDSL</strong> approach to version definitions. HTTP solutions are much more popular, but there is support for this kind of approach. It entails a version request through an <strong>XML</strong> exchange to get the proper version.</p>
-<p>Megalithic companies like Microsoft, IBM, and Oracle have references to this method in some of their documentation. Although, HTTP version indications are accepted in many divisions and products.</p>
-<p>Dating network <strong>Badoo</strong> opts for <a href=https://nordicapis.com/continuous-versioning-strategy-for-internal-apis/>continuous versioning</a>, where features are added and endpoints stay the same. Legacy clients can use old fields and new clients use added fields. API requests are transactional, with a feature request call made and a list of available options returned. Feature checks can serve as a sort of state request.</p>
-<p>The <a href=http://apistylebook.com/design/topics/versioning>API stylebook</a> has a few more paths to explore on versioning. Without a codified set of specifications, companies continue to explore different options.</p>
-<h2 id=version-with-accept-header>Version With Accept Header</h2>
-<p>A common alternative to path parameters is <strong>header exchanges</strong>. They can be more verbose about the expected response and are usually included anyway for an HTTP request. Having a resource specific header approach allows for other parameters (such as caching, compression, and <a href=http://nordicapis.com/content-negotiation/>content negotiation</a>) to be included.</p>
-<p>API providers often communicate <strong>resource criteria</strong> and limitations in their response, so developers will need to examine the header exchange anyway. Besides just response codes, common header responses include <a href=http://nordicapis.com/stemming-the-flood-how-to-rate-limit-an-api/>rate limit bounds</a>, <a href=http://nordicapis.com/best-practices-api-error-handling/>specific error messages</a>, time-based data, and more.</p>
-<p>A clever outlier is using <strong>MIME</strong> types to include a version indicator. API providers register these MIME types on their backend and then users include <strong>Accept</strong> and <strong>Content-type headers</strong>. IETF legitimized this approach in <a href=http://www.ietf.org/rfc/rfc4627.txt>RFC4627</a>. While this does work, developers choosing this approach will inevitably end up explaining their choice to management types who state, “but it doesn’t work on HTML forms, so why do you want to do it that way?”</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-http data-lang=http><span style=color:#a40000>Accept: application/pre.company.app-v1+json
-</span><span style=color:#a40000>Content-Type: application/pre.company.app-v1+json
-</span></code></pre></div><p>The debate over implementation is deep and will continue. So, developers and providers will have to make choices based on their specific needs. In general, the most common approach is a combination of <strong>URI parameters</strong> and <strong>header criteria</strong>. APIs accept URI requests with parameters and then return a payload with proper response codes and (hopefully) verbose <strong>metadata</strong> in the header of the response.</p>
-<p>What constitutes a proper response code is something engineers will debate gleefully and loudly at company happy hours. But, here are some useful negative responses that are verbose enough to be helpful downstream.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-http data-lang=http><span style=color:#a40000>400: BAD_REQUEST: ApiVersionUnspecified: An API version is required, but was not specified
-</span><span style=color:#a40000>400: BAD_REQUEST: InvalidApiVersion: An API version was specified, but it is invalid
-</span><span style=color:#a40000>400: BAD_REQUEST: AmbiguousApiVersion: An API version was specified multiple times with different values
-</span><span style=color:#a40000>400, 405: BAD_REQUEST, METHOD_NOT_ALLOWED: UnsupportedApiVersion: The specified API version is not supported
-</span><span style=color:#a40000>301: MOVED_PERMANENTLY: movedPermanently: This request and future requests for the same operation have 
-</span><span style=color:#a40000>to be sent to the URL specified in the Location header of this response 
-</span><span style=color:#a40000>instead of to the URL to which this request was sent
-</span><span style=color:#a40000>410: GONE: deleted: The request failed because the resource associated with the request has been deleted
-</span><span style=color:#a40000>299: OK: Warning: &#34;Deprecated API&#34;
-</span></code></pre></div><p>For More on Error Responses read: <a href=https://nordicapis.com/best-practices-api-error-handling/>Best Practices for API Error Handling</a></p>
-<h2 id=business-motives-will-direct-versioning-choices>Business Motives Will Direct Versioning Choices</h2>
-<p>In some ways, the technical aspects of versioning are the easiest to work out. The real debate comes down to product needs, <strong>business concerns</strong>, and future plans. The requirements for supporting multiple versions of an API can be very high in terms of engineering support, backend resources, and simple bandwidth.</p>
-<p>Also, to be done well, a new version needs <strong>rich documentation</strong> to successfully transition. Since up-to-date documentation is often low on the priorities of fast moving companies, it can end up getting launched poorly as a mashup of old documentation and new. Bad documentation can yield deep costs in time and money.</p>
-<p>The main takeaway here is that versioning is a <strong>multi-faceted</strong> conversation. It’s not just a technical problem. The downstream effects and legacy costs can be substantial and the entire process should be well thought out for effective growth.</p>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-0ed8876273e6ac030821cc5482b6b68c>3 - Design RESTFul API</h1>
-</div>
-<div class=td-content>
-<h1 id=pg-42068dd39eadc2f40b2fe49907766cd7>3.1 - Practical advice for designing REST APIs</h1>
-<blockquote>
-<p><a href=https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9>https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9</a> | 2021-04-16</p>
-</blockquote>
-<h2 id=first-some-terminology>First, Some Terminology</h2>
-<p>Any API design follows something called <code>Resource Oriented Design</code> It consists of three key concepts</p>
-<ul>
-<li><strong>Resource:</strong> A resource is a piece of data, For example, <strong>a User</strong>.</li>
-<li><strong>Collection:</strong> A group of resources is called a collection. Example: <strong>A list of users</strong></li>
-<li><strong>URL:</strong> Identifies the location of resource or collection. Example: <code>/user</code></li>
-</ul>
-<h2 id=1-use-kebab-case-for-urls>1. Use kebab-case for URLs</h2>
-<p>For example, if you want to get the list of orders.</p>
-<p><strong>Bad:</strong> <code>/systemOrders or /system_orders</code></p>
-<p><strong>Good:</strong> <code>/system-orders</code></p>
-<h2 id=2-use-camelcase-for-parameters>2. Use camelCase for Parameters</h2>
-<p>For example, if you want to get products from a particular shop.</p>
-<p><strong>Bad:</strong> <code>/system-orders/{order_id} or /system-orders/{OrderId}</code></p>
-<p><strong>Good:</strong> <code>/system-orders/{orderId}</code></p>
-<h2 id=3-plural-name-to-point-to-a-collection>3. Plural Name to Point to a Collection</h2>
-<p>If you want to get all the users of a system.</p>
-<p><strong>Bad:</strong> <code>GET /user or GET /User</code></p>
-<p><strong>Good:</strong> <code>GET /users</code></p>
-<h2 id=4-url-starts-with-a-collection-and-ends-with-an-identifier>4. URL Starts With a Collection and Ends With an Identifier</h2>
-<p>If want to keep the concept singular and consistent.</p>
-<p><strong>Bad:</strong> <code>GET /shops/:shopId/category/:categoryId/price</code></p>
-<p>This is bad because it’s pointing to a property instead of a resource.</p>
-<p><strong>Good:</strong> <code>GET /shops/:shopId/ or GET /category/:categoryId</code></p>
-<h2 id=5-keep-verbs-out-of-your-resource-url>5. Keep Verbs Out of Your Resource URL</h2>
-<p>Don’t use verbs to express your intention in the URL. Instead, use proper HTTP methods to describe the operation.</p>
-<p><strong>Bad:</strong> <code>POST /updateuser/{userId} or GET /getusers</code></p>
-<p><strong>Good:</strong> <code>PUT /user/{userId}</code></p>
-<h2 id=6-use-verbs-for-non-resource-url>6. Use Verbs for Non-Resource URL</h2>
-<p>You have an endpoint that returns nothing but an operation. In this case, you can use verbs. For example, if you want to resend the alert to a user.</p>
-<p><strong>Good:</strong> <code>POST /alerts/245743/resend</code></p>
-<p>Keep in mind that these are not our CRUD operations. Rather, these are considered functions that do a specific job in our system.</p>
-<h2 id=7-use-camelcase-for-json-property>7. Use camelCase for JSON property</h2>
-<p>If you’re building a system in which the request body or response is JSON, the property names should be in <code>camelCase</code></p>
-<p><strong>Bad:</strong></p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
-   user_name: &#34;Mohammad Faisal&#34;
-   user_id: &#34;1&#34;
-}
-</code></pre></div><p><strong>Good:</strong></p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
-   userName: &#34;Mohammad Faisal&#34;
-   userId: &#34;1&#34;
-}
-</code></pre></div><h2 id=8-monitoring>8. Monitoring</h2>
-<p>RESTful HTTP services MUST implement the <code>/health</code> and <code>/version</code> and <code>/metrics</code> API endpoints. They will provide the following info.</p>
-<ul>
-<li><strong>/health</strong>: Respond to requests to <code>/health</code> with a <code>200 OK</code> status code.</li>
-<li><strong>/version</strong>: Respond to request to <code>/version</code> with the version number.</li>
-<li><strong>/metrics</strong>: This endpoint will provide various metrics like average response time.</li>
-</ul>
-<p><code>/debug</code> and <code>/status</code> endpoints are also highly recommended.</p>
-<h2 id=9-dont-use-table_name-for-the-resource-name>9. Don’t Use table_name for the Resource Name</h2>
-<p>Don’t just use the table name as your resource name. In the long run, this kind of laziness can be harmful.</p>
-<p><strong>Bad:</strong> <code>product_order</code></p>
-<p><strong>Good:</strong> <code>product-orders</code></p>
-<p>This is because exposing the underlying architecture is not your purpose.</p>
-<h2 id=10-use-api-design-tools>10. Use API Design Tools</h2>
-<p>There are many good API design tools for good documentation, such as:</p>
-<ul>
-<li><a href=https://apiblueprint.org/>API Blueprint</a></li>
-<li><a href=https://swagger.io/>Swagger</a></li>
-</ul>
-<p>Having good and detailed documentation results in a great user experience for your API consumers.</p>
-<h2 id=11-use-simple-ordinal-number-as-version>11. Use Simple Ordinal Number as Version</h2>
-<p>Always use versioning for the API and move it all the way to the left so that it has the highest scope. The version number should be <code>v1</code>, <code>v2</code> etc.</p>
-<p><strong>Good:</strong> <code>http://api.domain.com/v1/shops/3/products</code></p>
-<p>Always use versioning in your API because if the API is being used by external entities, changing the endpoint can break their functionality.</p>
-<h2 id=12-include-total-number-of-resources-in-your-response>12. Include Total Number of Resources in Your Response</h2>
-<p>If an API returns a list of objects always include the total number of resources in the response. You can use the <code>total</code> property for this.</p>
-<p><strong>Bad:</strong></p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
-  users: [ 
-     ...
-  ]
-}
-</code></pre></div><p><strong>Good:</strong></p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>{
-  users: [ 
-     ...
-  ],  total: 34
-}
-</code></pre></div><h2 id=13-accept-limit-and-offset-parameters>13. Accept limit and offset Parameters</h2>
-<p>Always accept <code>limit</code> and <code>offset</code> parameters in <code>GET</code> operations.</p>
-<p><strong>Good:</strong> <code>GET /shops?offset=5&limit=5</code></p>
-<p>This is because it’s necessary for pagination on the front end.</p>
-<h2 id=14-take-fields-query-parameter>14. Take fields Query Parameter</h2>
-<p>The amount of data being returned should also be taken into consideration. Add a <code>fields</code> parameter to expose only the required fields from your API.</p>
-<h3 id=example>Example</h3>
-<p>Only return the name, address, and contact of the shops.</p>
-<p><code>GET /shops?fields=id,name,address,contact</code></p>
-<p>It also helps to reduce the response size in some cases.</p>
-<h2 id=15-dont-pass-authentication-tokens-in-url>15. Don’t Pass Authentication Tokens in URL</h2>
-<p>This is a very bad practice because often URLs are logged and the authentication token will also be logged unnecessarily.</p>
-<p><strong>Bad:</strong> <code>GET /shops/123?token=some_kind_of_authenticaiton_token</code></p>
-<p><strong>Good:</strong></p>
-<p>Instead, pass them with the header:</p>
-<p><code>Authorization: Bearer xxxxxx, Extra yyyyy</code></p>
-<p>Also, authorization tokens should be short-lived</p>
-<h2 id=16-validate-the-content-type>16. Validate the Content-Type</h2>
-<p>The server should not assume the content type. For example, if you accept <code>application/x-www-form-urlencoded</code> then an attacker can create a form and trigger a simple POST request.</p>
-<p>So, always validate the <code>content-type</code> and if you want to go with a default one use <code>content-type: application/json</code></p>
-<h2 id=17-use-http-methods-for-crud-functions>17. Use HTTP Methods for CRUD Functions</h2>
-<p>HTTP methods serve the purpose of explaining CRUD functionality.</p>
-<ul>
-<li><code>GET</code>: To retrieve a representation of a resource.</li>
-<li><code>POST</code>: To create new resources and sub-resources.</li>
-<li><code>PUT</code>: To update existing resources.</li>
-<li><code>PATCH</code>: To update existing resources. It only updates the fields that were supplied, leaving the others alone</li>
-<li><code>DELETE</code>: To delete existing resources.</li>
-</ul>
-<h2 id=18-use-the-relation-in-the-url-for-nested-resources>18. Use the Relation in the URL For Nested Resources</h2>
-<p>Some practical examples are:</p>
-<ul>
-<li><code>GET /shops/2/products</code> : Get the list of all products from shop 2.</li>
-<li><code>GET /shops/2/products/31</code>: Get the details of product 31, which belongs to shop 2.</li>
-<li><code>DELETE /shops/2/products/31</code> , should delete product 31, which belongs to shop 2.</li>
-<li><code>PUT /shops/2/products/31</code> , should update the info of product 31, Use PUT on resource-URL only, not the collection.</li>
-<li><code>POST /shops</code> , should create a new shop and return the details of the new shop created. Use POST on collection-URLs.</li>
-</ul>
-<h2 id=19-cors>19. CORS</h2>
-<p>Do support CORS (Cross-Origin Resource Sharing) headers for all public-facing APIs.</p>
-<p>Consider supporting a CORS allowed origin of “*”, and enforcing authorization through valid OAuth tokens.</p>
-<p>Avoid combining user credentials with origin validation.</p>
-<h2 id=20-security>20. Security</h2>
-<p>Enforce HTTPS (TLS-encrypted) across all endpoints, resources, and services.</p>
-<p>Enforce and require HTTPS for all callback URLs, push notification endpoints, and webhooks.</p>
-<h2 id=21-errors>21. Errors</h2>
-<p>Errors, or more specifically service errors, occur when a client makes an invalid or incorrect request to a service or passes invalid or incorrect data to a service, and the service rejects the request.</p>
-<p>Examples include invalid authentication credentials, incorrect parameters, unknown version IDs, etc.</p>
-<ul>
-<li>Do return <code>4xx</code> HTTP error codes when rejecting a client request due to one or more Service Errors.</li>
-<li>Consider processing all attributes and then returning multiple validation problems in a single response.</li>
-</ul>
-<h2 id=22-golden-rules>22. Golden Rules</h2>
-<p>If you are ever in doubt about an API formatting decision, these golden rules can help guide us to making the right decision.</p>
-<ul>
-<li>Flat is better than nested.</li>
-<li>Simple is better than complex.</li>
-<li>Strings are better than numbers.</li>
-<li>Consistency is better than customization.</li>
-</ul>
 </div>
 </main>
 </div>

@@ -20,7 +20,3 @@ open http://localhost:1313/
 # github will trigger github actions to deploy this to github pages
 open https://shijiansu.github.io/
 ```
-
-## Execute all tests in repo
-
-`/bin/bash run-repo-test.sh`

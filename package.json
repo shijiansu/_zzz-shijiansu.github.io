@@ -2,7 +2,7 @@
   "name": "shijiansu.github.io",
   "version": "0.0.1",
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.4.4",
     "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1"
   }
